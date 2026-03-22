@@ -45,6 +45,15 @@
     const parts = window.ANIMOTION_DATA.animations.map(a =>
       a.keyframeCSS + '\n' + a.css
     );
+    // Force all animations to loop infinitely in the card previews
+    // so users always see the animation playing. The modal and
+    // exported code use the original iteration count.
+    parts.push(`
+      .anim-card-preview [data-animate] {
+        animation-iteration-count: infinite !important;
+        animation-direction: alternate !important;
+      }
+    `);
     style.textContent = parts.join('\n\n');
     document.head.appendChild(style);
   }
