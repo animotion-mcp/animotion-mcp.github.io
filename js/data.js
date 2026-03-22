@@ -1,0 +1,2796 @@
+/**
+ * Animotion — CSS3 Animation Data Registry
+ * Contains 755 animations across 20 categories
+ * Each entry includes complete CSS keyframe and class definitions
+ */
+
+window.ANIMOTION_DATA = {
+
+categories: [
+  { id: 'entrance', name: 'Entrance', icon: '→', color: '#3b82f6', count: 65 },
+  { id: 'exit', name: 'Exit', icon: '←', color: '#94a3b8', count: 50 },
+  { id: 'attention', name: 'Attention', icon: '!', color: '#f59e0b', count: 40 },
+  { id: 'text', name: 'Text', icon: 'T', color: '#8b5cf6', count: 50 },
+  { id: 'background', name: 'Background', icon: '◻', color: '#10b981', count: 40 },
+  { id: 'button', name: 'Button', icon: '▢', color: '#ef4444', count: 40 },
+  { id: 'card', name: 'Card', icon: '▣', color: '#06b6d4', count: 35 },
+  { id: 'loader', name: 'Loader', icon: '◎', color: '#6366f1', count: 60 },
+  { id: 'navigation', name: 'Navigation', icon: '☰', color: '#f97316', count: 25 },
+  { id: 'form', name: 'Form', icon: '✎', color: '#ec4899', count: 30 },
+  { id: 'transform3d', name: '3D Transform', icon: '⬡', color: '#14b8a6', count: 35 },
+  { id: 'filter', name: 'Filter', icon: '◐', color: '#a855f7', count: 25 },
+  { id: 'micro', name: 'Micro Interaction', icon: '·', color: '#84cc16', count: 40 },
+  { id: 'scroll', name: 'Scroll', icon: '↕', color: '#0ea5e9', count: 25 },
+  { id: 'creative', name: 'Creative', icon: '✦', color: '#e879f9', count: 40 },
+  { id: 'fintech', name: 'Fintech', icon: '$', color: '#fbbf24', count: 30 },
+  { id: 'gaming', name: 'Gaming', icon: '⚔', color: '#4ade80', count: 40 },
+  { id: 'ecommerce', name: 'E-Commerce', icon: '🛒', color: '#f472b6', count: 25 },
+  { id: 'social', name: 'Social', icon: '💬', color: '#38bdf8', count: 25 },
+  { id: 'dashboard', name: 'Dashboard', icon: '📊', color: '#a78bfa', count: 25 }
+],
+
+animations: [
+// ==================== ENTRANCE (65) ====================
+{
+  id: 'E01', name: 'Fade In', description: 'Element fades in from transparent to opaque',
+  cssClass: 'animotion-fade-in', keyframeName: 'animotion-fadeIn',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'opacity', 'entrance', 'basic'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in { animation: animotion-fadeIn 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeIn { from { opacity: 0; } to { opacity: 1; } }`
+},
+{
+  id: 'E02', name: 'Fade In Down', description: 'Element fades in while sliding down from above',
+  cssClass: 'animotion-fade-in-down', keyframeName: 'animotion-fadeInDown',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'down', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-down { animation: animotion-fadeInDown 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'E03', name: 'Fade In Up', description: 'Element fades in while sliding up from below',
+  cssClass: 'animotion-fade-in-up', keyframeName: 'animotion-fadeInUp',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'up', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-up { animation: animotion-fadeInUp 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'E04', name: 'Fade In Left', description: 'Element fades in while sliding from the left',
+  cssClass: 'animotion-fade-in-left', keyframeName: 'animotion-fadeInLeft',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'left', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-left { animation: animotion-fadeInLeft 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }`
+},
+{
+  id: 'E05', name: 'Fade In Right', description: 'Element fades in while sliding from the right',
+  cssClass: 'animotion-fade-in-right', keyframeName: 'animotion-fadeInRight',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'right', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-right { animation: animotion-fadeInRight 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }`
+},
+{
+  id: 'E06', name: 'Fade In Down Big', description: 'Element fades in with a large downward slide',
+  cssClass: 'animotion-fade-in-down-big', keyframeName: 'animotion-fadeInDownBig',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'down', 'big', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-down-big { animation: animotion-fadeInDownBig 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInDownBig { from { opacity: 0; transform: translateY(-200px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'E07', name: 'Fade In Up Big', description: 'Element fades in with a large upward slide',
+  cssClass: 'animotion-fade-in-up-big', keyframeName: 'animotion-fadeInUpBig',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'up', 'big', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-up-big { animation: animotion-fadeInUpBig 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInUpBig { from { opacity: 0; transform: translateY(200px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'E08', name: 'Fade In Left Big', description: 'Element fades in with a large leftward slide',
+  cssClass: 'animotion-fade-in-left-big', keyframeName: 'animotion-fadeInLeftBig',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'left', 'big', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-left-big { animation: animotion-fadeInLeftBig 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInLeftBig { from { opacity: 0; transform: translateX(-200px); } to { opacity: 1; transform: translateX(0); } }`
+},
+{
+  id: 'E09', name: 'Fade In Right Big', description: 'Element fades in with a large rightward slide',
+  cssClass: 'animotion-fade-in-right-big', keyframeName: 'animotion-fadeInRightBig',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'slide', 'right', 'big', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-right-big { animation: animotion-fadeInRightBig 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInRightBig { from { opacity: 0; transform: translateX(200px); } to { opacity: 1; transform: translateX(0); } }`
+},
+{
+  id: 'E10', name: 'Fade In Top Left', description: 'Element fades in from the top-left corner',
+  cssClass: 'animotion-fade-in-top-left', keyframeName: 'animotion-fadeInTopLeft',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'diagonal', 'top', 'left', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-top-left { animation: animotion-fadeInTopLeft 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInTopLeft { from { opacity: 0; transform: translate(-30px, -30px); } to { opacity: 1; transform: translate(0, 0); } }`
+},
+{
+  id: 'E11', name: 'Fade In Top Right', description: 'Element fades in from the top-right corner',
+  cssClass: 'animotion-fade-in-top-right', keyframeName: 'animotion-fadeInTopRight',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'diagonal', 'top', 'right', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-top-right { animation: animotion-fadeInTopRight 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInTopRight { from { opacity: 0; transform: translate(30px, -30px); } to { opacity: 1; transform: translate(0, 0); } }`
+},
+{
+  id: 'E12', name: 'Fade In Bottom Left', description: 'Element fades in from the bottom-left corner',
+  cssClass: 'animotion-fade-in-bottom-left', keyframeName: 'animotion-fadeInBottomLeft',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'diagonal', 'bottom', 'left', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-bottom-left { animation: animotion-fadeInBottomLeft 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInBottomLeft { from { opacity: 0; transform: translate(-30px, 30px); } to { opacity: 1; transform: translate(0, 0); } }`
+},
+{
+  id: 'E13', name: 'Fade In Bottom Right', description: 'Element fades in from the bottom-right corner',
+  cssClass: 'animotion-fade-in-bottom-right', keyframeName: 'animotion-fadeInBottomRight',
+  category: 'entrance', subcategory: 'fade', tags: ['fade', 'diagonal', 'bottom', 'right', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-in-bottom-right { animation: animotion-fadeInBottomRight 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-fadeInBottomRight { from { opacity: 0; transform: translate(30px, 30px); } to { opacity: 1; transform: translate(0, 0); } }`
+},
+{
+  id: 'E14', name: 'Slide In Down', description: 'Element slides in from above without fading',
+  cssClass: 'animotion-slide-in-down', keyframeName: 'animotion-slideInDown',
+  category: 'entrance', subcategory: 'slide', tags: ['slide', 'down', 'entrance', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-in-down { animation: animotion-slideInDown 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-slideInDown { from { transform: translateY(-100%); visibility: visible; } to { transform: translateY(0); } }`
+},
+{
+  id: 'E15', name: 'Slide In Up', description: 'Element slides in from below without fading',
+  cssClass: 'animotion-slide-in-up', keyframeName: 'animotion-slideInUp',
+  category: 'entrance', subcategory: 'slide', tags: ['slide', 'up', 'entrance', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-in-up { animation: animotion-slideInUp 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-slideInUp { from { transform: translateY(100%); visibility: visible; } to { transform: translateY(0); } }`
+},
+{
+  id: 'E16', name: 'Slide In Left', description: 'Element slides in from the left edge',
+  cssClass: 'animotion-slide-in-left', keyframeName: 'animotion-slideInLeft',
+  category: 'entrance', subcategory: 'slide', tags: ['slide', 'left', 'entrance', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-in-left { animation: animotion-slideInLeft 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-slideInLeft { from { transform: translateX(-100%); visibility: visible; } to { transform: translateX(0); } }`
+},
+{
+  id: 'E17', name: 'Slide In Right', description: 'Element slides in from the right edge',
+  cssClass: 'animotion-slide-in-right', keyframeName: 'animotion-slideInRight',
+  category: 'entrance', subcategory: 'slide', tags: ['slide', 'right', 'entrance', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-in-right { animation: animotion-slideInRight 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-slideInRight { from { transform: translateX(100%); visibility: visible; } to { transform: translateX(0); } }`
+},
+{
+  id: 'E18', name: 'Zoom In', description: 'Element scales up from nothing to full size',
+  cssClass: 'animotion-zoom-in', keyframeName: 'animotion-zoomIn',
+  category: 'entrance', subcategory: 'zoom', tags: ['zoom', 'scale', 'entrance', 'grow'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-in { animation: animotion-zoomIn 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-zoomIn { from { opacity: 0; transform: scale(0.3); } to { opacity: 1; transform: scale(1); } }`
+},
+{
+  id: 'E19', name: 'Zoom In Down', description: 'Element zooms in while moving down from above',
+  cssClass: 'animotion-zoom-in-down', keyframeName: 'animotion-zoomInDown',
+  category: 'entrance', subcategory: 'zoom', tags: ['zoom', 'scale', 'down', 'entrance'],
+  duration: '0.6s', timingFunction: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-in-down { animation: animotion-zoomInDown 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }`,
+  keyframeCSS: `@keyframes animotion-zoomInDown { from { opacity: 0; transform: scale(0.1) translateY(-1000px); } 60% { opacity: 1; transform: scale(0.475) translateY(60px); } to { transform: scale(1) translateY(0); } }`
+},
+{
+  id: 'E20', name: 'Zoom In Up', description: 'Element zooms in while moving up from below',
+  cssClass: 'animotion-zoom-in-up', keyframeName: 'animotion-zoomInUp',
+  category: 'entrance', subcategory: 'zoom', tags: ['zoom', 'scale', 'up', 'entrance'],
+  duration: '0.6s', timingFunction: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-in-up { animation: animotion-zoomInUp 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }`,
+  keyframeCSS: `@keyframes animotion-zoomInUp { from { opacity: 0; transform: scale(0.1) translateY(1000px); } 60% { opacity: 1; transform: scale(0.475) translateY(-60px); } to { transform: scale(1) translateY(0); } }`
+},
+{
+  id: 'E21', name: 'Zoom In Left', description: 'Element zooms in from the left with scale effect',
+  cssClass: 'animotion-zoom-in-left', keyframeName: 'animotion-zoomInLeft',
+  category: 'entrance', subcategory: 'zoom', tags: ['zoom', 'scale', 'left', 'entrance'],
+  duration: '0.6s', timingFunction: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-in-left { animation: animotion-zoomInLeft 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }`,
+  keyframeCSS: `@keyframes animotion-zoomInLeft { from { opacity: 0; transform: scale(0.1) translateX(-1000px); } 60% { opacity: 1; transform: scale(0.475) translateX(10px); } to { transform: scale(1) translateX(0); } }`
+},
+{
+  id: 'E22', name: 'Zoom In Right', description: 'Element zooms in from the right with scale effect',
+  cssClass: 'animotion-zoom-in-right', keyframeName: 'animotion-zoomInRight',
+  category: 'entrance', subcategory: 'zoom', tags: ['zoom', 'scale', 'right', 'entrance'],
+  duration: '0.6s', timingFunction: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-in-right { animation: animotion-zoomInRight 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }`,
+  keyframeCSS: `@keyframes animotion-zoomInRight { from { opacity: 0; transform: scale(0.1) translateX(1000px); } 60% { opacity: 1; transform: scale(0.475) translateX(-10px); } to { transform: scale(1) translateX(0); } }`
+},
+{
+  id: 'E23', name: 'Flip In X', description: 'Element flips in along the horizontal axis',
+  cssClass: 'animotion-flip-in-x', keyframeName: 'animotion-flipInX',
+  category: 'entrance', subcategory: 'flip', tags: ['flip', '3d', 'rotate', 'entrance', 'x-axis'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-flip-in-x { animation: animotion-flipInX 0.6s ease-in both; backface-visibility: visible; }`,
+  keyframeCSS: `@keyframes animotion-flipInX { from { transform: perspective(400px) rotateX(90deg); opacity: 0; } 40% { transform: perspective(400px) rotateX(-20deg); } 60% { transform: perspective(400px) rotateX(10deg); opacity: 1; } 80% { transform: perspective(400px) rotateX(-5deg); } to { transform: perspective(400px) rotateX(0); } }`
+},
+{
+  id: 'E24', name: 'Flip In Y', description: 'Element flips in along the vertical axis',
+  cssClass: 'animotion-flip-in-y', keyframeName: 'animotion-flipInY',
+  category: 'entrance', subcategory: 'flip', tags: ['flip', '3d', 'rotate', 'entrance', 'y-axis'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-flip-in-y { animation: animotion-flipInY 0.6s ease-in both; backface-visibility: visible; }`,
+  keyframeCSS: `@keyframes animotion-flipInY { from { transform: perspective(400px) rotateY(90deg); opacity: 0; } 40% { transform: perspective(400px) rotateY(-20deg); } 60% { transform: perspective(400px) rotateY(10deg); opacity: 1; } 80% { transform: perspective(400px) rotateY(-5deg); } to { transform: perspective(400px) rotateY(0); } }`
+},
+{
+  id: 'E25', name: 'Rotate In', description: 'Element rotates in from a turned position',
+  cssClass: 'animotion-rotate-in', keyframeName: 'animotion-rotateIn',
+  category: 'entrance', subcategory: 'rotate', tags: ['rotate', 'spin', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-in { animation: animotion-rotateIn 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-rotateIn { from { transform: rotate(-200deg); opacity: 0; } to { transform: rotate(0); opacity: 1; } }`
+},
+{
+  id: 'E26', name: 'Rotate In Down Left', description: 'Element rotates in from the bottom-left corner',
+  cssClass: 'animotion-rotate-in-down-left', keyframeName: 'animotion-rotateInDownLeft',
+  category: 'entrance', subcategory: 'rotate', tags: ['rotate', 'down', 'left', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-in-down-left { animation: animotion-rotateInDownLeft 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-rotateInDownLeft { from { transform-origin: left bottom; transform: rotate(-45deg); opacity: 0; } to { transform-origin: left bottom; transform: rotate(0); opacity: 1; } }`
+},
+{
+  id: 'E27', name: 'Rotate In Down Right', description: 'Element rotates in from the bottom-right corner',
+  cssClass: 'animotion-rotate-in-down-right', keyframeName: 'animotion-rotateInDownRight',
+  category: 'entrance', subcategory: 'rotate', tags: ['rotate', 'down', 'right', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-in-down-right { animation: animotion-rotateInDownRight 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-rotateInDownRight { from { transform-origin: right bottom; transform: rotate(45deg); opacity: 0; } to { transform-origin: right bottom; transform: rotate(0); opacity: 1; } }`
+},
+{
+  id: 'E28', name: 'Rotate In Up Left', description: 'Element rotates in from the top-left corner',
+  cssClass: 'animotion-rotate-in-up-left', keyframeName: 'animotion-rotateInUpLeft',
+  category: 'entrance', subcategory: 'rotate', tags: ['rotate', 'up', 'left', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-in-up-left { animation: animotion-rotateInUpLeft 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-rotateInUpLeft { from { transform-origin: left bottom; transform: rotate(45deg); opacity: 0; } to { transform-origin: left bottom; transform: rotate(0); opacity: 1; } }`
+},
+{
+  id: 'E29', name: 'Rotate In Up Right', description: 'Element rotates in from the top-right corner',
+  cssClass: 'animotion-rotate-in-up-right', keyframeName: 'animotion-rotateInUpRight',
+  category: 'entrance', subcategory: 'rotate', tags: ['rotate', 'up', 'right', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-in-up-right { animation: animotion-rotateInUpRight 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-rotateInUpRight { from { transform-origin: right bottom; transform: rotate(-45deg); opacity: 0; } to { transform-origin: right bottom; transform: rotate(0); opacity: 1; } }`
+},
+{
+  id: 'E30', name: 'Bounce In', description: 'Element bounces in with elastic overshoot',
+  cssClass: 'animotion-bounce-in', keyframeName: 'animotion-bounceIn',
+  category: 'entrance', subcategory: 'bounce', tags: ['bounce', 'elastic', 'entrance', 'scale'],
+  duration: '0.75s', timingFunction: 'cubic-bezier(0.215, 0.61, 0.355, 1)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-in { animation: animotion-bounceIn 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) both; }`,
+  keyframeCSS: `@keyframes animotion-bounceIn { 0% { opacity: 0; transform: scale(0.3); } 20% { transform: scale(1.1); } 40% { transform: scale(0.9); } 60% { opacity: 1; transform: scale(1.03); } 80% { transform: scale(0.97); } to { opacity: 1; transform: scale(1); } }`
+},
+{
+  id: 'E31', name: 'Bounce In Down', description: 'Element bounces in from the top',
+  cssClass: 'animotion-bounce-in-down', keyframeName: 'animotion-bounceInDown',
+  category: 'entrance', subcategory: 'bounce', tags: ['bounce', 'down', 'entrance', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-in-down { animation: animotion-bounceInDown 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-bounceInDown { 0% { opacity: 0; transform: translateY(-250px); } 60% { opacity: 1; transform: translateY(25px); } 75% { transform: translateY(-10px); } 90% { transform: translateY(5px); } to { transform: translateY(0); } }`
+},
+{
+  id: 'E32', name: 'Bounce In Up', description: 'Element bounces in from the bottom',
+  cssClass: 'animotion-bounce-in-up', keyframeName: 'animotion-bounceInUp',
+  category: 'entrance', subcategory: 'bounce', tags: ['bounce', 'up', 'entrance', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-in-up { animation: animotion-bounceInUp 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-bounceInUp { 0% { opacity: 0; transform: translateY(250px); } 60% { opacity: 1; transform: translateY(-25px); } 75% { transform: translateY(10px); } 90% { transform: translateY(-5px); } to { transform: translateY(0); } }`
+},
+{
+  id: 'E33', name: 'Bounce In Left', description: 'Element bounces in from the left',
+  cssClass: 'animotion-bounce-in-left', keyframeName: 'animotion-bounceInLeft',
+  category: 'entrance', subcategory: 'bounce', tags: ['bounce', 'left', 'entrance', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-in-left { animation: animotion-bounceInLeft 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-bounceInLeft { 0% { opacity: 0; transform: translateX(-250px); } 60% { opacity: 1; transform: translateX(25px); } 75% { transform: translateX(-10px); } 90% { transform: translateX(5px); } to { transform: translateX(0); } }`
+},
+{
+  id: 'E34', name: 'Bounce In Right', description: 'Element bounces in from the right',
+  cssClass: 'animotion-bounce-in-right', keyframeName: 'animotion-bounceInRight',
+  category: 'entrance', subcategory: 'bounce', tags: ['bounce', 'right', 'entrance', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-in-right { animation: animotion-bounceInRight 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-bounceInRight { 0% { opacity: 0; transform: translateX(250px); } 60% { opacity: 1; transform: translateX(-25px); } 75% { transform: translateX(10px); } 90% { transform: translateX(-5px); } to { transform: translateX(0); } }`
+},
+{
+  id: 'E35', name: 'Light Speed In Left', description: 'Element swoops in from the left at high speed with skew',
+  cssClass: 'animotion-light-speed-in-left', keyframeName: 'animotion-lightSpeedInLeft',
+  category: 'entrance', subcategory: 'lightspeed', tags: ['speed', 'skew', 'left', 'entrance', 'fast'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-light-speed-in-left { animation: animotion-lightSpeedInLeft 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-lightSpeedInLeft { from { transform: translateX(-100%) skewX(30deg); opacity: 0; } 60% { transform: translateX(0) skewX(-20deg); opacity: 1; } 80% { transform: skewX(5deg); } to { transform: translateX(0) skewX(0); } }`
+},
+{
+  id: 'E36', name: 'Light Speed In Right', description: 'Element swoops in from the right at high speed with skew',
+  cssClass: 'animotion-light-speed-in-right', keyframeName: 'animotion-lightSpeedInRight',
+  category: 'entrance', subcategory: 'lightspeed', tags: ['speed', 'skew', 'right', 'entrance', 'fast'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-light-speed-in-right { animation: animotion-lightSpeedInRight 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-lightSpeedInRight { from { transform: translateX(100%) skewX(-30deg); opacity: 0; } 60% { transform: translateX(0) skewX(20deg); opacity: 1; } 80% { transform: skewX(-5deg); } to { transform: translateX(0) skewX(0); } }`
+},
+{
+  id: 'E37', name: 'Roll In', description: 'Element rolls in from the left with rotation',
+  cssClass: 'animotion-roll-in', keyframeName: 'animotion-rollIn',
+  category: 'entrance', subcategory: 'special', tags: ['roll', 'rotate', 'entrance', 'creative'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-roll-in { animation: animotion-rollIn 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-rollIn { from { opacity: 0; transform: translateX(-100%) rotate(-120deg); } to { opacity: 1; transform: translateX(0) rotate(0); } }`
+},
+{
+  id: 'E38', name: 'Jack In The Box', description: 'Element pops up with a spring-like jack-in-the-box motion',
+  cssClass: 'animotion-jack-in-the-box', keyframeName: 'animotion-jackInTheBox',
+  category: 'entrance', subcategory: 'special', tags: ['jack', 'pop', 'spring', 'entrance', 'fun'],
+  duration: '0.8s', timingFunction: 'ease', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-jack-in-the-box { animation: animotion-jackInTheBox 0.8s ease both; }`,
+  keyframeCSS: `@keyframes animotion-jackInTheBox { 0% { opacity: 0; transform: scale(0.1) rotate(30deg); transform-origin: center bottom; } 50% { transform: rotate(-10deg); } 70% { transform: rotate(3deg); } to { opacity: 1; transform: scale(1) rotate(0); } }`
+},
+{
+  id: 'E39', name: 'Hinge', description: 'Element swings on a hinge before dropping down',
+  cssClass: 'animotion-hinge', keyframeName: 'animotion-hinge',
+  category: 'entrance', subcategory: 'special', tags: ['hinge', 'swing', 'drop', 'entrance', 'creative'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-hinge { animation: animotion-hinge 2s ease-in-out both; transform-origin: top left; }`,
+  keyframeCSS: `@keyframes animotion-hinge { 0% { transform: rotate(0); opacity: 1; } 20%, 60% { transform: rotate(80deg); } 40%, 80% { transform: rotate(60deg); } to { transform: translateY(700px); opacity: 0; } }`
+},
+{
+  id: 'E40', name: 'Blur Reveal', description: 'Element appears from a heavy blur to sharp focus',
+  cssClass: 'animotion-blur-reveal', keyframeName: 'animotion-blurReveal',
+  category: 'entrance', subcategory: 'special', tags: ['blur', 'reveal', 'focus', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-blur-reveal { animation: animotion-blurReveal 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-blurReveal { from { opacity: 0; filter: blur(20px); } to { opacity: 1; filter: blur(0); } }`
+},
+{
+  id: 'E41', name: 'Clip Wipe Left', description: 'Element reveals with a left-to-right clip-path wipe',
+  cssClass: 'animotion-clip-wipe-left', keyframeName: 'animotion-clipWipeLeft',
+  category: 'entrance', subcategory: 'special', tags: ['clip', 'wipe', 'left', 'reveal', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-clip-wipe-left { animation: animotion-clipWipeLeft 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-clipWipeLeft { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'E42', name: 'Clip Wipe Top', description: 'Element reveals with a top-to-bottom clip-path wipe',
+  cssClass: 'animotion-clip-wipe-top', keyframeName: 'animotion-clipWipeTop',
+  category: 'entrance', subcategory: 'special', tags: ['clip', 'wipe', 'top', 'reveal', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-clip-wipe-top { animation: animotion-clipWipeTop 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-clipWipeTop { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'E43', name: 'Clip Wipe Right', description: 'Element reveals with a right-to-left clip-path wipe',
+  cssClass: 'animotion-clip-wipe-right', keyframeName: 'animotion-clipWipeRight',
+  category: 'entrance', subcategory: 'special', tags: ['clip', 'wipe', 'right', 'reveal', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-clip-wipe-right { animation: animotion-clipWipeRight 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-clipWipeRight { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'E44', name: 'Clip Wipe Bottom', description: 'Element reveals with a bottom-to-top clip-path wipe',
+  cssClass: 'animotion-clip-wipe-bottom', keyframeName: 'animotion-clipWipeBottom',
+  category: 'entrance', subcategory: 'special', tags: ['clip', 'wipe', 'bottom', 'reveal', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-clip-wipe-bottom { animation: animotion-clipWipeBottom 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-clipWipeBottom { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'E45', name: 'Circle Reveal', description: 'Element reveals through an expanding circle clip-path',
+  cssClass: 'animotion-circle-reveal', keyframeName: 'animotion-circleReveal',
+  category: 'entrance', subcategory: 'special', tags: ['circle', 'reveal', 'clip-path', 'entrance'],
+  duration: '0.7s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-circle-reveal { animation: animotion-circleReveal 0.7s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-circleReveal { from { clip-path: circle(0% at 50% 50%); } to { clip-path: circle(75% at 50% 50%); } }`
+},
+{
+  id: 'E46', name: 'Iris Wipe', description: 'Element reveals with a diamond-shaped iris wipe effect',
+  cssClass: 'animotion-iris-wipe', keyframeName: 'animotion-irisWipe',
+  category: 'entrance', subcategory: 'special', tags: ['iris', 'wipe', 'diamond', 'reveal', 'entrance'],
+  duration: '0.7s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-iris-wipe { animation: animotion-irisWipe 0.7s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-irisWipe { from { clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); } to { clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); } }`
+},
+{
+  id: 'E47', name: 'Text Wipe', description: 'Element reveals with a horizontal text-wipe motion',
+  cssClass: 'animotion-text-wipe', keyframeName: 'animotion-textWipe',
+  category: 'entrance', subcategory: 'special', tags: ['text', 'wipe', 'reveal', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-text-wipe { animation: animotion-textWipe 0.6s ease-in-out both; overflow: hidden; }`,
+  keyframeCSS: `@keyframes animotion-textWipe { from { max-width: 0; opacity: 0; } to { max-width: 500px; opacity: 1; } }`
+},
+{
+  id: 'E48', name: 'Drop In', description: 'Element drops in from above with a bounce at the bottom',
+  cssClass: 'animotion-drop-in', keyframeName: 'animotion-dropIn',
+  category: 'entrance', subcategory: 'special', tags: ['drop', 'gravity', 'bounce', 'entrance'],
+  duration: '0.7s', timingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-drop-in { animation: animotion-dropIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,
+  keyframeCSS: `@keyframes animotion-dropIn { from { opacity: 0; transform: translateY(-100px) scaleY(0.5); } to { opacity: 1; transform: translateY(0) scaleY(1); } }`
+},
+{
+  id: 'E49', name: 'Swing In', description: 'Element swings in from the top like a pendulum',
+  cssClass: 'animotion-swing-in', keyframeName: 'animotion-swingIn',
+  category: 'entrance', subcategory: 'special', tags: ['swing', 'pendulum', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-swing-in { animation: animotion-swingIn 0.8s ease-out both; transform-origin: top center; }`,
+  keyframeCSS: `@keyframes animotion-swingIn { 0% { transform: rotateX(-90deg); opacity: 0; } 40% { transform: rotateX(20deg); } 60% { transform: rotateX(-10deg); } 80% { transform: rotateX(5deg); opacity: 1; } to { transform: rotateX(0); } }`
+},
+{
+  id: 'E50', name: 'Expand In', description: 'Element expands from zero width and height to full size',
+  cssClass: 'animotion-expand-in', keyframeName: 'animotion-expandIn',
+  category: 'entrance', subcategory: 'special', tags: ['expand', 'grow', 'scale', 'entrance'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-expand-in { animation: animotion-expandIn 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-expandIn { from { transform: scale(0, 0); opacity: 0; } to { transform: scale(1, 1); opacity: 1; } }`
+},
+{
+  id: 'E51', name: 'Unfold In', description: 'Element unfolds from a flat horizontal line to full height',
+  cssClass: 'animotion-unfold-in', keyframeName: 'animotion-unfoldIn',
+  category: 'entrance', subcategory: 'special', tags: ['unfold', 'height', 'reveal', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-unfold-in { animation: animotion-unfoldIn 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-unfoldIn { from { transform: scaleY(0); opacity: 0; transform-origin: top; } to { transform: scaleY(1); opacity: 1; transform-origin: top; } }`
+},
+{
+  id: 'E52', name: 'Pop In', description: 'Element pops in with overshoot scale effect',
+  cssClass: 'animotion-pop-in', keyframeName: 'animotion-popIn',
+  category: 'entrance', subcategory: 'special', tags: ['pop', 'scale', 'overshoot', 'entrance'],
+  duration: '0.4s', timingFunction: 'cubic-bezier(0.26, 0.53, 0.74, 1.48)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-pop-in { animation: animotion-popIn 0.4s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }`,
+  keyframeCSS: `@keyframes animotion-popIn { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }`
+},
+{
+  id: 'E53', name: 'Scale Reveal', description: 'Element scales up from center with opacity reveal',
+  cssClass: 'animotion-scale-reveal', keyframeName: 'animotion-scaleReveal',
+  category: 'entrance', subcategory: 'special', tags: ['scale', 'reveal', 'center', 'entrance'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-scale-reveal { animation: animotion-scaleReveal 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-scaleReveal { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }`
+},
+{
+  id: 'E54', name: 'Morph In', description: 'Element morphs from a circle to its original shape',
+  cssClass: 'animotion-morph-in', keyframeName: 'animotion-morphIn',
+  category: 'entrance', subcategory: 'special', tags: ['morph', 'shape', 'clip-path', 'entrance'],
+  duration: '0.7s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-morph-in { animation: animotion-morphIn 0.7s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-morphIn { from { clip-path: circle(0% at 50% 50%); opacity: 0; } to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 1; } }`
+},
+{
+  id: 'E55', name: 'Spiral In', description: 'Element spirals in with rotation and scale',
+  cssClass: 'animotion-spiral-in', keyframeName: 'animotion-spiralIn',
+  category: 'entrance', subcategory: 'special', tags: ['spiral', 'rotate', 'scale', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-spiral-in { animation: animotion-spiralIn 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-spiralIn { from { transform: rotate(720deg) scale(0); opacity: 0; } to { transform: rotate(0) scale(1); opacity: 1; } }`
+},
+{
+  id: 'E56', name: 'Swoop In', description: 'Element swoops in with arc-like motion from bottom-right',
+  cssClass: 'animotion-swoop-in', keyframeName: 'animotion-swoopIn',
+  category: 'entrance', subcategory: 'special', tags: ['swoop', 'arc', 'curve', 'entrance'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-swoop-in { animation: animotion-swoopIn 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-swoopIn { from { transform: translate(100px, 100px) rotate(45deg) scale(0); opacity: 0; } to { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; } }`
+},
+{
+  id: 'E57', name: 'Curtain Up', description: 'Element reveals like a curtain rising from the bottom',
+  cssClass: 'animotion-curtain-up', keyframeName: 'animotion-curtainUp',
+  category: 'entrance', subcategory: 'special', tags: ['curtain', 'reveal', 'up', 'entrance'],
+  duration: '0.7s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-curtain-up { animation: animotion-curtainUp 0.7s ease-in-out both; overflow: hidden; }`,
+  keyframeCSS: `@keyframes animotion-curtainUp { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'E58', name: 'Curtain Down', description: 'Element reveals like a curtain dropping from the top',
+  cssClass: 'animotion-curtain-down', keyframeName: 'animotion-curtainDown',
+  category: 'entrance', subcategory: 'special', tags: ['curtain', 'reveal', 'down', 'entrance'],
+  duration: '0.7s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-curtain-down { animation: animotion-curtainDown 0.7s ease-in-out both; overflow: hidden; }`,
+  keyframeCSS: `@keyframes animotion-curtainDown { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'E59', name: 'Door Open', description: 'Element swings open like a door on its left hinge',
+  cssClass: 'animotion-door-open', keyframeName: 'animotion-doorOpen',
+  category: 'entrance', subcategory: 'special', tags: ['door', '3d', 'perspective', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-door-open { animation: animotion-doorOpen 0.8s ease-out both; transform-origin: left center; perspective: 800px; }`,
+  keyframeCSS: `@keyframes animotion-doorOpen { from { transform: perspective(800px) rotateY(-90deg); opacity: 0; } to { transform: perspective(800px) rotateY(0); opacity: 1; } }`
+},
+{
+  id: 'E60', name: 'Peel In', description: 'Element peels in from the corner like a sticker',
+  cssClass: 'animotion-peel-in', keyframeName: 'animotion-peelIn',
+  category: 'entrance', subcategory: 'special', tags: ['peel', 'sticker', '3d', 'entrance'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-peel-in { animation: animotion-peelIn 0.8s ease-out both; transform-origin: bottom left; }`,
+  keyframeCSS: `@keyframes animotion-peelIn { from { transform: perspective(600px) rotateX(80deg) rotateY(10deg); opacity: 0; } 50% { opacity: 1; } to { transform: perspective(600px) rotateX(0) rotateY(0); } }`
+},
+{
+  id: 'E61', name: 'Type Reveal In', description: 'Element reveals character by character like typing',
+  cssClass: 'animotion-type-reveal-in', keyframeName: 'animotion-typeRevealIn',
+  category: 'entrance', subcategory: 'special', tags: ['type', 'reveal', 'text', 'entrance'],
+  duration: '1.5s', timingFunction: 'steps(20, end)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-type-reveal-in { animation: animotion-typeRevealIn 1.5s steps(20, end) both; overflow: hidden; white-space: nowrap; }`,
+  keyframeCSS: `@keyframes animotion-typeRevealIn { from { width: 0; } to { width: 100%; } }`
+},
+{
+  id: 'E62', name: 'Elastic In', description: 'Element enters with elastic springy overshoot',
+  cssClass: 'animotion-elastic-in', keyframeName: 'animotion-elasticIn',
+  category: 'entrance', subcategory: 'special', tags: ['elastic', 'spring', 'overshoot', 'entrance'],
+  duration: '0.8s', timingFunction: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-elastic-in { animation: animotion-elasticIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }`,
+  keyframeCSS: `@keyframes animotion-elasticIn { 0% { opacity: 0; transform: scale(0.3); } 50% { transform: scale(1.05); } 70% { transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }`
+},
+{
+  id: 'E63', name: 'Spring In', description: 'Element springs into place with bouncy physics',
+  cssClass: 'animotion-spring-in', keyframeName: 'animotion-springIn',
+  category: 'entrance', subcategory: 'special', tags: ['spring', 'physics', 'bounce', 'entrance'],
+  duration: '0.9s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-spring-in { animation: animotion-springIn 0.9s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-springIn { 0% { opacity: 0; transform: translateY(-60px) scale(0.8); } 30% { transform: translateY(10px) scale(1.1); } 50% { transform: translateY(-5px) scale(0.95); } 70% { transform: translateY(3px) scale(1.02); } to { opacity: 1; transform: translateY(0) scale(1); } }`
+},
+{
+  id: 'E64', name: 'Telegraph In', description: 'Element appears with a telegraph-style staccato reveal',
+  cssClass: 'animotion-telegraph-in', keyframeName: 'animotion-telegraphIn',
+  category: 'entrance', subcategory: 'special', tags: ['telegraph', 'staccato', 'step', 'entrance'],
+  duration: '0.6s', timingFunction: 'steps(5, end)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-telegraph-in { animation: animotion-telegraphIn 0.6s steps(5, end) both; }`,
+  keyframeCSS: `@keyframes animotion-telegraphIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'E65', name: 'Vortex In', description: 'Element spirals in from a distant vortex with 3D depth',
+  cssClass: 'animotion-vortex-in', keyframeName: 'animotion-vortexIn',
+  category: 'entrance', subcategory: 'special', tags: ['vortex', 'spiral', '3d', 'depth', 'entrance'],
+  duration: '1s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-vortex-in { animation: animotion-vortexIn 1s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-vortexIn { from { opacity: 0; transform: rotate(1080deg) scale(0) translateZ(-500px); } 50% { opacity: 0.5; } to { opacity: 1; transform: rotate(0) scale(1) translateZ(0); } }`
+},
+// ==================== EXIT (50) ====================
+{
+  id: 'X01', name: 'Fade Out', description: 'Element fades from opaque to transparent',
+  cssClass: 'animotion-fade-out', keyframeName: 'animotion-fadeOut',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'opacity', 'exit', 'basic'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out { animation: animotion-fadeOut 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOut { from { opacity: 1; } to { opacity: 0; } }`
+},
+{
+  id: 'X02', name: 'Fade Out Down', description: 'Element fades out while sliding down',
+  cssClass: 'animotion-fade-out-down', keyframeName: 'animotion-fadeOutDown',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'down', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-down { animation: animotion-fadeOutDown 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutDown { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(30px); } }`
+},
+{
+  id: 'X03', name: 'Fade Out Up', description: 'Element fades out while sliding up',
+  cssClass: 'animotion-fade-out-up', keyframeName: 'animotion-fadeOutUp',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'up', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-up { animation: animotion-fadeOutUp 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutUp { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-30px); } }`
+},
+{
+  id: 'X04', name: 'Fade Out Left', description: 'Element fades out while sliding left',
+  cssClass: 'animotion-fade-out-left', keyframeName: 'animotion-fadeOutLeft',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'left', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-left { animation: animotion-fadeOutLeft 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutLeft { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-30px); } }`
+},
+{
+  id: 'X05', name: 'Fade Out Right', description: 'Element fades out while sliding right',
+  cssClass: 'animotion-fade-out-right', keyframeName: 'animotion-fadeOutRight',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'right', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-right { animation: animotion-fadeOutRight 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutRight { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(30px); } }`
+},
+{
+  id: 'X06', name: 'Fade Out Down Big', description: 'Element fades out with a large downward slide',
+  cssClass: 'animotion-fade-out-down-big', keyframeName: 'animotion-fadeOutDownBig',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'down', 'big', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-down-big { animation: animotion-fadeOutDownBig 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutDownBig { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(200px); } }`
+},
+{
+  id: 'X07', name: 'Fade Out Up Big', description: 'Element fades out with a large upward slide',
+  cssClass: 'animotion-fade-out-up-big', keyframeName: 'animotion-fadeOutUpBig',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'up', 'big', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-up-big { animation: animotion-fadeOutUpBig 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutUpBig { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-200px); } }`
+},
+{
+  id: 'X08', name: 'Fade Out Left Big', description: 'Element fades out with a large leftward slide',
+  cssClass: 'animotion-fade-out-left-big', keyframeName: 'animotion-fadeOutLeftBig',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'left', 'big', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-left-big { animation: animotion-fadeOutLeftBig 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutLeftBig { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-200px); } }`
+},
+{
+  id: 'X09', name: 'Fade Out Right Big', description: 'Element fades out with a large rightward slide',
+  cssClass: 'animotion-fade-out-right-big', keyframeName: 'animotion-fadeOutRightBig',
+  category: 'exit', subcategory: 'fade', tags: ['fade', 'slide', 'right', 'big', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fade-out-right-big { animation: animotion-fadeOutRightBig 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-fadeOutRightBig { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(200px); } }`
+},
+{
+  id: 'X10', name: 'Slide Out Down', description: 'Element slides out downward off-screen',
+  cssClass: 'animotion-slide-out-down', keyframeName: 'animotion-slideOutDown',
+  category: 'exit', subcategory: 'slide', tags: ['slide', 'down', 'exit', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-out-down { animation: animotion-slideOutDown 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-slideOutDown { from { transform: translateY(0); } to { transform: translateY(100%); visibility: hidden; } }`
+},
+{
+  id: 'X11', name: 'Slide Out Up', description: 'Element slides out upward off-screen',
+  cssClass: 'animotion-slide-out-up', keyframeName: 'animotion-slideOutUp',
+  category: 'exit', subcategory: 'slide', tags: ['slide', 'up', 'exit', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-out-up { animation: animotion-slideOutUp 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-slideOutUp { from { transform: translateY(0); } to { transform: translateY(-100%); visibility: hidden; } }`
+},
+{
+  id: 'X12', name: 'Slide Out Left', description: 'Element slides out to the left off-screen',
+  cssClass: 'animotion-slide-out-left', keyframeName: 'animotion-slideOutLeft',
+  category: 'exit', subcategory: 'slide', tags: ['slide', 'left', 'exit', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-out-left { animation: animotion-slideOutLeft 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-slideOutLeft { from { transform: translateX(0); } to { transform: translateX(-100%); visibility: hidden; } }`
+},
+{
+  id: 'X13', name: 'Slide Out Right', description: 'Element slides out to the right off-screen',
+  cssClass: 'animotion-slide-out-right', keyframeName: 'animotion-slideOutRight',
+  category: 'exit', subcategory: 'slide', tags: ['slide', 'right', 'exit', 'translate'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-slide-out-right { animation: animotion-slideOutRight 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-slideOutRight { from { transform: translateX(0); } to { transform: translateX(100%); visibility: hidden; } }`
+},
+{
+  id: 'X14', name: 'Zoom Out', description: 'Element shrinks and fades away',
+  cssClass: 'animotion-zoom-out', keyframeName: 'animotion-zoomOut',
+  category: 'exit', subcategory: 'zoom', tags: ['zoom', 'scale', 'exit', 'shrink'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-out { animation: animotion-zoomOut 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-zoomOut { from { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.3); } to { opacity: 0; transform: scale(0); } }`
+},
+{
+  id: 'X15', name: 'Zoom Out Down', description: 'Element zooms out while falling down',
+  cssClass: 'animotion-zoom-out-down', keyframeName: 'animotion-zoomOutDown',
+  category: 'exit', subcategory: 'zoom', tags: ['zoom', 'scale', 'down', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-out-down { animation: animotion-zoomOutDown 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-zoomOutDown { 40% { opacity: 1; transform: scale(0.475) translateY(-60px); } to { opacity: 0; transform: scale(0.1) translateY(1000px); } }`
+},
+{
+  id: 'X16', name: 'Zoom Out Up', description: 'Element zooms out while flying up',
+  cssClass: 'animotion-zoom-out-up', keyframeName: 'animotion-zoomOutUp',
+  category: 'exit', subcategory: 'zoom', tags: ['zoom', 'scale', 'up', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-out-up { animation: animotion-zoomOutUp 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-zoomOutUp { 40% { opacity: 1; transform: scale(0.475) translateY(60px); } to { opacity: 0; transform: scale(0.1) translateY(-1000px); } }`
+},
+{
+  id: 'X17', name: 'Zoom Out Left', description: 'Element zooms out while flying left',
+  cssClass: 'animotion-zoom-out-left', keyframeName: 'animotion-zoomOutLeft',
+  category: 'exit', subcategory: 'zoom', tags: ['zoom', 'scale', 'left', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-out-left { animation: animotion-zoomOutLeft 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-zoomOutLeft { 40% { opacity: 1; transform: scale(0.475) translateX(10px); } to { opacity: 0; transform: scale(0.1) translateX(-1000px); } }`
+},
+{
+  id: 'X18', name: 'Zoom Out Right', description: 'Element zooms out while flying right',
+  cssClass: 'animotion-zoom-out-right', keyframeName: 'animotion-zoomOutRight',
+  category: 'exit', subcategory: 'zoom', tags: ['zoom', 'scale', 'right', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-zoom-out-right { animation: animotion-zoomOutRight 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-zoomOutRight { 40% { opacity: 1; transform: scale(0.475) translateX(-10px); } to { opacity: 0; transform: scale(0.1) translateX(1000px); } }`
+},
+{
+  id: 'X19', name: 'Flip Out X', description: 'Element flips out along the horizontal axis',
+  cssClass: 'animotion-flip-out-x', keyframeName: 'animotion-flipOutX',
+  category: 'exit', subcategory: 'flip', tags: ['flip', '3d', 'rotate', 'exit', 'x-axis'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-flip-out-x { animation: animotion-flipOutX 0.5s ease-in both; backface-visibility: visible; }`,
+  keyframeCSS: `@keyframes animotion-flipOutX { from { transform: perspective(400px) rotateX(0); } 30% { transform: perspective(400px) rotateX(-20deg); opacity: 1; } to { transform: perspective(400px) rotateX(90deg); opacity: 0; } }`
+},
+{
+  id: 'X20', name: 'Flip Out Y', description: 'Element flips out along the vertical axis',
+  cssClass: 'animotion-flip-out-y', keyframeName: 'animotion-flipOutY',
+  category: 'exit', subcategory: 'flip', tags: ['flip', '3d', 'rotate', 'exit', 'y-axis'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-flip-out-y { animation: animotion-flipOutY 0.5s ease-in both; backface-visibility: visible; }`,
+  keyframeCSS: `@keyframes animotion-flipOutY { from { transform: perspective(400px) rotateY(0); } 30% { transform: perspective(400px) rotateY(-15deg); opacity: 1; } to { transform: perspective(400px) rotateY(90deg); opacity: 0; } }`
+},
+{
+  id: 'X21', name: 'Rotate Out', description: 'Element rotates and fades away',
+  cssClass: 'animotion-rotate-out', keyframeName: 'animotion-rotateOut',
+  category: 'exit', subcategory: 'rotate', tags: ['rotate', 'spin', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-out { animation: animotion-rotateOut 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-rotateOut { from { transform: rotate(0); opacity: 1; } to { transform: rotate(200deg); opacity: 0; } }`
+},
+{
+  id: 'X22', name: 'Rotate Out Down Left', description: 'Element rotates out from the bottom-left corner',
+  cssClass: 'animotion-rotate-out-down-left', keyframeName: 'animotion-rotateOutDownLeft',
+  category: 'exit', subcategory: 'rotate', tags: ['rotate', 'down', 'left', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-out-down-left { animation: animotion-rotateOutDownLeft 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-rotateOutDownLeft { from { transform-origin: left bottom; transform: rotate(0); opacity: 1; } to { transform-origin: left bottom; transform: rotate(45deg); opacity: 0; } }`
+},
+{
+  id: 'X23', name: 'Rotate Out Down Right', description: 'Element rotates out from the bottom-right corner',
+  cssClass: 'animotion-rotate-out-down-right', keyframeName: 'animotion-rotateOutDownRight',
+  category: 'exit', subcategory: 'rotate', tags: ['rotate', 'down', 'right', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-out-down-right { animation: animotion-rotateOutDownRight 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-rotateOutDownRight { from { transform-origin: right bottom; transform: rotate(0); opacity: 1; } to { transform-origin: right bottom; transform: rotate(-45deg); opacity: 0; } }`
+},
+{
+  id: 'X24', name: 'Rotate Out Up Left', description: 'Element rotates out from the top-left corner',
+  cssClass: 'animotion-rotate-out-up-left', keyframeName: 'animotion-rotateOutUpLeft',
+  category: 'exit', subcategory: 'rotate', tags: ['rotate', 'up', 'left', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-out-up-left { animation: animotion-rotateOutUpLeft 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-rotateOutUpLeft { from { transform-origin: left bottom; transform: rotate(0); opacity: 1; } to { transform-origin: left bottom; transform: rotate(-45deg); opacity: 0; } }`
+},
+{
+  id: 'X25', name: 'Rotate Out Up Right', description: 'Element rotates out from the top-right corner',
+  cssClass: 'animotion-rotate-out-up-right', keyframeName: 'animotion-rotateOutUpRight',
+  category: 'exit', subcategory: 'rotate', tags: ['rotate', 'up', 'right', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rotate-out-up-right { animation: animotion-rotateOutUpRight 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-rotateOutUpRight { from { transform-origin: right bottom; transform: rotate(0); opacity: 1; } to { transform-origin: right bottom; transform: rotate(45deg); opacity: 0; } }`
+},
+{
+  id: 'X26', name: 'Bounce Out', description: 'Element bounces out before disappearing',
+  cssClass: 'animotion-bounce-out', keyframeName: 'animotion-bounceOut',
+  category: 'exit', subcategory: 'bounce', tags: ['bounce', 'elastic', 'exit', 'scale'],
+  duration: '0.75s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-out { animation: animotion-bounceOut 0.75s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-bounceOut { 20% { transform: scale(0.9); } 50%, 55% { opacity: 1; transform: scale(1.1); } to { opacity: 0; transform: scale(0.3); } }`
+},
+{
+  id: 'X27', name: 'Bounce Out Down', description: 'Element bounces then exits downward',
+  cssClass: 'animotion-bounce-out-down', keyframeName: 'animotion-bounceOutDown',
+  category: 'exit', subcategory: 'bounce', tags: ['bounce', 'down', 'exit', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-out-down { animation: animotion-bounceOutDown 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-bounceOutDown { 20% { transform: translateY(-10px); } 40%, 45% { opacity: 1; transform: translateY(20px); } to { opacity: 0; transform: translateY(250px); } }`
+},
+{
+  id: 'X28', name: 'Bounce Out Up', description: 'Element bounces then exits upward',
+  cssClass: 'animotion-bounce-out-up', keyframeName: 'animotion-bounceOutUp',
+  category: 'exit', subcategory: 'bounce', tags: ['bounce', 'up', 'exit', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-out-up { animation: animotion-bounceOutUp 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-bounceOutUp { 20% { transform: translateY(10px); } 40%, 45% { opacity: 1; transform: translateY(-20px); } to { opacity: 0; transform: translateY(-250px); } }`
+},
+{
+  id: 'X29', name: 'Bounce Out Left', description: 'Element bounces then exits to the left',
+  cssClass: 'animotion-bounce-out-left', keyframeName: 'animotion-bounceOutLeft',
+  category: 'exit', subcategory: 'bounce', tags: ['bounce', 'left', 'exit', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-out-left { animation: animotion-bounceOutLeft 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-bounceOutLeft { 20% { opacity: 1; transform: translateX(20px); } to { opacity: 0; transform: translateX(-250px); } }`
+},
+{
+  id: 'X30', name: 'Bounce Out Right', description: 'Element bounces then exits to the right',
+  cssClass: 'animotion-bounce-out-right', keyframeName: 'animotion-bounceOutRight',
+  category: 'exit', subcategory: 'bounce', tags: ['bounce', 'right', 'exit', 'elastic'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce-out-right { animation: animotion-bounceOutRight 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-bounceOutRight { 20% { opacity: 1; transform: translateX(-20px); } to { opacity: 0; transform: translateX(250px); } }`
+},
+{
+  id: 'X31', name: 'Light Speed Out Left', description: 'Element exits to the left at high speed with skew',
+  cssClass: 'animotion-light-speed-out-left', keyframeName: 'animotion-lightSpeedOutLeft',
+  category: 'exit', subcategory: 'lightspeed', tags: ['speed', 'skew', 'left', 'exit', 'fast'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-light-speed-out-left { animation: animotion-lightSpeedOutLeft 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-lightSpeedOutLeft { from { opacity: 1; } to { transform: translateX(-100%) skewX(-30deg); opacity: 0; } }`
+},
+{
+  id: 'X32', name: 'Light Speed Out Right', description: 'Element exits to the right at high speed with skew',
+  cssClass: 'animotion-light-speed-out-right', keyframeName: 'animotion-lightSpeedOutRight',
+  category: 'exit', subcategory: 'lightspeed', tags: ['speed', 'skew', 'right', 'exit', 'fast'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-light-speed-out-right { animation: animotion-lightSpeedOutRight 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-lightSpeedOutRight { from { opacity: 1; } to { transform: translateX(100%) skewX(30deg); opacity: 0; } }`
+},
+{
+  id: 'X33', name: 'Roll Out', description: 'Element rolls out to the right with rotation',
+  cssClass: 'animotion-roll-out', keyframeName: 'animotion-rollOut',
+  category: 'exit', subcategory: 'special', tags: ['roll', 'rotate', 'exit', 'creative'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-roll-out { animation: animotion-rollOut 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-rollOut { from { opacity: 1; transform: translateX(0) rotate(0); } to { opacity: 0; transform: translateX(100%) rotate(120deg); } }`
+},
+{
+  id: 'X34', name: 'Blur Out', description: 'Element blurs out and fades away',
+  cssClass: 'animotion-blur-out', keyframeName: 'animotion-blurOut',
+  category: 'exit', subcategory: 'special', tags: ['blur', 'fade', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-blur-out { animation: animotion-blurOut 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-blurOut { from { opacity: 1; filter: blur(0); } to { opacity: 0; filter: blur(20px); } }`
+},
+{
+  id: 'X35', name: 'Circle Collapse', description: 'Element collapses into a shrinking circle',
+  cssClass: 'animotion-circle-collapse', keyframeName: 'animotion-circleCollapse',
+  category: 'exit', subcategory: 'special', tags: ['circle', 'collapse', 'clip-path', 'exit'],
+  duration: '0.7s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-circle-collapse { animation: animotion-circleCollapse 0.7s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-circleCollapse { from { clip-path: circle(75% at 50% 50%); } to { clip-path: circle(0% at 50% 50%); } }`
+},
+{
+  id: 'X36', name: 'Shrink Out', description: 'Element shrinks to nothing from center',
+  cssClass: 'animotion-shrink-out', keyframeName: 'animotion-shrinkOut',
+  category: 'exit', subcategory: 'special', tags: ['shrink', 'scale', 'exit'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-shrink-out { animation: animotion-shrinkOut 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-shrinkOut { from { transform: scale(1); opacity: 1; } to { transform: scale(0); opacity: 0; } }`
+},
+{
+  id: 'X37', name: 'Pop Out', description: 'Element pops with slight overshoot before vanishing',
+  cssClass: 'animotion-pop-out', keyframeName: 'animotion-popOut',
+  category: 'exit', subcategory: 'special', tags: ['pop', 'scale', 'exit'],
+  duration: '0.4s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-pop-out { animation: animotion-popOut 0.4s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-popOut { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } to { transform: scale(0); opacity: 0; } }`
+},
+{
+  id: 'X38', name: 'Fold Out', description: 'Element folds shut vertically from top',
+  cssClass: 'animotion-fold-out', keyframeName: 'animotion-foldOut',
+  category: 'exit', subcategory: 'special', tags: ['fold', 'collapse', 'height', 'exit'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-fold-out { animation: animotion-foldOut 0.5s ease-in both; transform-origin: top; }`,
+  keyframeCSS: `@keyframes animotion-foldOut { from { transform: scaleY(1); opacity: 1; } to { transform: scaleY(0); opacity: 0; } }`
+},
+{
+  id: 'X39', name: 'Spiral Out', description: 'Element spirals out with rotation and shrinking',
+  cssClass: 'animotion-spiral-out', keyframeName: 'animotion-spiralOut',
+  category: 'exit', subcategory: 'special', tags: ['spiral', 'rotate', 'scale', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-spiral-out { animation: animotion-spiralOut 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-spiralOut { from { transform: rotate(0) scale(1); opacity: 1; } to { transform: rotate(720deg) scale(0); opacity: 0; } }`
+},
+{
+  id: 'X40', name: 'Swoop Out', description: 'Element swoops out in an arc to the bottom-right',
+  cssClass: 'animotion-swoop-out', keyframeName: 'animotion-swoopOut',
+  category: 'exit', subcategory: 'special', tags: ['swoop', 'arc', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-swoop-out { animation: animotion-swoopOut 0.6s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-swoopOut { from { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; } to { transform: translate(100px, 100px) rotate(45deg) scale(0); opacity: 0; } }`
+},
+{
+  id: 'X41', name: 'Door Close', description: 'Element swings shut like a door closing',
+  cssClass: 'animotion-door-close', keyframeName: 'animotion-doorClose',
+  category: 'exit', subcategory: 'special', tags: ['door', '3d', 'perspective', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-door-close { animation: animotion-doorClose 0.8s ease-in both; transform-origin: left center; }`,
+  keyframeCSS: `@keyframes animotion-doorClose { from { transform: perspective(800px) rotateY(0); opacity: 1; } to { transform: perspective(800px) rotateY(90deg); opacity: 0; } }`
+},
+{
+  id: 'X42', name: 'Peel Out', description: 'Element peels away like a sticker being removed',
+  cssClass: 'animotion-peel-out', keyframeName: 'animotion-peelOut',
+  category: 'exit', subcategory: 'special', tags: ['peel', 'sticker', '3d', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-peel-out { animation: animotion-peelOut 0.8s ease-in both; transform-origin: top right; }`,
+  keyframeCSS: `@keyframes animotion-peelOut { from { transform: perspective(600px) rotateX(0) rotateY(0); opacity: 1; } to { transform: perspective(600px) rotateX(-80deg) rotateY(-10deg); opacity: 0; } }`
+},
+{
+  id: 'X43', name: 'Elastic Out', description: 'Element squishes elastically before exiting',
+  cssClass: 'animotion-elastic-out', keyframeName: 'animotion-elasticOut',
+  category: 'exit', subcategory: 'special', tags: ['elastic', 'spring', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-elastic-out { animation: animotion-elasticOut 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-elasticOut { 0% { transform: scale(1); opacity: 1; } 30% { transform: scale(1.05); } 50% { transform: scale(0.9); } to { transform: scale(0.3); opacity: 0; } }`
+},
+{
+  id: 'X44', name: 'Vortex Out', description: 'Element spirals away into a distant vortex',
+  cssClass: 'animotion-vortex-out', keyframeName: 'animotion-vortexOut',
+  category: 'exit', subcategory: 'special', tags: ['vortex', 'spiral', '3d', 'exit'],
+  duration: '1s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-vortex-out { animation: animotion-vortexOut 1s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-vortexOut { from { transform: rotate(0) scale(1); opacity: 1; } to { transform: rotate(1080deg) scale(0) translateZ(-500px); opacity: 0; } }`
+},
+{
+  id: 'X45', name: 'Clip Wipe Out Left', description: 'Element disappears with a right-to-left wipe',
+  cssClass: 'animotion-clip-wipe-out-left', keyframeName: 'animotion-clipWipeOutLeft',
+  category: 'exit', subcategory: 'special', tags: ['clip', 'wipe', 'left', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-clip-wipe-out-left { animation: animotion-clipWipeOutLeft 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-clipWipeOutLeft { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 100% 0 0); } }`
+},
+{
+  id: 'X46', name: 'Clip Wipe Out Top', description: 'Element disappears with a bottom-to-top wipe',
+  cssClass: 'animotion-clip-wipe-out-top', keyframeName: 'animotion-clipWipeOutTop',
+  category: 'exit', subcategory: 'special', tags: ['clip', 'wipe', 'top', 'exit'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-clip-wipe-out-top { animation: animotion-clipWipeOutTop 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-clipWipeOutTop { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 100% 0); } }`
+},
+{
+  id: 'X47', name: 'Curtain Close', description: 'Element hides like a closing curtain from both sides',
+  cssClass: 'animotion-curtain-close', keyframeName: 'animotion-curtainClose',
+  category: 'exit', subcategory: 'special', tags: ['curtain', 'close', 'exit'],
+  duration: '0.7s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-curtain-close { animation: animotion-curtainClose 0.7s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-curtainClose { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 50% 0 50%); } }`
+},
+{
+  id: 'X48', name: 'Dissolve Out', description: 'Element dissolves away with pixelated opacity',
+  cssClass: 'animotion-dissolve-out', keyframeName: 'animotion-dissolveOut',
+  category: 'exit', subcategory: 'special', tags: ['dissolve', 'fade', 'exit'],
+  duration: '0.8s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-dissolve-out { animation: animotion-dissolveOut 0.8s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-dissolveOut { 0% { opacity: 1; filter: blur(0); } 50% { opacity: 0.5; filter: blur(4px); } to { opacity: 0; filter: blur(12px); } }`
+},
+{
+  id: 'X49', name: 'Collapse Out', description: 'Element collapses inward to its center',
+  cssClass: 'animotion-collapse-out', keyframeName: 'animotion-collapseOut',
+  category: 'exit', subcategory: 'special', tags: ['collapse', 'scale', 'exit'],
+  duration: '0.5s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-collapse-out { animation: animotion-collapseOut 0.5s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-collapseOut { from { transform: scale(1, 1); opacity: 1; } 50% { transform: scale(1, 0.5); } to { transform: scale(0, 0); opacity: 0; } }`
+},
+{
+  id: 'X50', name: 'Dimension Out', description: 'Element recedes into 3D space and disappears',
+  cssClass: 'animotion-dimension-out', keyframeName: 'animotion-dimensionOut',
+  category: 'exit', subcategory: 'special', tags: ['dimension', '3d', 'depth', 'exit'],
+  duration: '0.7s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-dimension-out { animation: animotion-dimensionOut 0.7s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-dimensionOut { from { transform: perspective(800px) translateZ(0) rotateY(0); opacity: 1; } to { transform: perspective(800px) translateZ(-300px) rotateY(45deg); opacity: 0; } }`
+},
+// ==================== ATTENTION (40) ====================
+{
+  id: 'A01', name: 'Bounce', description: 'Element bounces up and down to grab attention',
+  cssClass: 'animotion-bounce', keyframeName: 'animotion-bounce',
+  category: 'attention', subcategory: 'movement', tags: ['bounce', 'attention', 'loop', 'fun'],
+  duration: '1s', timingFunction: 'ease', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-bounce { animation: animotion-bounce 1s ease infinite; }`,
+  keyframeCSS: `@keyframes animotion-bounce { 0%, 20%, 53%, 80%, to { transform: translateY(0); } 40%, 43% { transform: translateY(-30px); } 70% { transform: translateY(-15px); } 90% { transform: translateY(-4px); } }`
+},
+{
+  id: 'A02', name: 'Flash', description: 'Element flashes by toggling opacity rapidly',
+  cssClass: 'animotion-flash', keyframeName: 'animotion-flash',
+  category: 'attention', subcategory: 'opacity', tags: ['flash', 'blink', 'attention', 'opacity'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-flash { animation: animotion-flash 1s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-flash { 0%, 50%, to { opacity: 1; } 25%, 75% { opacity: 0; } }`
+},
+{
+  id: 'A03', name: 'Pulse', description: 'Element gently scales up and down rhythmically',
+  cssClass: 'animotion-pulse', keyframeName: 'animotion-pulse',
+  category: 'attention', subcategory: 'scale', tags: ['pulse', 'scale', 'attention', 'heartbeat'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-pulse { animation: animotion-pulse 1s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } to { transform: scale(1); } }`
+},
+{
+  id: 'A04', name: 'Rubber Band', description: 'Element stretches and snaps like a rubber band',
+  cssClass: 'animotion-rubber-band', keyframeName: 'animotion-rubberBand',
+  category: 'attention', subcategory: 'distort', tags: ['rubber', 'stretch', 'elastic', 'attention'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rubber-band { animation: animotion-rubberBand 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-rubberBand { 0% { transform: scaleX(1); } 30% { transform: scaleX(1.25) scaleY(0.75); } 40% { transform: scaleX(0.75) scaleY(1.25); } 50% { transform: scaleX(1.15) scaleY(0.85); } 65% { transform: scaleX(0.95) scaleY(1.05); } 75% { transform: scaleX(1.05) scaleY(0.95); } to { transform: scaleX(1); } }`
+},
+{
+  id: 'A05', name: 'Shake X', description: 'Element shakes horizontally to indicate an error or alert',
+  cssClass: 'animotion-shake-x', keyframeName: 'animotion-shakeX',
+  category: 'attention', subcategory: 'shake', tags: ['shake', 'horizontal', 'error', 'attention'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-shake-x { animation: animotion-shakeX 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-shakeX { 0%, to { transform: translateX(0); } 10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); } 20%, 40%, 60%, 80% { transform: translateX(10px); } }`
+},
+{
+  id: 'A06', name: 'Shake Y', description: 'Element shakes vertically to draw attention',
+  cssClass: 'animotion-shake-y', keyframeName: 'animotion-shakeY',
+  category: 'attention', subcategory: 'shake', tags: ['shake', 'vertical', 'attention'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-shake-y { animation: animotion-shakeY 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-shakeY { 0%, to { transform: translateY(0); } 10%, 30%, 50%, 70%, 90% { transform: translateY(-10px); } 20%, 40%, 60%, 80% { transform: translateY(10px); } }`
+},
+{
+  id: 'A07', name: 'Head Shake', description: 'Element shakes side to side like shaking your head no',
+  cssClass: 'animotion-head-shake', keyframeName: 'animotion-headShake',
+  category: 'attention', subcategory: 'shake', tags: ['headshake', 'no', 'reject', 'attention'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-head-shake { animation: animotion-headShake 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-headShake { 0% { transform: translateX(0); } 6.5% { transform: translateX(-6px) rotateY(-9deg); } 18.5% { transform: translateX(5px) rotateY(7deg); } 31.5% { transform: translateX(-3px) rotateY(-5deg); } 43.5% { transform: translateX(2px) rotateY(3deg); } 50% { transform: translateX(0); } }`
+},
+{
+  id: 'A08', name: 'Swing', description: 'Element swings like a pendulum from its top',
+  cssClass: 'animotion-swing', keyframeName: 'animotion-swing',
+  category: 'attention', subcategory: 'rotate', tags: ['swing', 'pendulum', 'attention', 'rotate'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-swing { animation: animotion-swing 1s ease-in-out both; transform-origin: top center; }`,
+  keyframeCSS: `@keyframes animotion-swing { 20% { transform: rotate(15deg); } 40% { transform: rotate(-10deg); } 60% { transform: rotate(5deg); } 80% { transform: rotate(-5deg); } to { transform: rotate(0); } }`
+},
+{
+  id: 'A09', name: 'Tada', description: 'Element does an energetic tada with scale and rotation',
+  cssClass: 'animotion-tada', keyframeName: 'animotion-tada',
+  category: 'attention', subcategory: 'complex', tags: ['tada', 'celebration', 'attention', 'scale', 'rotate'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-tada { animation: animotion-tada 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-tada { 0% { transform: scale(1) rotate(0); } 10%, 20% { transform: scale(0.9) rotate(-3deg); } 30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); } 40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); } to { transform: scale(1) rotate(0); } }`
+},
+{
+  id: 'A10', name: 'Wobble', description: 'Element wobbles side to side with tilt effect',
+  cssClass: 'animotion-wobble', keyframeName: 'animotion-wobble',
+  category: 'attention', subcategory: 'distort', tags: ['wobble', 'tilt', 'attention'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-wobble { animation: animotion-wobble 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-wobble { 0% { transform: translateX(0) rotate(0); } 15% { transform: translateX(-25%) rotate(-5deg); } 30% { transform: translateX(20%) rotate(3deg); } 45% { transform: translateX(-15%) rotate(-3deg); } 60% { transform: translateX(10%) rotate(2deg); } 75% { transform: translateX(-5%) rotate(-1deg); } to { transform: translateX(0) rotate(0); } }`
+},
+{
+  id: 'A11', name: 'Jello', description: 'Element wobbles like jello with skew distortion',
+  cssClass: 'animotion-jello', keyframeName: 'animotion-jello',
+  category: 'attention', subcategory: 'distort', tags: ['jello', 'skew', 'wobble', 'attention'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-jello { animation: animotion-jello 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-jello { 0%, 11.1%, to { transform: none; } 22.2% { transform: skewX(-12.5deg) skewY(-12.5deg); } 33.3% { transform: skewX(6.25deg) skewY(6.25deg); } 44.4% { transform: skewX(-3.125deg) skewY(-3.125deg); } 55.5% { transform: skewX(1.5625deg) skewY(1.5625deg); } 66.6% { transform: skewX(-0.78125deg) skewY(-0.78125deg); } 77.7% { transform: skewX(0.39deg) skewY(0.39deg); } 88.8% { transform: skewX(-0.195deg) skewY(-0.195deg); } }`
+},
+{
+  id: 'A12', name: 'Heartbeat', description: 'Element pulses with a heartbeat rhythm - two quick beats',
+  cssClass: 'animotion-heartbeat', keyframeName: 'animotion-heartbeat',
+  category: 'attention', subcategory: 'scale', tags: ['heartbeat', 'pulse', 'health', 'attention'],
+  duration: '1.3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-heartbeat { animation: animotion-heartbeat 1.3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-heartbeat { 0% { transform: scale(1); } 14% { transform: scale(1.3); } 28% { transform: scale(1); } 42% { transform: scale(1.3); } 70% { transform: scale(1); } }`
+},
+{
+  id: 'A13', name: 'Spin', description: 'Element spins 360 degrees continuously',
+  cssClass: 'animotion-spin', keyframeName: 'animotion-spin',
+  category: 'attention', subcategory: 'rotate', tags: ['spin', 'rotate', '360', 'attention', 'loop'],
+  duration: '1s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'box',
+  css: `.animotion-spin { animation: animotion-spin 1s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`
+},
+{
+  id: 'A14', name: 'Wiggle', description: 'Element wiggles rapidly with small rotations',
+  cssClass: 'animotion-wiggle', keyframeName: 'animotion-wiggle',
+  category: 'attention', subcategory: 'rotate', tags: ['wiggle', 'rotate', 'quick', 'attention'],
+  duration: '0.5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-wiggle { animation: animotion-wiggle 0.5s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-wiggle { 0%, to { transform: rotate(0); } 25% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } 75% { transform: rotate(-3deg); } }`
+},
+{
+  id: 'A15', name: 'Float', description: 'Element gently floats up and down like hovering',
+  cssClass: 'animotion-float', keyframeName: 'animotion-float',
+  category: 'attention', subcategory: 'movement', tags: ['float', 'hover', 'gentle', 'attention', 'loop'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-float { animation: animotion-float 3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-float { 0%, to { transform: translateY(0); } 50% { transform: translateY(-10px); } }`
+},
+{
+  id: 'A16', name: 'Breathe', description: 'Element gently scales in and out like breathing',
+  cssClass: 'animotion-breathe', keyframeName: 'animotion-breathe',
+  category: 'attention', subcategory: 'scale', tags: ['breathe', 'scale', 'gentle', 'attention', 'loop'],
+  duration: '4s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-breathe { animation: animotion-breathe 4s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-breathe { 0%, to { transform: scale(1); } 50% { transform: scale(1.06); } }`
+},
+{
+  id: 'A17', name: 'Nod', description: 'Element nods up and down like agreeing',
+  cssClass: 'animotion-nod', keyframeName: 'animotion-nod',
+  category: 'attention', subcategory: 'rotate', tags: ['nod', 'yes', 'agree', 'attention'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '2', fillMode: 'both', demoType: 'box',
+  css: `.animotion-nod { animation: animotion-nod 0.6s ease-in-out 2 both; transform-origin: bottom center; }`,
+  keyframeCSS: `@keyframes animotion-nod { 0%, to { transform: rotateX(0); } 50% { transform: rotateX(15deg); } }`
+},
+{
+  id: 'A18', name: 'Tilt', description: 'Element tilts to one side and returns',
+  cssClass: 'animotion-tilt', keyframeName: 'animotion-tilt',
+  category: 'attention', subcategory: 'rotate', tags: ['tilt', 'lean', 'rotate', 'attention'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-tilt { animation: animotion-tilt 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-tilt { 0%, to { transform: rotate(0); } 25% { transform: rotate(-10deg); } 75% { transform: rotate(10deg); } }`
+},
+{
+  id: 'A19', name: 'Blink', description: 'Element blinks by rapidly toggling visibility',
+  cssClass: 'animotion-blink', keyframeName: 'animotion-blink',
+  category: 'attention', subcategory: 'opacity', tags: ['blink', 'flash', 'attention', 'cursor'],
+  duration: '1s', timingFunction: 'steps(2, start)', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-blink { animation: animotion-blink 1s steps(2, start) infinite; }`,
+  keyframeCSS: `@keyframes animotion-blink { to { visibility: hidden; } }`
+},
+{
+  id: 'A20', name: 'Snap', description: 'Element snaps to an offset and back quickly',
+  cssClass: 'animotion-snap', keyframeName: 'animotion-snap',
+  category: 'attention', subcategory: 'movement', tags: ['snap', 'quick', 'attention'],
+  duration: '0.3s', timingFunction: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-snap { animation: animotion-snap 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }`,
+  keyframeCSS: `@keyframes animotion-snap { 0%, to { transform: translateX(0) rotate(0); } 50% { transform: translateX(5px) rotate(2deg); } }`
+},
+{
+  id: 'A21', name: 'Vibrate', description: 'Element vibrates rapidly in place for urgency',
+  cssClass: 'animotion-vibrate', keyframeName: 'animotion-vibrate',
+  category: 'attention', subcategory: 'shake', tags: ['vibrate', 'shake', 'urgent', 'attention'],
+  duration: '0.3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-vibrate { animation: animotion-vibrate 0.3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-vibrate { 0% { transform: translate(0); } 20% { transform: translate(-2px, 2px); } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); } 80% { transform: translate(2px, -2px); } to { transform: translate(0); } }`
+},
+{
+  id: 'A22', name: 'Twitch', description: 'Element twitches with sudden random-feeling movement',
+  cssClass: 'animotion-twitch', keyframeName: 'animotion-twitch',
+  category: 'attention', subcategory: 'shake', tags: ['twitch', 'glitch', 'sudden', 'attention'],
+  duration: '0.4s', timingFunction: 'ease-in-out', iterationCount: '3', fillMode: 'both', demoType: 'box',
+  css: `.animotion-twitch { animation: animotion-twitch 0.4s ease-in-out 3 both; }`,
+  keyframeCSS: `@keyframes animotion-twitch { 0%, to { transform: translate(0, 0) rotate(0); } 25% { transform: translate(-3px, 1px) rotate(-1deg); } 50% { transform: translate(2px, -2px) rotate(1deg); } 75% { transform: translate(1px, 2px) rotate(0deg); } }`
+},
+{
+  id: 'A23', name: 'Sway', description: 'Element sways gently side to side',
+  cssClass: 'animotion-sway', keyframeName: 'animotion-sway',
+  category: 'attention', subcategory: 'movement', tags: ['sway', 'gentle', 'side', 'attention'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-sway { animation: animotion-sway 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-sway { 0%, to { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }`
+},
+{
+  id: 'A24', name: 'Rock', description: 'Element rocks back and forth with rotation',
+  cssClass: 'animotion-rock', keyframeName: 'animotion-rock',
+  category: 'attention', subcategory: 'rotate', tags: ['rock', 'rotate', 'gentle', 'attention'],
+  duration: '1.5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-rock { animation: animotion-rock 1.5s ease-in-out infinite; transform-origin: center bottom; }`,
+  keyframeCSS: `@keyframes animotion-rock { 0%, to { transform: rotate(0); } 25% { transform: rotate(-8deg); } 75% { transform: rotate(8deg); } }`
+},
+{
+  id: 'A25', name: 'Pendulum', description: 'Element swings like a pendulum with damping',
+  cssClass: 'animotion-pendulum', keyframeName: 'animotion-pendulum',
+  category: 'attention', subcategory: 'rotate', tags: ['pendulum', 'swing', 'gravity', 'attention'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-pendulum { animation: animotion-pendulum 2s ease-in-out infinite; transform-origin: top center; }`,
+  keyframeCSS: `@keyframes animotion-pendulum { 0%, to { transform: rotate(0); } 25% { transform: rotate(15deg); } 75% { transform: rotate(-15deg); } }`
+},
+{
+  id: 'A26', name: 'Tremble', description: 'Element trembles with tiny rapid movements',
+  cssClass: 'animotion-tremble', keyframeName: 'animotion-tremble',
+  category: 'attention', subcategory: 'shake', tags: ['tremble', 'tiny', 'shake', 'attention'],
+  duration: '0.2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-tremble { animation: animotion-tremble 0.2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-tremble { 0%, to { transform: translate(0, 0); } 25% { transform: translate(1px, -1px); } 50% { transform: translate(-1px, 1px); } 75% { transform: translate(1px, 1px); } }`
+},
+{
+  id: 'A27', name: 'Quiver', description: 'Element quivers with subtle rotation oscillation',
+  cssClass: 'animotion-quiver', keyframeName: 'animotion-quiver',
+  category: 'attention', subcategory: 'rotate', tags: ['quiver', 'subtle', 'rotate', 'attention'],
+  duration: '0.3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-quiver { animation: animotion-quiver 0.3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-quiver { 0%, to { transform: rotate(0); } 25% { transform: rotate(1deg); } 50% { transform: rotate(-1deg); } 75% { transform: rotate(0.5deg); } }`
+},
+{
+  id: 'A28', name: 'Pulsate Ring', description: 'Element emits expanding ring pulses via box-shadow',
+  cssClass: 'animotion-pulsate-ring', keyframeName: 'animotion-pulsateRing',
+  category: 'attention', subcategory: 'shadow', tags: ['pulsate', 'ring', 'shadow', 'attention', 'glow'],
+  duration: '1.5s', timingFunction: 'ease-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-pulsate-ring { animation: animotion-pulsateRing 1.5s ease-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-pulsateRing { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); } to { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); } }`
+},
+{
+  id: 'A29', name: 'Ripple Attention', description: 'Element emits multiple ripple rings outward',
+  cssClass: 'animotion-ripple-attention', keyframeName: 'animotion-rippleAttention',
+  category: 'attention', subcategory: 'shadow', tags: ['ripple', 'ring', 'attention', 'wave'],
+  duration: '1s', timingFunction: 'ease-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-ripple-attention { animation: animotion-rippleAttention 1s ease-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-rippleAttention { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4), 0 0 0 0 rgba(59, 130, 246, 0.2); } to { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0), 0 0 0 30px rgba(59, 130, 246, 0); } }`
+},
+{
+  id: 'A30', name: 'Glow Pulse', description: 'Element glows brighter and dimmer with box-shadow',
+  cssClass: 'animotion-glow-pulse', keyframeName: 'animotion-glowPulse',
+  category: 'attention', subcategory: 'shadow', tags: ['glow', 'pulse', 'shadow', 'attention', 'light'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-glow-pulse { animation: animotion-glowPulse 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-glowPulse { 0%, to { box-shadow: 0 0 5px rgba(59, 130, 246, 0.3); } 50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); } }`
+},
+{
+  id: 'A31', name: 'Border Pulse', description: 'Element border color pulses between two colors',
+  cssClass: 'animotion-border-pulse', keyframeName: 'animotion-borderPulse',
+  category: 'attention', subcategory: 'border', tags: ['border', 'pulse', 'color', 'attention'],
+  duration: '1.5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-border-pulse { animation: animotion-borderPulse 1.5s ease-in-out infinite; border: 2px solid #3b82f6; }`,
+  keyframeCSS: `@keyframes animotion-borderPulse { 0%, to { border-color: #3b82f6; } 50% { border-color: #ef4444; } }`
+},
+{
+  id: 'A32', name: 'Shadow Pulse', description: 'Element box-shadow expands and contracts rhythmically',
+  cssClass: 'animotion-shadow-pulse', keyframeName: 'animotion-shadowPulse',
+  category: 'attention', subcategory: 'shadow', tags: ['shadow', 'pulse', 'depth', 'attention'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-shadow-pulse { animation: animotion-shadowPulse 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-shadowPulse { 0%, to { box-shadow: 0 2px 4px rgba(0,0,0,0.1); } 50% { box-shadow: 0 8px 25px rgba(0,0,0,0.3); } }`
+},
+{
+  id: 'A33', name: 'Color Shift', description: 'Element background color cycles through a spectrum',
+  cssClass: 'animotion-color-shift', keyframeName: 'animotion-colorShift',
+  category: 'attention', subcategory: 'color', tags: ['color', 'shift', 'rainbow', 'attention', 'background'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-color-shift { animation: animotion-colorShift 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-colorShift { 0%, to { background-color: #3b82f6; } 25% { background-color: #8b5cf6; } 50% { background-color: #ef4444; } 75% { background-color: #f59e0b; } }`
+},
+{
+  id: 'A34', name: 'Skew Bounce', description: 'Element bounces with a skew distortion for playfulness',
+  cssClass: 'animotion-skew-bounce', keyframeName: 'animotion-skewBounce',
+  category: 'attention', subcategory: 'distort', tags: ['skew', 'bounce', 'playful', 'attention'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-skew-bounce { animation: animotion-skewBounce 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-skewBounce { 0%, to { transform: skew(0) translateY(0); } 30% { transform: skew(-5deg) translateY(-15px); } 50% { transform: skew(3deg) translateY(0); } 70% { transform: skew(-2deg) translateY(-5px); } }`
+},
+{
+  id: 'A35', name: 'Stretch X', description: 'Element stretches horizontally and returns',
+  cssClass: 'animotion-stretch-x', keyframeName: 'animotion-stretchX',
+  category: 'attention', subcategory: 'scale', tags: ['stretch', 'horizontal', 'scale', 'attention'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-stretch-x { animation: animotion-stretchX 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-stretchX { 0%, to { transform: scaleX(1); } 50% { transform: scaleX(1.3); } }`
+},
+{
+  id: 'A36', name: 'Stretch Y', description: 'Element stretches vertically and returns',
+  cssClass: 'animotion-stretch-y', keyframeName: 'animotion-stretchY',
+  category: 'attention', subcategory: 'scale', tags: ['stretch', 'vertical', 'scale', 'attention'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-stretch-y { animation: animotion-stretchY 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-stretchY { 0%, to { transform: scaleY(1); } 50% { transform: scaleY(1.3); } }`
+},
+{
+  id: 'A37', name: 'Squish', description: 'Element squishes down and stretches wide, then returns',
+  cssClass: 'animotion-squish', keyframeName: 'animotion-squish',
+  category: 'attention', subcategory: 'distort', tags: ['squish', 'squash', 'stretch', 'attention'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-squish { animation: animotion-squish 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-squish { 0%, to { transform: scaleX(1) scaleY(1); } 40% { transform: scaleX(1.2) scaleY(0.8); } 60% { transform: scaleX(0.9) scaleY(1.1); } }`
+},
+{
+  id: 'A38', name: 'Pop Attention', description: 'Element pops with quick scale overshoot for emphasis',
+  cssClass: 'animotion-pop-attention', keyframeName: 'animotion-popAttention',
+  category: 'attention', subcategory: 'scale', tags: ['pop', 'scale', 'emphasis', 'attention'],
+  duration: '0.3s', timingFunction: 'cubic-bezier(0.26, 0.53, 0.74, 1.48)', iterationCount: '1', fillMode: 'both', demoType: 'box',
+  css: `.animotion-pop-attention { animation: animotion-popAttention 0.3s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }`,
+  keyframeCSS: `@keyframes animotion-popAttention { 0% { transform: scale(1); } 50% { transform: scale(1.2); } to { transform: scale(1); } }`
+},
+{
+  id: 'A39', name: 'Flicker Attention', description: 'Element flickers like a faulty light bulb',
+  cssClass: 'animotion-flicker-attention', keyframeName: 'animotion-flickerAttention',
+  category: 'attention', subcategory: 'opacity', tags: ['flicker', 'light', 'glitch', 'attention'],
+  duration: '1.5s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-flicker-attention { animation: animotion-flickerAttention 1.5s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-flickerAttention { 0%, 19.9%, 22%, 62.9%, 64%, 64.9%, 70%, to { opacity: 1; } 20%, 21.9%, 63%, 63.9%, 65%, 69.9% { opacity: 0.4; } }`
+},
+{
+  id: 'A40', name: 'Buzz Attention', description: 'Element buzzes with a mechanical vibration pattern',
+  cssClass: 'animotion-buzz-attention', keyframeName: 'animotion-buzzAttention',
+  category: 'attention', subcategory: 'shake', tags: ['buzz', 'vibrate', 'mechanical', 'attention'],
+  duration: '0.15s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'box',
+  css: `.animotion-buzz-attention { animation: animotion-buzzAttention 0.15s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-buzzAttention { 0% { transform: translateX(0); } 25% { transform: translateX(3px); } 50% { transform: translateX(-3px); } 75% { transform: translateX(1px); } to { transform: translateX(0); } }`
+},
+// ==================== TEXT (50) ====================
+{
+  id: 'T01', name: 'Typewriter', description: 'Text appears character by character like typing',
+  cssClass: 'animotion-typewriter', keyframeName: 'animotion-typewriter',
+  category: 'text', subcategory: 'reveal', tags: ['typewriter', 'typing', 'reveal', 'text'],
+  duration: '2s', timingFunction: 'steps(30, end)', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-typewriter { animation: animotion-typewriter 2s steps(30, end) both; overflow: hidden; white-space: nowrap; border-right: 2px solid; }`,
+  keyframeCSS: `@keyframes animotion-typewriter { from { width: 0; } to { width: 100%; } }`
+},
+{
+  id: 'T02', name: 'Shimmer Text', description: 'Text has a shimmering metallic highlight that sweeps across',
+  cssClass: 'animotion-shimmer-text', keyframeName: 'animotion-shimmerText',
+  category: 'text', subcategory: 'effect', tags: ['shimmer', 'metallic', 'shine', 'text'],
+  duration: '2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-shimmer-text { background: linear-gradient(90deg, #333 0%, #fff 50%, #333 100%); background-size: 200% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: animotion-shimmerText 2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-shimmerText { from { background-position: 200% center; } to { background-position: -200% center; } }`
+},
+{
+  id: 'T03', name: 'Gradient Text', description: 'Text color smoothly shifts through gradient colors',
+  cssClass: 'animotion-gradient-text', keyframeName: 'animotion-gradientText',
+  category: 'text', subcategory: 'color', tags: ['gradient', 'color', 'rainbow', 'text'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-gradient-text { background: linear-gradient(270deg, #3b82f6, #8b5cf6, #ef4444, #f59e0b, #3b82f6); background-size: 400% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: animotion-gradientText 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-gradientText { 0% { background-position: 0% 50%; } to { background-position: 400% 50%; } }`
+},
+{
+  id: 'T04', name: 'Glitch Text', description: 'Text glitches with offset color layers and jittering',
+  cssClass: 'animotion-glitch-text', keyframeName: 'animotion-glitchText',
+  category: 'text', subcategory: 'effect', tags: ['glitch', 'distortion', 'retro', 'text'],
+  duration: '0.5s', timingFunction: 'steps(2, end)', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-glitch-text { position: relative; animation: animotion-glitchText 0.5s steps(2, end) infinite; }`,
+  keyframeCSS: `@keyframes animotion-glitchText { 0% { text-shadow: 2px 0 #ff0000, -2px 0 #00ff00; } 25% { text-shadow: -2px 0 #ff0000, 2px 0 #00ff00; } 50% { text-shadow: 2px -1px #ff0000, -2px 1px #00ff00; } 75% { text-shadow: -1px 2px #ff0000, 1px -2px #00ff00; } to { text-shadow: 2px 0 #ff0000, -2px 0 #00ff00; } }`
+},
+{
+  id: 'T05', name: 'RGB Split', description: 'Text splits into RGB color channels with offset',
+  cssClass: 'animotion-rgb-split', keyframeName: 'animotion-rgbSplit',
+  category: 'text', subcategory: 'effect', tags: ['rgb', 'split', 'chromatic', 'text', 'glitch'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-rgb-split { animation: animotion-rgbSplit 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-rgbSplit { 0%, to { text-shadow: 0 0 transparent, 0 0 transparent; } 50% { text-shadow: -3px 0 #ff0000, 3px 0 #0000ff; } }`
+},
+{
+  id: 'T06', name: 'Neon Flicker', description: 'Text flickers with neon glow like a neon sign',
+  cssClass: 'animotion-neon-flicker', keyframeName: 'animotion-neonFlicker',
+  category: 'text', subcategory: 'glow', tags: ['neon', 'flicker', 'glow', 'text', 'sign'],
+  duration: '1.5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-neon-flicker { color: #fff; animation: animotion-neonFlicker 1.5s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-neonFlicker { 0%, 19%, 21%, 23%, 25%, 54%, 56%, to { text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #3b82f6, 0 0 82px #3b82f6, 0 0 92px #3b82f6; } 20%, 24%, 55% { text-shadow: none; } }`
+},
+{
+  id: 'T07', name: 'Text Wipe Reveal', description: 'Text is revealed with a horizontal wipe from left to right',
+  cssClass: 'animotion-text-wipe-reveal', keyframeName: 'animotion-textWipeReveal',
+  category: 'text', subcategory: 'reveal', tags: ['wipe', 'reveal', 'clip', 'text'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-wipe-reveal { animation: animotion-textWipeReveal 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-textWipeReveal { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'T08', name: 'Text Split', description: 'Text splits apart vertically from the center',
+  cssClass: 'animotion-text-split', keyframeName: 'animotion-textSplit',
+  category: 'text', subcategory: 'effect', tags: ['split', 'clip', 'reveal', 'text'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-split { animation: animotion-textSplit 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-textSplit { from { letter-spacing: -0.5em; opacity: 0; filter: blur(10px); } to { letter-spacing: normal; opacity: 1; filter: blur(0); } }`
+},
+{
+  id: 'T09', name: 'Letter Wave', description: 'Each letter undulates in a wave pattern vertically',
+  cssClass: 'animotion-letter-wave', keyframeName: 'animotion-letterWave',
+  category: 'text', subcategory: 'movement', tags: ['wave', 'letter', 'bounce', 'text'],
+  duration: '1.5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-letter-wave { display: inline-block; animation: animotion-letterWave 1.5s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-letterWave { 0%, to { transform: translateY(0); } 50% { transform: translateY(-10px); } }`
+},
+{
+  id: 'T10', name: 'Char Wave', description: 'Characters move in a sine-wave horizontal pattern',
+  cssClass: 'animotion-char-wave', keyframeName: 'animotion-charWave',
+  category: 'text', subcategory: 'movement', tags: ['wave', 'character', 'horizontal', 'text'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-char-wave { display: inline-block; animation: animotion-charWave 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-charWave { 0%, to { transform: translateX(0) translateY(0); } 25% { transform: translateX(3px) translateY(-5px); } 75% { transform: translateX(-3px) translateY(5px); } }`
+},
+{
+  id: 'T11', name: 'Blur Reveal Text', description: 'Text fades in from a blurred state to sharp focus',
+  cssClass: 'animotion-blur-reveal-text', keyframeName: 'animotion-blurRevealText',
+  category: 'text', subcategory: 'reveal', tags: ['blur', 'reveal', 'focus', 'text'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-blur-reveal-text { animation: animotion-blurRevealText 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-blurRevealText { from { opacity: 0; filter: blur(15px); } to { opacity: 1; filter: blur(0); } }`
+},
+{
+  id: 'T12', name: 'Zoom Text', description: 'Text zooms in from small to normal size with opacity',
+  cssClass: 'animotion-zoom-text', keyframeName: 'animotion-zoomText',
+  category: 'text', subcategory: 'scale', tags: ['zoom', 'scale', 'entrance', 'text'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-zoom-text { animation: animotion-zoomText 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-zoomText { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }`
+},
+{
+  id: 'T13', name: 'Flip Text 3D', description: 'Text flips in with a 3D rotation around X axis',
+  cssClass: 'animotion-flip-text-3d', keyframeName: 'animotion-flipText3D',
+  category: 'text', subcategory: '3d', tags: ['flip', '3d', 'rotate', 'text', 'perspective'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-flip-text-3d { animation: animotion-flipText3D 0.8s ease-out both; perspective: 600px; }`,
+  keyframeCSS: `@keyframes animotion-flipText3D { from { transform: perspective(600px) rotateX(-90deg); opacity: 0; } to { transform: perspective(600px) rotateX(0); opacity: 1; } }`
+},
+{
+  id: 'T14', name: 'Outlined Pulsing', description: 'Text outline pulses between filled and outlined states',
+  cssClass: 'animotion-outlined-pulsing', keyframeName: 'animotion-outlinedPulsing',
+  category: 'text', subcategory: 'effect', tags: ['outline', 'pulse', 'stroke', 'text'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-outlined-pulsing { -webkit-text-stroke: 1px currentColor; animation: animotion-outlinedPulsing 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-outlinedPulsing { 0%, to { -webkit-text-fill-color: currentColor; } 50% { -webkit-text-fill-color: transparent; } }`
+},
+{
+  id: 'T15', name: 'Rainbow Text', description: 'Text color cycles through rainbow hues continuously',
+  cssClass: 'animotion-rainbow-text', keyframeName: 'animotion-rainbowText',
+  category: 'text', subcategory: 'color', tags: ['rainbow', 'hue', 'color', 'text'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-rainbow-text { animation: animotion-rainbowText 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-rainbowText { 0% { color: #ff0000; } 17% { color: #ff8800; } 33% { color: #ffff00; } 50% { color: #00ff00; } 67% { color: #0088ff; } 83% { color: #8800ff; } to { color: #ff0000; } }`
+},
+{
+  id: 'T16', name: 'Text Trail', description: 'Text leaves a fading trail shadow behind as if moving',
+  cssClass: 'animotion-text-trail', keyframeName: 'animotion-textTrail',
+  category: 'text', subcategory: 'shadow', tags: ['trail', 'shadow', 'motion', 'text'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-trail { animation: animotion-textTrail 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-textTrail { 0%, to { text-shadow: none; } 50% { text-shadow: 5px 0 0 rgba(59,130,246,0.6), 10px 0 0 rgba(59,130,246,0.4), 15px 0 0 rgba(59,130,246,0.2); } }`
+},
+{
+  id: 'T17', name: 'Text Pop', description: 'Text pops with an elastic scale overshoot',
+  cssClass: 'animotion-text-pop', keyframeName: 'animotion-textPop',
+  category: 'text', subcategory: 'scale', tags: ['pop', 'scale', 'elastic', 'text'],
+  duration: '0.4s', timingFunction: 'cubic-bezier(0.26, 0.53, 0.74, 1.48)', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-pop { animation: animotion-textPop 0.4s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }`,
+  keyframeCSS: `@keyframes animotion-textPop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }`
+},
+{
+  id: 'T18', name: 'Marquee Scroll', description: 'Text scrolls horizontally like a marquee ticker',
+  cssClass: 'animotion-marquee-scroll', keyframeName: 'animotion-marqueeScroll',
+  category: 'text', subcategory: 'movement', tags: ['marquee', 'scroll', 'ticker', 'text'],
+  duration: '10s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'text',
+  css: `.animotion-marquee-scroll { animation: animotion-marqueeScroll 10s linear infinite; white-space: nowrap; }`,
+  keyframeCSS: `@keyframes animotion-marqueeScroll { from { transform: translateX(100%); } to { transform: translateX(-100%); } }`
+},
+{
+  id: 'T19', name: 'Text Cascade', description: 'Text cascades down in a staggered waterfall pattern',
+  cssClass: 'animotion-text-cascade', keyframeName: 'animotion-textCascade',
+  category: 'text', subcategory: 'reveal', tags: ['cascade', 'waterfall', 'stagger', 'text'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-cascade { display: inline-block; animation: animotion-textCascade 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-textCascade { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'T20', name: 'Text Scramble', description: 'Text appears scrambled then unscrambles to readable form',
+  cssClass: 'animotion-text-scramble', keyframeName: 'animotion-textScramble',
+  category: 'text', subcategory: 'effect', tags: ['scramble', 'decode', 'cipher', 'text'],
+  duration: '1s', timingFunction: 'steps(10, end)', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-scramble { animation: animotion-textScramble 1s steps(10, end) both; }`,
+  keyframeCSS: `@keyframes animotion-textScramble { from { filter: blur(8px); opacity: 0; letter-spacing: 1em; } to { filter: blur(0); opacity: 1; letter-spacing: normal; } }`
+},
+{
+  id: 'T21', name: 'Shadow Expand', description: 'Text shadow expands dramatically from zero',
+  cssClass: 'animotion-shadow-expand', keyframeName: 'animotion-shadowExpand',
+  category: 'text', subcategory: 'shadow', tags: ['shadow', 'expand', 'depth', 'text'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-shadow-expand { animation: animotion-shadowExpand 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-shadowExpand { from { text-shadow: 0 0 0 rgba(0,0,0,0); } to { text-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 8px 16px rgba(0,0,0,0.1); } }`
+},
+{
+  id: 'T22', name: 'Word Flip Carousel', description: 'Words flip vertically like a carousel display',
+  cssClass: 'animotion-word-flip-carousel', keyframeName: 'animotion-wordFlipCarousel',
+  category: 'text', subcategory: '3d', tags: ['flip', 'carousel', 'rotate', 'text'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-word-flip-carousel { display: inline-block; animation: animotion-wordFlipCarousel 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-wordFlipCarousel { from { transform: perspective(400px) rotateX(90deg); opacity: 0; } to { transform: perspective(400px) rotateX(0); opacity: 1; } }`
+},
+{
+  id: 'T23', name: 'Typing Cursor', description: 'Blinking cursor animation for typing effects',
+  cssClass: 'animotion-typing-cursor', keyframeName: 'animotion-typingCursor',
+  category: 'text', subcategory: 'effect', tags: ['cursor', 'typing', 'blink', 'text', 'terminal'],
+  duration: '1s', timingFunction: 'steps(1)', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-typing-cursor { border-right: 2px solid currentColor; animation: animotion-typingCursor 1s steps(1) infinite; }`,
+  keyframeCSS: `@keyframes animotion-typingCursor { 0%, to { border-color: currentColor; } 50% { border-color: transparent; } }`
+},
+{
+  id: 'T24', name: 'Gradient Border Text', description: 'Text with animated gradient border that rotates',
+  cssClass: 'animotion-gradient-border-text', keyframeName: 'animotion-gradientBorderText',
+  category: 'text', subcategory: 'border', tags: ['gradient', 'border', 'rotate', 'text'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-gradient-border-text { border: 2px solid transparent; background-clip: padding-box; animation: animotion-gradientBorderText 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-gradientBorderText { 0% { border-color: #3b82f6; } 25% { border-color: #8b5cf6; } 50% { border-color: #ef4444; } 75% { border-color: #f59e0b; } to { border-color: #3b82f6; } }`
+},
+{
+  id: 'T25', name: 'Stagger Cascade', description: 'Text lines cascade in with staggered delays',
+  cssClass: 'animotion-stagger-cascade', keyframeName: 'animotion-staggerCascade',
+  category: 'text', subcategory: 'reveal', tags: ['stagger', 'cascade', 'delay', 'text'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-stagger-cascade { animation: animotion-staggerCascade 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-staggerCascade { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'T26', name: 'Text Slide Up Reveal', description: 'Text slides up from behind a mask to reveal itself',
+  cssClass: 'animotion-text-slide-up-reveal', keyframeName: 'animotion-textSlideUpReveal',
+  category: 'text', subcategory: 'reveal', tags: ['slide', 'reveal', 'mask', 'text'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-slide-up-reveal { overflow: hidden; animation: animotion-textSlideUpReveal 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-textSlideUpReveal { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`
+},
+{
+  id: 'T27', name: 'Ink Drop Text', description: 'Text appears as if ink is dropping onto paper',
+  cssClass: 'animotion-ink-drop-text', keyframeName: 'animotion-inkDropText',
+  category: 'text', subcategory: 'reveal', tags: ['ink', 'drop', 'spread', 'text'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-ink-drop-text { animation: animotion-inkDropText 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-inkDropText { from { opacity: 0; transform: scale(0.3); filter: blur(10px); } 50% { opacity: 0.8; filter: blur(3px); } to { opacity: 1; transform: scale(1); filter: blur(0); } }`
+},
+{
+  id: 'T28', name: 'Text Glitch Clone', description: 'Text glitches with cloned offset layers flickering',
+  cssClass: 'animotion-text-glitch-clone', keyframeName: 'animotion-textGlitchClone',
+  category: 'text', subcategory: 'effect', tags: ['glitch', 'clone', 'offset', 'text'],
+  duration: '0.8s', timingFunction: 'steps(2, end)', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-glitch-clone { animation: animotion-textGlitchClone 0.8s steps(2, end) infinite; }`,
+  keyframeCSS: `@keyframes animotion-textGlitchClone { 0%, to { text-shadow: 2px 0 #ff0000, -2px 0 #00ffff; clip-path: inset(0 0 0 0); } 20% { text-shadow: -3px 0 #ff0000, 3px 0 #00ffff; clip-path: inset(20% 0 60% 0); } 40% { text-shadow: 3px 0 #ff0000, -3px 0 #00ffff; clip-path: inset(60% 0 10% 0); } 60% { text-shadow: -1px 0 #ff0000, 1px 0 #00ffff; clip-path: inset(40% 0 30% 0); } }`
+},
+{
+  id: 'T29', name: 'Counter Roll', description: 'Number text rolls like an odometer counter',
+  cssClass: 'animotion-counter-roll', keyframeName: 'animotion-counterRoll',
+  category: 'text', subcategory: 'movement', tags: ['counter', 'roll', 'number', 'text', 'odometer'],
+  duration: '1s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-counter-roll { display: inline-block; overflow: hidden; animation: animotion-counterRoll 1s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-counterRoll { from { transform: translateY(-100%); } to { transform: translateY(0); } }`
+},
+{
+  id: 'T30', name: 'Text Breathe', description: 'Text gently scales and adjusts letter-spacing like breathing',
+  cssClass: 'animotion-text-breathe', keyframeName: 'animotion-textBreathe',
+  category: 'text', subcategory: 'scale', tags: ['breathe', 'scale', 'gentle', 'text'],
+  duration: '4s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-breathe { animation: animotion-textBreathe 4s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-textBreathe { 0%, to { letter-spacing: normal; transform: scale(1); } 50% { letter-spacing: 0.05em; transform: scale(1.02); } }`
+},
+{
+  id: 'T31', name: 'Text Float', description: 'Text gently floats up and down like hovering',
+  cssClass: 'animotion-text-float', keyframeName: 'animotion-textFloat',
+  category: 'text', subcategory: 'movement', tags: ['float', 'hover', 'gentle', 'text'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-float { animation: animotion-textFloat 3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-textFloat { 0%, to { transform: translateY(0); } 50% { transform: translateY(-8px); } }`
+},
+{
+  id: 'T32', name: 'Text Bounce', description: 'Text bounces energetically as if on a trampoline',
+  cssClass: 'animotion-text-bounce', keyframeName: 'animotion-textBounce',
+  category: 'text', subcategory: 'movement', tags: ['bounce', 'energetic', 'fun', 'text'],
+  duration: '0.8s', timingFunction: 'cubic-bezier(0.28, 0.84, 0.42, 1)', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-bounce { display: inline-block; animation: animotion-textBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; }`,
+  keyframeCSS: `@keyframes animotion-textBounce { 0%, to { transform: translateY(0) scaleY(1); } 40% { transform: translateY(-15px) scaleY(1.1); } 60% { transform: translateY(0) scaleY(0.9); } }`
+},
+{
+  id: 'T33', name: 'Text Elastic', description: 'Text stretches and snaps back with elastic motion',
+  cssClass: 'animotion-text-elastic', keyframeName: 'animotion-textElastic',
+  category: 'text', subcategory: 'distort', tags: ['elastic', 'stretch', 'snap', 'text'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-elastic { display: inline-block; animation: animotion-textElastic 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-textElastic { 0% { transform: scaleX(1); } 30% { transform: scaleX(1.25); } 40% { transform: scaleX(0.75); } 50% { transform: scaleX(1.15); } 65% { transform: scaleX(0.95); } 75% { transform: scaleX(1.05); } to { transform: scaleX(1); } }`
+},
+{
+  id: 'T34', name: 'Text Spring', description: 'Text springs into place with overshoot from below',
+  cssClass: 'animotion-text-spring', keyframeName: 'animotion-textSpring',
+  category: 'text', subcategory: 'movement', tags: ['spring', 'overshoot', 'bounce', 'text'],
+  duration: '0.7s', timingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-spring { animation: animotion-textSpring 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,
+  keyframeCSS: `@keyframes animotion-textSpring { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'T35', name: 'Text Morph', description: 'Text morphs with letter-spacing and weight changes',
+  cssClass: 'animotion-text-morph', keyframeName: 'animotion-textMorph',
+  category: 'text', subcategory: 'effect', tags: ['morph', 'weight', 'spacing', 'text'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-morph { animation: animotion-textMorph 3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-textMorph { 0%, to { font-weight: 300; letter-spacing: 0; } 50% { font-weight: 700; letter-spacing: 0.1em; } }`
+},
+{
+  id: 'T36', name: 'Text Reveal Mask', description: 'Text revealed by a sliding rectangular mask',
+  cssClass: 'animotion-text-reveal-mask', keyframeName: 'animotion-textRevealMask',
+  category: 'text', subcategory: 'reveal', tags: ['reveal', 'mask', 'clip', 'text'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-reveal-mask { animation: animotion-textRevealMask 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-textRevealMask { from { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); } to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }`
+},
+{
+  id: 'T37', name: 'Text Fade Words', description: 'Words fade in one by one sequentially',
+  cssClass: 'animotion-text-fade-words', keyframeName: 'animotion-textFadeWords',
+  category: 'text', subcategory: 'reveal', tags: ['fade', 'words', 'sequential', 'text'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-fade-words { animation: animotion-textFadeWords 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-textFadeWords { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`
+},
+{
+  id: 'T38', name: 'Text Highlight', description: 'Text gets highlighted with a sweeping background color',
+  cssClass: 'animotion-text-highlight', keyframeName: 'animotion-textHighlight',
+  category: 'text', subcategory: 'effect', tags: ['highlight', 'background', 'sweep', 'text'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-highlight { animation: animotion-textHighlight 0.8s ease-in-out both; background-size: 200% 100%; background-image: linear-gradient(to right, transparent 50%, #fde68a 50%); }`,
+  keyframeCSS: `@keyframes animotion-textHighlight { from { background-position: 100% 0; } to { background-position: 0 0; } }`
+},
+{
+  id: 'T39', name: 'Text Stroke', description: 'Text stroke draws in progressively',
+  cssClass: 'animotion-text-stroke', keyframeName: 'animotion-textStroke',
+  category: 'text', subcategory: 'effect', tags: ['stroke', 'draw', 'outline', 'text'],
+  duration: '1.5s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-stroke { -webkit-text-stroke: 2px currentColor; -webkit-text-fill-color: transparent; animation: animotion-textStroke 1.5s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-textStroke { from { -webkit-text-fill-color: transparent; } to { -webkit-text-fill-color: currentColor; } }`
+},
+{
+  id: 'T40', name: 'Text Shadow Dance', description: 'Text shadow moves around creating a dancing 3D effect',
+  cssClass: 'animotion-text-shadow-dance', keyframeName: 'animotion-textShadowDance',
+  category: 'text', subcategory: 'shadow', tags: ['shadow', 'dance', '3d', 'text', 'movement'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-shadow-dance { animation: animotion-textShadowDance 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-textShadowDance { 0%, to { text-shadow: 3px 3px 0 rgba(0,0,0,0.2); } 25% { text-shadow: -3px 3px 0 rgba(0,0,0,0.2); } 50% { text-shadow: -3px -3px 0 rgba(0,0,0,0.2); } 75% { text-shadow: 3px -3px 0 rgba(0,0,0,0.2); } }`
+},
+{
+  id: 'T41', name: 'Text Perspective', description: 'Text tilts with 3D perspective for depth effect',
+  cssClass: 'animotion-text-perspective', keyframeName: 'animotion-textPerspective',
+  category: 'text', subcategory: '3d', tags: ['perspective', '3d', 'tilt', 'text'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-perspective { animation: animotion-textPerspective 3s ease-in-out infinite; perspective: 600px; }`,
+  keyframeCSS: `@keyframes animotion-textPerspective { 0%, to { transform: perspective(600px) rotateY(0) rotateX(0); } 25% { transform: perspective(600px) rotateY(10deg) rotateX(5deg); } 75% { transform: perspective(600px) rotateY(-10deg) rotateX(-5deg); } }`
+},
+{
+  id: 'T42', name: 'Text Wobble', description: 'Text wobbles with rotation and horizontal movement',
+  cssClass: 'animotion-text-wobble', keyframeName: 'animotion-textWobble',
+  category: 'text', subcategory: 'movement', tags: ['wobble', 'rotate', 'playful', 'text'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-wobble { display: inline-block; animation: animotion-textWobble 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-textWobble { 0%, to { transform: rotate(0); } 15% { transform: rotate(-5deg); } 30% { transform: rotate(3deg); } 45% { transform: rotate(-3deg); } 60% { transform: rotate(2deg); } 75% { transform: rotate(-1deg); } }`
+},
+{
+  id: 'T43', name: 'Text Zigzag', description: 'Text moves in a zigzag pattern across the line',
+  cssClass: 'animotion-text-zigzag', keyframeName: 'animotion-textZigzag',
+  category: 'text', subcategory: 'movement', tags: ['zigzag', 'path', 'movement', 'text'],
+  duration: '2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-zigzag { display: inline-block; animation: animotion-textZigzag 2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-textZigzag { 0%, to { transform: translate(0, 0); } 25% { transform: translate(5px, -5px); } 50% { transform: translate(0, 0); } 75% { transform: translate(-5px, -5px); } }`
+},
+{
+  id: 'T44', name: 'Text Spiral', description: 'Text spins in a spiral motion with scale change',
+  cssClass: 'animotion-text-spiral', keyframeName: 'animotion-textSpiral',
+  category: 'text', subcategory: 'movement', tags: ['spiral', 'rotate', 'scale', 'text'],
+  duration: '1s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-spiral { display: inline-block; animation: animotion-textSpiral 1s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-textSpiral { from { transform: rotate(360deg) scale(0); opacity: 0; } to { transform: rotate(0) scale(1); opacity: 1; } }`
+},
+{
+  id: 'T45', name: 'Text Rain', description: 'Text drops down like raindrops with gravity',
+  cssClass: 'animotion-text-rain', keyframeName: 'animotion-textRain',
+  category: 'text', subcategory: 'movement', tags: ['rain', 'drop', 'gravity', 'text'],
+  duration: '0.5s', timingFunction: 'cubic-bezier(0.55, 0, 1, 0.45)', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-rain { display: inline-block; animation: animotion-textRain 0.5s cubic-bezier(0.55, 0, 1, 0.45) both; }`,
+  keyframeCSS: `@keyframes animotion-textRain { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`
+},
+{
+  id: 'T46', name: 'Text Explode', description: 'Text letters spread outward as if exploding',
+  cssClass: 'animotion-text-explode', keyframeName: 'animotion-textExplode',
+  category: 'text', subcategory: 'effect', tags: ['explode', 'spread', 'dramatic', 'text'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-explode { animation: animotion-textExplode 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-textExplode { from { letter-spacing: normal; opacity: 1; } to { letter-spacing: 1em; opacity: 0; } }`
+},
+{
+  id: 'T47', name: 'Text Assemble', description: 'Text letters come together from far apart',
+  cssClass: 'animotion-text-assemble', keyframeName: 'animotion-textAssemble',
+  category: 'text', subcategory: 'reveal', tags: ['assemble', 'gather', 'letters', 'text'],
+  duration: '0.8s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-assemble { animation: animotion-textAssemble 0.8s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-textAssemble { from { letter-spacing: 1em; opacity: 0; filter: blur(8px); } to { letter-spacing: normal; opacity: 1; filter: blur(0); } }`
+},
+{
+  id: 'T48', name: 'Text Matrix', description: 'Text appears with a Matrix-style digital rain effect',
+  cssClass: 'animotion-text-matrix', keyframeName: 'animotion-textMatrix',
+  category: 'text', subcategory: 'effect', tags: ['matrix', 'digital', 'code', 'text', 'hacker'],
+  duration: '0.6s', timingFunction: 'steps(5, end)', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-matrix { color: #00ff00; font-family: monospace; animation: animotion-textMatrix 0.6s steps(5, end) both; }`,
+  keyframeCSS: `@keyframes animotion-textMatrix { from { opacity: 0; transform: translateY(-20px); text-shadow: 0 0 10px #00ff00; } to { opacity: 1; transform: translateY(0); text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; } }`
+},
+{
+  id: 'T49', name: 'Text Hologram', description: 'Text appears with a holographic flickering effect',
+  cssClass: 'animotion-text-hologram', keyframeName: 'animotion-textHologram',
+  category: 'text', subcategory: 'effect', tags: ['hologram', 'flicker', 'sci-fi', 'text', 'futuristic'],
+  duration: '2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'text',
+  css: `.animotion-text-hologram { animation: animotion-textHologram 2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-textHologram { 0%, to { opacity: 1; text-shadow: 0 0 10px rgba(0,200,255,0.8), 0 0 20px rgba(0,200,255,0.4); transform: skewX(0); } 25% { opacity: 0.9; transform: skewX(0.5deg); } 50% { opacity: 1; text-shadow: 0 0 15px rgba(0,200,255,1), 0 0 30px rgba(0,200,255,0.6); transform: skewX(-0.5deg); } 75% { opacity: 0.8; transform: skewX(0.3deg); } }`
+},
+{
+  id: 'T50', name: 'Typewriter Delete', description: 'Text retracts character by character like deleting',
+  cssClass: 'animotion-typewriter-delete', keyframeName: 'animotion-typewriterDelete',
+  category: 'text', subcategory: 'reveal', tags: ['typewriter', 'delete', 'backspace', 'text'],
+  duration: '2s', timingFunction: 'steps(30, end)', iterationCount: '1', fillMode: 'both', demoType: 'text',
+  css: `.animotion-typewriter-delete { animation: animotion-typewriterDelete 2s steps(30, end) both; overflow: hidden; white-space: nowrap; border-right: 2px solid; }`,
+  keyframeCSS: `@keyframes animotion-typewriterDelete { from { width: 100%; } to { width: 0; } }`
+},
+// ==================== BACKGROUND (40) ====================
+{
+  id: 'B01', name: 'Gradient Shift', description: 'Background gradient smoothly shifts position creating flowing color',
+  cssClass: 'animotion-gradient-shift', keyframeName: 'animotion-gradientShift',
+  category: 'background', subcategory: 'gradient', tags: ['gradient', 'shift', 'color', 'background'],
+  duration: '4s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-gradient-shift { background: linear-gradient(270deg, #3b82f6, #8b5cf6, #ef4444, #f59e0b); background-size: 400% 400%; animation: animotion-gradientShift 4s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } to { background-position: 0% 50%; } }`
+},
+{
+  id: 'B02', name: 'Aurora', description: 'Northern lights aurora effect with flowing colors',
+  cssClass: 'animotion-aurora', keyframeName: 'animotion-aurora',
+  category: 'background', subcategory: 'gradient', tags: ['aurora', 'northern-lights', 'gradient', 'background'],
+  duration: '6s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-aurora { background: linear-gradient(135deg, #0c3547, #134e5e, #1a6b4e, #71b280, #134e5e); background-size: 400% 400%; animation: animotion-aurora 6s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-aurora { 0% { background-position: 0% 0%; } 25% { background-position: 50% 100%; } 50% { background-position: 100% 50%; } 75% { background-position: 50% 0%; } to { background-position: 0% 0%; } }`
+},
+{
+  id: 'B03', name: 'Mesh Gradient', description: 'Multi-point mesh gradient that slowly morphs and shifts',
+  cssClass: 'animotion-mesh-gradient', keyframeName: 'animotion-meshGradient',
+  category: 'background', subcategory: 'gradient', tags: ['mesh', 'gradient', 'morph', 'background'],
+  duration: '8s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-mesh-gradient { background: radial-gradient(at 40% 20%, #3b82f6 0%, transparent 50%), radial-gradient(at 80% 0%, #8b5cf6 0%, transparent 50%), radial-gradient(at 0% 50%, #ef4444 0%, transparent 50%), radial-gradient(at 80% 80%, #10b981 0%, transparent 50%), radial-gradient(at 0% 100%, #f59e0b 0%, transparent 50%); background-size: 200% 200%; animation: animotion-meshGradient 8s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-meshGradient { 0%, to { background-position: 0% 0%; } 25% { background-position: 50% 50%; } 50% { background-position: 100% 100%; } 75% { background-position: 50% 0%; } }`
+},
+{
+  id: 'B04', name: 'Animated Grid', description: 'Background grid lines pulse and glow rhythmically',
+  cssClass: 'animotion-animated-grid', keyframeName: 'animotion-animatedGrid',
+  category: 'background', subcategory: 'pattern', tags: ['grid', 'lines', 'pulse', 'background'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-animated-grid { background-image: linear-gradient(rgba(59,130,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px); background-size: 30px 30px; animation: animotion-animatedGrid 3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-animatedGrid { 0%, to { background-size: 30px 30px; opacity: 0.5; } 50% { background-size: 35px 35px; opacity: 1; } }`
+},
+{
+  id: 'B05', name: 'Dot Grid Pulse', description: 'Dot pattern grid pulses in size rhythmically',
+  cssClass: 'animotion-dot-grid-pulse', keyframeName: 'animotion-dotGridPulse',
+  category: 'background', subcategory: 'pattern', tags: ['dots', 'grid', 'pulse', 'background', 'pattern'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-dot-grid-pulse { background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px); background-size: 20px 20px; animation: animotion-dotGridPulse 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-dotGridPulse { 0%, to { background-size: 20px 20px; } 50% { background-size: 25px 25px; } }`
+},
+{
+  id: 'B06', name: 'Starfield', description: 'Animated starfield effect with twinkling dots on dark background',
+  cssClass: 'animotion-starfield', keyframeName: 'animotion-starfield',
+  category: 'background', subcategory: 'particle', tags: ['stars', 'space', 'twinkle', 'background'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-starfield { background: #0a0a2e; background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent), radial-gradient(2px 2px at 40px 70px, #fff, transparent), radial-gradient(1px 1px at 90px 40px, #fff, transparent), radial-gradient(1px 1px at 130px 80px, #fff, transparent), radial-gradient(2px 2px at 160px 30px, #fff, transparent); background-size: 200px 100px; animation: animotion-starfield 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-starfield { from { background-position: 0 0; } to { background-position: -200px 0; } }`
+},
+{
+  id: 'B07', name: 'Bokeh Circles', description: 'Soft bokeh circle lights floating and pulsing',
+  cssClass: 'animotion-bokeh-circles', keyframeName: 'animotion-bokehCircles',
+  category: 'background', subcategory: 'particle', tags: ['bokeh', 'circles', 'light', 'background'],
+  duration: '5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-bokeh-circles { background: radial-gradient(circle at 20% 50%, rgba(59,130,246,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 30%, rgba(139,92,246,0.3) 0%, transparent 40%), radial-gradient(circle at 50% 80%, rgba(245,158,11,0.3) 0%, transparent 45%); animation: animotion-bokehCircles 5s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-bokehCircles { 0%, to { background-size: 100% 100%; filter: blur(30px); } 50% { background-size: 120% 120%; filter: blur(40px); } }`
+},
+{
+  id: 'B08', name: 'Plasma', description: 'Plasma-like swirling color blobs that morph continuously',
+  cssClass: 'animotion-plasma', keyframeName: 'animotion-plasma',
+  category: 'background', subcategory: 'gradient', tags: ['plasma', 'swirl', 'morph', 'background'],
+  duration: '6s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-plasma { background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #06d6a0, #ff006e); background-size: 300% 300%; animation: animotion-plasma 6s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-plasma { 0% { background-position: 0% 0%; } 33% { background-position: 100% 0%; } 66% { background-position: 100% 100%; } to { background-position: 0% 0%; } }`
+},
+{
+  id: 'B09', name: 'Matrix Rain', description: 'Matrix-style digital rain effect on dark background',
+  cssClass: 'animotion-matrix-rain', keyframeName: 'animotion-matrixRain',
+  category: 'background', subcategory: 'effect', tags: ['matrix', 'rain', 'digital', 'background', 'code'],
+  duration: '2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-matrix-rain { background: #000 repeating-linear-gradient(0deg, rgba(0,255,0,0.15) 0px, rgba(0,255,0,0.15) 1px, transparent 1px, transparent 20px); background-size: 20px 20px; animation: animotion-matrixRain 2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-matrixRain { from { background-position: 0 0; } to { background-position: 0 20px; } }`
+},
+{
+  id: 'B10', name: 'Conic Spin', description: 'Conic gradient that spins continuously creating a radar effect',
+  cssClass: 'animotion-conic-spin', keyframeName: 'animotion-conicSpin',
+  category: 'background', subcategory: 'gradient', tags: ['conic', 'spin', 'radar', 'background', 'rotate'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'background',
+  css: `.animotion-conic-spin { background: conic-gradient(from 0deg, #3b82f6, #8b5cf6, #ef4444, #f59e0b, #3b82f6); animation: animotion-conicSpin 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-conicSpin { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(360deg); } }`
+},
+{
+  id: 'B11', name: 'Wave Blob', description: 'Organic blob shapes that morph and undulate',
+  cssClass: 'animotion-wave-blob', keyframeName: 'animotion-waveBlob',
+  category: 'background', subcategory: 'shape', tags: ['blob', 'wave', 'organic', 'background', 'morph'],
+  duration: '8s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-wave-blob { background: #3b82f6; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation: animotion-waveBlob 8s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-waveBlob { 0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } 50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; } to { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } }`
+},
+{
+  id: 'B12', name: 'Ripple Expand', description: 'Concentric ripple rings expand from center of background',
+  cssClass: 'animotion-ripple-expand', keyframeName: 'animotion-rippleExpand',
+  category: 'background', subcategory: 'effect', tags: ['ripple', 'expand', 'concentric', 'background'],
+  duration: '2s', timingFunction: 'ease-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-ripple-expand { background: radial-gradient(circle, transparent 30%, rgba(59,130,246,0.3) 31%, transparent 32%); background-size: 100% 100%; animation: animotion-rippleExpand 2s ease-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-rippleExpand { from { background-size: 0% 0%; opacity: 1; } to { background-size: 300% 300%; opacity: 0; } }`
+},
+{
+  id: 'B13', name: 'Circuit Board', description: 'Animated circuit board pattern with glowing traces',
+  cssClass: 'animotion-circuit-board', keyframeName: 'animotion-circuitBoard',
+  category: 'background', subcategory: 'pattern', tags: ['circuit', 'tech', 'board', 'background'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-circuit-board { background: #0a0a2e; background-image: linear-gradient(rgba(59,130,246,0.2) 2px, transparent 2px), linear-gradient(90deg, rgba(59,130,246,0.2) 2px, transparent 2px), linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px); background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px; animation: animotion-circuitBoard 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-circuitBoard { from { background-position: 0 0, 0 0, 0 0, 0 0; } to { background-position: 100px 0, 0 100px, 20px 0, 0 20px; } }`
+},
+{
+  id: 'B14', name: 'Confetti Rain', description: 'Colorful confetti pieces falling down the background',
+  cssClass: 'animotion-confetti-rain', keyframeName: 'animotion-confettiRain',
+  category: 'background', subcategory: 'particle', tags: ['confetti', 'celebration', 'rain', 'background'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-confetti-rain { background-image: radial-gradient(circle, #ff6b6b 2px, transparent 2px), radial-gradient(circle, #ffd93d 2px, transparent 2px), radial-gradient(circle, #6bcb77 2px, transparent 2px), radial-gradient(circle, #4d96ff 2px, transparent 2px); background-size: 60px 80px, 70px 90px, 80px 70px, 50px 100px; animation: animotion-confettiRain 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-confettiRain { from { background-position: 0 0, 20px 0, 40px 0, 10px 0; } to { background-position: 0 80px, 20px 90px, 40px 70px, 10px 100px; } }`
+},
+{
+  id: 'B15', name: 'Bubble Float', description: 'Translucent bubbles floating upward through the background',
+  cssClass: 'animotion-bubble-float', keyframeName: 'animotion-bubbleFloat',
+  category: 'background', subcategory: 'particle', tags: ['bubble', 'float', 'rise', 'background'],
+  duration: '4s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-bubble-float { background-image: radial-gradient(circle at 30% 80%, rgba(59,130,246,0.3) 10px, transparent 10px), radial-gradient(circle at 70% 60%, rgba(139,92,246,0.2) 15px, transparent 15px), radial-gradient(circle at 50% 90%, rgba(16,185,129,0.25) 8px, transparent 8px); animation: animotion-bubbleFloat 4s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-bubbleFloat { 0%, to { background-position: 0 0; } 50% { background-position: 0 -40px; } }`
+},
+{
+  id: 'B16', name: 'Spotlight Move', description: 'A spotlight beam sweeps across the background',
+  cssClass: 'animotion-spotlight-move', keyframeName: 'animotion-spotlightMove',
+  category: 'background', subcategory: 'effect', tags: ['spotlight', 'beam', 'sweep', 'background'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-spotlight-move { background: radial-gradient(circle at 0% 50%, rgba(255,255,255,0.3) 0%, transparent 60%); animation: animotion-spotlightMove 3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-spotlightMove { 0% { background-position: -50% 50%; } 50% { background-position: 150% 50%; } to { background-position: -50% 50%; } }`
+},
+{
+  id: 'B17', name: 'Moving Gradient', description: 'Diagonal gradient moves continuously across the element',
+  cssClass: 'animotion-moving-gradient', keyframeName: 'animotion-movingGradient',
+  category: 'background', subcategory: 'gradient', tags: ['gradient', 'moving', 'diagonal', 'background'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-moving-gradient { background: linear-gradient(45deg, #3b82f6 25%, #8b5cf6 50%, #3b82f6 75%); background-size: 200% 200%; animation: animotion-movingGradient 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-movingGradient { from { background-position: 200% 0; } to { background-position: -200% 0; } }`
+},
+{
+  id: 'B18', name: 'Noise Overlay', description: 'Animated noise texture overlay flickering on background',
+  cssClass: 'animotion-noise-overlay', keyframeName: 'animotion-noiseOverlay',
+  category: 'background', subcategory: 'effect', tags: ['noise', 'grain', 'texture', 'background', 'film'],
+  duration: '0.2s', timingFunction: 'steps(4)', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-noise-overlay { background-image: repeating-radial-gradient(circle at 17% 32%, rgba(0,0,0,0.05) 0px, transparent 1px, transparent 2px); background-size: 3px 3px; animation: animotion-noiseOverlay 0.2s steps(4) infinite; }`,
+  keyframeCSS: `@keyframes animotion-noiseOverlay { 0% { background-position: 0 0; } 25% { background-position: 2px 1px; } 50% { background-position: -1px 2px; } 75% { background-position: 1px -1px; } to { background-position: 0 0; } }`
+},
+{
+  id: 'B19', name: 'Geometric Rotate', description: 'Geometric shapes rotating in the background',
+  cssClass: 'animotion-geometric-rotate', keyframeName: 'animotion-geometricRotate',
+  category: 'background', subcategory: 'pattern', tags: ['geometric', 'rotate', 'shapes', 'background'],
+  duration: '10s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'background',
+  css: `.animotion-geometric-rotate { background: conic-gradient(from 0deg at 50% 50%, rgba(59,130,246,0.1) 0deg, transparent 60deg, rgba(139,92,246,0.1) 120deg, transparent 180deg, rgba(239,68,68,0.1) 240deg, transparent 300deg); animation: animotion-geometricRotate 10s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-geometricRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`
+},
+{
+  id: 'B20', name: 'Parallax Layers', description: 'Multiple background layers moving at different speeds',
+  cssClass: 'animotion-parallax-layers', keyframeName: 'animotion-parallaxLayers',
+  category: 'background', subcategory: 'effect', tags: ['parallax', 'layers', 'depth', 'background'],
+  duration: '6s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-parallax-layers { background-image: linear-gradient(135deg, rgba(59,130,246,0.2) 25%, transparent 25%), linear-gradient(225deg, rgba(139,92,246,0.2) 25%, transparent 25%); background-size: 60px 60px, 40px 40px; animation: animotion-parallaxLayers 6s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-parallaxLayers { from { background-position: 0 0, 0 0; } to { background-position: 60px 60px, 120px 120px; } }`
+},
+{
+  id: 'B21', name: 'Hue Rotate Bg', description: 'Background hue rotates through the full color spectrum',
+  cssClass: 'animotion-hue-rotate-bg', keyframeName: 'animotion-hueRotateBg',
+  category: 'background', subcategory: 'color', tags: ['hue', 'rotate', 'spectrum', 'background'],
+  duration: '5s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'background',
+  css: `.animotion-hue-rotate-bg { background: linear-gradient(135deg, #3b82f6, #8b5cf6); animation: animotion-hueRotateBg 5s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-hueRotateBg { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(360deg); } }`
+},
+{
+  id: 'B22', name: 'Scanline CRT', description: 'CRT monitor scanline effect scrolling down the background',
+  cssClass: 'animotion-scanline-crt', keyframeName: 'animotion-scanlineCRT',
+  category: 'background', subcategory: 'effect', tags: ['scanline', 'crt', 'retro', 'background', 'tv'],
+  duration: '4s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-scanline-crt { background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px); background-size: 100% 4px; animation: animotion-scanlineCRT 4s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-scanlineCRT { from { background-position: 0 0; } to { background-position: 0 100px; } }`
+},
+{
+  id: 'B23', name: 'Holographic Foil', description: 'Iridescent holographic foil effect that shifts with animation',
+  cssClass: 'animotion-holographic-foil', keyframeName: 'animotion-holographicFoil',
+  category: 'background', subcategory: 'effect', tags: ['holographic', 'foil', 'iridescent', 'background'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-holographic-foil { background: linear-gradient(135deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #ff6b6b); background-size: 200% 200%; animation: animotion-holographicFoil 3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-holographicFoil { 0% { background-position: 0% 0%; filter: brightness(1); } 50% { background-position: 100% 100%; filter: brightness(1.2); } to { background-position: 0% 0%; filter: brightness(1); } }`
+},
+{
+  id: 'B24', name: 'Lava Lamp', description: 'Lava lamp blobs that rise, morph, and fall',
+  cssClass: 'animotion-lava-lamp', keyframeName: 'animotion-lavaLamp',
+  category: 'background', subcategory: 'shape', tags: ['lava', 'lamp', 'blob', 'background', 'retro'],
+  duration: '8s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-lava-lamp { background: radial-gradient(ellipse at 30% 80%, rgba(239,68,68,0.6) 0%, transparent 50%), radial-gradient(ellipse at 70% 20%, rgba(245,158,11,0.6) 0%, transparent 50%); animation: animotion-lavaLamp 8s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-lavaLamp { 0%, to { background-position: 30% 80%, 70% 20%; } 25% { background-position: 40% 20%, 60% 80%; } 50% { background-position: 60% 30%, 40% 70%; } 75% { background-position: 50% 70%, 50% 30%; } }`
+},
+{
+  id: 'B25', name: 'Particle Field', description: 'Field of particles drifting gently across the background',
+  cssClass: 'animotion-particle-field', keyframeName: 'animotion-particleField',
+  category: 'background', subcategory: 'particle', tags: ['particle', 'field', 'drift', 'background'],
+  duration: '10s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-particle-field { background-image: radial-gradient(1px 1px at 10px 10px, rgba(255,255,255,0.5) 0%, transparent 100%), radial-gradient(1px 1px at 50px 30px, rgba(255,255,255,0.4) 0%, transparent 100%), radial-gradient(2px 2px at 80px 50px, rgba(255,255,255,0.3) 0%, transparent 100%); background-size: 100px 80px; animation: animotion-particleField 10s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-particleField { from { background-position: 0 0; } to { background-position: -100px -80px; } }`
+},
+{
+  id: 'B26', name: 'Nebula', description: 'Deep space nebula clouds with shifting colors',
+  cssClass: 'animotion-nebula', keyframeName: 'animotion-nebula',
+  category: 'background', subcategory: 'gradient', tags: ['nebula', 'space', 'cosmic', 'background'],
+  duration: '10s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-nebula { background: radial-gradient(ellipse at 20% 50%, rgba(139,92,246,0.4), transparent 70%), radial-gradient(ellipse at 80% 50%, rgba(59,130,246,0.4), transparent 70%), radial-gradient(ellipse at 50% 20%, rgba(239,68,68,0.3), transparent 70%); background-color: #0a0a2e; animation: animotion-nebula 10s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-nebula { 0%, to { filter: hue-rotate(0deg) brightness(1); } 33% { filter: hue-rotate(30deg) brightness(1.1); } 66% { filter: hue-rotate(-30deg) brightness(0.9); } }`
+},
+{
+  id: 'B27', name: 'Fireflies', description: 'Tiny glowing dots that float like fireflies',
+  cssClass: 'animotion-fireflies', keyframeName: 'animotion-fireflies',
+  category: 'background', subcategory: 'particle', tags: ['fireflies', 'glow', 'float', 'background', 'nature'],
+  duration: '5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-fireflies { background-image: radial-gradient(2px 2px at 25% 40%, rgba(245,158,11,0.8), transparent), radial-gradient(2px 2px at 75% 60%, rgba(245,158,11,0.6), transparent), radial-gradient(1px 1px at 50% 30%, rgba(245,158,11,0.9), transparent); background-size: 200px 200px; animation: animotion-fireflies 5s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-fireflies { 0%, to { background-position: 0 0; opacity: 0.8; } 25% { background-position: 10px -15px; opacity: 1; } 50% { background-position: -5px 10px; opacity: 0.6; } 75% { background-position: 15px 5px; opacity: 1; } }`
+},
+{
+  id: 'B28', name: 'Ocean Wave', description: 'Wavy ocean-like gradient flowing horizontally',
+  cssClass: 'animotion-ocean-wave', keyframeName: 'animotion-oceanWave',
+  category: 'background', subcategory: 'gradient', tags: ['ocean', 'wave', 'water', 'background'],
+  duration: '4s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-ocean-wave { background: linear-gradient(180deg, #0077b6, #0096c7, #00b4d8, #48cae4, #90e0ef); background-size: 100% 200%; animation: animotion-oceanWave 4s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-oceanWave { 0%, to { background-position: 0% 0%; } 50% { background-position: 0% 100%; } }`
+},
+{
+  id: 'B29', name: 'Cloud Drift', description: 'Soft cloud shapes drifting across the background',
+  cssClass: 'animotion-cloud-drift', keyframeName: 'animotion-cloudDrift',
+  category: 'background', subcategory: 'particle', tags: ['cloud', 'drift', 'sky', 'background'],
+  duration: '15s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-cloud-drift { background-image: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.6) 0%, transparent 60%), radial-gradient(ellipse at 70% 40%, rgba(255,255,255,0.4) 0%, transparent 50%); background-size: 300px 150px; animation: animotion-cloudDrift 15s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-cloudDrift { from { background-position: -300px 0; } to { background-position: 100vw 0; } }`
+},
+{
+  id: 'B30', name: 'Light Rays', description: 'Radial light rays emanating from a central point',
+  cssClass: 'animotion-light-rays', keyframeName: 'animotion-lightRays',
+  category: 'background', subcategory: 'effect', tags: ['light', 'rays', 'sun', 'background', 'radial'],
+  duration: '10s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'background',
+  css: `.animotion-light-rays { background: conic-gradient(from 0deg, transparent 0deg, rgba(255,255,255,0.1) 10deg, transparent 20deg, transparent 30deg, rgba(255,255,255,0.1) 40deg, transparent 50deg); animation: animotion-lightRays 10s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-lightRays { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`
+},
+{
+  id: 'B31', name: 'Prism Refract', description: 'Light refracting through a prism with rainbow splits',
+  cssClass: 'animotion-prism-refract', keyframeName: 'animotion-prismRefract',
+  category: 'background', subcategory: 'effect', tags: ['prism', 'refract', 'rainbow', 'background'],
+  duration: '4s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-prism-refract { background: linear-gradient(135deg, #ff0000, #ff8800, #ffff00, #00ff00, #0088ff, #8800ff); background-size: 200% 200%; animation: animotion-prismRefract 4s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-prismRefract { 0%, to { background-position: 0% 0%; opacity: 0.8; } 50% { background-position: 100% 100%; opacity: 1; } }`
+},
+{
+  id: 'B32', name: 'Galaxy Spiral', description: 'Spiral galaxy effect with rotating arms of color',
+  cssClass: 'animotion-galaxy-spiral', keyframeName: 'animotion-galaxySpiral',
+  category: 'background', subcategory: 'effect', tags: ['galaxy', 'spiral', 'space', 'background'],
+  duration: '15s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'background',
+  css: `.animotion-galaxy-spiral { background: conic-gradient(from 0deg at 50% 50%, #0a0a2e, rgba(139,92,246,0.3), #0a0a2e, rgba(59,130,246,0.3), #0a0a2e); animation: animotion-galaxySpiral 15s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-galaxySpiral { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`
+},
+{
+  id: 'B33', name: 'Electric Field', description: 'Electric field lines pulsing across the background',
+  cssClass: 'animotion-electric-field', keyframeName: 'animotion-electricField',
+  category: 'background', subcategory: 'effect', tags: ['electric', 'field', 'energy', 'background'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-electric-field { background: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(59,130,246,0.1) 10px, rgba(59,130,246,0.1) 11px); animation: animotion-electricField 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-electricField { 0%, to { opacity: 0.5; background-size: 100% 100%; } 50% { opacity: 1; background-size: 105% 100%; } }`
+},
+{
+  id: 'B34', name: 'Data Stream', description: 'Streaming data visualization with moving lines',
+  cssClass: 'animotion-data-stream', keyframeName: 'animotion-dataStream',
+  category: 'background', subcategory: 'effect', tags: ['data', 'stream', 'lines', 'background', 'tech'],
+  duration: '2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-data-stream { background: repeating-linear-gradient(0deg, rgba(59,130,246,0.1) 0px, rgba(59,130,246,0.1) 1px, transparent 1px, transparent 5px); background-size: 100% 5px; animation: animotion-dataStream 2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-dataStream { from { background-position: 0 0; } to { background-position: 0 -50px; } }`
+},
+{
+  id: 'B35', name: 'Grid Pulse', description: 'Grid pattern pulses with brightness variation',
+  cssClass: 'animotion-grid-pulse', keyframeName: 'animotion-gridPulse',
+  category: 'background', subcategory: 'pattern', tags: ['grid', 'pulse', 'brightness', 'background'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-grid-pulse { background-image: linear-gradient(rgba(59,130,246,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.15) 1px, transparent 1px); background-size: 40px 40px; animation: animotion-gridPulse 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-gridPulse { 0%, to { opacity: 0.4; } 50% { opacity: 1; } }`
+},
+{
+  id: 'B36', name: 'Waveform Bg', description: 'Audio waveform visualization moving across the background',
+  cssClass: 'animotion-waveform-bg', keyframeName: 'animotion-waveformBg',
+  category: 'background', subcategory: 'effect', tags: ['waveform', 'audio', 'music', 'background'],
+  duration: '3s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-waveform-bg { background: linear-gradient(0deg, transparent 40%, rgba(59,130,246,0.3) 50%, transparent 60%); background-size: 100% 100%; animation: animotion-waveformBg 3s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-waveformBg { 0%, to { background-size: 100% 100%; } 25% { background-size: 100% 80%; } 50% { background-size: 100% 120%; } 75% { background-size: 100% 90%; } }`
+},
+{
+  id: 'B37', name: 'Raindrops', description: 'Raindrop ripple effects appearing across the background',
+  cssClass: 'animotion-raindrops', keyframeName: 'animotion-raindrops',
+  category: 'background', subcategory: 'particle', tags: ['rain', 'drops', 'ripple', 'background'],
+  duration: '2s', timingFunction: 'ease-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-raindrops { background-image: radial-gradient(circle at 30% 40%, rgba(59,130,246,0.3) 0%, transparent 20%), radial-gradient(circle at 70% 60%, rgba(59,130,246,0.2) 0%, transparent 15%), radial-gradient(circle at 50% 80%, rgba(59,130,246,0.25) 0%, transparent 18%); animation: animotion-raindrops 2s ease-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-raindrops { from { background-size: 0% 0%, 0% 0%, 0% 0%; opacity: 1; } to { background-size: 40% 40%, 30% 30%, 35% 35%; opacity: 0; } }`
+},
+{
+  id: 'B38', name: 'Snowfall', description: 'Snowflakes gently falling down the background',
+  cssClass: 'animotion-snowfall', keyframeName: 'animotion-snowfall',
+  category: 'background', subcategory: 'particle', tags: ['snow', 'fall', 'winter', 'background'],
+  duration: '5s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-snowfall { background-image: radial-gradient(3px 3px at 20% 0%, rgba(255,255,255,0.8), transparent), radial-gradient(2px 2px at 50% 0%, rgba(255,255,255,0.6), transparent), radial-gradient(2px 2px at 80% 0%, rgba(255,255,255,0.7), transparent); background-size: 200px 200px, 150px 180px, 180px 220px; animation: animotion-snowfall 5s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-snowfall { from { background-position: 0 -200px, 0 -180px, 0 -220px; } to { background-position: 30px 200px, -20px 180px, 10px 220px; } }`
+},
+{
+  id: 'B39', name: 'Fog Roll', description: 'Fog layers rolling across the background slowly',
+  cssClass: 'animotion-fog-roll', keyframeName: 'animotion-fogRoll',
+  category: 'background', subcategory: 'effect', tags: ['fog', 'mist', 'roll', 'background', 'atmosphere'],
+  duration: '10s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-fog-roll { background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1)); background-size: 200% 100%; animation: animotion-fogRoll 10s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-fogRoll { from { background-position: -200% 0; } to { background-position: 200% 0; } }`
+},
+{
+  id: 'B40', name: 'Aurora Boreal', description: 'Northern aurora borealis with wavy shifting curtains of light',
+  cssClass: 'animotion-aurora-boreal', keyframeName: 'animotion-auroraBoreal',
+  category: 'background', subcategory: 'gradient', tags: ['aurora', 'borealis', 'northern', 'background'],
+  duration: '8s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'background',
+  css: `.animotion-aurora-boreal { background: linear-gradient(180deg, #000428 0%, #004e92 30%, #00bf72 50%, #a8ff78 60%, #004e92 80%, #000428 100%); background-size: 100% 400%; animation: animotion-auroraBoreal 8s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-auroraBoreal { 0%, to { background-position: 0% 0%; } 50% { background-position: 0% 100%; } }`
+},
+// ==================== BUTTON (40) ====================
+{
+  id: 'BT01', name: 'Ripple Click', description: 'Material-style ripple effect expanding from click point',
+  cssClass: 'animotion-ripple-click', keyframeName: 'animotion-rippleClick',
+  category: 'button', subcategory: 'click', tags: ['ripple', 'click', 'material', 'button'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-ripple-click { position: relative; overflow: hidden; } .animotion-ripple-click::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%); animation: animotion-rippleClick 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-rippleClick { from { transform: scale(0); opacity: 1; } to { transform: scale(4); opacity: 0; } }`
+},
+{
+  id: 'BT02', name: 'Glow Pulse Button', description: 'Button glows with pulsating box-shadow on hover',
+  cssClass: 'animotion-glow-pulse-btn', keyframeName: 'animotion-glowPulseBtn',
+  category: 'button', subcategory: 'glow', tags: ['glow', 'pulse', 'shadow', 'button', 'hover'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-glow-pulse-btn { animation: animotion-glowPulseBtn 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-glowPulseBtn { 0%, to { box-shadow: 0 0 5px rgba(59,130,246,0.5); } 50% { box-shadow: 0 0 20px rgba(59,130,246,0.8), 0 0 40px rgba(59,130,246,0.4); } }`
+},
+{
+  id: 'BT03', name: 'Shine Sweep', description: 'Shiny highlight sweeps across button surface diagonally',
+  cssClass: 'animotion-shine-sweep', keyframeName: 'animotion-shineSweep',
+  category: 'button', subcategory: 'effect', tags: ['shine', 'sweep', 'highlight', 'button'],
+  duration: '1.5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-shine-sweep { position: relative; overflow: hidden; background-image: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%); background-size: 200% 100%; animation: animotion-shineSweep 1.5s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-shineSweep { from { background-position: 200% 0; } to { background-position: -200% 0; } }`
+},
+{
+  id: 'BT04', name: 'Fill Left', description: 'Button fills with color from left to right on hover',
+  cssClass: 'animotion-fill-left', keyframeName: 'animotion-fillLeft',
+  category: 'button', subcategory: 'fill', tags: ['fill', 'left', 'background', 'button'],
+  duration: '0.4s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-fill-left { background-size: 200% 100%; background-image: linear-gradient(to right, #3b82f6 50%, transparent 50%); background-position: right; animation: animotion-fillLeft 0.4s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-fillLeft { from { background-position: right; } to { background-position: left; } }`
+},
+{
+  id: 'BT05', name: 'Fill Right', description: 'Button fills with color from right to left on hover',
+  cssClass: 'animotion-fill-right', keyframeName: 'animotion-fillRight',
+  category: 'button', subcategory: 'fill', tags: ['fill', 'right', 'background', 'button'],
+  duration: '0.4s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-fill-right { background-size: 200% 100%; background-image: linear-gradient(to left, #3b82f6 50%, transparent 50%); background-position: left; animation: animotion-fillRight 0.4s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-fillRight { from { background-position: left; } to { background-position: right; } }`
+},
+{
+  id: 'BT06', name: 'Fill Top', description: 'Button fills with color from top to bottom',
+  cssClass: 'animotion-fill-top', keyframeName: 'animotion-fillTop',
+  category: 'button', subcategory: 'fill', tags: ['fill', 'top', 'background', 'button'],
+  duration: '0.4s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-fill-top { background-size: 100% 200%; background-image: linear-gradient(to bottom, #3b82f6 50%, transparent 50%); background-position: bottom; animation: animotion-fillTop 0.4s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-fillTop { from { background-position: bottom; } to { background-position: top; } }`
+},
+{
+  id: 'BT07', name: 'Fill Bottom', description: 'Button fills with color from bottom to top',
+  cssClass: 'animotion-fill-bottom', keyframeName: 'animotion-fillBottom',
+  category: 'button', subcategory: 'fill', tags: ['fill', 'bottom', 'background', 'button'],
+  duration: '0.4s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-fill-bottom { background-size: 100% 200%; background-image: linear-gradient(to top, #3b82f6 50%, transparent 50%); background-position: top; animation: animotion-fillBottom 0.4s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-fillBottom { from { background-position: top; } to { background-position: bottom; } }`
+},
+{
+  id: 'BT08', name: 'Press 3D', description: 'Button presses down with 3D depth effect',
+  cssClass: 'animotion-press-3d', keyframeName: 'animotion-press3D',
+  category: 'button', subcategory: '3d', tags: ['press', '3d', 'depth', 'button', 'click'],
+  duration: '0.15s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-press-3d { box-shadow: 0 4px 0 #1e40af; animation: animotion-press3D 0.15s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-press3D { from { transform: translateY(0); box-shadow: 0 4px 0 #1e40af; } to { transform: translateY(4px); box-shadow: 0 0px 0 #1e40af; } }`
+},
+{
+  id: 'BT09', name: 'Border Draw', description: 'Button border draws itself around the perimeter',
+  cssClass: 'animotion-border-draw', keyframeName: 'animotion-borderDraw',
+  category: 'button', subcategory: 'border', tags: ['border', 'draw', 'outline', 'button'],
+  duration: '0.8s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-border-draw { border: 2px solid transparent; background-clip: padding-box; animation: animotion-borderDraw 0.8s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-borderDraw { 0% { border-color: transparent; clip-path: inset(0 100% 100% 0); } 25% { clip-path: inset(0 0 100% 0); } 50% { clip-path: inset(0 0 0 0); border-color: #3b82f6; } to { border-color: #3b82f6; clip-path: inset(0 0 0 0); } }`
+},
+{
+  id: 'BT10', name: 'Gradient Border', description: 'Button border animates with rotating gradient colors',
+  cssClass: 'animotion-gradient-border-btn', keyframeName: 'animotion-gradientBorderBtn',
+  category: 'button', subcategory: 'border', tags: ['gradient', 'border', 'rotate', 'button'],
+  duration: '3s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-gradient-border-btn { border: 2px solid; animation: animotion-gradientBorderBtn 3s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-gradientBorderBtn { 0% { border-color: #3b82f6; } 25% { border-color: #8b5cf6; } 50% { border-color: #ef4444; } 75% { border-color: #f59e0b; } to { border-color: #3b82f6; } }`
+},
+{
+  id: 'BT11', name: 'Gradient Sweep', description: 'Gradient color sweeps across button background',
+  cssClass: 'animotion-gradient-sweep', keyframeName: 'animotion-gradientSweep',
+  category: 'button', subcategory: 'gradient', tags: ['gradient', 'sweep', 'color', 'button'],
+  duration: '2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-gradient-sweep { background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ef4444, #3b82f6); background-size: 300% 100%; animation: animotion-gradientSweep 2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-gradientSweep { from { background-position: 0% 0%; } to { background-position: 300% 0%; } }`
+},
+{
+  id: 'BT12', name: 'Magnetic Pull', description: 'Button subtly pulls toward the cursor with transform',
+  cssClass: 'animotion-magnetic-pull', keyframeName: 'animotion-magneticPull',
+  category: 'button', subcategory: 'movement', tags: ['magnetic', 'pull', 'hover', 'button'],
+  duration: '0.3s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-magnetic-pull { animation: animotion-magneticPull 0.3s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-magneticPull { from { transform: translate(0, 0); } to { transform: translate(3px, -3px); } }`
+},
+{
+  id: 'BT13', name: 'Shake Error', description: 'Button shakes to indicate an error or invalid action',
+  cssClass: 'animotion-shake-error', keyframeName: 'animotion-shakeError',
+  category: 'button', subcategory: 'feedback', tags: ['shake', 'error', 'invalid', 'button'],
+  duration: '0.5s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-shake-error { animation: animotion-shakeError 0.5s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-shakeError { 0%, to { transform: translateX(0); } 15% { transform: translateX(-8px); } 30% { transform: translateX(8px); } 45% { transform: translateX(-6px); } 60% { transform: translateX(6px); } 75% { transform: translateX(-3px); } 90% { transform: translateX(3px); } }`
+},
+{
+  id: 'BT14', name: 'Success Checkmark', description: 'Button morphs to show a success checkmark indicator',
+  cssClass: 'animotion-success-checkmark', keyframeName: 'animotion-successCheckmark',
+  category: 'button', subcategory: 'feedback', tags: ['success', 'check', 'done', 'button'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-success-checkmark { background-color: #10b981; animation: animotion-successCheckmark 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-successCheckmark { 0% { transform: scale(1); } 30% { transform: scale(0.9); } 50% { transform: scale(1.1); background-color: #10b981; } to { transform: scale(1); } }`
+},
+{
+  id: 'BT15', name: 'Loading Spinner', description: 'Button shows a spinning loading indicator',
+  cssClass: 'animotion-loading-spinner', keyframeName: 'animotion-loadingSpinner',
+  category: 'button', subcategory: 'feedback', tags: ['loading', 'spinner', 'wait', 'button'],
+  duration: '1s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'none', demoType: 'button',
+  css: `.animotion-loading-spinner { position: relative; color: transparent; } .animotion-loading-spinner::after { content: ''; position: absolute; width: 16px; height: 16px; top: 50%; left: 50%; margin: -8px 0 0 -8px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: animotion-loadingSpinner 1s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-loadingSpinner { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`
+},
+{
+  id: 'BT16', name: 'Progress Fill', description: 'Button fills horizontally to indicate progress completion',
+  cssClass: 'animotion-progress-fill', keyframeName: 'animotion-progressFill',
+  category: 'button', subcategory: 'feedback', tags: ['progress', 'fill', 'loading', 'button'],
+  duration: '2s', timingFunction: 'linear', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-progress-fill { background: linear-gradient(90deg, #10b981 0%, #10b981 50%, #3b82f6 50%, #3b82f6 100%); background-size: 200% 100%; background-position: right; animation: animotion-progressFill 2s linear both; }`,
+  keyframeCSS: `@keyframes animotion-progressFill { from { background-position: right; } to { background-position: left; } }`
+},
+{
+  id: 'BT17', name: 'Jelly Bounce', description: 'Button bounces with jelly-like squash and stretch',
+  cssClass: 'animotion-jelly-bounce', keyframeName: 'animotion-jellyBounce',
+  category: 'button', subcategory: 'elastic', tags: ['jelly', 'bounce', 'squash', 'button'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-jelly-bounce { animation: animotion-jellyBounce 0.6s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-jellyBounce { 0% { transform: scaleX(1) scaleY(1); } 30% { transform: scaleX(1.15) scaleY(0.85); } 50% { transform: scaleX(0.9) scaleY(1.1); } 65% { transform: scaleX(1.05) scaleY(0.95); } 80% { transform: scaleX(0.97) scaleY(1.03); } to { transform: scaleX(1) scaleY(1); } }`
+},
+{
+  id: 'BT18', name: 'Elastic Scale', description: 'Button scales with elastic spring overshoot on click',
+  cssClass: 'animotion-elastic-scale', keyframeName: 'animotion-elasticScale',
+  category: 'button', subcategory: 'elastic', tags: ['elastic', 'scale', 'spring', 'button'],
+  duration: '0.5s', timingFunction: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-elastic-scale { animation: animotion-elasticScale 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }`,
+  keyframeCSS: `@keyframes animotion-elasticScale { from { transform: scale(0.9); } to { transform: scale(1); } }`
+},
+{
+  id: 'BT19', name: 'Outline Grow', description: 'Button outline grows outward from the element',
+  cssClass: 'animotion-outline-grow', keyframeName: 'animotion-outlineGrow',
+  category: 'button', subcategory: 'border', tags: ['outline', 'grow', 'expand', 'button'],
+  duration: '0.3s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-outline-grow { animation: animotion-outlineGrow 0.3s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-outlineGrow { from { box-shadow: 0 0 0 0 rgba(59,130,246,0.6); } to { box-shadow: 0 0 0 4px rgba(59,130,246,0.6); } }`
+},
+{
+  id: 'BT20', name: 'Icon Slide In', description: 'Icon slides in from the side when button is hovered',
+  cssClass: 'animotion-icon-slide-in', keyframeName: 'animotion-iconSlideIn',
+  category: 'button', subcategory: 'content', tags: ['icon', 'slide', 'hover', 'button'],
+  duration: '0.3s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-icon-slide-in { animation: animotion-iconSlideIn 0.3s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-iconSlideIn { from { transform: translateX(-10px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`
+},
+{
+  id: 'BT21', name: 'Color Wave', description: 'Color wave ripples across button background',
+  cssClass: 'animotion-color-wave', keyframeName: 'animotion-colorWave',
+  category: 'button', subcategory: 'color', tags: ['color', 'wave', 'ripple', 'button'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-color-wave { background: linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6); background-size: 200% 100%; animation: animotion-colorWave 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-colorWave { 0%, to { background-position: 0% 0%; } 50% { background-position: 100% 0%; } }`
+},
+{
+  id: 'BT22', name: 'Neon Glow', description: 'Button has neon glow effect that pulses',
+  cssClass: 'animotion-neon-glow', keyframeName: 'animotion-neonGlow',
+  category: 'button', subcategory: 'glow', tags: ['neon', 'glow', 'pulse', 'button'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-neon-glow { animation: animotion-neonGlow 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-neonGlow { 0%, to { box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #3b82f6; } 50% { box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 80px #3b82f6; } }`
+},
+{
+  id: 'BT23', name: 'Spotlight Sweep', description: 'Spotlight sweeps across button surface',
+  cssClass: 'animotion-spotlight-sweep', keyframeName: 'animotion-spotlightSweep',
+  category: 'button', subcategory: 'effect', tags: ['spotlight', 'sweep', 'shine', 'button'],
+  duration: '2s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-spotlight-sweep { background-image: linear-gradient(110deg, transparent 20%, rgba(255,255,255,0.3) 50%, transparent 80%); background-size: 200% 100%; animation: animotion-spotlightSweep 2s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-spotlightSweep { from { background-position: 200% 0; } to { background-position: -200% 0; } }`
+},
+{
+  id: 'BT24', name: 'Text Flip', description: 'Button text flips vertically to reveal alternate text',
+  cssClass: 'animotion-text-flip-btn', keyframeName: 'animotion-textFlipBtn',
+  category: 'button', subcategory: 'content', tags: ['text', 'flip', '3d', 'button'],
+  duration: '0.4s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-text-flip-btn { perspective: 600px; animation: animotion-textFlipBtn 0.4s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-textFlipBtn { from { transform: perspective(600px) rotateX(0); } to { transform: perspective(600px) rotateX(360deg); } }`
+},
+{
+  id: 'BT25', name: 'Button Flip 3D', description: 'Entire button flips in 3D to show a different state',
+  cssClass: 'animotion-btn-flip-3d', keyframeName: 'animotion-btnFlip3D',
+  category: 'button', subcategory: '3d', tags: ['flip', '3d', 'rotate', 'button'],
+  duration: '0.6s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-flip-3d { animation: animotion-btnFlip3D 0.6s ease-in-out both; perspective: 800px; }`,
+  keyframeCSS: `@keyframes animotion-btnFlip3D { from { transform: perspective(800px) rotateY(0); } to { transform: perspective(800px) rotateY(180deg); } }`
+},
+{
+  id: 'BT26', name: 'Button Morph', description: 'Button morphs shape from rectangle to rounded pill',
+  cssClass: 'animotion-btn-morph', keyframeName: 'animotion-btnMorph',
+  category: 'button', subcategory: 'shape', tags: ['morph', 'shape', 'radius', 'button'],
+  duration: '0.5s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-morph { animation: animotion-btnMorph 0.5s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnMorph { from { border-radius: 4px; padding: 10px 24px; } to { border-radius: 50px; padding: 10px 32px; } }`
+},
+{
+  id: 'BT27', name: 'Button Stretch', description: 'Button stretches wider on hover',
+  cssClass: 'animotion-btn-stretch', keyframeName: 'animotion-btnStretch',
+  category: 'button', subcategory: 'scale', tags: ['stretch', 'wide', 'hover', 'button'],
+  duration: '0.3s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-stretch { animation: animotion-btnStretch 0.3s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnStretch { from { transform: scaleX(1); } to { transform: scaleX(1.1); } }`
+},
+{
+  id: 'BT28', name: 'Button Pop', description: 'Button pops with elastic scale on click',
+  cssClass: 'animotion-btn-pop', keyframeName: 'animotion-btnPop',
+  category: 'button', subcategory: 'scale', tags: ['pop', 'scale', 'elastic', 'button'],
+  duration: '0.3s', timingFunction: 'cubic-bezier(0.26, 0.53, 0.74, 1.48)', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-pop { animation: animotion-btnPop 0.3s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }`,
+  keyframeCSS: `@keyframes animotion-btnPop { 0% { transform: scale(0.95); } 50% { transform: scale(1.08); } to { transform: scale(1); } }`
+},
+{
+  id: 'BT29', name: 'Button Slide', description: 'Button content slides to reveal icon or second label',
+  cssClass: 'animotion-btn-slide', keyframeName: 'animotion-btnSlide',
+  category: 'button', subcategory: 'content', tags: ['slide', 'reveal', 'content', 'button'],
+  duration: '0.3s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-slide { animation: animotion-btnSlide 0.3s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnSlide { from { padding-left: 24px; padding-right: 24px; } to { padding-left: 16px; padding-right: 32px; } }`
+},
+{
+  id: 'BT30', name: 'Button Rotate', description: 'Button rotates slightly on hover for playful feel',
+  cssClass: 'animotion-btn-rotate', keyframeName: 'animotion-btnRotate',
+  category: 'button', subcategory: 'movement', tags: ['rotate', 'tilt', 'playful', 'button'],
+  duration: '0.3s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-rotate { animation: animotion-btnRotate 0.3s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnRotate { from { transform: rotate(0); } to { transform: rotate(-3deg); } }`
+},
+{
+  id: 'BT31', name: 'Button Pulse Ring', description: 'Expanding ring pulses outward from button edge',
+  cssClass: 'animotion-btn-pulse-ring', keyframeName: 'animotion-btnPulseRing',
+  category: 'button', subcategory: 'glow', tags: ['pulse', 'ring', 'expand', 'button'],
+  duration: '1.5s', timingFunction: 'ease-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-pulse-ring { animation: animotion-btnPulseRing 1.5s ease-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-btnPulseRing { 0% { box-shadow: 0 0 0 0 rgba(59,130,246,0.6); } to { box-shadow: 0 0 0 15px rgba(59,130,246,0); } }`
+},
+{
+  id: 'BT32', name: 'Button Glitch', description: 'Button glitches with RGB offset and position jitter',
+  cssClass: 'animotion-btn-glitch', keyframeName: 'animotion-btnGlitch',
+  category: 'button', subcategory: 'effect', tags: ['glitch', 'rgb', 'jitter', 'button'],
+  duration: '0.3s', timingFunction: 'steps(2, end)', iterationCount: '3', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-glitch { animation: animotion-btnGlitch 0.3s steps(2, end) 3 both; }`,
+  keyframeCSS: `@keyframes animotion-btnGlitch { 0%, to { transform: translate(0); box-shadow: 2px 0 #ff0000, -2px 0 #00ff00; } 25% { transform: translate(-2px, 1px); box-shadow: -2px 0 #ff0000, 2px 0 #00ff00; } 50% { transform: translate(1px, -1px); } 75% { transform: translate(2px, 1px); box-shadow: 2px 0 #ff0000, -2px 0 #00ff00; } }`
+},
+{
+  id: 'BT33', name: 'Button Wave', description: 'Wave effect ripples through button background',
+  cssClass: 'animotion-btn-wave', keyframeName: 'animotion-btnWave',
+  category: 'button', subcategory: 'effect', tags: ['wave', 'ripple', 'effect', 'button'],
+  duration: '1.5s', timingFunction: 'ease-in-out', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-wave { background: linear-gradient(90deg, #3b82f6, #6366f1, #3b82f6); background-size: 200% 100%; animation: animotion-btnWave 1.5s ease-in-out infinite; }`,
+  keyframeCSS: `@keyframes animotion-btnWave { 0%, to { background-position: 0% 0%; } 50% { background-position: 100% 0%; } }`
+},
+{
+  id: 'BT34', name: 'Button Ripple Out', description: 'Ripple ring expands outward from button center',
+  cssClass: 'animotion-btn-ripple-out', keyframeName: 'animotion-btnRippleOut',
+  category: 'button', subcategory: 'click', tags: ['ripple', 'expand', 'center', 'button'],
+  duration: '0.6s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-ripple-out { animation: animotion-btnRippleOut 0.6s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnRippleOut { from { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); } to { box-shadow: 0 0 0 20px rgba(59,130,246,0); } }`
+},
+{
+  id: 'BT35', name: 'Button Fill Diagonal', description: 'Button fills diagonally from corner to corner',
+  cssClass: 'animotion-btn-fill-diagonal', keyframeName: 'animotion-btnFillDiagonal',
+  category: 'button', subcategory: 'fill', tags: ['fill', 'diagonal', 'background', 'button'],
+  duration: '0.4s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-fill-diagonal { background: linear-gradient(135deg, #3b82f6 50%, transparent 50%); background-size: 250% 250%; background-position: 100% 100%; animation: animotion-btnFillDiagonal 0.4s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnFillDiagonal { from { background-position: 100% 100%; } to { background-position: 0% 0%; } }`
+},
+{
+  id: 'BT36', name: 'Button Sweep Circle', description: 'Circular sweep reveal fills the button from center',
+  cssClass: 'animotion-btn-sweep-circle', keyframeName: 'animotion-btnSweepCircle',
+  category: 'button', subcategory: 'fill', tags: ['sweep', 'circle', 'reveal', 'button'],
+  duration: '0.5s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-sweep-circle { background: radial-gradient(circle, #3b82f6 0%, transparent 0%); animation: animotion-btnSweepCircle 0.5s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnSweepCircle { from { background: radial-gradient(circle, #3b82f6 0%, transparent 0%); } to { background: radial-gradient(circle, #3b82f6 100%, transparent 100%); } }`
+},
+{
+  id: 'BT37', name: 'Button Border Chase', description: 'Animated border segment chases around the button perimeter',
+  cssClass: 'animotion-btn-border-chase', keyframeName: 'animotion-btnBorderChase',
+  category: 'button', subcategory: 'border', tags: ['border', 'chase', 'animate', 'button'],
+  duration: '2s', timingFunction: 'linear', iterationCount: 'infinite', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-border-chase { border: 2px solid transparent; background-clip: padding-box; animation: animotion-btnBorderChase 2s linear infinite; }`,
+  keyframeCSS: `@keyframes animotion-btnBorderChase { 0% { border-color: #3b82f6 transparent transparent transparent; } 25% { border-color: transparent #3b82f6 transparent transparent; } 50% { border-color: transparent transparent #3b82f6 transparent; } 75% { border-color: transparent transparent transparent #3b82f6; } to { border-color: #3b82f6 transparent transparent transparent; } }`
+},
+{
+  id: 'BT38', name: 'Button Shine', description: 'Glossy shine band sweeps across button on hover',
+  cssClass: 'animotion-btn-shine', keyframeName: 'animotion-btnShine',
+  category: 'button', subcategory: 'effect', tags: ['shine', 'gloss', 'sweep', 'button'],
+  duration: '1s', timingFunction: 'ease-in-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-shine { position: relative; overflow: hidden; } .animotion-btn-shine::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: animotion-btnShine 1s ease-in-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnShine { from { left: -100%; } to { left: 200%; } }`
+},
+{
+  id: 'BT39', name: 'Button Lift', description: 'Button lifts up with shadow increase on hover',
+  cssClass: 'animotion-btn-lift', keyframeName: 'animotion-btnLift',
+  category: 'button', subcategory: 'movement', tags: ['lift', 'shadow', 'hover', 'button', 'elevation'],
+  duration: '0.3s', timingFunction: 'ease-out', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-lift { animation: animotion-btnLift 0.3s ease-out both; }`,
+  keyframeCSS: `@keyframes animotion-btnLift { from { transform: translateY(0); box-shadow: 0 2px 4px rgba(0,0,0,0.1); } to { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); } }`
+},
+{
+  id: 'BT40', name: 'Button Press', description: 'Button presses down with shadow reduction on click',
+  cssClass: 'animotion-btn-press', keyframeName: 'animotion-btnPress',
+  category: 'button', subcategory: 'click', tags: ['press', 'down', 'click', 'button', 'active'],
+  duration: '0.15s', timingFunction: 'ease-in', iterationCount: '1', fillMode: 'both', demoType: 'button',
+  css: `.animotion-btn-press { animation: animotion-btnPress 0.15s ease-in both; }`,
+  keyframeCSS: `@keyframes animotion-btnPress { from { transform: translateY(0) scale(1); box-shadow: 0 4px 8px rgba(0,0,0,0.2); } to { transform: translateY(2px) scale(0.98); box-shadow: 0 1px 2px rgba(0,0,0,0.2); } }`
+},
+// ==================== CARD (35) ====================
+{id:'C01',name:'Card Lift',description:'Card lifts with increased shadow on hover',cssClass:'animotion-card-lift',keyframeName:'animotion-cardLift',category:'card',subcategory:'hover',tags:['lift','shadow','hover','card'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-lift { animation: animotion-cardLift 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardLift { from { transform: translateY(0); box-shadow: 0 2px 8px rgba(0,0,0,0.1); } to { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); } }`},
+{id:'C02',name:'Card Flip 3D',description:'Card flips 180 degrees to reveal back content',cssClass:'animotion-card-flip-3d',keyframeName:'animotion-cardFlip3D',category:'card',subcategory:'3d',tags:['flip','3d','rotate','card','reveal'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-flip-3d { animation: animotion-cardFlip3D 0.6s ease-in-out both; perspective: 1000px; }`,keyframeCSS:`@keyframes animotion-cardFlip3D { from { transform: perspective(1000px) rotateY(0); } to { transform: perspective(1000px) rotateY(180deg); } }`},
+{id:'C03',name:'Card Tilt 3D',description:'Card tilts in 3D space following cursor-like movement',cssClass:'animotion-card-tilt-3d',keyframeName:'animotion-cardTilt3D',category:'card',subcategory:'3d',tags:['tilt','3d','perspective','card','parallax'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-card-tilt-3d { animation: animotion-cardTilt3D 3s ease-in-out infinite; perspective: 1000px; }`,keyframeCSS:`@keyframes animotion-cardTilt3D { 0%, to { transform: perspective(1000px) rotateX(0) rotateY(0); } 25% { transform: perspective(1000px) rotateX(5deg) rotateY(-5deg); } 50% { transform: perspective(1000px) rotateX(-3deg) rotateY(5deg); } 75% { transform: perspective(1000px) rotateX(3deg) rotateY(-3deg); } }`},
+{id:'C04',name:'Glassmorphism',description:'Card applies animated glassmorphism with blur backdrop',cssClass:'animotion-glassmorphism',keyframeName:'animotion-glassmorphism',category:'card',subcategory:'effect',tags:['glass','blur','frosted','card','modern'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-glassmorphism { animation: animotion-glassmorphism 0.5s ease-out both; backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }`,keyframeCSS:`@keyframes animotion-glassmorphism { from { backdrop-filter: blur(0); background: rgba(255,255,255,0); } to { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); } }`},
+{id:'C05',name:'Neumorphism Press',description:'Card presses with neumorphic shadow inversion',cssClass:'animotion-neumorphism-press',keyframeName:'animotion-neumorphismPress',category:'card',subcategory:'effect',tags:['neumorphism','press','shadow','card'],duration:'0.2s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-neumorphism-press { animation: animotion-neumorphismPress 0.2s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-neumorphismPress { from { box-shadow: 8px 8px 16px rgba(0,0,0,0.15), -8px -8px 16px rgba(255,255,255,0.8); } to { box-shadow: inset 4px 4px 8px rgba(0,0,0,0.1), inset -4px -4px 8px rgba(255,255,255,0.6); } }`},
+{id:'C06',name:'Glow Border Card',description:'Card border glows with animated color shifting',cssClass:'animotion-glow-border-card',keyframeName:'animotion-glowBorderCard',category:'card',subcategory:'border',tags:['glow','border','color','card'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-glow-border-card { border: 2px solid #3b82f6; animation: animotion-glowBorderCard 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-glowBorderCard { 0%, to { border-color: #3b82f6; box-shadow: 0 0 10px rgba(59,130,246,0.3); } 50% { border-color: #8b5cf6; box-shadow: 0 0 20px rgba(139,92,246,0.5); } }`},
+{id:'C07',name:'Gradient Border Card',description:'Card border has an animated rotating gradient',cssClass:'animotion-gradient-border-card',keyframeName:'animotion-gradientBorderCard',category:'card',subcategory:'border',tags:['gradient','border','rotate','card'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-gradient-border-card { border: 2px solid; animation: animotion-gradientBorderCard 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-gradientBorderCard { 0% { border-color: #3b82f6; } 33% { border-color: #8b5cf6; } 66% { border-color: #ef4444; } to { border-color: #3b82f6; } }`},
+{id:'C08',name:'Zoom Image',description:'Card image zooms in subtly on hover',cssClass:'animotion-zoom-image',keyframeName:'animotion-zoomImage',category:'card',subcategory:'hover',tags:['zoom','image','scale','card','hover'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-zoom-image { overflow: hidden; animation: animotion-zoomImage 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-zoomImage { from { transform: scale(1); } to { transform: scale(1.1); } }`},
+{id:'C09',name:'Overlay Reveal',description:'Card overlay slides up to reveal additional info',cssClass:'animotion-overlay-reveal',keyframeName:'animotion-overlayReveal',category:'card',subcategory:'reveal',tags:['overlay','reveal','slide','card','info'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-overlay-reveal { animation: animotion-overlayReveal 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-overlayReveal { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'C10',name:'Slide Info Panel',description:'Information panel slides in from the side of the card',cssClass:'animotion-slide-info-panel',keyframeName:'animotion-slideInfoPanel',category:'card',subcategory:'reveal',tags:['slide','panel','info','card'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-slide-info-panel { animation: animotion-slideInfoPanel 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-slideInfoPanel { from { transform: translateX(100%); } to { transform: translateX(0); } }`},
+{id:'C11',name:'Card Scale In',description:'Card scales in from small to full size with opacity',cssClass:'animotion-card-scale-in',keyframeName:'animotion-cardScaleIn',category:'card',subcategory:'entrance',tags:['scale','entrance','grow','card'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-scale-in { animation: animotion-cardScaleIn 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardScaleIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'C12',name:'Shadow Bloom',description:'Card shadow blooms outward dramatically on hover',cssClass:'animotion-shadow-bloom',keyframeName:'animotion-shadowBloom',category:'card',subcategory:'shadow',tags:['shadow','bloom','expand','card'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-shadow-bloom { animation: animotion-shadowBloom 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-shadowBloom { from { box-shadow: 0 2px 8px rgba(0,0,0,0.1); } to { box-shadow: 0 20px 60px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1); } }`},
+{id:'C13',name:'Shimmer Loading',description:'Card shows shimmer loading placeholder effect',cssClass:'animotion-shimmer-loading',keyframeName:'animotion-shimmerLoading',category:'card',subcategory:'loading',tags:['shimmer','loading','skeleton','card','placeholder'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-shimmer-loading { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: animotion-shimmerLoading 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-shimmerLoading { from { background-position: 200% 0; } to { background-position: -200% 0; } }`},
+{id:'C14',name:'Skeleton Screen',description:'Card skeleton loading with pulsing gray blocks',cssClass:'animotion-skeleton-screen',keyframeName:'animotion-skeletonScreen',category:'card',subcategory:'loading',tags:['skeleton','loading','pulse','card','placeholder'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-skeleton-screen { background: #e5e7eb; animation: animotion-skeletonScreen 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-skeletonScreen { 0%, to { opacity: 1; } 50% { opacity: 0.5; } }`},
+{id:'C15',name:'Card Rotate Y',description:'Card rotates subtly on Y axis for depth peek',cssClass:'animotion-card-rotate-y',keyframeName:'animotion-cardRotateY',category:'card',subcategory:'3d',tags:['rotate','3d','y-axis','card'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-rotate-y { animation: animotion-cardRotateY 0.5s ease-out both; perspective: 1000px; }`,keyframeCSS:`@keyframes animotion-cardRotateY { from { transform: perspective(1000px) rotateY(0); } to { transform: perspective(1000px) rotateY(15deg); } }`},
+{id:'C16',name:'Polaroid Drop',description:'Card drops in like a polaroid photo with slight rotation',cssClass:'animotion-polaroid-drop',keyframeName:'animotion-polaroidDrop',category:'card',subcategory:'entrance',tags:['polaroid','drop','photo','card','creative'],duration:'0.7s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-polaroid-drop { animation: animotion-polaroidDrop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-polaroidDrop { from { transform: translateY(-100px) rotate(-15deg); opacity: 0; } to { transform: translateY(0) rotate(-3deg); opacity: 1; } }`},
+{id:'C17',name:'Card Unfold',description:'Card unfolds from a folded state to reveal content',cssClass:'animotion-card-unfold',keyframeName:'animotion-cardUnfold',category:'card',subcategory:'reveal',tags:['unfold','reveal','fold','card'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-unfold { animation: animotion-cardUnfold 0.6s ease-out both; transform-origin: top; }`,keyframeCSS:`@keyframes animotion-cardUnfold { from { transform: perspective(800px) rotateX(-90deg); opacity: 0; } to { transform: perspective(800px) rotateX(0); opacity: 1; } }`},
+{id:'C18',name:'Flip Reveal',description:'Card flips to reveal hidden back content',cssClass:'animotion-flip-reveal',keyframeName:'animotion-flipReveal',category:'card',subcategory:'3d',tags:['flip','reveal','3d','card'],duration:'0.8s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-flip-reveal { animation: animotion-flipReveal 0.8s ease-in-out both; perspective: 1000px; }`,keyframeCSS:`@keyframes animotion-flipReveal { 0% { transform: perspective(1000px) rotateY(0); } 100% { transform: perspective(1000px) rotateY(180deg); } }`},
+{id:'C19',name:'Border Collapse Draw',description:'Card border draws in from corners toward center',cssClass:'animotion-border-collapse-draw',keyframeName:'animotion-borderCollapseDraw',category:'card',subcategory:'border',tags:['border','draw','collapse','card'],duration:'0.8s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-border-collapse-draw { border: 2px solid transparent; animation: animotion-borderCollapseDraw 0.8s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-borderCollapseDraw { from { border-color: transparent; } to { border-color: #3b82f6; } }`},
+{id:'C20',name:'Confetti Card',description:'Card celebrates with confetti burst animation',cssClass:'animotion-confetti-card',keyframeName:'animotion-confettiCard',category:'card',subcategory:'effect',tags:['confetti','celebration','burst','card'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-confetti-card { animation: animotion-confettiCard 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-confettiCard { 0% { transform: scale(0.9); } 50% { transform: scale(1.02); box-shadow: 0 0 30px rgba(59,130,246,0.3); } to { transform: scale(1); } }`},
+{id:'C21',name:'Card Stack',description:'Cards stack on top of each other with offset',cssClass:'animotion-card-stack',keyframeName:'animotion-cardStack',category:'card',subcategory:'layout',tags:['stack','offset','depth','card'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-stack { animation: animotion-cardStack 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardStack { from { transform: translateY(-20px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }`},
+{id:'C22',name:'Card Fan',description:'Cards fan out like a hand of playing cards',cssClass:'animotion-card-fan',keyframeName:'animotion-cardFan',category:'card',subcategory:'layout',tags:['fan','spread','cards','card'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-fan { animation: animotion-cardFan 0.6s ease-out both; transform-origin: bottom center; }`,keyframeCSS:`@keyframes animotion-cardFan { from { transform: rotate(0); } to { transform: rotate(15deg); } }`},
+{id:'C23',name:'Card Shuffle',description:'Cards shuffle with overlapping slide movements',cssClass:'animotion-card-shuffle',keyframeName:'animotion-cardShuffle',category:'card',subcategory:'layout',tags:['shuffle','slide','rearrange','card'],duration:'0.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-shuffle { animation: animotion-cardShuffle 0.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-cardShuffle { 0% { transform: translateX(0) translateY(0); } 50% { transform: translateX(20px) translateY(-10px); z-index: 1; } to { transform: translateX(0) translateY(0); } }`},
+{id:'C24',name:'Card Deal',description:'Card deals in from the side like a deck of cards',cssClass:'animotion-card-deal',keyframeName:'animotion-cardDeal',category:'card',subcategory:'entrance',tags:['deal','slide','deck','card'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-deal { animation: animotion-cardDeal 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardDeal { from { transform: translateX(-200px) rotate(-20deg); opacity: 0; } to { transform: translateX(0) rotate(0); opacity: 1; } }`},
+{id:'C25',name:'Card Peel',description:'Card peels up from bottom corner like turning a page',cssClass:'animotion-card-peel',keyframeName:'animotion-cardPeel',category:'card',subcategory:'3d',tags:['peel','page','corner','card'],duration:'0.7s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-peel { animation: animotion-cardPeel 0.7s ease-in-out both; transform-origin: bottom left; }`,keyframeCSS:`@keyframes animotion-cardPeel { from { transform: perspective(800px) rotateX(0) rotateY(0); } to { transform: perspective(800px) rotateX(-30deg) rotateY(10deg); } }`},
+{id:'C26',name:'Card Slide',description:'Card slides in from below with smooth easing',cssClass:'animotion-card-slide',keyframeName:'animotion-cardSlide',category:'card',subcategory:'entrance',tags:['slide','up','entrance','card'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-slide { animation: animotion-cardSlide 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardSlide { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'C27',name:'Card Morph',description:'Card shape morphs between rounded and sharp corners',cssClass:'animotion-card-morph',keyframeName:'animotion-cardMorph',category:'card',subcategory:'shape',tags:['morph','shape','radius','card'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-card-morph { animation: animotion-cardMorph 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-cardMorph { 0%, to { border-radius: 8px; } 50% { border-radius: 24px; } }`},
+{id:'C28',name:'Card Expand',description:'Card expands from compact to full size revealing content',cssClass:'animotion-card-expand',keyframeName:'animotion-cardExpand',category:'card',subcategory:'reveal',tags:['expand','grow','reveal','card'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-expand { animation: animotion-cardExpand 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardExpand { from { transform: scale(0.5); max-height: 0; opacity: 0; } to { transform: scale(1); max-height: 500px; opacity: 1; } }`},
+{id:'C29',name:'Card Collapse',description:'Card collapses inward to a compact state',cssClass:'animotion-card-collapse',keyframeName:'animotion-cardCollapse',category:'card',subcategory:'reveal',tags:['collapse','shrink','compact','card'],duration:'0.4s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-collapse { animation: animotion-cardCollapse 0.4s ease-in both; }`,keyframeCSS:`@keyframes animotion-cardCollapse { from { transform: scale(1); max-height: 500px; opacity: 1; } to { transform: scale(0.5); max-height: 0; opacity: 0; } }`},
+{id:'C30',name:'Card Swipe',description:'Card swipes away horizontally like a Tinder card',cssClass:'animotion-card-swipe',keyframeName:'animotion-cardSwipe',category:'card',subcategory:'gesture',tags:['swipe','tinder','dismiss','card'],duration:'0.5s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-swipe { animation: animotion-cardSwipe 0.5s ease-in both; }`,keyframeCSS:`@keyframes animotion-cardSwipe { from { transform: translateX(0) rotate(0); opacity: 1; } to { transform: translateX(200px) rotate(20deg); opacity: 0; } }`},
+{id:'C31',name:'Card Bounce',description:'Card bounces into position with elastic overshoot',cssClass:'animotion-card-bounce',keyframeName:'animotion-cardBounce',category:'card',subcategory:'entrance',tags:['bounce','elastic','entrance','card'],duration:'0.7s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-bounce { animation: animotion-cardBounce 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-cardBounce { from { transform: translateY(30px) scale(0.9); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }`},
+{id:'C32',name:'Card Wobble',description:'Card wobbles playfully when interacted with',cssClass:'animotion-card-wobble',keyframeName:'animotion-cardWobble',category:'card',subcategory:'hover',tags:['wobble','playful','rotate','card'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-wobble { animation: animotion-cardWobble 0.6s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-cardWobble { 0%, to { transform: rotate(0); } 15% { transform: rotate(-3deg); } 30% { transform: rotate(2deg); } 45% { transform: rotate(-2deg); } 60% { transform: rotate(1deg); } 75% { transform: rotate(-1deg); } }`},
+{id:'C33',name:'Card Glow',description:'Card emits a subtle ambient glow on hover',cssClass:'animotion-card-glow',keyframeName:'animotion-cardGlow',category:'card',subcategory:'shadow',tags:['glow','ambient','hover','card'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-glow { animation: animotion-cardGlow 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardGlow { from { box-shadow: 0 0 0 rgba(59,130,246,0); } to { box-shadow: 0 0 30px rgba(59,130,246,0.3), 0 0 60px rgba(59,130,246,0.1); } }`},
+{id:'C34',name:'Card Pulse',description:'Card pulses gently to draw attention',cssClass:'animotion-card-pulse',keyframeName:'animotion-cardPulse',category:'card',subcategory:'attention',tags:['pulse','scale','attention','card'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-card-pulse { animation: animotion-cardPulse 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-cardPulse { 0%, to { transform: scale(1); } 50% { transform: scale(1.02); } }`},
+{id:'C35',name:'Card Reveal',description:'Card content reveals with staggered child animations',cssClass:'animotion-card-reveal',keyframeName:'animotion-cardReveal',category:'card',subcategory:'reveal',tags:['reveal','stagger','content','card'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-card-reveal { animation: animotion-cardReveal 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-cardReveal { from { clip-path: inset(0 0 100% 0); opacity: 0; } to { clip-path: inset(0 0 0 0); opacity: 1; } }`},
+// ==================== LOADER (60) ====================
+{id:'L01',name:'Spinner Border',description:'Classic circular spinner with a single colored arc',cssClass:'animotion-spinner-border',keyframeName:'animotion-spinnerBorder',category:'loader',subcategory:'spinner',tags:['spinner','circle','border','loader'],duration:'0.75s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-spinner-border { width: 40px; height: 40px; border: 3px solid rgba(59,130,246,0.2); border-top-color: #3b82f6; border-radius: 50%; animation: animotion-spinnerBorder 0.75s linear infinite; }`,keyframeCSS:`@keyframes animotion-spinnerBorder { to { transform: rotate(360deg); } }`},
+{id:'L02',name:'Dual Ring',description:'Two concentric rings spinning in opposite directions',cssClass:'animotion-dual-ring',keyframeName:'animotion-dualRing',category:'loader',subcategory:'spinner',tags:['dual','ring','spinner','loader'],duration:'1.2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-dual-ring { width: 40px; height: 40px; border: 3px solid transparent; border-top-color: #3b82f6; border-bottom-color: #8b5cf6; border-radius: 50%; animation: animotion-dualRing 1.2s linear infinite; }`,keyframeCSS:`@keyframes animotion-dualRing { to { transform: rotate(360deg); } }`},
+{id:'L03',name:'Triple Ring',description:'Three concentric rings spinning at different speeds',cssClass:'animotion-triple-ring',keyframeName:'animotion-tripleRing',category:'loader',subcategory:'spinner',tags:['triple','ring','spinner','loader'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-triple-ring { width: 40px; height: 40px; border: 3px solid rgba(59,130,246,0.15); border-top-color: #3b82f6; border-right-color: #8b5cf6; border-bottom-color: #ef4444; border-radius: 50%; animation: animotion-tripleRing 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-tripleRing { to { transform: rotate(360deg); } }`},
+{id:'L04',name:'Conic Spinner',description:'Spinner with conic gradient creating smooth color wheel',cssClass:'animotion-conic-spinner',keyframeName:'animotion-conicSpinner',category:'loader',subcategory:'spinner',tags:['conic','gradient','spinner','loader'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-conic-spinner { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(from 0deg, transparent, #3b82f6); mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px)); animation: animotion-conicSpinner 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-conicSpinner { to { transform: rotate(360deg); } }`},
+{id:'L05',name:'Gradient Spinner',description:'Spinner with animated gradient that rotates smoothly',cssClass:'animotion-gradient-spinner',keyframeName:'animotion-gradientSpinner',category:'loader',subcategory:'spinner',tags:['gradient','spinner','smooth','loader'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-gradient-spinner { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(#3b82f6, #8b5cf6, transparent); mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px)); animation: animotion-gradientSpinner 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-gradientSpinner { to { transform: rotate(360deg); } }`},
+{id:'L06',name:'Dots Wave',description:'Three dots bouncing in a wave pattern',cssClass:'animotion-dots-wave',keyframeName:'animotion-dotsWave',category:'loader',subcategory:'dots',tags:['dots','wave','bounce','loader'],duration:'1.4s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-dots-wave { display: flex; gap: 6px; } .animotion-dots-wave span { width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsWave 1.4s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-dotsWave { 0%, 80%, to { transform: translateY(0); } 40% { transform: translateY(-15px); } }`},
+{id:'L07',name:'Dots Bounce',description:'Dots bounce with alternating timing for playful effect',cssClass:'animotion-dots-bounce',keyframeName:'animotion-dotsBounce',category:'loader',subcategory:'dots',tags:['dots','bounce','playful','loader'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-dots-bounce span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsBounce 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-dotsBounce { 0%, to { transform: scale(1); } 50% { transform: scale(1.5); } }`},
+{id:'L08',name:'Dots Scale',description:'Dots scale up and down in sequence',cssClass:'animotion-dots-scale',keyframeName:'animotion-dotsScale',category:'loader',subcategory:'dots',tags:['dots','scale','sequence','loader'],duration:'1.2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-dots-scale span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsScale 1.2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-dotsScale { 0%, to { transform: scale(0.5); opacity: 0.5; } 50% { transform: scale(1); opacity: 1; } }`},
+{id:'L09',name:'Dots Fade',description:'Dots fade in and out in sequence',cssClass:'animotion-dots-fade',keyframeName:'animotion-dotsFade',category:'loader',subcategory:'dots',tags:['dots','fade','opacity','loader'],duration:'1.2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-dots-fade span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsFade 1.2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-dotsFade { 0%, to { opacity: 0.2; } 50% { opacity: 1; } }`},
+{id:'L10',name:'Dots Orbit',description:'Dots orbit around a central point',cssClass:'animotion-dots-orbit',keyframeName:'animotion-dotsOrbit',category:'loader',subcategory:'dots',tags:['dots','orbit','rotate','loader'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'dots',css:`.animotion-dots-orbit { width: 40px; height: 40px; position: relative; animation: animotion-dotsOrbit 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-dotsOrbit { to { transform: rotate(360deg); } }`},
+{id:'L11',name:'Bars Wave',description:'Vertical bars animate in a wave pattern like an equalizer',cssClass:'animotion-bars-wave',keyframeName:'animotion-barsWave',category:'loader',subcategory:'bars',tags:['bars','wave','equalizer','loader'],duration:'1.2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-bars-wave span { display: inline-block; width: 4px; height: 20px; background: #3b82f6; margin: 0 2px; animation: animotion-barsWave 1.2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-barsWave { 0%, to { transform: scaleY(0.5); } 50% { transform: scaleY(1.5); } }`},
+{id:'L12',name:'Bars Scale',description:'Bars scale up and down in alternating heights',cssClass:'animotion-bars-scale',keyframeName:'animotion-barsScale',category:'loader',subcategory:'bars',tags:['bars','scale','height','loader'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-bars-scale span { display: inline-block; width: 4px; height: 30px; background: #3b82f6; margin: 0 2px; animation: animotion-barsScale 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-barsScale { 0%, to { transform: scaleY(1); } 50% { transform: scaleY(0.3); } }`},
+{id:'L13',name:'Bars Strobe',description:'Bars flash on and off in a strobe-like pattern',cssClass:'animotion-bars-strobe',keyframeName:'animotion-barsStrobe',category:'loader',subcategory:'bars',tags:['bars','strobe','flash','loader'],duration:'0.8s',timingFunction:'steps(1)',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-bars-strobe span { display: inline-block; width: 4px; height: 25px; background: #3b82f6; margin: 0 2px; animation: animotion-barsStrobe 0.8s steps(1) infinite; }`,keyframeCSS:`@keyframes animotion-barsStrobe { 0%, to { opacity: 1; } 50% { opacity: 0.2; } }`},
+{id:'L14',name:'Orbital',description:'Dot orbits around a ring track',cssClass:'animotion-orbital',keyframeName:'animotion-orbital',category:'loader',subcategory:'spinner',tags:['orbital','orbit','dot','loader'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-orbital { width: 40px; height: 40px; border: 2px solid rgba(59,130,246,0.2); border-radius: 50%; position: relative; } .animotion-orbital::after { content: ''; position: absolute; width: 8px; height: 8px; background: #3b82f6; border-radius: 50%; top: -4px; left: 50%; margin-left: -4px; animation: animotion-orbital 1.5s linear infinite; transform-origin: 4px 24px; }`,keyframeCSS:`@keyframes animotion-orbital { to { transform: rotate(360deg); } }`},
+{id:'L15',name:'Ping Pulse',description:'Pulsing circle that expands and fades like a ping',cssClass:'animotion-ping-pulse',keyframeName:'animotion-pingPulse',category:'loader',subcategory:'pulse',tags:['ping','pulse','expand','loader'],duration:'1.5s',timingFunction:'ease-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-ping-pulse { width: 20px; height: 20px; border-radius: 50%; background: #3b82f6; animation: animotion-pingPulse 1.5s ease-out infinite; }`,keyframeCSS:`@keyframes animotion-pingPulse { 0% { transform: scale(1); opacity: 1; } to { transform: scale(2.5); opacity: 0; } }`},
+{id:'L16',name:'Progress Bar',description:'Horizontal progress bar filling from left to right',cssClass:'animotion-progress-bar',keyframeName:'animotion-progressBar',category:'loader',subcategory:'bar',tags:['progress','bar','fill','loader'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-progress-bar { width: 100%; height: 4px; background: rgba(59,130,246,0.2); border-radius: 2px; overflow: hidden; } .animotion-progress-bar::after { content: ''; display: block; height: 100%; background: #3b82f6; animation: animotion-progressBar 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-progressBar { 0% { width: 0%; } 50% { width: 100%; } to { width: 0%; } }`},
+{id:'L17',name:'Indeterminate Bar',description:'Indeterminate progress bar sliding back and forth',cssClass:'animotion-indeterminate-bar',keyframeName:'animotion-indeterminateBar',category:'loader',subcategory:'bar',tags:['indeterminate','progress','sliding','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-indeterminate-bar { width: 100%; height: 4px; background: rgba(59,130,246,0.2); overflow: hidden; } .animotion-indeterminate-bar::after { content: ''; display: block; width: 40%; height: 100%; background: #3b82f6; animation: animotion-indeterminateBar 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-indeterminateBar { 0% { transform: translateX(-100%); } to { transform: translateX(350%); } }`},
+{id:'L18',name:'Striped Progress',description:'Progress bar with animated diagonal stripes',cssClass:'animotion-striped-progress',keyframeName:'animotion-stripedProgress',category:'loader',subcategory:'bar',tags:['striped','progress','diagonal','loader'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-striped-progress { height: 8px; background: repeating-linear-gradient(45deg, #3b82f6 0px, #3b82f6 10px, #6366f1 10px, #6366f1 20px); background-size: 28px 100%; animation: animotion-stripedProgress 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-stripedProgress { from { background-position: 0 0; } to { background-position: 28px 0; } }`},
+{id:'L19',name:'Circle Progress',description:'Circular progress indicator filling around the ring',cssClass:'animotion-circle-progress',keyframeName:'animotion-circleProgress',category:'loader',subcategory:'spinner',tags:['circle','progress','ring','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-circle-progress { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(#3b82f6 0deg, transparent 0deg); animation: animotion-circleProgress 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-circleProgress { to { background: conic-gradient(#3b82f6 360deg, transparent 360deg); } }`},
+{id:'L20',name:'Semi Circle Progress',description:'Semi-circular loading indicator that rocks back and forth',cssClass:'animotion-semi-circle-progress',keyframeName:'animotion-semiCircleProgress',category:'loader',subcategory:'spinner',tags:['semi-circle','rock','progress','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-semi-circle-progress { width: 40px; height: 20px; border-radius: 40px 40px 0 0; border: 3px solid #3b82f6; border-bottom: none; animation: animotion-semiCircleProgress 1.5s ease-in-out infinite; transform-origin: bottom center; }`,keyframeCSS:`@keyframes animotion-semiCircleProgress { 0%, to { transform: rotate(-45deg); } 50% { transform: rotate(45deg); } }`},
+{id:'L21',name:'Skeleton Lines',description:'Skeleton loading lines pulsing for content placeholder',cssClass:'animotion-skeleton-lines',keyframeName:'animotion-skeletonLines',category:'loader',subcategory:'skeleton',tags:['skeleton','lines','placeholder','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-skeleton-lines { background: linear-gradient(90deg, #e5e7eb 25%, #d1d5db 50%, #e5e7eb 75%); background-size: 200% 100%; animation: animotion-skeletonLines 1.5s ease-in-out infinite; height: 12px; border-radius: 4px; }`,keyframeCSS:`@keyframes animotion-skeletonLines { from { background-position: 200% 0; } to { background-position: -200% 0; } }`},
+{id:'L22',name:'Heartbeat Monitor',description:'Heart monitor line moving across with pulse spike',cssClass:'animotion-heartbeat-monitor',keyframeName:'animotion-heartbeatMonitor',category:'loader',subcategory:'creative',tags:['heartbeat','monitor','medical','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-heartbeat-monitor { width: 4px; height: 20px; background: #ef4444; animation: animotion-heartbeatMonitor 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-heartbeatMonitor { 0%, to { transform: scaleY(0.3); } 25% { transform: scaleY(1); } 30% { transform: scaleY(0.5); } 35% { transform: scaleY(2); } 40% { transform: scaleY(0.3); } }`},
+{id:'L23',name:'DNA Helix',description:'Double helix spinning animation like DNA strand',cssClass:'animotion-dna-helix',keyframeName:'animotion-dnaHelix',category:'loader',subcategory:'creative',tags:['dna','helix','science','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'dots',css:`.animotion-dna-helix span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-dnaHelix 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-dnaHelix { 0% { transform: translateY(0) scale(1); background: #3b82f6; } 25% { transform: translateY(-10px) scale(0.5); background: #8b5cf6; } 50% { transform: translateY(0) scale(1); background: #3b82f6; } 75% { transform: translateY(10px) scale(0.5); background: #8b5cf6; } to { transform: translateY(0) scale(1); background: #3b82f6; } }`},
+{id:'L24',name:'Cube Spin Loader',description:'3D cube spinning on multiple axes',cssClass:'animotion-cube-spin-loader',keyframeName:'animotion-cubeSpinLoader',category:'loader',subcategory:'3d',tags:['cube','3d','spin','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-cube-spin-loader { width: 30px; height: 30px; background: #3b82f6; animation: animotion-cubeSpinLoader 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-cubeSpinLoader { 0% { transform: perspective(120px) rotateX(0) rotateY(0); } 50% { transform: perspective(120px) rotateX(-180deg) rotateY(0); } to { transform: perspective(120px) rotateX(-180deg) rotateY(-180deg); } }`},
+{id:'L25',name:'Dots Grid Pulse',description:'3x3 grid of dots pulsing in sequence',cssClass:'animotion-dots-grid-pulse',keyframeName:'animotion-dotsGridPulse',category:'loader',subcategory:'dots',tags:['dots','grid','pulse','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-dots-grid-pulse span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsGridPulse 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-dotsGridPulse { 0%, to { transform: scale(1); opacity: 1; } 50% { transform: scale(0.3); opacity: 0.3; } }`},
+{id:'L26',name:'Infinity Loop',description:'Figure-eight infinity loop path animation',cssClass:'animotion-infinity-loop',keyframeName:'animotion-infinityLoop',category:'loader',subcategory:'creative',tags:['infinity','loop','figure-eight','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-infinity-loop { width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-infinityLoop 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-infinityLoop { 0% { transform: translate(0, 0); } 25% { transform: translate(20px, -10px); } 50% { transform: translate(0, 0); } 75% { transform: translate(-20px, -10px); } to { transform: translate(0, 0); } }`},
+{id:'L27',name:'Hourglass Flip',description:'Hourglass shape flips to indicate time passing',cssClass:'animotion-hourglass-flip',keyframeName:'animotion-hourglassFlip',category:'loader',subcategory:'creative',tags:['hourglass','flip','time','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-hourglass-flip { width: 20px; height: 20px; clip-path: polygon(0 0, 100% 0, 50% 50%, 100% 100%, 0 100%, 50% 50%); background: #3b82f6; animation: animotion-hourglassFlip 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-hourglassFlip { 0%, to { transform: rotate(0); } 50% { transform: rotate(180deg); } }`},
+{id:'L28',name:'Wifi Bars',description:'WiFi signal bars animating strength indication',cssClass:'animotion-wifi-bars',keyframeName:'animotion-wifiBars',category:'loader',subcategory:'icon',tags:['wifi','bars','signal','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-wifi-bars span { display: inline-block; width: 4px; background: #3b82f6; margin: 0 2px; border-radius: 2px; animation: animotion-wifiBars 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-wifiBars { 0%, to { opacity: 0.2; } 50% { opacity: 1; } }`},
+{id:'L29',name:'Battery Fill',description:'Battery icon filling animation for charging state',cssClass:'animotion-battery-fill',keyframeName:'animotion-batteryFill',category:'loader',subcategory:'icon',tags:['battery','fill','charge','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-battery-fill { width: 40px; height: 20px; border: 2px solid #3b82f6; border-radius: 3px; position: relative; overflow: hidden; } .animotion-battery-fill::after { content: ''; display: block; height: 100%; background: #3b82f6; animation: animotion-batteryFill 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-batteryFill { 0% { width: 10%; } to { width: 100%; } }`},
+{id:'L30',name:'Typing Indicator',description:'Three dots bouncing like a chat typing indicator',cssClass:'animotion-typing-indicator',keyframeName:'animotion-typingIndicator',category:'loader',subcategory:'dots',tags:['typing','chat','dots','loader','messaging'],duration:'1.4s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-typing-indicator span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; animation: animotion-typingIndicator 1.4s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-typingIndicator { 0%, 60%, to { transform: translateY(0); } 30% { transform: translateY(-8px); } }`},
+{id:'L31',name:'Clock Spin',description:'Clock hand spinning around a circle face',cssClass:'animotion-clock-spin',keyframeName:'animotion-clockSpin',category:'loader',subcategory:'icon',tags:['clock','spin','time','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-clock-spin { width: 40px; height: 40px; border: 2px solid #3b82f6; border-radius: 50%; position: relative; } .animotion-clock-spin::after { content: ''; position: absolute; width: 2px; height: 15px; background: #3b82f6; top: 5px; left: 50%; margin-left: -1px; transform-origin: bottom center; animation: animotion-clockSpin 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-clockSpin { to { transform: rotate(360deg); } }`},
+{id:'L32',name:'Gear Spin',description:'Gear icon spinning as if machinery is working',cssClass:'animotion-gear-spin',keyframeName:'animotion-gearSpin',category:'loader',subcategory:'icon',tags:['gear','spin','machinery','loader'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-gear-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(50% 0%, 63% 13%, 80% 10%, 78% 28%, 95% 35%, 85% 50%, 95% 65%, 78% 72%, 80% 90%, 63% 87%, 50% 100%, 37% 87%, 20% 90%, 22% 72%, 5% 65%, 15% 50%, 5% 35%, 22% 28%, 20% 10%, 37% 13%); animation: animotion-gearSpin 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-gearSpin { to { transform: rotate(360deg); } }`},
+{id:'L33',name:'Atom Spin',description:'Electrons orbiting a nucleus like an atom',cssClass:'animotion-atom-spin',keyframeName:'animotion-atomSpin',category:'loader',subcategory:'creative',tags:['atom','orbit','electron','loader','science'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-atom-spin { width: 40px; height: 40px; border: 2px solid rgba(59,130,246,0.3); border-radius: 50%; position: relative; animation: animotion-atomSpin 2s linear infinite; } .animotion-atom-spin::after { content: ''; width: 6px; height: 6px; background: #3b82f6; border-radius: 50%; position: absolute; top: -3px; left: 50%; margin-left: -3px; }`,keyframeCSS:`@keyframes animotion-atomSpin { to { transform: rotate(360deg); } }`},
+{id:'L34',name:'Pulse Dot',description:'Single dot pulsing with scale and opacity',cssClass:'animotion-pulse-dot',keyframeName:'animotion-pulseDot',category:'loader',subcategory:'dots',tags:['pulse','dot','scale','loader'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-pulse-dot { width: 15px; height: 15px; border-radius: 50%; background: #3b82f6; animation: animotion-pulseDot 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-pulseDot { 0%, to { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.5; } }`},
+{id:'L35',name:'Chain Links',description:'Chain links connecting and rotating in sequence',cssClass:'animotion-chain-links',keyframeName:'animotion-chainLinks',category:'loader',subcategory:'creative',tags:['chain','links','connect','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-chain-links { width: 20px; height: 10px; border: 2px solid #3b82f6; border-radius: 10px; animation: animotion-chainLinks 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-chainLinks { 0%, to { transform: rotate(0) scaleX(1); } 25% { transform: rotate(90deg) scaleX(0.8); } 50% { transform: rotate(180deg) scaleX(1); } 75% { transform: rotate(270deg) scaleX(0.8); } }`},
+{id:'L36',name:'Wave Loader',description:'Sinusoidal wave animation across the loader width',cssClass:'animotion-wave-loader',keyframeName:'animotion-waveLoader',category:'loader',subcategory:'bars',tags:['wave','sine','bars','loader'],duration:'1.2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-wave-loader span { display: inline-block; width: 4px; height: 30px; background: #3b82f6; margin: 0 2px; animation: animotion-waveLoader 1.2s ease-in-out infinite; transform-origin: bottom; }`,keyframeCSS:`@keyframes animotion-waveLoader { 0%, to { transform: scaleY(0.4); } 20% { transform: scaleY(1); } 40% { transform: scaleY(0.4); } }`},
+{id:'L37',name:'Snake Loader',description:'Snake-like line chasing its tail around a path',cssClass:'animotion-snake-loader',keyframeName:'animotion-snakeLoader',category:'loader',subcategory:'creative',tags:['snake','chase','path','loader'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-snake-loader { width: 40px; height: 40px; border: 3px solid transparent; border-top-color: #3b82f6; border-right-color: #3b82f6; border-radius: 50%; animation: animotion-snakeLoader 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-snakeLoader { to { transform: rotate(360deg); } }`},
+{id:'L38',name:'Pendulum Loader',description:'Pendulum swinging back and forth hypnotically',cssClass:'animotion-pendulum-loader',keyframeName:'animotion-pendulumLoader',category:'loader',subcategory:'creative',tags:['pendulum','swing','hypnotic','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-pendulum-loader { width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-pendulumLoader 1.5s ease-in-out infinite; transform-origin: top center; }`,keyframeCSS:`@keyframes animotion-pendulumLoader { 0%, to { transform: rotate(-30deg); } 50% { transform: rotate(30deg); } }`},
+{id:'L39',name:'Square Rotate',description:'Square rotates and morphs while loading',cssClass:'animotion-square-rotate',keyframeName:'animotion-squareRotate',category:'loader',subcategory:'shape',tags:['square','rotate','morph','loader'],duration:'1.2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-square-rotate { width: 25px; height: 25px; background: #3b82f6; animation: animotion-squareRotate 1.2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-squareRotate { 0% { transform: rotate(0) scale(1); } 50% { transform: rotate(180deg) scale(0.6); border-radius: 50%; } to { transform: rotate(360deg) scale(1); border-radius: 0; } }`},
+{id:'L40',name:'Triangle Spin',description:'Triangle shape spinning as a loader',cssClass:'animotion-triangle-spin',keyframeName:'animotion-triangleSpin',category:'loader',subcategory:'shape',tags:['triangle','spin','shape','loader'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-triangle-spin { width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 26px solid #3b82f6; animation: animotion-triangleSpin 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-triangleSpin { to { transform: rotate(360deg); } }`},
+{id:'L41',name:'Hexagon Spin',description:'Hexagonal shape spinning as a loader',cssClass:'animotion-hexagon-spin',keyframeName:'animotion-hexagonSpin',category:'loader',subcategory:'shape',tags:['hexagon','spin','shape','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-hexagon-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); animation: animotion-hexagonSpin 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-hexagonSpin { to { transform: rotate(360deg); } }`},
+{id:'L42',name:'Diamond Spin',description:'Diamond shape spinning and pulsing',cssClass:'animotion-diamond-spin',keyframeName:'animotion-diamondSpin',category:'loader',subcategory:'shape',tags:['diamond','spin','shape','loader'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-diamond-spin { width: 25px; height: 25px; background: #3b82f6; transform: rotate(45deg); animation: animotion-diamondSpin 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-diamondSpin { to { transform: rotate(405deg); } }`},
+{id:'L43',name:'Star Spin',description:'Star shape spinning as a loading indicator',cssClass:'animotion-star-spin',keyframeName:'animotion-starSpin',category:'loader',subcategory:'shape',tags:['star','spin','shape','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-star-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation: animotion-starSpin 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-starSpin { to { transform: rotate(360deg); } }`},
+{id:'L44',name:'Cross Spin',description:'Cross/plus shape spinning as a loader',cssClass:'animotion-cross-spin',keyframeName:'animotion-crossSpin',category:'loader',subcategory:'shape',tags:['cross','spin','plus','loader'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-cross-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%); animation: animotion-crossSpin 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-crossSpin { to { transform: rotate(360deg); } }`},
+{id:'L45',name:'Plus Spin',description:'Plus sign rotating as a minimal loader',cssClass:'animotion-plus-spin',keyframeName:'animotion-plusSpin',category:'loader',subcategory:'shape',tags:['plus','spin','minimal','loader'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-plus-spin { width: 30px; height: 30px; position: relative; animation: animotion-plusSpin 1s linear infinite; } .animotion-plus-spin::before, .animotion-plus-spin::after { content: ''; position: absolute; background: #3b82f6; } .animotion-plus-spin::before { width: 100%; height: 4px; top: 50%; margin-top: -2px; } .animotion-plus-spin::after { width: 4px; height: 100%; left: 50%; margin-left: -2px; }`,keyframeCSS:`@keyframes animotion-plusSpin { to { transform: rotate(360deg); } }`},
+{id:'L46',name:'Arrow Spin',description:'Arrow shape spinning to indicate directional loading',cssClass:'animotion-arrow-spin',keyframeName:'animotion-arrowSpin',category:'loader',subcategory:'shape',tags:['arrow','spin','direction','loader'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-arrow-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 40% 65%, 0% 65%, 0% 35%, 40% 35%); animation: animotion-arrowSpin 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-arrowSpin { to { transform: rotate(360deg); } }`},
+{id:'L47',name:'Ripple Loader',description:'Concentric circles rippling outward from center',cssClass:'animotion-ripple-loader',keyframeName:'animotion-rippleLoader',category:'loader',subcategory:'pulse',tags:['ripple','circles','expand','loader'],duration:'1.5s',timingFunction:'ease-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-ripple-loader { width: 40px; height: 40px; border-radius: 50%; border: 3px solid #3b82f6; animation: animotion-rippleLoader 1.5s ease-out infinite; }`,keyframeCSS:`@keyframes animotion-rippleLoader { 0% { transform: scale(0); opacity: 1; } to { transform: scale(1.5); opacity: 0; } }`},
+{id:'L48',name:'Expanding Circle',description:'Circle expands from dot to full size and repeats',cssClass:'animotion-expanding-circle',keyframeName:'animotion-expandingCircle',category:'loader',subcategory:'pulse',tags:['expand','circle','grow','loader'],duration:'1.2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-expanding-circle { width: 40px; height: 40px; border-radius: 50%; background: rgba(59,130,246,0.4); animation: animotion-expandingCircle 1.2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-expandingCircle { 0% { transform: scale(0); opacity: 1; } to { transform: scale(1); opacity: 0; } }`},
+{id:'L49',name:'Bouncing Ball',description:'Ball bouncing up and down with squash on landing',cssClass:'animotion-bouncing-ball',keyframeName:'animotion-bouncingBall',category:'loader',subcategory:'creative',tags:['bounce','ball','gravity','loader'],duration:'1s',timingFunction:'cubic-bezier(0.28, 0.84, 0.42, 1)',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-bouncing-ball { width: 20px; height: 20px; border-radius: 50%; background: #3b82f6; animation: animotion-bouncingBall 1s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; }`,keyframeCSS:`@keyframes animotion-bouncingBall { 0%, to { transform: translateY(0) scaleX(1) scaleY(1); } 50% { transform: translateY(-30px) scaleX(0.9) scaleY(1.1); } 90% { transform: translateY(0) scaleX(1.1) scaleY(0.9); } }`},
+{id:'L50',name:'Sliding Dots',description:'Dots slide left and right in alternating pattern',cssClass:'animotion-sliding-dots',keyframeName:'animotion-slidingDots',category:'loader',subcategory:'dots',tags:['sliding','dots','alternate','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-sliding-dots span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-slidingDots 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-slidingDots { 0%, to { transform: translateX(0); } 50% { transform: translateX(15px); } }`},
+{id:'L51',name:'Morphing Shape',description:'Shape morphs between circle, square, and diamond',cssClass:'animotion-morphing-shape',keyframeName:'animotion-morphingShape',category:'loader',subcategory:'shape',tags:['morph','shape','circle','square','loader'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-morphing-shape { width: 30px; height: 30px; background: #3b82f6; animation: animotion-morphingShape 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-morphingShape { 0% { border-radius: 0; transform: rotate(0); } 33% { border-radius: 50%; transform: rotate(120deg); } 66% { border-radius: 0; transform: rotate(240deg) scale(0.8); } to { border-radius: 0; transform: rotate(360deg); } }`},
+{id:'L52',name:'Flowing Dots',description:'Dots flow in a continuous stream from left to right',cssClass:'animotion-flowing-dots',keyframeName:'animotion-flowingDots',category:'loader',subcategory:'dots',tags:['flow','dots','stream','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-flowing-dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-flowingDots 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-flowingDots { 0% { transform: translateX(-20px); opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } to { transform: translateX(20px); opacity: 0; } }`},
+{id:'L53',name:'Spiral Loader',description:'Dot traces a spiral path inward then outward',cssClass:'animotion-spiral-loader',keyframeName:'animotion-spiralLoader',category:'loader',subcategory:'creative',tags:['spiral','path','trace','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-spiral-loader { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-spiralLoader 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-spiralLoader { 0% { transform: rotate(0) translateX(0); } 50% { transform: rotate(360deg) translateX(15px); } to { transform: rotate(720deg) translateX(0); } }`},
+{id:'L54',name:'Grid Loader',description:'Grid cells light up in sequence',cssClass:'animotion-grid-loader',keyframeName:'animotion-gridLoader',category:'loader',subcategory:'creative',tags:['grid','cells','sequence','loader'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-grid-loader span { display: inline-block; width: 10px; height: 10px; background: #3b82f6; margin: 1px; animation: animotion-gridLoader 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-gridLoader { 0%, to { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }`},
+{id:'L55',name:'Barber Pole',description:'Animated diagonal stripes like a barber pole',cssClass:'animotion-barber-pole',keyframeName:'animotion-barberPole',category:'loader',subcategory:'bar',tags:['barber','pole','stripes','loader'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-barber-pole { height: 8px; background: repeating-linear-gradient(45deg, #3b82f6 0px, #3b82f6 10px, #fff 10px, #fff 20px); background-size: 28px 100%; animation: animotion-barberPole 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-barberPole { from { background-position: 0 0; } to { background-position: 28px 0; } }`},
+{id:'L56',name:'Pulse Bars',description:'Vertical bars pulse with opacity in sequence',cssClass:'animotion-pulse-bars',keyframeName:'animotion-pulseBars',category:'loader',subcategory:'bars',tags:['pulse','bars','sequence','loader'],duration:'1.2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-pulse-bars span { display: inline-block; width: 4px; height: 25px; background: #3b82f6; margin: 0 2px; animation: animotion-pulseBars 1.2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-pulseBars { 0%, to { opacity: 0.3; } 50% { opacity: 1; } }`},
+{id:'L57',name:'Waveform Loader',description:'Audio waveform visualization as a loading animation',cssClass:'animotion-waveform-loader',keyframeName:'animotion-waveformLoader',category:'loader',subcategory:'bars',tags:['waveform','audio','bars','loader'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-waveform-loader span { display: inline-block; width: 3px; background: #3b82f6; margin: 0 1px; animation: animotion-waveformLoader 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-waveformLoader { 0%, to { height: 5px; } 50% { height: 25px; } }`},
+{id:'L58',name:'Orbit Dots',description:'Multiple dots orbiting at different speeds',cssClass:'animotion-orbit-dots',keyframeName:'animotion-orbitDots',category:'loader',subcategory:'dots',tags:['orbit','dots','rotate','loader'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'dots',css:`.animotion-orbit-dots { width: 40px; height: 40px; position: relative; animation: animotion-orbitDots 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-orbitDots { to { transform: rotate(360deg); } }`},
+{id:'L59',name:'Rainbow Spinner',description:'Spinner with rainbow gradient colors rotating',cssClass:'animotion-rainbow-spinner',keyframeName:'animotion-rainbowSpinner',category:'loader',subcategory:'spinner',tags:['rainbow','gradient','spinner','loader'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-rainbow-spinner { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(#ff0000, #ff8800, #ffff00, #00ff00, #0088ff, #8800ff, #ff0000); mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px)); animation: animotion-rainbowSpinner 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-rainbowSpinner { to { transform: rotate(360deg); } }`},
+{id:'L60',name:'Matrix Loader',description:'Matrix-style cascading green characters loading effect',cssClass:'animotion-matrix-loader',keyframeName:'animotion-matrixLoader',category:'loader',subcategory:'creative',tags:['matrix','digital','code','loader'],duration:'1.5s',timingFunction:'steps(5)',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-matrix-loader { color: #00ff00; font-family: monospace; animation: animotion-matrixLoader 1.5s steps(5) infinite; }`,keyframeCSS:`@keyframes animotion-matrixLoader { 0%, to { opacity: 0.2; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-5px); } }`},
+// ==================== NAVIGATION (25) ====================
+{id:'N01',name:'Underline Grow',description:'Underline grows from center outward on hover',cssClass:'animotion-underline-grow',keyframeName:'animotion-underlineGrow',category:'navigation',subcategory:'link',tags:['underline','grow','hover','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-underline-grow { position: relative; } .animotion-underline-grow::after { content: ''; position: absolute; bottom: 0; left: 50%; height: 2px; background: #3b82f6; animation: animotion-underlineGrow 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-underlineGrow { from { width: 0; left: 50%; } to { width: 100%; left: 0; } }`},
+{id:'N02',name:'Underline Slide',description:'Underline slides in from the left on hover',cssClass:'animotion-underline-slide',keyframeName:'animotion-underlineSlide',category:'navigation',subcategory:'link',tags:['underline','slide','left','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-underline-slide::after { content: ''; position: absolute; bottom: 0; left: 0; height: 2px; background: #3b82f6; animation: animotion-underlineSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-underlineSlide { from { width: 0; } to { width: 100%; } }`},
+{id:'N03',name:'Hamburger X',description:'Hamburger menu icon morphs into an X with rotation',cssClass:'animotion-hamburger-x',keyframeName:'animotion-hamburgerX',category:'navigation',subcategory:'icon',tags:['hamburger','x','close','nav','menu'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-hamburger-x { animation: animotion-hamburgerX 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-hamburgerX { from { transform: rotate(0); } to { transform: rotate(45deg); } }`},
+{id:'N04',name:'Hamburger Arrow',description:'Hamburger menu morphs into a back arrow',cssClass:'animotion-hamburger-arrow',keyframeName:'animotion-hamburgerArrow',category:'navigation',subcategory:'icon',tags:['hamburger','arrow','back','nav','menu'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-hamburger-arrow { animation: animotion-hamburgerArrow 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-hamburgerArrow { from { transform: rotate(0) scaleX(1); } to { transform: rotate(180deg) scaleX(0.7); } }`},
+{id:'N05',name:'Dropdown Slide',description:'Dropdown menu slides down with opacity reveal',cssClass:'animotion-dropdown-slide',keyframeName:'animotion-dropdownSlide',category:'navigation',subcategory:'menu',tags:['dropdown','slide','reveal','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-dropdown-slide { animation: animotion-dropdownSlide 0.3s ease-out both; transform-origin: top; }`,keyframeCSS:`@keyframes animotion-dropdownSlide { from { opacity: 0; transform: scaleY(0); } to { opacity: 1; transform: scaleY(1); } }`},
+{id:'N06',name:'Drawer Slide In',description:'Side drawer slides in from off-screen',cssClass:'animotion-drawer-slide-in',keyframeName:'animotion-drawerSlideIn',category:'navigation',subcategory:'menu',tags:['drawer','slide','sidebar','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-drawer-slide-in { animation: animotion-drawerSlideIn 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-drawerSlideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }`},
+{id:'N07',name:'Sticky Nav Compact',description:'Navigation bar compacts when scrolling down',cssClass:'animotion-sticky-nav-compact',keyframeName:'animotion-stickyNavCompact',category:'navigation',subcategory:'scroll',tags:['sticky','compact','scroll','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-sticky-nav-compact { animation: animotion-stickyNavCompact 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-stickyNavCompact { from { padding: 20px 0; } to { padding: 8px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); } }`},
+{id:'N08',name:'Back To Top Appear',description:'Back-to-top button fades in with upward slide',cssClass:'animotion-back-to-top-appear',keyframeName:'animotion-backToTopAppear',category:'navigation',subcategory:'button',tags:['back-to-top','appear','scroll','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-back-to-top-appear { animation: animotion-backToTopAppear 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-backToTopAppear { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'N09',name:'Scroll Progress Bar',description:'Progress bar fills as user scrolls down the page',cssClass:'animotion-scroll-progress-bar',keyframeName:'animotion-scrollProgressBar',category:'navigation',subcategory:'scroll',tags:['scroll','progress','bar','nav'],duration:'0.3s',timingFunction:'linear',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-scroll-progress-bar { height: 3px; background: #3b82f6; animation: animotion-scrollProgressBar 0.3s linear both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-scrollProgressBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }`},
+{id:'N10',name:'Pagination Hop',description:'Pagination item hops with bounce when activated',cssClass:'animotion-pagination-hop',keyframeName:'animotion-paginationHop',category:'navigation',subcategory:'button',tags:['pagination','hop','bounce','nav'],duration:'0.4s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-pagination-hop { animation: animotion-paginationHop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-paginationHop { from { transform: translateY(0) scale(1); } 50% { transform: translateY(-5px) scale(1.1); } to { transform: translateY(0) scale(1); } }`},
+{id:'N11',name:'Breadcrumb Cascade',description:'Breadcrumb items cascade in from left with stagger',cssClass:'animotion-breadcrumb-cascade',keyframeName:'animotion-breadcrumbCascade',category:'navigation',subcategory:'link',tags:['breadcrumb','cascade','stagger','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-breadcrumb-cascade { animation: animotion-breadcrumbCascade 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-breadcrumbCascade { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }`},
+{id:'N12',name:'Tab Active Pill',description:'Tab indicator slides as a pill shape to active tab',cssClass:'animotion-tab-active-pill',keyframeName:'animotion-tabActivePill',category:'navigation',subcategory:'tab',tags:['tab','pill','active','nav','indicator'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-tab-active-pill { animation: animotion-tabActivePill 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-tabActivePill { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }`},
+{id:'N13',name:'Bottom Nav Active',description:'Bottom navigation item bounces up when activated',cssClass:'animotion-bottom-nav-active',keyframeName:'animotion-bottomNavActive',category:'navigation',subcategory:'button',tags:['bottom-nav','active','bounce','nav'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-bottom-nav-active { animation: animotion-bottomNavActive 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-bottomNavActive { from { transform: translateY(0); } to { transform: translateY(-4px); } }`},
+{id:'N14',name:'Dropdown Arrow Spin',description:'Dropdown arrow rotates to indicate open/close state',cssClass:'animotion-dropdown-arrow-spin',keyframeName:'animotion-dropdownArrowSpin',category:'navigation',subcategory:'icon',tags:['dropdown','arrow','rotate','nav'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-dropdown-arrow-spin { animation: animotion-dropdownArrowSpin 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-dropdownArrowSpin { from { transform: rotate(0); } to { transform: rotate(180deg); } }`},
+{id:'N15',name:'Nav Link Rainbow',description:'Nav link text shifts through rainbow colors on hover',cssClass:'animotion-nav-link-rainbow',keyframeName:'animotion-navLinkRainbow',category:'navigation',subcategory:'link',tags:['rainbow','color','hover','nav'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'nav',css:`.animotion-nav-link-rainbow { animation: animotion-navLinkRainbow 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-navLinkRainbow { 0%, to { color: #3b82f6; } 33% { color: #8b5cf6; } 66% { color: #ef4444; } }`},
+{id:'N16',name:'Nav Slide Down',description:'Navigation slides down from top of viewport',cssClass:'animotion-nav-slide-down',keyframeName:'animotion-navSlideDown',category:'navigation',subcategory:'menu',tags:['slide','down','top','nav'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-slide-down { animation: animotion-navSlideDown 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-navSlideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }`},
+{id:'N17',name:'Nav Fade In',description:'Navigation fades in smoothly on page load',cssClass:'animotion-nav-fade-in',keyframeName:'animotion-navFadeIn',category:'navigation',subcategory:'entrance',tags:['fade','entrance','load','nav'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-fade-in { animation: animotion-navFadeIn 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-navFadeIn { from { opacity: 0; } to { opacity: 1; } }`},
+{id:'N18',name:'Nav Accordion',description:'Accordion navigation item expands to show sub-items',cssClass:'animotion-nav-accordion',keyframeName:'animotion-navAccordion',category:'navigation',subcategory:'menu',tags:['accordion','expand','sub-menu','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-accordion { animation: animotion-navAccordion 0.3s ease-out both; overflow: hidden; }`,keyframeCSS:`@keyframes animotion-navAccordion { from { max-height: 0; opacity: 0; } to { max-height: 200px; opacity: 1; } }`},
+{id:'N19',name:'Nav Highlight',description:'Navigation item gets highlighted background on hover',cssClass:'animotion-nav-highlight',keyframeName:'animotion-navHighlight',category:'navigation',subcategory:'link',tags:['highlight','background','hover','nav'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-highlight { animation: animotion-navHighlight 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-navHighlight { from { background-color: transparent; } to { background-color: rgba(59,130,246,0.1); } }`},
+{id:'N20',name:'Nav Border Slide',description:'Border slides along the bottom of active nav item',cssClass:'animotion-nav-border-slide',keyframeName:'animotion-navBorderSlide',category:'navigation',subcategory:'link',tags:['border','slide','active','nav'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-border-slide { border-bottom: 2px solid #3b82f6; animation: animotion-navBorderSlide 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-navBorderSlide { from { border-bottom-color: transparent; transform: scaleX(0); } to { border-bottom-color: #3b82f6; transform: scaleX(1); } }`},
+{id:'N21',name:'Nav Glow',description:'Navigation item glows on hover with box-shadow',cssClass:'animotion-nav-glow',keyframeName:'animotion-navGlow',category:'navigation',subcategory:'link',tags:['glow','shadow','hover','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-glow { animation: animotion-navGlow 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-navGlow { from { box-shadow: 0 0 0 rgba(59,130,246,0); } to { box-shadow: 0 0 15px rgba(59,130,246,0.3); } }`},
+{id:'N22',name:'Nav Pulse',description:'Nav item pulses to indicate notification or attention',cssClass:'animotion-nav-pulse',keyframeName:'animotion-navPulse',category:'navigation',subcategory:'attention',tags:['pulse','notification','attention','nav'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'nav',css:`.animotion-nav-pulse { animation: animotion-navPulse 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-navPulse { 0%, to { transform: scale(1); } 50% { transform: scale(1.05); } }`},
+{id:'N23',name:'Nav Scale',description:'Nav item scales up on hover for emphasis',cssClass:'animotion-nav-scale',keyframeName:'animotion-navScale',category:'navigation',subcategory:'hover',tags:['scale','hover','emphasis','nav'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-scale { animation: animotion-navScale 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-navScale { from { transform: scale(1); } to { transform: scale(1.1); } }`},
+{id:'N24',name:'Nav Rotate',description:'Nav icon rotates on interaction for feedback',cssClass:'animotion-nav-rotate',keyframeName:'animotion-navRotate',category:'navigation',subcategory:'icon',tags:['rotate','icon','feedback','nav'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-rotate { animation: animotion-navRotate 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-navRotate { from { transform: rotate(0); } to { transform: rotate(90deg); } }`},
+{id:'N25',name:'Nav Morph',description:'Navigation shape morphs between states smoothly',cssClass:'animotion-nav-morph',keyframeName:'animotion-navMorph',category:'navigation',subcategory:'shape',tags:['morph','shape','smooth','nav'],duration:'0.4s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-nav-morph { animation: animotion-navMorph 0.4s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-navMorph { from { border-radius: 0; padding: 8px 16px; } to { border-radius: 20px; padding: 8px 24px; background: rgba(59,130,246,0.1); } }`},
+// ==================== FORM (30) ====================
+{id:'F01',name:'Label Float',description:'Form label floats up when input is focused',cssClass:'animotion-label-float',keyframeName:'animotion-labelFloat',category:'form',subcategory:'label',tags:['label','float','focus','form'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-label-float { animation: animotion-labelFloat 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-labelFloat { from { transform: translateY(0); font-size: 1em; } to { transform: translateY(-20px); font-size: 0.75em; color: #3b82f6; } }`},
+{id:'F02',name:'Input Glow Focus',description:'Input glows with blue border on focus',cssClass:'animotion-input-glow-focus',keyframeName:'animotion-inputGlowFocus',category:'form',subcategory:'input',tags:['glow','focus','border','form','input'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-glow-focus { animation: animotion-inputGlowFocus 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputGlowFocus { from { box-shadow: 0 0 0 0 rgba(59,130,246,0); border-color: #d1d5db; } to { box-shadow: 0 0 0 3px rgba(59,130,246,0.2); border-color: #3b82f6; } }`},
+{id:'F03',name:'Input Shake Error',description:'Input shakes horizontally to indicate validation error',cssClass:'animotion-input-shake-error',keyframeName:'animotion-inputShakeError',category:'form',subcategory:'validation',tags:['shake','error','validation','form','input'],duration:'0.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-shake-error { animation: animotion-inputShakeError 0.5s ease-in-out both; border-color: #ef4444; }`,keyframeCSS:`@keyframes animotion-inputShakeError { 0%, to { transform: translateX(0); } 15%, 45%, 75% { transform: translateX(-6px); } 30%, 60%, 90% { transform: translateX(6px); } }`},
+{id:'F04',name:'Input Success Border',description:'Input border turns green with success indication',cssClass:'animotion-input-success-border',keyframeName:'animotion-inputSuccessBorder',category:'form',subcategory:'validation',tags:['success','border','green','form','input'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-success-border { animation: animotion-inputSuccessBorder 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputSuccessBorder { from { border-color: #d1d5db; } to { border-color: #10b981; box-shadow: 0 0 0 3px rgba(16,185,129,0.2); } }`},
+{id:'F05',name:'Checkbox Draw',description:'Checkbox checkmark draws itself with stroke animation',cssClass:'animotion-checkbox-draw',keyframeName:'animotion-checkboxDraw',category:'form',subcategory:'checkbox',tags:['checkbox','draw','check','form','stroke'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-checkbox-draw { animation: animotion-checkboxDraw 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-checkboxDraw { from { transform: scale(0) rotate(-45deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }`},
+{id:'F06',name:'Checkbox Scale Pop',description:'Checkbox pops with scale overshoot when checked',cssClass:'animotion-checkbox-scale-pop',keyframeName:'animotion-checkboxScalePop',category:'form',subcategory:'checkbox',tags:['checkbox','pop','scale','form'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-checkbox-scale-pop { animation: animotion-checkboxScalePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-checkboxScalePop { from { transform: scale(0); } 60% { transform: scale(1.2); } to { transform: scale(1); } }`},
+{id:'F07',name:'Radio Fill',description:'Radio button fills from center outward when selected',cssClass:'animotion-radio-fill',keyframeName:'animotion-radioFill',category:'form',subcategory:'radio',tags:['radio','fill','select','form'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-radio-fill { animation: animotion-radioFill 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-radioFill { from { transform: scale(0); } to { transform: scale(1); } }`},
+{id:'F08',name:'Radio Ping',description:'Radio button emits a ping ring when selected',cssClass:'animotion-radio-ping',keyframeName:'animotion-radioPing',category:'form',subcategory:'radio',tags:['radio','ping','ring','form'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-radio-ping { animation: animotion-radioPing 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-radioPing { from { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); } to { box-shadow: 0 0 0 10px rgba(59,130,246,0); } }`},
+{id:'F09',name:'Toggle Slide',description:'Toggle switch slides between on and off states',cssClass:'animotion-toggle-slide',keyframeName:'animotion-toggleSlide',category:'form',subcategory:'toggle',tags:['toggle','slide','switch','form'],duration:'0.2s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-toggle-slide { animation: animotion-toggleSlide 0.2s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-toggleSlide { from { transform: translateX(0); } to { transform: translateX(20px); } }`},
+{id:'F10',name:'Toggle Morph',description:'Toggle handle morphs shape as it slides between states',cssClass:'animotion-toggle-morph',keyframeName:'animotion-toggleMorph',category:'form',subcategory:'toggle',tags:['toggle','morph','shape','form'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-toggle-morph { animation: animotion-toggleMorph 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-toggleMorph { from { transform: translateX(0); border-radius: 50%; } 50% { border-radius: 4px; transform: translateX(10px) scaleX(1.3); } to { transform: translateX(20px); border-radius: 50%; } }`},
+{id:'F11',name:'Search Bar Expand',description:'Search bar expands from icon to full-width input',cssClass:'animotion-search-bar-expand',keyframeName:'animotion-searchBarExpand',category:'form',subcategory:'input',tags:['search','expand','width','form'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-search-bar-expand { animation: animotion-searchBarExpand 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-searchBarExpand { from { width: 40px; padding: 8px; } to { width: 250px; padding: 8px 16px; } }`},
+{id:'F12',name:'Password Reveal',description:'Password field transitions from masked to visible text',cssClass:'animotion-password-reveal',keyframeName:'animotion-passwordReveal',category:'form',subcategory:'input',tags:['password','reveal','toggle','form'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-password-reveal { animation: animotion-passwordReveal 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-passwordReveal { from { filter: blur(4px); } to { filter: blur(0); } }`},
+{id:'F13',name:'Range Fill',description:'Range slider track fills with color up to thumb position',cssClass:'animotion-range-fill',keyframeName:'animotion-rangeFill',category:'form',subcategory:'range',tags:['range','slider','fill','form'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-range-fill { animation: animotion-rangeFill 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-rangeFill { from { background-size: 0% 100%; } to { background-size: 50% 100%; } }`},
+{id:'F14',name:'Form Progress Steps',description:'Form step indicator advances with animated progression',cssClass:'animotion-form-progress-steps',keyframeName:'animotion-formProgressSteps',category:'form',subcategory:'progress',tags:['progress','steps','form','wizard'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-form-progress-steps { animation: animotion-formProgressSteps 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-formProgressSteps { from { background: #d1d5db; transform: scale(0.8); } to { background: #3b82f6; transform: scale(1); } }`},
+{id:'F15',name:'Select Slide Open',description:'Select dropdown slides open with smooth reveal',cssClass:'animotion-select-slide-open',keyframeName:'animotion-selectSlideOpen',category:'form',subcategory:'select',tags:['select','dropdown','slide','form'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-select-slide-open { animation: animotion-selectSlideOpen 0.2s ease-out both; transform-origin: top; }`,keyframeCSS:`@keyframes animotion-selectSlideOpen { from { transform: scaleY(0); opacity: 0; } to { transform: scaleY(1); opacity: 1; } }`},
+{id:'F16',name:'Input Border Focus',description:'Input border color transitions smoothly on focus',cssClass:'animotion-input-border-focus',keyframeName:'animotion-inputBorderFocus',category:'form',subcategory:'input',tags:['border','focus','color','form','input'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-border-focus { animation: animotion-inputBorderFocus 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputBorderFocus { from { border-color: #d1d5db; } to { border-color: #3b82f6; } }`},
+{id:'F17',name:'Input Label Shrink',description:'Input label shrinks and moves when field has content',cssClass:'animotion-input-label-shrink',keyframeName:'animotion-inputLabelShrink',category:'form',subcategory:'label',tags:['label','shrink','content','form'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-label-shrink { animation: animotion-inputLabelShrink 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputLabelShrink { from { font-size: 1em; top: 12px; color: #6b7280; } to { font-size: 0.7em; top: -8px; color: #3b82f6; background: white; padding: 0 4px; } }`},
+{id:'F18',name:'Input Ripple',description:'Ripple effect emanates from focus point on input',cssClass:'animotion-input-ripple',keyframeName:'animotion-inputRipple',category:'form',subcategory:'input',tags:['ripple','focus','effect','form','input'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-ripple { animation: animotion-inputRipple 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputRipple { from { box-shadow: 0 0 0 0 rgba(59,130,246,0.3); } to { box-shadow: 0 0 0 6px rgba(59,130,246,0); } }`},
+{id:'F19',name:'Input Highlight',description:'Input background highlights subtly on focus',cssClass:'animotion-input-highlight',keyframeName:'animotion-inputHighlight',category:'form',subcategory:'input',tags:['highlight','background','focus','form','input'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-highlight { animation: animotion-inputHighlight 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputHighlight { from { background-color: white; } to { background-color: rgba(59,130,246,0.05); } }`},
+{id:'F20',name:'Input Underline',description:'Material-style underline grows from center on focus',cssClass:'animotion-input-underline',keyframeName:'animotion-inputUnderline',category:'form',subcategory:'input',tags:['underline','material','focus','form','input'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-underline::after { content: ''; display: block; height: 2px; background: #3b82f6; animation: animotion-inputUnderline 0.3s ease-out both; transform-origin: center; }`,keyframeCSS:`@keyframes animotion-inputUnderline { from { transform: scaleX(0); } to { transform: scaleX(1); } }`},
+{id:'F21',name:'Input Fill',description:'Input background fills with color from left on focus',cssClass:'animotion-input-fill',keyframeName:'animotion-inputFill',category:'form',subcategory:'input',tags:['fill','background','focus','form','input'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-fill { background-size: 200% 100%; background-image: linear-gradient(to right, rgba(59,130,246,0.05) 50%, transparent 50%); background-position: right; animation: animotion-inputFill 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputFill { from { background-position: right; } to { background-position: left; } }`},
+{id:'F22',name:'Form Step Slide',description:'Form step content slides to next step horizontally',cssClass:'animotion-form-step-slide',keyframeName:'animotion-formStepSlide',category:'form',subcategory:'progress',tags:['step','slide','wizard','form'],duration:'0.4s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-form-step-slide { animation: animotion-formStepSlide 0.4s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-formStepSlide { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'F23',name:'Input Count Up',description:'Numeric input value animates counting up',cssClass:'animotion-input-count-up',keyframeName:'animotion-inputCountUp',category:'form',subcategory:'input',tags:['count','number','increment','form'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-count-up { animation: animotion-inputCountUp 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputCountUp { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'F24',name:'Input Tag Pop',description:'Tag pops into the input field with elastic effect',cssClass:'animotion-input-tag-pop',keyframeName:'animotion-inputTagPop',category:'form',subcategory:'input',tags:['tag','pop','elastic','form'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-tag-pop { animation: animotion-inputTagPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-inputTagPop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'F25',name:'Input Auto Fill',description:'Input auto-fills with suggested text sliding in',cssClass:'animotion-input-auto-fill',keyframeName:'animotion-inputAutoFill',category:'form',subcategory:'input',tags:['auto-fill','suggestion','slide','form'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-auto-fill { animation: animotion-inputAutoFill 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputAutoFill { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'F26',name:'Select Rotate Open',description:'Custom select rotates its indicator when opened',cssClass:'animotion-select-rotate-open',keyframeName:'animotion-selectRotateOpen',category:'form',subcategory:'select',tags:['select','rotate','indicator','form'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-select-rotate-open { animation: animotion-selectRotateOpen 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-selectRotateOpen { from { transform: rotate(0); } to { transform: rotate(180deg); } }`},
+{id:'F27',name:'Textarea Grow',description:'Textarea grows in height as content expands',cssClass:'animotion-textarea-grow',keyframeName:'animotion-textareaGrow',category:'form',subcategory:'input',tags:['textarea','grow','expand','form'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-textarea-grow { animation: animotion-textareaGrow 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-textareaGrow { from { max-height: 60px; } to { max-height: 200px; } }`},
+{id:'F28',name:'Input Icon Slide',description:'Icon slides into the input field from the left',cssClass:'animotion-input-icon-slide',keyframeName:'animotion-inputIconSlide',category:'form',subcategory:'input',tags:['icon','slide','input','form'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-input-icon-slide { animation: animotion-inputIconSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-inputIconSlide { from { transform: translateX(-10px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'F29',name:'Form Validate Shake',description:'Form element shakes when validation fails on submit',cssClass:'animotion-form-validate-shake',keyframeName:'animotion-formValidateShake',category:'form',subcategory:'validation',tags:['validate','shake','submit','form','error'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-form-validate-shake { animation: animotion-formValidateShake 0.6s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-formValidateShake { 0%, to { transform: translateX(0); } 10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); border-color: #ef4444; } 20%, 40%, 60%, 80% { transform: translateX(5px); border-color: #ef4444; } }`},
+{id:'F30',name:'Form Success Glow',description:'Form glows green on successful submission',cssClass:'animotion-form-success-glow',keyframeName:'animotion-formSuccessGlow',category:'form',subcategory:'validation',tags:['success','glow','submit','form','green'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'input',css:`.animotion-form-success-glow { animation: animotion-formSuccessGlow 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-formSuccessGlow { from { box-shadow: 0 0 0 rgba(16,185,129,0); border-color: #d1d5db; } to { box-shadow: 0 0 15px rgba(16,185,129,0.3); border-color: #10b981; } }`},
+// ==================== TRANSFORM 3D (35) ====================
+{id:'3D01',name:'Rotate X Axis',description:'Element rotates around the X (horizontal) axis',cssClass:'animotion-rotate-x-axis',keyframeName:'animotion-rotateXAxis',category:'transform3d',subcategory:'rotate',tags:['rotate','x-axis','3d','perspective'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-rotate-x-axis { animation: animotion-rotateXAxis 2s linear infinite; perspective: 800px; }`,keyframeCSS:`@keyframes animotion-rotateXAxis { to { transform: perspective(800px) rotateX(360deg); } }`},
+{id:'3D02',name:'Rotate Y Axis',description:'Element rotates around the Y (vertical) axis',cssClass:'animotion-rotate-y-axis',keyframeName:'animotion-rotateYAxis',category:'transform3d',subcategory:'rotate',tags:['rotate','y-axis','3d','perspective'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-rotate-y-axis { animation: animotion-rotateYAxis 2s linear infinite; perspective: 800px; }`,keyframeCSS:`@keyframes animotion-rotateYAxis { to { transform: perspective(800px) rotateY(360deg); } }`},
+{id:'3D03',name:'Rotate Z Axis',description:'Element rotates around the Z (depth) axis in 3D space',cssClass:'animotion-rotate-z-axis',keyframeName:'animotion-rotateZAxis',category:'transform3d',subcategory:'rotate',tags:['rotate','z-axis','3d','spin'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-rotate-z-axis { animation: animotion-rotateZAxis 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-rotateZAxis { to { transform: rotateZ(360deg); } }`},
+{id:'3D04',name:'Full Cube Spin',description:'Element spins on all axes like a tumbling cube',cssClass:'animotion-full-cube-spin',keyframeName:'animotion-fullCubeSpin',category:'transform3d',subcategory:'rotate',tags:['cube','spin','tumble','3d'],duration:'4s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-full-cube-spin { animation: animotion-fullCubeSpin 4s linear infinite; }`,keyframeCSS:`@keyframes animotion-fullCubeSpin { 0% { transform: perspective(800px) rotateX(0) rotateY(0) rotateZ(0); } to { transform: perspective(800px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }`},
+{id:'3D05',name:'Card Flip Front Back',description:'Card flips between front and back faces in 3D',cssClass:'animotion-card-flip-front-back',keyframeName:'animotion-cardFlipFrontBack',category:'transform3d',subcategory:'flip',tags:['card','flip','front','back','3d'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-card-flip-front-back { animation: animotion-cardFlipFrontBack 1s ease-in-out both; perspective: 1000px; }`,keyframeCSS:`@keyframes animotion-cardFlipFrontBack { from { transform: perspective(1000px) rotateY(0); } to { transform: perspective(1000px) rotateY(180deg); } }`},
+{id:'3D06',name:'Perspective Tilt',description:'Element tilts with 3D perspective on hover',cssClass:'animotion-perspective-tilt',keyframeName:'animotion-perspectiveTilt',category:'transform3d',subcategory:'tilt',tags:['perspective','tilt','hover','3d'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-perspective-tilt { animation: animotion-perspectiveTilt 3s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-perspectiveTilt { 0%, to { transform: perspective(600px) rotateX(0) rotateY(0); } 25% { transform: perspective(600px) rotateX(10deg) rotateY(-10deg); } 75% { transform: perspective(600px) rotateX(-10deg) rotateY(10deg); } }`},
+{id:'3D07',name:'Text Extrude 3D',description:'Text appears extruded with 3D depth using shadows',cssClass:'animotion-text-extrude-3d',keyframeName:'animotion-textExtrude3D',category:'transform3d',subcategory:'effect',tags:['text','extrude','depth','3d','shadow'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-text-extrude-3d { animation: animotion-textExtrude3D 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-textExtrude3D { 0%, to { text-shadow: 0 1px 0 #ccc, 0 2px 0 #bbb, 0 3px 0 #aaa, 0 4px 0 #999; transform: translateY(0); } 50% { text-shadow: 0 1px 0 #ccc, 0 2px 0 #bbb, 0 3px 0 #aaa, 0 4px 0 #999, 0 5px 10px rgba(0,0,0,0.2); transform: translateY(-4px); } }`},
+{id:'3D08',name:'Button Press 3D',description:'Button presses down with 3D depth perspective',cssClass:'animotion-button-press-3d',keyframeName:'animotion-buttonPress3D',category:'transform3d',subcategory:'press',tags:['button','press','depth','3d'],duration:'0.15s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-button-press-3d { animation: animotion-buttonPress3D 0.15s ease-in both; }`,keyframeCSS:`@keyframes animotion-buttonPress3D { from { transform: perspective(500px) translateZ(0); box-shadow: 0 5px 0 #1e40af; } to { transform: perspective(500px) translateZ(-5px); box-shadow: 0 0px 0 #1e40af; } }`},
+{id:'3D09',name:'Fold From Top',description:'Element folds down from the top edge in 3D',cssClass:'animotion-fold-from-top',keyframeName:'animotion-foldFromTop',category:'transform3d',subcategory:'fold',tags:['fold','top','perspective','3d'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-fold-from-top { animation: animotion-foldFromTop 0.6s ease-out both; transform-origin: top; }`,keyframeCSS:`@keyframes animotion-foldFromTop { from { transform: perspective(800px) rotateX(-90deg); opacity: 0; } to { transform: perspective(800px) rotateX(0); opacity: 1; } }`},
+{id:'3D10',name:'Sphere Illusion',description:'Flat element appears as a sphere using 3D transforms',cssClass:'animotion-sphere-illusion',keyframeName:'animotion-sphereIllusion',category:'transform3d',subcategory:'shape',tags:['sphere','illusion','rounded','3d'],duration:'4s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-sphere-illusion { border-radius: 50%; animation: animotion-sphereIllusion 4s linear infinite; }`,keyframeCSS:`@keyframes animotion-sphereIllusion { 0% { transform: perspective(400px) rotateY(0); box-shadow: inset -10px -5px 20px rgba(0,0,0,0.3); } 50% { box-shadow: inset 10px -5px 20px rgba(0,0,0,0.3); } to { transform: perspective(400px) rotateY(360deg); box-shadow: inset -10px -5px 20px rgba(0,0,0,0.3); } }`},
+{id:'3D11',name:'Cylinder Spin',description:'Element spins as if wrapped around a cylinder',cssClass:'animotion-cylinder-spin',keyframeName:'animotion-cylinderSpin',category:'transform3d',subcategory:'rotate',tags:['cylinder','spin','wrap','3d'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-cylinder-spin { animation: animotion-cylinderSpin 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-cylinderSpin { to { transform: perspective(600px) rotateY(360deg); } }`},
+{id:'3D12',name:'Book Page Open',description:'Element opens like a book page turning',cssClass:'animotion-book-page-open',keyframeName:'animotion-bookPageOpen',category:'transform3d',subcategory:'fold',tags:['book','page','turn','3d'],duration:'0.8s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-book-page-open { animation: animotion-bookPageOpen 0.8s ease-in-out both; transform-origin: left center; }`,keyframeCSS:`@keyframes animotion-bookPageOpen { from { transform: perspective(800px) rotateY(0); } to { transform: perspective(800px) rotateY(-120deg); } }`},
+{id:'3D13',name:'Door Open 3D',description:'Element opens like a door swinging on its hinge',cssClass:'animotion-door-open-3d',keyframeName:'animotion-doorOpen3D',category:'transform3d',subcategory:'fold',tags:['door','open','hinge','3d'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-door-open-3d { animation: animotion-doorOpen3D 0.8s ease-out both; transform-origin: left center; }`,keyframeCSS:`@keyframes animotion-doorOpen3D { from { transform: perspective(800px) rotateY(0); } to { transform: perspective(800px) rotateY(-90deg); } }`},
+{id:'3D14',name:'Dice Roll',description:'Element tumbles like a rolling die',cssClass:'animotion-dice-roll',keyframeName:'animotion-diceRoll',category:'transform3d',subcategory:'rotate',tags:['dice','roll','tumble','3d'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-dice-roll { animation: animotion-diceRoll 1.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-diceRoll { 0% { transform: perspective(600px) rotateX(0) rotateZ(0) translateX(0); } 50% { transform: perspective(600px) rotateX(180deg) rotateZ(90deg) translateX(50px); } to { transform: perspective(600px) rotateX(360deg) rotateZ(180deg) translateX(100px); } }`},
+{id:'3D15',name:'Panorama Spin',description:'Element spins slowly like a 360 panorama viewer',cssClass:'animotion-panorama-spin',keyframeName:'animotion-panoramaSpin',category:'transform3d',subcategory:'rotate',tags:['panorama','360','slow','3d'],duration:'10s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-panorama-spin { animation: animotion-panoramaSpin 10s linear infinite; }`,keyframeCSS:`@keyframes animotion-panoramaSpin { to { transform: perspective(1000px) rotateY(360deg); } }`},
+{id:'3D16',name:'Carousel Spin',description:'Element rotates like a 3D carousel around Y axis',cssClass:'animotion-carousel-spin',keyframeName:'animotion-carouselSpin',category:'transform3d',subcategory:'rotate',tags:['carousel','spin','circle','3d'],duration:'6s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-carousel-spin { animation: animotion-carouselSpin 6s linear infinite; }`,keyframeCSS:`@keyframes animotion-carouselSpin { to { transform: perspective(800px) rotateY(360deg) translateZ(100px); } }`},
+{id:'3D17',name:'Prism Rotate',description:'Element rotates like a triangular prism',cssClass:'animotion-prism-rotate',keyframeName:'animotion-prismRotate',category:'transform3d',subcategory:'rotate',tags:['prism','rotate','triangle','3d'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-prism-rotate { animation: animotion-prismRotate 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-prismRotate { 0% { transform: perspective(600px) rotateX(0); } 33% { transform: perspective(600px) rotateX(120deg); } 66% { transform: perspective(600px) rotateX(240deg); } to { transform: perspective(600px) rotateX(360deg); } }`},
+{id:'3D18',name:'Pyramid Spin',description:'Element spins as if it were a pyramid shape',cssClass:'animotion-pyramid-spin',keyframeName:'animotion-pyramidSpin',category:'transform3d',subcategory:'rotate',tags:['pyramid','spin','shape','3d'],duration:'4s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-pyramid-spin { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); animation: animotion-pyramidSpin 4s linear infinite; }`,keyframeCSS:`@keyframes animotion-pyramidSpin { to { transform: perspective(600px) rotateY(360deg); } }`},
+{id:'3D19',name:'Helix Twist',description:'Element twists in a helix/spiral 3D motion',cssClass:'animotion-helix-twist',keyframeName:'animotion-helixTwist',category:'transform3d',subcategory:'rotate',tags:['helix','twist','spiral','3d'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-helix-twist { animation: animotion-helixTwist 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-helixTwist { 0% { transform: perspective(600px) rotateY(0) rotateX(0); } 25% { transform: perspective(600px) rotateY(90deg) rotateX(30deg); } 50% { transform: perspective(600px) rotateY(180deg) rotateX(0); } 75% { transform: perspective(600px) rotateY(270deg) rotateX(-30deg); } to { transform: perspective(600px) rotateY(360deg) rotateX(0); } }`},
+{id:'3D20',name:'Spiral Descend',description:'Element descends in a 3D spiral path',cssClass:'animotion-spiral-descend',keyframeName:'animotion-spiralDescend',category:'transform3d',subcategory:'path',tags:['spiral','descend','path','3d'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-spiral-descend { animation: animotion-spiralDescend 3s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-spiralDescend { 0% { transform: translateY(-20px) rotate(0) scale(0.8); } 50% { transform: translateY(20px) rotate(180deg) scale(1.2); } to { transform: translateY(-20px) rotate(360deg) scale(0.8); } }`},
+{id:'3D21',name:'Orbital Path',description:'Element follows an elliptical orbital path in 3D',cssClass:'animotion-orbital-path',keyframeName:'animotion-orbitalPath',category:'transform3d',subcategory:'path',tags:['orbital','path','ellipse','3d'],duration:'4s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-orbital-path { animation: animotion-orbitalPath 4s linear infinite; }`,keyframeCSS:`@keyframes animotion-orbitalPath { 0% { transform: perspective(600px) translateX(0) translateZ(0) scale(1); } 25% { transform: perspective(600px) translateX(30px) translateZ(-50px) scale(0.8); } 50% { transform: perspective(600px) translateX(0) translateZ(-100px) scale(0.6); } 75% { transform: perspective(600px) translateX(-30px) translateZ(-50px) scale(0.8); } to { transform: perspective(600px) translateX(0) translateZ(0) scale(1); } }`},
+{id:'3D22',name:'Swing Door',description:'Element swings open and closed like a saloon door',cssClass:'animotion-swing-door',keyframeName:'animotion-swingDoor',category:'transform3d',subcategory:'fold',tags:['swing','door','hinge','3d'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-swing-door { animation: animotion-swingDoor 2s ease-in-out infinite; transform-origin: left center; }`,keyframeCSS:`@keyframes animotion-swingDoor { 0%, to { transform: perspective(800px) rotateY(0); } 50% { transform: perspective(800px) rotateY(-60deg); } }`},
+{id:'3D23',name:'Flip Board',description:'Element flips like a departure board display',cssClass:'animotion-flip-board',keyframeName:'animotion-flipBoard',category:'transform3d',subcategory:'flip',tags:['flip','board','departure','3d'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-flip-board { animation: animotion-flipBoard 0.6s ease-in-out both; transform-origin: center bottom; }`,keyframeCSS:`@keyframes animotion-flipBoard { from { transform: perspective(400px) rotateX(90deg); } to { transform: perspective(400px) rotateX(0); } }`},
+{id:'3D24',name:'Cube Unfold',description:'Cube faces unfold flat from a 3D cube shape',cssClass:'animotion-cube-unfold',keyframeName:'animotion-cubeUnfold',category:'transform3d',subcategory:'fold',tags:['cube','unfold','flat','3d'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-cube-unfold { animation: animotion-cubeUnfold 1s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-cubeUnfold { from { transform: perspective(600px) rotateX(-90deg) rotateY(-90deg); opacity: 0; } to { transform: perspective(600px) rotateX(0) rotateY(0); opacity: 1; } }`},
+{id:'3D25',name:'Tunnel Zoom',description:'Element zooms in creating a tunnel vision 3D effect',cssClass:'animotion-tunnel-zoom',keyframeName:'animotion-tunnelZoom',category:'transform3d',subcategory:'zoom',tags:['tunnel','zoom','depth','3d'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-tunnel-zoom { animation: animotion-tunnelZoom 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-tunnelZoom { from { transform: perspective(500px) translateZ(-200px); opacity: 0; } 50% { opacity: 1; } to { transform: perspective(500px) translateZ(100px); opacity: 0; } }`},
+{id:'3D26',name:'Perspective Zoom',description:'Element zooms with perspective depth change',cssClass:'animotion-perspective-zoom',keyframeName:'animotion-perspectiveZoom',category:'transform3d',subcategory:'zoom',tags:['perspective','zoom','depth','3d'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-perspective-zoom { animation: animotion-perspectiveZoom 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-perspectiveZoom { 0%, to { transform: perspective(800px) translateZ(0); } 50% { transform: perspective(800px) translateZ(100px); } }`},
+{id:'3D27',name:'Tilt Shift',description:'Element tilts with perspective shift for depth-of-field look',cssClass:'animotion-tilt-shift',keyframeName:'animotion-tiltShift',category:'transform3d',subcategory:'tilt',tags:['tilt','shift','depth','3d'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-tilt-shift { animation: animotion-tiltShift 3s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-tiltShift { 0%, to { transform: perspective(600px) rotateX(0) translateZ(0); } 50% { transform: perspective(600px) rotateX(15deg) translateZ(20px); } }`},
+{id:'3D28',name:'Rotate In Place',description:'Element smoothly rotates in place in 3D space',cssClass:'animotion-rotate-in-place',keyframeName:'animotion-rotateInPlace',category:'transform3d',subcategory:'rotate',tags:['rotate','place','smooth','3d'],duration:'4s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-rotate-in-place { animation: animotion-rotateInPlace 4s linear infinite; }`,keyframeCSS:`@keyframes animotion-rotateInPlace { to { transform: perspective(800px) rotateY(360deg); } }`},
+{id:'3D29',name:'Wobble 3D',description:'Element wobbles with 3D perspective-based movement',cssClass:'animotion-wobble-3d',keyframeName:'animotion-wobble3D',category:'transform3d',subcategory:'movement',tags:['wobble','3d','perspective','movement'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-wobble-3d { animation: animotion-wobble3D 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-wobble3D { 0%, to { transform: perspective(600px) rotateX(0) rotateY(0); } 25% { transform: perspective(600px) rotateX(10deg) rotateY(-10deg); } 50% { transform: perspective(600px) rotateX(-5deg) rotateY(5deg); } 75% { transform: perspective(600px) rotateX(5deg) rotateY(-5deg); } }`},
+{id:'3D30',name:'Bounce 3D',description:'Element bounces with 3D translateZ depth changes',cssClass:'animotion-bounce-3d',keyframeName:'animotion-bounce3D',category:'transform3d',subcategory:'movement',tags:['bounce','3d','depth','translateZ'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-bounce-3d { animation: animotion-bounce3D 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-bounce3D { 0%, to { transform: perspective(600px) translateZ(0) translateY(0); } 50% { transform: perspective(600px) translateZ(50px) translateY(-20px); } }`},
+{id:'3D31',name:'Swing 3D',description:'Element swings in 3D space like a pendulum',cssClass:'animotion-swing-3d',keyframeName:'animotion-swing3D',category:'transform3d',subcategory:'movement',tags:['swing','pendulum','3d'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-swing-3d { animation: animotion-swing3D 2s ease-in-out infinite; transform-origin: top center; }`,keyframeCSS:`@keyframes animotion-swing3D { 0%, to { transform: perspective(600px) rotateX(0); } 25% { transform: perspective(600px) rotateX(20deg); } 75% { transform: perspective(600px) rotateX(-20deg); } }`},
+{id:'3D32',name:'Pendulum 3D',description:'Element swings as a 3D pendulum with depth',cssClass:'animotion-pendulum-3d',keyframeName:'animotion-pendulum3D',category:'transform3d',subcategory:'movement',tags:['pendulum','3d','swing','depth'],duration:'2.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-pendulum-3d { animation: animotion-pendulum3D 2.5s ease-in-out infinite; transform-origin: top center; }`,keyframeCSS:`@keyframes animotion-pendulum3D { 0%, to { transform: perspective(600px) rotateZ(0) translateZ(0); } 25% { transform: perspective(600px) rotateZ(15deg) translateZ(20px); } 75% { transform: perspective(600px) rotateZ(-15deg) translateZ(20px); } }`},
+{id:'3D33',name:'Seesaw 3D',description:'Element tilts back and forth like a seesaw in 3D',cssClass:'animotion-seesaw-3d',keyframeName:'animotion-seesaw3D',category:'transform3d',subcategory:'movement',tags:['seesaw','tilt','balance','3d'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-seesaw-3d { animation: animotion-seesaw3D 2s ease-in-out infinite; transform-origin: center bottom; }`,keyframeCSS:`@keyframes animotion-seesaw3D { 0%, to { transform: perspective(600px) rotateX(0); } 50% { transform: perspective(600px) rotateX(20deg); } }`},
+{id:'3D34',name:'Ferris Wheel',description:'Element rotates in a large circular path like a ferris wheel',cssClass:'animotion-ferris-wheel',keyframeName:'animotion-ferrisWheel',category:'transform3d',subcategory:'path',tags:['ferris','wheel','circular','3d'],duration:'6s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-ferris-wheel { animation: animotion-ferrisWheel 6s linear infinite; }`,keyframeCSS:`@keyframes animotion-ferrisWheel { to { transform: rotate(360deg); } }`},
+{id:'3D35',name:'Windmill 3D',description:'Element spins like a windmill with 3D depth',cssClass:'animotion-windmill-3d',keyframeName:'animotion-windmill3D',category:'transform3d',subcategory:'rotate',tags:['windmill','spin','3d','rotate'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-windmill-3d { animation: animotion-windmill3D 3s linear infinite; transform-origin: center center; }`,keyframeCSS:`@keyframes animotion-windmill3D { to { transform: perspective(600px) rotateZ(360deg) rotateY(15deg); } }`},
+// ==================== FILTER (25) ====================
+{id:'FL01',name:'Blur In',description:'Element transitions from blurred to sharp focus',cssClass:'animotion-blur-in',keyframeName:'animotion-blurIn',category:'filter',subcategory:'blur',tags:['blur','focus','entrance','filter'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-blur-in { animation: animotion-blurIn 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-blurIn { from { filter: blur(20px); opacity: 0; } to { filter: blur(0); opacity: 1; } }`},
+{id:'FL02',name:'Unblur Hover',description:'Blurred element becomes sharp on hover',cssClass:'animotion-unblur-hover',keyframeName:'animotion-unblurHover',category:'filter',subcategory:'blur',tags:['unblur','hover','focus','filter'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-unblur-hover { filter: blur(5px); animation: animotion-unblurHover 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-unblurHover { from { filter: blur(5px); } to { filter: blur(0); } }`},
+{id:'FL03',name:'Grayscale To Color',description:'Image transitions from grayscale to full color',cssClass:'animotion-grayscale-to-color',keyframeName:'animotion-grayscaleToColor',category:'filter',subcategory:'color',tags:['grayscale','color','transition','filter'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-grayscale-to-color { animation: animotion-grayscaleToColor 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-grayscaleToColor { from { filter: grayscale(100%); } to { filter: grayscale(0%); } }`},
+{id:'FL04',name:'Sepia Flash',description:'Image flashes through sepia tone before returning to normal',cssClass:'animotion-sepia-flash',keyframeName:'animotion-sepiaFlash',category:'filter',subcategory:'color',tags:['sepia','flash','vintage','filter'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-sepia-flash { animation: animotion-sepiaFlash 1s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-sepiaFlash { 0%, to { filter: sepia(0); } 50% { filter: sepia(100%); } }`},
+{id:'FL05',name:'Saturate Boost',description:'Image saturation increases dramatically for vivid effect',cssClass:'animotion-saturate-boost',keyframeName:'animotion-saturateBoost',category:'filter',subcategory:'color',tags:['saturate','vivid','boost','filter'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-saturate-boost { animation: animotion-saturateBoost 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-saturateBoost { from { filter: saturate(50%); } to { filter: saturate(150%); } }`},
+{id:'FL06',name:'Brightness Flash',description:'Image brightness flashes bright then returns to normal',cssClass:'animotion-brightness-flash',keyframeName:'animotion-brightnessFlash',category:'filter',subcategory:'brightness',tags:['brightness','flash','light','filter'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-brightness-flash { animation: animotion-brightnessFlash 0.6s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-brightnessFlash { 0%, to { filter: brightness(1); } 50% { filter: brightness(2); } }`},
+{id:'FL07',name:'Contrast Pulse',description:'Image contrast pulses between low and high values',cssClass:'animotion-contrast-pulse',keyframeName:'animotion-contrastPulse',category:'filter',subcategory:'contrast',tags:['contrast','pulse','dramatic','filter'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'image',css:`.animotion-contrast-pulse { animation: animotion-contrastPulse 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-contrastPulse { 0%, to { filter: contrast(100%); } 50% { filter: contrast(150%); } }`},
+{id:'FL08',name:'Hue Rotate Cycle',description:'Image hue rotates through the full color spectrum',cssClass:'animotion-hue-rotate-cycle',keyframeName:'animotion-hueRotateCycle',category:'filter',subcategory:'color',tags:['hue','rotate','spectrum','filter','rainbow'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'image',css:`.animotion-hue-rotate-cycle { animation: animotion-hueRotateCycle 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-hueRotateCycle { to { filter: hue-rotate(360deg); } }`},
+{id:'FL09',name:'Invert Flash',description:'Image briefly inverts colors then returns',cssClass:'animotion-invert-flash',keyframeName:'animotion-invertFlash',category:'filter',subcategory:'color',tags:['invert','flash','negative','filter'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-invert-flash { animation: animotion-invertFlash 0.6s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-invertFlash { 0%, to { filter: invert(0); } 50% { filter: invert(100%); } }`},
+{id:'FL10',name:'Drop Shadow Grow',description:'Image drop shadow grows from none to prominent',cssClass:'animotion-drop-shadow-grow',keyframeName:'animotion-dropShadowGrow',category:'filter',subcategory:'shadow',tags:['shadow','grow','drop','filter'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-drop-shadow-grow { animation: animotion-dropShadowGrow 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-dropShadowGrow { from { filter: drop-shadow(0 0 0 rgba(0,0,0,0)); } to { filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3)); } }`},
+{id:'FL11',name:'Blur Pulse',description:'Image pulses between slightly blurred and sharp',cssClass:'animotion-blur-pulse',keyframeName:'animotion-blurPulse',category:'filter',subcategory:'blur',tags:['blur','pulse','focus','filter'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'image',css:`.animotion-blur-pulse { animation: animotion-blurPulse 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-blurPulse { 0%, to { filter: blur(0); } 50% { filter: blur(3px); } }`},
+{id:'FL12',name:'Vintage Filter',description:'Image transitions to a warm vintage look',cssClass:'animotion-vintage-filter',keyframeName:'animotion-vintageFilter',category:'filter',subcategory:'preset',tags:['vintage','warm','retro','filter'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-vintage-filter { animation: animotion-vintageFilter 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-vintageFilter { from { filter: sepia(0) saturate(100%) contrast(100%); } to { filter: sepia(40%) saturate(80%) contrast(110%); } }`},
+{id:'FL13',name:'Night Vision',description:'Image transitions to green-tinted night vision look',cssClass:'animotion-night-vision',keyframeName:'animotion-nightVision',category:'filter',subcategory:'preset',tags:['night','vision','green','filter'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-night-vision { animation: animotion-nightVision 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-nightVision { from { filter: brightness(1) saturate(100%) hue-rotate(0deg); } to { filter: brightness(1.3) saturate(50%) hue-rotate(90deg); } }`},
+{id:'FL14',name:'Thermal Vision',description:'Image shifts to thermal/heat map color palette',cssClass:'animotion-thermal-vision',keyframeName:'animotion-thermalVision',category:'filter',subcategory:'preset',tags:['thermal','heat','vision','filter'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-thermal-vision { animation: animotion-thermalVision 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-thermalVision { from { filter: saturate(100%) hue-rotate(0deg) contrast(100%); } to { filter: saturate(200%) hue-rotate(180deg) contrast(130%); } }`},
+{id:'FL15',name:'X-Ray Effect',description:'Image transitions to an x-ray like inverted high-contrast look',cssClass:'animotion-xray-effect',keyframeName:'animotion-xrayEffect',category:'filter',subcategory:'preset',tags:['xray','invert','contrast','filter'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-xray-effect { animation: animotion-xrayEffect 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-xrayEffect { from { filter: invert(0) contrast(100%) brightness(100%); } to { filter: invert(100%) contrast(150%) brightness(120%); } }`},
+{id:'FL16',name:'Duotone Shift',description:'Image cycles between different duotone color treatments',cssClass:'animotion-duotone-shift',keyframeName:'animotion-duotoneShift',category:'filter',subcategory:'color',tags:['duotone','shift','color','filter'],duration:'4s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'image',css:`.animotion-duotone-shift { animation: animotion-duotoneShift 4s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-duotoneShift { 0%, to { filter: hue-rotate(0deg) saturate(80%); } 33% { filter: hue-rotate(120deg) saturate(80%); } 66% { filter: hue-rotate(240deg) saturate(80%); } }`},
+{id:'FL17',name:'Color Pop',description:'Image background desaturates while subject stays colorful',cssClass:'animotion-color-pop',keyframeName:'animotion-colorPop',category:'filter',subcategory:'color',tags:['color','pop','selective','filter'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-color-pop { animation: animotion-colorPop 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-colorPop { from { filter: saturate(30%) contrast(90%); } to { filter: saturate(130%) contrast(110%); } }`},
+{id:'FL18',name:'Fade To Grayscale',description:'Image gradually fades from color to grayscale',cssClass:'animotion-fade-to-grayscale',keyframeName:'animotion-fadeToGrayscale',category:'filter',subcategory:'color',tags:['grayscale','fade','desaturate','filter'],duration:'0.8s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-fade-to-grayscale { animation: animotion-fadeToGrayscale 0.8s ease-in both; }`,keyframeCSS:`@keyframes animotion-fadeToGrayscale { from { filter: grayscale(0); } to { filter: grayscale(100%); } }`},
+{id:'FL19',name:'Bloom Effect',description:'Image blooms with bright glow-like brightness increase',cssClass:'animotion-bloom-effect',keyframeName:'animotion-bloomEffect',category:'filter',subcategory:'brightness',tags:['bloom','glow','bright','filter'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'image',css:`.animotion-bloom-effect { animation: animotion-bloomEffect 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-bloomEffect { 0%, to { filter: brightness(1) blur(0); } 50% { filter: brightness(1.3) blur(1px); } }`},
+{id:'FL20',name:'Soft Focus',description:'Image applies a dreamy soft-focus effect',cssClass:'animotion-soft-focus',keyframeName:'animotion-softFocus',category:'filter',subcategory:'blur',tags:['soft','focus','dreamy','filter'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-soft-focus { animation: animotion-softFocus 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-softFocus { from { filter: blur(0) brightness(1); } to { filter: blur(1px) brightness(1.1); } }`},
+{id:'FL21',name:'Crystal Refract',description:'Image distorts as if viewed through crystal refraction',cssClass:'animotion-crystal-refract',keyframeName:'animotion-crystalRefract',category:'filter',subcategory:'effect',tags:['crystal','refract','distort','filter'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'image',css:`.animotion-crystal-refract { animation: animotion-crystalRefract 3s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-crystalRefract { 0%, to { filter: hue-rotate(0deg) brightness(1); } 25% { filter: hue-rotate(30deg) brightness(1.1); } 50% { filter: hue-rotate(-30deg) brightness(1.2); } 75% { filter: hue-rotate(15deg) brightness(0.9); } }`},
+{id:'FL22',name:'Prismatic Shift',description:'Image color shifts through prismatic rainbow tones',cssClass:'animotion-prismatic-shift',keyframeName:'animotion-prismaticShift',category:'filter',subcategory:'color',tags:['prismatic','rainbow','shift','filter'],duration:'4s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'image',css:`.animotion-prismatic-shift { animation: animotion-prismaticShift 4s linear infinite; }`,keyframeCSS:`@keyframes animotion-prismaticShift { to { filter: hue-rotate(360deg); } }`},
+{id:'FL23',name:'Neon Filter',description:'Image gets a high-contrast neon-glow treatment',cssClass:'animotion-neon-filter',keyframeName:'animotion-neonFilter',category:'filter',subcategory:'preset',tags:['neon','glow','contrast','filter'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'image',css:`.animotion-neon-filter { animation: animotion-neonFilter 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-neonFilter { 0%, to { filter: contrast(150%) brightness(1) saturate(150%); } 50% { filter: contrast(200%) brightness(1.2) saturate(200%); } }`},
+{id:'FL24',name:'Retro Filter',description:'Image applies an animated retro film-grain look',cssClass:'animotion-retro-filter',keyframeName:'animotion-retroFilter',category:'filter',subcategory:'preset',tags:['retro','film','grain','filter','vintage'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'image',css:`.animotion-retro-filter { animation: animotion-retroFilter 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-retroFilter { from { filter: contrast(100%) sepia(0) saturate(100%); } to { filter: contrast(120%) sepia(20%) saturate(70%); } }`},
+{id:'FL25',name:'Glitch Filter',description:'Image glitches with rapid hue and contrast shifts',cssClass:'animotion-glitch-filter',keyframeName:'animotion-glitchFilter',category:'filter',subcategory:'effect',tags:['glitch','distort','digital','filter'],duration:'0.5s',timingFunction:'steps(3)',iterationCount:'infinite',fillMode:'both',demoType:'image',css:`.animotion-glitch-filter { animation: animotion-glitchFilter 0.5s steps(3) infinite; }`,keyframeCSS:`@keyframes animotion-glitchFilter { 0%, to { filter: hue-rotate(0deg) contrast(100%); } 33% { filter: hue-rotate(90deg) contrast(150%); } 66% { filter: hue-rotate(-90deg) contrast(80%); } }`},
+// ==================== MICRO (40) ====================
+{id:'MI01',name:'Like Bounce',description:'Heart bounces with scale overshoot for like action',cssClass:'animotion-like-bounce',keyframeName:'animotion-likeBounce',category:'micro',subcategory:'scale',tags:['like', 'heart', 'bounce', 'micro'],duration:'0.4s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-like-bounce { animation: animotion-likeBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-likeBounce { from { transform: scale(0); } 50% { transform: scale(1.3); } to { transform: scale(1); } }`},
+{id:'MI02',name:'Add To Cart',description:'Item slides toward cart icon with shrink effect',cssClass:'animotion-add-to-cart',keyframeName:'animotion-addToCart',category:'micro',subcategory:'slide',tags:['cart', 'add', 'slide', 'micro'],duration:'0.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-add-to-cart { animation: animotion-addToCart 0.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-addToCart { from { transform: translateX(0) scale(1); opacity: 1; } to { transform: translateX(100px) scale(0.3); opacity: 0; } }`},
+{id:'MI03',name:'Notification Pop',description:'Notification badge pops in with elastic scale',cssClass:'animotion-notification-pop',keyframeName:'animotion-notificationPop',category:'micro',subcategory:'scale',tags:['notification', 'pop', 'badge', 'micro'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-notification-pop { animation: animotion-notificationPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-notificationPop { from { transform: scale(0); } to { transform: scale(1); } }`},
+{id:'MI04',name:'Switch Toggle',description:'Toggle switch slides with smooth momentum',cssClass:'animotion-switch-toggle',keyframeName:'animotion-switchToggle',category:'micro',subcategory:'slide',tags:['switch', 'toggle', 'slide', 'micro'],duration:'0.2s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-switch-toggle { animation: animotion-switchToggle 0.2s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-switchToggle { from { transform: translateX(0); } to { transform: translateX(20px); } }`},
+{id:'MI05',name:'Checkmark Draw',description:'Checkmark draws itself with stroke animation',cssClass:'animotion-checkmark-draw',keyframeName:'animotion-checkmarkDraw',category:'micro',subcategory:'draw',tags:['checkmark', 'draw', 'complete', 'micro'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-checkmark-draw { animation: animotion-checkmarkDraw 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-checkmarkDraw { from { transform: scale(0) rotate(-45deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }`},
+{id:'MI06',name:'Star Rate',description:'Star fills with color and scales for rating',cssClass:'animotion-star-rate',keyframeName:'animotion-starRate',category:'micro',subcategory:'scale',tags:['star', 'rate', 'fill', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-star-rate { animation: animotion-starRate 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-starRate { from { transform: scale(0.5); opacity: 0.3; } to { transform: scale(1); opacity: 1; } }`},
+{id:'MI07',name:'Progress Complete',description:'Progress indicator completes with celebration pulse',cssClass:'animotion-progress-complete',keyframeName:'animotion-progressComplete',category:'micro',subcategory:'pulse',tags:['progress', 'complete', 'done', 'micro'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-progress-complete { animation: animotion-progressComplete 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-progressComplete { 0% { transform: scale(1); } 50% { transform: scale(1.1); background-color: #10b981; } to { transform: scale(1); } }`},
+{id:'MI08',name:'Drag Start',description:'Element lifts with shadow when drag begins',cssClass:'animotion-drag-start',keyframeName:'animotion-dragStart',category:'micro',subcategory:'lift',tags:['drag', 'start', 'lift', 'micro'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-drag-start { animation: animotion-dragStart 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-dragStart { from { transform: scale(1); box-shadow: 0 2px 4px rgba(0,0,0,0.1); } to { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.2); } }`},
+{id:'MI09',name:'Drag End',description:'Element settles back with bounce when dropped',cssClass:'animotion-drag-end',keyframeName:'animotion-dragEnd',category:'micro',subcategory:'settle',tags:['drag', 'end', 'drop', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-drag-end { animation: animotion-dragEnd 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-dragEnd { from { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.2); } to { transform: scale(1); box-shadow: 0 2px 4px rgba(0,0,0,0.1); } }`},
+{id:'MI10',name:'Pinch Zoom',description:'Element zooms in response to pinch gesture',cssClass:'animotion-pinch-zoom',keyframeName:'animotion-pinchZoom',category:'micro',subcategory:'scale',tags:['pinch', 'zoom', 'gesture', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-pinch-zoom { animation: animotion-pinchZoom 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-pinchZoom { from { transform: scale(1); } to { transform: scale(1.5); } }`},
+{id:'MI11',name:'Swipe Hint',description:'Element nudges to hint at swipe interaction',cssClass:'animotion-swipe-hint',keyframeName:'animotion-swipeHint',category:'micro',subcategory:'hint',tags:['swipe', 'hint', 'nudge', 'micro'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'3',fillMode:'both',demoType:'box',css:`.animotion-swipe-hint { animation: animotion-swipeHint 1.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-swipeHint { 0%, to { transform: translateX(0); } 50% { transform: translateX(-15px); } }`},
+{id:'MI12',name:'Pull To Refresh',description:'Element stretches down as if pulling to refresh',cssClass:'animotion-pull-to-refresh',keyframeName:'animotion-pullToRefresh',category:'micro',subcategory:'stretch',tags:['pull', 'refresh', 'stretch', 'micro'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-pull-to-refresh { animation: animotion-pullToRefresh 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-pullToRefresh { from { transform: translateY(-30px) scaleY(1.3); } to { transform: translateY(0) scaleY(1); } }`},
+{id:'MI13',name:'Double Tap Zoom',description:'Element zooms in with double-tap gesture feel',cssClass:'animotion-double-tap-zoom',keyframeName:'animotion-doubleTapZoom',category:'micro',subcategory:'zoom',tags:['double-tap', 'zoom', 'gesture', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-double-tap-zoom { animation: animotion-doubleTapZoom 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-doubleTapZoom { from { transform: scale(1); } to { transform: scale(2); } }`},
+{id:'MI14',name:'Long Press Glow',description:'Element glows during long press interaction',cssClass:'animotion-long-press-glow',keyframeName:'animotion-longPressGlow',category:'micro',subcategory:'glow',tags:['long-press', 'glow', 'hold', 'micro'],duration:'0.8s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-long-press-glow { animation: animotion-longPressGlow 0.8s ease-in both; }`,keyframeCSS:`@keyframes animotion-longPressGlow { from { box-shadow: 0 0 0 rgba(59,130,246,0); } to { box-shadow: 0 0 20px rgba(59,130,246,0.5); } }`},
+{id:'MI15',name:'Tap Feedback',description:'Quick scale feedback on tap or click',cssClass:'animotion-tap-feedback',keyframeName:'animotion-tapFeedback',category:'micro',subcategory:'scale',tags:['tap', 'feedback', 'click', 'micro'],duration:'0.15s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-tap-feedback { animation: animotion-tapFeedback 0.15s ease-out both; }`,keyframeCSS:`@keyframes animotion-tapFeedback { 0% { transform: scale(1); } 50% { transform: scale(0.95); } to { transform: scale(1); } }`},
+{id:'MI16',name:'Menu Item Hover',description:'Menu item highlights with left border slide',cssClass:'animotion-menu-item-hover',keyframeName:'animotion-menuItemHover',category:'micro',subcategory:'highlight',tags:['menu', 'hover', 'highlight', 'micro'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'nav',css:`.animotion-menu-item-hover { animation: animotion-menuItemHover 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-menuItemHover { from { padding-left: 12px; border-left-color: transparent; } to { padding-left: 16px; border-left-color: #3b82f6; } }`},
+{id:'MI17',name:'Tooltip Fade',description:'Tooltip fades in with slight upward movement',cssClass:'animotion-tooltip-fade',keyframeName:'animotion-tooltipFade',category:'micro',subcategory:'fade',tags:['tooltip', 'fade', 'reveal', 'micro'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-tooltip-fade { animation: animotion-tooltipFade 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-tooltipFade { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'MI18',name:'Chip Remove',description:'Tag chip shrinks and fades when removed',cssClass:'animotion-chip-remove',keyframeName:'animotion-chipRemove',category:'micro',subcategory:'remove',tags:['chip', 'tag', 'remove', 'micro'],duration:'0.2s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-chip-remove { animation: animotion-chipRemove 0.2s ease-in both; }`,keyframeCSS:`@keyframes animotion-chipRemove { from { transform: scale(1); opacity: 1; } to { transform: scale(0); opacity: 0; } }`},
+{id:'MI19',name:'Badge Count',description:'Badge number updates with bounce animation',cssClass:'animotion-badge-count',keyframeName:'animotion-badgeCount',category:'micro',subcategory:'bounce',tags:['badge', 'count', 'update', 'micro'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-badge-count { animation: animotion-badgeCount 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-badgeCount { from { transform: scale(0.5); } 60% { transform: scale(1.2); } to { transform: scale(1); } }`},
+{id:'MI20',name:'FAB Open',description:'Floating action button expands with rotation',cssClass:'animotion-fab-open',keyframeName:'animotion-fabOpen',category:'micro',subcategory:'open',tags:['fab', 'open', 'expand', 'micro'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'button',css:`.animotion-fab-open { animation: animotion-fabOpen 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-fabOpen { from { transform: scale(0) rotate(-45deg); } to { transform: scale(1) rotate(0); } }`},
+{id:'MI21',name:'FAB Close',description:'Floating action button collapses with rotation',cssClass:'animotion-fab-close',keyframeName:'animotion-fabClose',category:'micro',subcategory:'close',tags:['fab', 'close', 'collapse', 'micro'],duration:'0.2s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'button',css:`.animotion-fab-close { animation: animotion-fabClose 0.2s ease-in both; }`,keyframeCSS:`@keyframes animotion-fabClose { from { transform: scale(1) rotate(0); } to { transform: scale(0) rotate(45deg); } }`},
+{id:'MI22',name:'Snackbar Slide',description:'Snackbar slides up from bottom of screen',cssClass:'animotion-snackbar-slide',keyframeName:'animotion-snackbarSlide',category:'micro',subcategory:'slide',tags:['snackbar', 'toast', 'slide', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-snackbar-slide { animation: animotion-snackbarSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-snackbarSlide { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'MI23',name:'Snackbar Dismiss',description:'Snackbar slides away when dismissed',cssClass:'animotion-snackbar-dismiss',keyframeName:'animotion-snackbarDismiss',category:'micro',subcategory:'dismiss',tags:['snackbar', 'dismiss', 'exit', 'micro'],duration:'0.2s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-snackbar-dismiss { animation: animotion-snackbarDismiss 0.2s ease-in both; }`,keyframeCSS:`@keyframes animotion-snackbarDismiss { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }`},
+{id:'MI24',name:'Modal Open',description:'Modal scales in with backdrop fade',cssClass:'animotion-modal-open',keyframeName:'animotion-modalOpen',category:'micro',subcategory:'open',tags:['modal', 'open', 'scale', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-modal-open { animation: animotion-modalOpen 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-modalOpen { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'MI25',name:'Modal Close',description:'Modal scales out with backdrop fade',cssClass:'animotion-modal-close',keyframeName:'animotion-modalClose',category:'micro',subcategory:'close',tags:['modal', 'close', 'scale', 'micro'],duration:'0.2s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-modal-close { animation: animotion-modalClose 0.2s ease-in both; }`,keyframeCSS:`@keyframes animotion-modalClose { from { transform: scale(1); opacity: 1; } to { transform: scale(0.9); opacity: 0; } }`},
+{id:'MI26',name:'Accordion Expand',description:'Accordion section expands to reveal content',cssClass:'animotion-accordion-expand',keyframeName:'animotion-accordionExpand',category:'micro',subcategory:'expand',tags:['accordion', 'expand', 'reveal', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-accordion-expand { animation: animotion-accordionExpand 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-accordionExpand { from { max-height: 0; opacity: 0; } to { max-height: 500px; opacity: 1; } }`},
+{id:'MI27',name:'Accordion Collapse',description:'Accordion section collapses to hide content',cssClass:'animotion-accordion-collapse',keyframeName:'animotion-accordionCollapse',category:'micro',subcategory:'collapse',tags:['accordion', 'collapse', 'hide', 'micro'],duration:'0.2s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-accordion-collapse { animation: animotion-accordionCollapse 0.2s ease-in both; }`,keyframeCSS:`@keyframes animotion-accordionCollapse { from { max-height: 500px; opacity: 1; } to { max-height: 0; opacity: 0; } }`},
+{id:'MI28',name:'Tab Switch',description:'Tab content switches with cross-fade effect',cssClass:'animotion-tab-switch',keyframeName:'animotion-tabSwitch',category:'micro',subcategory:'switch',tags:['tab', 'switch', 'fade', 'micro'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-tab-switch { animation: animotion-tabSwitch 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-tabSwitch { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'MI29',name:'Carousel Slide',description:'Carousel item slides to next position',cssClass:'animotion-carousel-slide',keyframeName:'animotion-carouselSlide',category:'micro',subcategory:'slide',tags:['carousel', 'slide', 'next', 'micro'],duration:'0.4s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-carousel-slide { animation: animotion-carouselSlide 0.4s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-carouselSlide { from { transform: translateX(100%); } to { transform: translateX(0); } }`},
+{id:'MI30',name:'Stepper Advance',description:'Stepper advances to next step with pulse',cssClass:'animotion-stepper-advance',keyframeName:'animotion-stepperAdvance',category:'micro',subcategory:'advance',tags:['stepper', 'advance', 'progress', 'micro'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-stepper-advance { animation: animotion-stepperAdvance 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-stepperAdvance { from { background: #d1d5db; transform: scale(0.8); } to { background: #3b82f6; transform: scale(1); } }`},
+{id:'MI31',name:'Rating Fill',description:'Rating element fills with golden color',cssClass:'animotion-rating-fill',keyframeName:'animotion-ratingFill',category:'micro',subcategory:'fill',tags:['rating', 'fill', 'gold', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-rating-fill { animation: animotion-ratingFill 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-ratingFill { from { color: #d1d5db; transform: scale(0.8); } to { color: #f59e0b; transform: scale(1); } }`},
+{id:'MI32',name:'Bookmark Flip',description:'Bookmark icon flips when toggled',cssClass:'animotion-bookmark-flip',keyframeName:'animotion-bookmarkFlip',category:'micro',subcategory:'flip',tags:['bookmark', 'flip', 'toggle', 'micro'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-bookmark-flip { animation: animotion-bookmarkFlip 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-bookmarkFlip { from { transform: rotateY(0); } to { transform: rotateY(180deg); } }`},
+{id:'MI33',name:'Share Expand',description:'Share options expand outward from button',cssClass:'animotion-share-expand',keyframeName:'animotion-shareExpand',category:'micro',subcategory:'expand',tags:['share', 'expand', 'options', 'micro'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'button',css:`.animotion-share-expand { animation: animotion-shareExpand 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-shareExpand { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'MI34',name:'Comment Slide',description:'New comment slides in from the left',cssClass:'animotion-comment-slide',keyframeName:'animotion-commentSlide',category:'micro',subcategory:'slide',tags:['comment', 'slide', 'new', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-comment-slide { animation: animotion-commentSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-commentSlide { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'MI35',name:'Reply Indent',description:'Reply slides in with indentation offset',cssClass:'animotion-reply-indent',keyframeName:'animotion-replyIndent',category:'micro',subcategory:'indent',tags:['reply', 'indent', 'offset', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-reply-indent { animation: animotion-replyIndent 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-replyIndent { from { transform: translateX(-10px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'MI36',name:'Emoji React',description:'Emoji floats up with fade for reaction',cssClass:'animotion-emoji-react',keyframeName:'animotion-emojiReact',category:'micro',subcategory:'float',tags:['emoji', 'react', 'float', 'micro'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-emoji-react { animation: animotion-emojiReact 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-emojiReact { from { transform: translateY(0) scale(1); opacity: 1; } to { transform: translateY(-40px) scale(1.5); opacity: 0; } }`},
+{id:'MI37',name:'Voice Wave',description:'Voice input indicator pulses with audio waveform',cssClass:'animotion-voice-wave',keyframeName:'animotion-voiceWave',category:'micro',subcategory:'pulse',tags:['voice', 'wave', 'audio', 'micro'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-voice-wave { animation: animotion-voiceWave 1s ease-in-out infinite both; }`,keyframeCSS:`@keyframes animotion-voiceWave { 0%, to { transform: scaleY(0.5); } 50% { transform: scaleY(1.5); } }`},
+{id:'MI38',name:'Read Indicator',description:'Read receipt checkmarks appear sequentially',cssClass:'animotion-read-indicator',keyframeName:'animotion-readIndicator',category:'micro',subcategory:'appear',tags:['read', 'receipt', 'check', 'micro'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-read-indicator { animation: animotion-readIndicator 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-readIndicator { from { opacity: 0; transform: translateX(-5px); } to { opacity: 1; transform: translateX(0); } }`},
+{id:'MI39',name:'Online Status',description:'Online status dot pulses with green glow',cssClass:'animotion-online-status',keyframeName:'animotion-onlineStatus',category:'micro',subcategory:'pulse',tags:['online', 'status', 'pulse', 'micro'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-online-status { animation: animotion-onlineStatus 2s ease-in-out infinite both; }`,keyframeCSS:`@keyframes animotion-onlineStatus { 0%, to { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); } 50% { box-shadow: 0 0 0 8px rgba(16,185,129,0); } }`},
+{id:'MI40',name:'Typing Bubble',description:'Typing indicator dots bounce in chat bubble',cssClass:'animotion-typing-bubble',keyframeName:'animotion-typingBubble',category:'micro',subcategory:'bounce',tags:['typing', 'bubble', 'chat', 'micro'],duration:'1.4s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-typing-bubble { animation: animotion-typingBubble 1.4s ease-in-out infinite both; }`,keyframeCSS:`@keyframes animotion-typingBubble { 0%, 60%, to { transform: translateY(0); } 30% { transform: translateY(-6px); } }`},
+// ==================== SCROLL (25) ====================
+{id:'SC01',name:'Scroll Fade In',description:'Element fades in as it enters the viewport on scroll',cssClass:'animotion-scroll-fade-in',keyframeName:'animotion-scrollFadeIn',category:'scroll',subcategory:'fade',tags:['scroll','fade','viewport','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-fade-in { animation: animotion-scrollFadeIn 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollFadeIn { from { opacity: 0; } to { opacity: 1; } }`},
+{id:'SC02',name:'Scroll Fade In Up',description:'Element fades in and slides up when scrolled into view',cssClass:'animotion-scroll-fade-in-up',keyframeName:'animotion-scrollFadeInUp',category:'scroll',subcategory:'fade',tags:['scroll','fade','up','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-fade-in-up { animation: animotion-scrollFadeInUp 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollFadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'SC03',name:'Scroll Fade In Left',description:'Element fades in from the left on scroll',cssClass:'animotion-scroll-fade-in-left',keyframeName:'animotion-scrollFadeInLeft',category:'scroll',subcategory:'fade',tags:['scroll','fade','left','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-fade-in-left { animation: animotion-scrollFadeInLeft 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollFadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }`},
+{id:'SC04',name:'Scroll Fade In Right',description:'Element fades in from the right on scroll',cssClass:'animotion-scroll-fade-in-right',keyframeName:'animotion-scrollFadeInRight',category:'scroll',subcategory:'fade',tags:['scroll','fade','right','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-fade-in-right { animation: animotion-scrollFadeInRight 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollFadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }`},
+{id:'SC05',name:'Scroll Zoom In',description:'Element zooms in from small when scrolled into view',cssClass:'animotion-scroll-zoom-in',keyframeName:'animotion-scrollZoomIn',category:'scroll',subcategory:'zoom',tags:['scroll','zoom','scale','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-zoom-in { animation: animotion-scrollZoomIn 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollZoomIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }`},
+{id:'SC06',name:'Scroll Slide Up',description:'Element slides up into view on scroll',cssClass:'animotion-scroll-slide-up',keyframeName:'animotion-scrollSlideUp',category:'scroll',subcategory:'slide',tags:['scroll','slide','up','reveal'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-slide-up { animation: animotion-scrollSlideUp 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollSlideUp { from { transform: translateY(50px); } to { transform: translateY(0); } }`},
+{id:'SC07',name:'Scroll Slide Left',description:'Element slides in from the left on scroll',cssClass:'animotion-scroll-slide-left',keyframeName:'animotion-scrollSlideLeft',category:'scroll',subcategory:'slide',tags:['scroll','slide','left','reveal'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-slide-left { animation: animotion-scrollSlideLeft 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollSlideLeft { from { transform: translateX(-50px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'SC08',name:'Scroll Rotate In',description:'Element rotates into view on scroll',cssClass:'animotion-scroll-rotate-in',keyframeName:'animotion-scrollRotateIn',category:'scroll',subcategory:'rotate',tags:['scroll','rotate','entrance','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-rotate-in { animation: animotion-scrollRotateIn 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollRotateIn { from { opacity: 0; transform: rotate(-15deg) scale(0.9); } to { opacity: 1; transform: rotate(0) scale(1); } }`},
+{id:'SC09',name:'Scroll Flip In',description:'Element flips into view on scroll with 3D effect',cssClass:'animotion-scroll-flip-in',keyframeName:'animotion-scrollFlipIn',category:'scroll',subcategory:'3d',tags:['scroll','flip','3d','reveal'],duration:'0.7s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-flip-in { animation: animotion-scrollFlipIn 0.7s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollFlipIn { from { opacity: 0; transform: perspective(600px) rotateX(-60deg); } to { opacity: 1; transform: perspective(600px) rotateX(0); } }`},
+{id:'SC10',name:'Scroll Blur In',description:'Element transitions from blurred to sharp on scroll',cssClass:'animotion-scroll-blur-in',keyframeName:'animotion-scrollBlurIn',category:'scroll',subcategory:'filter',tags:['scroll','blur','focus','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-blur-in { animation: animotion-scrollBlurIn 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollBlurIn { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }`},
+{id:'SC11',name:'Scroll Count Up',description:'Number counts up from zero when scrolled into view',cssClass:'animotion-scroll-count-up',keyframeName:'animotion-scrollCountUp',category:'scroll',subcategory:'text',tags:['scroll','count','number','reveal'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-count-up { animation: animotion-scrollCountUp 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollCountUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'SC12',name:'Scroll Progress Reveal',description:'Element reveals with a progress bar-style horizontal wipe',cssClass:'animotion-scroll-progress-reveal',keyframeName:'animotion-scrollProgressReveal',category:'scroll',subcategory:'clip',tags:['scroll','progress','wipe','reveal'],duration:'0.8s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-progress-reveal { animation: animotion-scrollProgressReveal 0.8s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-scrollProgressReveal { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }`},
+{id:'SC13',name:'Scroll Parallax',description:'Element moves at different rate than scroll for depth effect',cssClass:'animotion-scroll-parallax',keyframeName:'animotion-scrollParallax',category:'scroll',subcategory:'parallax',tags:['scroll','parallax','depth','movement'],duration:'0.1s',timingFunction:'linear',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-parallax { animation: animotion-scrollParallax 0.1s linear both; will-change: transform; }`,keyframeCSS:`@keyframes animotion-scrollParallax { from { transform: translateY(0); } to { transform: translateY(-20px); } }`},
+{id:'SC14',name:'Scroll Stagger',description:'Multiple elements stagger their entrance on scroll',cssClass:'animotion-scroll-stagger',keyframeName:'animotion-scrollStagger',category:'scroll',subcategory:'stagger',tags:['scroll','stagger','sequence','reveal'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-stagger { animation: animotion-scrollStagger 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollStagger { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'SC15',name:'Scroll Scale',description:'Element scales up from zero to full size on scroll',cssClass:'animotion-scroll-scale',keyframeName:'animotion-scrollScale',category:'scroll',subcategory:'scale',tags:['scroll','scale','grow','reveal'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-scale { animation: animotion-scrollScale 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollScale { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'SC16',name:'Scroll Clip Reveal',description:'Element reveals with expanding clip-path on scroll',cssClass:'animotion-scroll-clip-reveal',keyframeName:'animotion-scrollClipReveal',category:'scroll',subcategory:'clip',tags:['scroll','clip','reveal','mask'],duration:'0.7s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-clip-reveal { animation: animotion-scrollClipReveal 0.7s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollClipReveal { from { clip-path: circle(0% at 50% 50%); } to { clip-path: circle(75% at 50% 50%); } }`},
+{id:'SC17',name:'Scroll Text Reveal',description:'Text reveals line by line on scroll',cssClass:'animotion-scroll-text-reveal',keyframeName:'animotion-scrollTextReveal',category:'scroll',subcategory:'text',tags:['scroll','text','reveal','line'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-text-reveal { animation: animotion-scrollTextReveal 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollTextReveal { from { clip-path: inset(0 0 100% 0); opacity: 0; } to { clip-path: inset(0 0 0 0); opacity: 1; } }`},
+{id:'SC18',name:'Scroll Image Reveal',description:'Image reveals with a dramatic wipe effect on scroll',cssClass:'animotion-scroll-image-reveal',keyframeName:'animotion-scrollImageReveal',category:'scroll',subcategory:'image',tags:['scroll','image','reveal','wipe'],duration:'0.8s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-image-reveal { animation: animotion-scrollImageReveal 0.8s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-scrollImageReveal { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }`},
+{id:'SC19',name:'Scroll Card Stack',description:'Cards stack and reveal as user scrolls through section',cssClass:'animotion-scroll-card-stack',keyframeName:'animotion-scrollCardStack',category:'scroll',subcategory:'layout',tags:['scroll','card','stack','reveal'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-card-stack { animation: animotion-scrollCardStack 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollCardStack { from { transform: translateY(30px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }`},
+{id:'SC20',name:'Scroll Timeline',description:'Timeline items reveal progressively as page scrolls',cssClass:'animotion-scroll-timeline',keyframeName:'animotion-scrollTimeline',category:'scroll',subcategory:'layout',tags:['scroll','timeline','progressive','reveal'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-timeline { animation: animotion-scrollTimeline 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollTimeline { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }`},
+{id:'SC21',name:'Scroll Horizontal',description:'Content scrolls horizontally while page scrolls vertically',cssClass:'animotion-scroll-horizontal',keyframeName:'animotion-scrollHorizontal',category:'scroll',subcategory:'direction',tags:['scroll','horizontal','transform','reveal'],duration:'0.5s',timingFunction:'linear',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-horizontal { animation: animotion-scrollHorizontal 0.5s linear both; }`,keyframeCSS:`@keyframes animotion-scrollHorizontal { from { transform: translateX(-100%); } to { transform: translateX(0); } }`},
+{id:'SC22',name:'Scroll Snap',description:'Element snaps into position with sharp deceleration',cssClass:'animotion-scroll-snap',keyframeName:'animotion-scrollSnap',category:'scroll',subcategory:'movement',tags:['scroll','snap','position','sharp'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-snap { animation: animotion-scrollSnap 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-scrollSnap { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'SC23',name:'Scroll Reveal Mask',description:'Element reveals with an animated gradient mask on scroll',cssClass:'animotion-scroll-reveal-mask',keyframeName:'animotion-scrollRevealMask',category:'scroll',subcategory:'mask',tags:['scroll','reveal','mask','gradient'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-reveal-mask { animation: animotion-scrollRevealMask 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollRevealMask { from { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); } to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }`},
+{id:'SC24',name:'Scroll Wipe In',description:'Element wipes in from one edge on scroll',cssClass:'animotion-scroll-wipe-in',keyframeName:'animotion-scrollWipeIn',category:'scroll',subcategory:'clip',tags:['scroll','wipe','edge','reveal'],duration:'0.7s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-wipe-in { animation: animotion-scrollWipeIn 0.7s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-scrollWipeIn { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }`},
+{id:'SC25',name:'Scroll Morph In',description:'Element morphs from a different shape as it scrolls in',cssClass:'animotion-scroll-morph-in',keyframeName:'animotion-scrollMorphIn',category:'scroll',subcategory:'shape',tags:['scroll','morph','shape','reveal'],duration:'0.7s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-scroll-morph-in { animation: animotion-scrollMorphIn 0.7s ease-out both; }`,keyframeCSS:`@keyframes animotion-scrollMorphIn { from { border-radius: 50%; transform: scale(0.5); opacity: 0; } to { border-radius: 8px; transform: scale(1); opacity: 1; } }`},
+// ==================== CREATIVE (40) ====================
+{id:'CR01',name:'Paint Splash',description:'Element splatters in like a paint splash with clip-path',cssClass:'animotion-paint-splash',keyframeName:'animotion-paintSplash',category:'creative',subcategory:'art',tags:['paint','splash','art','creative'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-paint-splash { animation: animotion-paintSplash 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-paintSplash { from { clip-path: circle(0% at 50% 50%); transform: scale(0.5); } to { clip-path: circle(75% at 50% 50%); transform: scale(1); } }`},
+{id:'CR02',name:'Ink Bleed',description:'Element bleeds outward like ink on wet paper',cssClass:'animotion-ink-bleed',keyframeName:'animotion-inkBleed',category:'creative',subcategory:'art',tags:['ink','bleed','spread','creative'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-ink-bleed { animation: animotion-inkBleed 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-inkBleed { from { filter: blur(20px); opacity: 0; transform: scale(0.3); } to { filter: blur(0); opacity: 1; transform: scale(1); } }`},
+{id:'CR03',name:'Watercolor',description:'Element fades in with soft watercolor-like blur edges',cssClass:'animotion-watercolor',keyframeName:'animotion-watercolor',category:'creative',subcategory:'art',tags:['watercolor','soft','blur','creative'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-watercolor { animation: animotion-watercolor 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-watercolor { from { opacity: 0; filter: blur(30px) saturate(200%); transform: scale(1.2); } to { opacity: 1; filter: blur(0) saturate(100%); transform: scale(1); } }`},
+{id:'CR04',name:'Paper Fold',description:'Element folds like paper being creased',cssClass:'animotion-paper-fold',keyframeName:'animotion-paperFold',category:'creative',subcategory:'material',tags:['paper','fold','crease','creative'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-paper-fold { animation: animotion-paperFold 0.6s ease-in-out both; transform-origin: top; }`,keyframeCSS:`@keyframes animotion-paperFold { from { transform: perspective(800px) rotateX(-90deg); } to { transform: perspective(800px) rotateX(0); } }`},
+{id:'CR05',name:'Origami',description:'Element unfolds like origami from a folded shape',cssClass:'animotion-origami',keyframeName:'animotion-origami',category:'creative',subcategory:'material',tags:['origami','unfold','paper','creative'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-origami { animation: animotion-origami 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-origami { 0% { transform: perspective(600px) rotateX(-90deg) rotateY(-45deg) scale(0.5); opacity: 0; } 50% { transform: perspective(600px) rotateX(-45deg) rotateY(0) scale(0.8); } to { transform: perspective(600px) rotateX(0) rotateY(0) scale(1); opacity: 1; } }`},
+{id:'CR06',name:'Film Burn',description:'Film burn effect with brightness and color flash',cssClass:'animotion-film-burn',keyframeName:'animotion-filmBurn',category:'creative',subcategory:'retro',tags:['film','burn','flash','creative','retro'],duration:'0.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-film-burn { animation: animotion-filmBurn 0.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-filmBurn { 0%, to { filter: brightness(1) saturate(100%); } 30% { filter: brightness(2) saturate(200%); } 50% { filter: brightness(3) saturate(300%) hue-rotate(30deg); } }`},
+{id:'CR07',name:'VHS Tracking',description:'VHS tape tracking distortion with horizontal lines',cssClass:'animotion-vhs-tracking',keyframeName:'animotion-vhsTracking',category:'creative',subcategory:'retro',tags:['vhs','tracking','distortion','creative','retro'],duration:'2s',timingFunction:'steps(3)',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-vhs-tracking { animation: animotion-vhsTracking 2s steps(3) infinite; }`,keyframeCSS:`@keyframes animotion-vhsTracking { 0%, to { transform: translateX(0); filter: saturate(100%); } 20% { transform: translateX(-3px); filter: saturate(150%); } 40% { transform: translateX(2px); } 60% { transform: translateX(-1px); filter: saturate(80%); } 80% { transform: translateX(1px); } }`},
+{id:'CR08',name:'Pixelate',description:'Element transitions from pixelated to clear',cssClass:'animotion-pixelate',keyframeName:'animotion-pixelate',category:'creative',subcategory:'digital',tags:['pixel','pixelate','mosaic','creative'],duration:'0.8s',timingFunction:'steps(8)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-pixelate { animation: animotion-pixelate 0.8s steps(8) both; }`,keyframeCSS:`@keyframes animotion-pixelate { from { filter: blur(10px); opacity: 0; } to { filter: blur(0); opacity: 1; } }`},
+{id:'CR09',name:'Ascii',description:'Element reveals with ASCII art-style stepped appearance',cssClass:'animotion-ascii',keyframeName:'animotion-ascii',category:'creative',subcategory:'digital',tags:['ascii','text','digital','creative'],duration:'1s',timingFunction:'steps(10)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-ascii { animation: animotion-ascii 1s steps(10) both; font-family: monospace; }`,keyframeCSS:`@keyframes animotion-ascii { from { opacity: 0; filter: contrast(500%) blur(2px); } to { opacity: 1; filter: contrast(100%) blur(0); } }`},
+{id:'CR10',name:'Halftone',description:'Element transitions with halftone dot pattern effect',cssClass:'animotion-halftone',keyframeName:'animotion-halftone',category:'creative',subcategory:'print',tags:['halftone','dots','print','creative'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-halftone { animation: animotion-halftone 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-halftone { from { filter: contrast(200%) brightness(150%); opacity: 0; } to { filter: contrast(100%) brightness(100%); opacity: 1; } }`},
+{id:'CR11',name:'Mosaic',description:'Element assembles from mosaic tile pieces',cssClass:'animotion-mosaic',keyframeName:'animotion-mosaic',category:'creative',subcategory:'art',tags:['mosaic','tiles','assemble','creative'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-mosaic { animation: animotion-mosaic 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-mosaic { from { opacity: 0; filter: blur(15px); transform: scale(1.1); } to { opacity: 1; filter: blur(0); transform: scale(1); } }`},
+{id:'CR12',name:'Kaleidoscope',description:'Element rotates with kaleidoscope-like color shifting',cssClass:'animotion-kaleidoscope',keyframeName:'animotion-kaleidoscope',category:'creative',subcategory:'effect',tags:['kaleidoscope','rotate','color','creative'],duration:'4s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-kaleidoscope { animation: animotion-kaleidoscope 4s linear infinite; }`,keyframeCSS:`@keyframes animotion-kaleidoscope { to { transform: rotate(360deg); filter: hue-rotate(360deg); } }`},
+{id:'CR13',name:'Mirror Reflect',description:'Element reflects with a mirrored shimmer effect',cssClass:'animotion-mirror-reflect',keyframeName:'animotion-mirrorReflect',category:'creative',subcategory:'effect',tags:['mirror','reflect','shimmer','creative'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-mirror-reflect { animation: animotion-mirrorReflect 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-mirrorReflect { 0%, to { transform: scaleX(1); filter: brightness(1); } 50% { transform: scaleX(-1); filter: brightness(1.2); } }`},
+{id:'CR14',name:'Liquid Morph',description:'Element morphs with liquid-like organic shape transitions',cssClass:'animotion-liquid-morph',keyframeName:'animotion-liquidMorph',category:'creative',subcategory:'shape',tags:['liquid','morph','organic','creative'],duration:'4s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-liquid-morph { animation: animotion-liquidMorph 4s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-liquidMorph { 0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } 50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; } to { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; } }`},
+{id:'CR15',name:'Smoke Rise',description:'Element rises and fades like wisps of smoke',cssClass:'animotion-smoke-rise',keyframeName:'animotion-smokeRise',category:'creative',subcategory:'nature',tags:['smoke','rise','fade','creative'],duration:'3s',timingFunction:'ease-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-smoke-rise { animation: animotion-smokeRise 3s ease-out infinite; }`,keyframeCSS:`@keyframes animotion-smokeRise { from { transform: translateY(0) scale(1); opacity: 0.6; filter: blur(2px); } to { transform: translateY(-60px) scale(1.5); opacity: 0; filter: blur(8px); } }`},
+{id:'CR16',name:'Fire Flicker',description:'Element flickers like a flame with color and scale changes',cssClass:'animotion-fire-flicker',keyframeName:'animotion-fireFlicker',category:'creative',subcategory:'nature',tags:['fire','flame','flicker','creative'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-fire-flicker { animation: animotion-fireFlicker 0.3s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-fireFlicker { 0%, to { transform: scaleY(1) scaleX(1); filter: brightness(1); } 25% { transform: scaleY(1.1) scaleX(0.95); filter: brightness(1.2); } 50% { transform: scaleY(0.95) scaleX(1.05); } 75% { transform: scaleY(1.05) scaleX(0.98); filter: brightness(0.9); } }`},
+{id:'CR17',name:'Lightning Flash',description:'Dramatic lightning flash with white-out and quick fade',cssClass:'animotion-lightning-flash',keyframeName:'animotion-lightningFlash',category:'creative',subcategory:'nature',tags:['lightning','flash','dramatic','creative'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-lightning-flash { animation: animotion-lightningFlash 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-lightningFlash { 0% { filter: brightness(1); } 10% { filter: brightness(5); } 20% { filter: brightness(1); } 30% { filter: brightness(3); } to { filter: brightness(1); } }`},
+{id:'CR18',name:'Aurora Wave',description:'Aurora borealis wave effect with color and movement',cssClass:'animotion-aurora-wave',keyframeName:'animotion-auroraWave',category:'creative',subcategory:'nature',tags:['aurora','wave','northern-lights','creative'],duration:'5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-aurora-wave { animation: animotion-auroraWave 5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-auroraWave { 0%, to { filter: hue-rotate(0deg) brightness(1); transform: skewX(0); } 33% { filter: hue-rotate(60deg) brightness(1.2); transform: skewX(5deg); } 66% { filter: hue-rotate(-30deg) brightness(0.9); transform: skewX(-5deg); } }`},
+{id:'CR19',name:'Crystal Grow',description:'Element grows like a crystal forming with faceted edges',cssClass:'animotion-crystal-grow',keyframeName:'animotion-crystalGrow',category:'creative',subcategory:'nature',tags:['crystal','grow','form','creative'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-crystal-grow { animation: animotion-crystalGrow 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-crystalGrow { from { clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%); opacity: 0; } to { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); opacity: 1; } }`},
+{id:'CR20',name:'Ice Formation',description:'Element appears to freeze with white frost spreading',cssClass:'animotion-ice-formation',keyframeName:'animotion-iceFormation',category:'creative',subcategory:'nature',tags:['ice','frost','freeze','creative'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-ice-formation { animation: animotion-iceFormation 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-iceFormation { from { filter: brightness(1) contrast(100%); } to { filter: brightness(1.3) contrast(120%) saturate(50%); } }`},
+{id:'CR21',name:'Sand Flow',description:'Element flows like sand grains falling',cssClass:'animotion-sand-flow',keyframeName:'animotion-sandFlow',category:'creative',subcategory:'nature',tags:['sand','flow','fall','creative'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-sand-flow { animation: animotion-sandFlow 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-sandFlow { from { transform: translateY(-10px); opacity: 0.5; } to { transform: translateY(10px); opacity: 1; } }`},
+{id:'CR22',name:'Wind Blow',description:'Element sways as if blown by wind',cssClass:'animotion-wind-blow',keyframeName:'animotion-windBlow',category:'creative',subcategory:'nature',tags:['wind','blow','sway','creative'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-wind-blow { animation: animotion-windBlow 3s ease-in-out infinite; transform-origin: bottom center; }`,keyframeCSS:`@keyframes animotion-windBlow { 0%, to { transform: rotate(0) skewX(0); } 25% { transform: rotate(3deg) skewX(2deg); } 75% { transform: rotate(-2deg) skewX(-1deg); } }`},
+{id:'CR23',name:'Leaf Fall',description:'Element falls like a leaf with gentle swaying',cssClass:'animotion-leaf-fall',keyframeName:'animotion-leafFall',category:'creative',subcategory:'nature',tags:['leaf','fall','sway','creative'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-leaf-fall { animation: animotion-leafFall 3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-leafFall { 0% { transform: translate(0, -50px) rotate(0); opacity: 1; } 50% { transform: translate(30px, 0) rotate(90deg); } to { transform: translate(-10px, 50px) rotate(180deg); opacity: 0.5; } }`},
+{id:'CR24',name:'Petal Float',description:'Element floats gently like a flower petal',cssClass:'animotion-petal-float',keyframeName:'animotion-petalFloat',category:'creative',subcategory:'nature',tags:['petal','float','gentle','creative'],duration:'4s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-petal-float { animation: animotion-petalFloat 4s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-petalFloat { 0%, to { transform: translate(0, 0) rotate(0); } 25% { transform: translate(10px, -5px) rotate(10deg); } 50% { transform: translate(0, -10px) rotate(0); } 75% { transform: translate(-10px, -5px) rotate(-10deg); } }`},
+{id:'CR25',name:'Bubble Rise',description:'Element rises like a bubble floating upward',cssClass:'animotion-bubble-rise',keyframeName:'animotion-bubbleRise',category:'creative',subcategory:'nature',tags:['bubble','rise','float','creative'],duration:'3s',timingFunction:'ease-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-bubble-rise { animation: animotion-bubbleRise 3s ease-out infinite; }`,keyframeCSS:`@keyframes animotion-bubbleRise { from { transform: translateY(0) scale(1); opacity: 0.7; } to { transform: translateY(-80px) scale(1.3); opacity: 0; } }`},
+{id:'CR26',name:'Waves Crash',description:'Element moves like crashing ocean waves',cssClass:'animotion-waves-crash',keyframeName:'animotion-wavesCrash',category:'creative',subcategory:'nature',tags:['waves','crash','ocean','creative'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-waves-crash { animation: animotion-wavesCrash 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-wavesCrash { 0%, to { transform: translateX(0) scaleY(1); } 30% { transform: translateX(10px) scaleY(1.3); } 60% { transform: translateX(-5px) scaleY(0.8); } }`},
+{id:'CR27',name:'Rain Drop',description:'Element drops like a raindrop and creates a splash ripple',cssClass:'animotion-rain-drop',keyframeName:'animotion-rainDrop',category:'creative',subcategory:'nature',tags:['rain','drop','splash','creative'],duration:'1s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-rain-drop { animation: animotion-rainDrop 1s ease-in both; }`,keyframeCSS:`@keyframes animotion-rainDrop { 0% { transform: translateY(-40px) scaleX(0.8); opacity: 1; } 70% { transform: translateY(0) scaleX(1); } to { transform: translateY(0) scaleX(1.5) scaleY(0.3); opacity: 0; } }`},
+{id:'CR28',name:'Sparkle',description:'Element sparkles with twinkling star-like glints',cssClass:'animotion-sparkle',keyframeName:'animotion-sparkle',category:'creative',subcategory:'effect',tags:['sparkle','twinkle','star','creative'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-sparkle { animation: animotion-sparkle 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-sparkle { 0%, to { opacity: 1; transform: scale(1); } 25% { opacity: 0.6; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.1); filter: brightness(1.5); } 75% { opacity: 0.8; transform: scale(0.95); } }`},
+{id:'CR29',name:'Stardust',description:'Element emits trailing stardust particles',cssClass:'animotion-stardust',keyframeName:'animotion-stardust',category:'creative',subcategory:'space',tags:['stardust','particles','trail','creative'],duration:'2s',timingFunction:'ease-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-stardust { animation: animotion-stardust 2s ease-out infinite; }`,keyframeCSS:`@keyframes animotion-stardust { 0% { box-shadow: 0 0 5px rgba(255,255,255,0.8); } 50% { box-shadow: 0 0 15px rgba(255,255,255,0.4), 5px -5px 10px rgba(139,92,246,0.3), -5px 5px 10px rgba(59,130,246,0.3); } to { box-shadow: 0 0 5px rgba(255,255,255,0.8); } }`},
+{id:'CR30',name:'Cosmic Dust',description:'Element drifts with cosmic dust-like movement',cssClass:'animotion-cosmic-dust',keyframeName:'animotion-cosmicDust',category:'creative',subcategory:'space',tags:['cosmic','dust','drift','creative'],duration:'5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-cosmic-dust { animation: animotion-cosmicDust 5s linear infinite; }`,keyframeCSS:`@keyframes animotion-cosmicDust { 0%, to { transform: translate(0, 0) rotate(0); } 25% { transform: translate(5px, -3px) rotate(2deg); } 50% { transform: translate(-3px, -5px) rotate(-1deg); } 75% { transform: translate(-5px, 3px) rotate(1deg); } }`},
+{id:'CR31',name:'Galaxy Spin',description:'Element spins with galaxy-like color trails',cssClass:'animotion-galaxy-spin',keyframeName:'animotion-galaxySpin',category:'creative',subcategory:'space',tags:['galaxy','spin','color','creative'],duration:'8s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-galaxy-spin { animation: animotion-galaxySpin 8s linear infinite; }`,keyframeCSS:`@keyframes animotion-galaxySpin { to { transform: rotate(360deg); filter: hue-rotate(360deg); } }`},
+{id:'CR32',name:'Black Hole',description:'Element gets pulled toward a center point like a black hole',cssClass:'animotion-black-hole',keyframeName:'animotion-blackHole',category:'creative',subcategory:'space',tags:['black-hole','pull','gravity','creative'],duration:'1s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-black-hole { animation: animotion-blackHole 1s ease-in both; }`,keyframeCSS:`@keyframes animotion-blackHole { from { transform: scale(1) rotate(0); opacity: 1; } to { transform: scale(0) rotate(720deg); opacity: 0; } }`},
+{id:'CR33',name:'Wormhole',description:'Element travels through a wormhole with depth distortion',cssClass:'animotion-wormhole',keyframeName:'animotion-wormhole',category:'creative',subcategory:'space',tags:['wormhole','tunnel','depth','creative'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-wormhole { animation: animotion-wormhole 1.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-wormhole { 0% { transform: perspective(500px) translateZ(0) scale(1); } 50% { transform: perspective(500px) translateZ(-500px) scale(0.1); opacity: 0.3; } to { transform: perspective(500px) translateZ(0) scale(1); opacity: 1; } }`},
+{id:'CR34',name:'Time Warp',description:'Element distorts as if warping through time',cssClass:'animotion-time-warp',keyframeName:'animotion-timeWarp',category:'creative',subcategory:'effect',tags:['time','warp','distort','creative'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-time-warp { animation: animotion-timeWarp 1s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-timeWarp { 0% { transform: skewX(0) scaleX(1); filter: blur(0); } 30% { transform: skewX(10deg) scaleX(0.8); filter: blur(3px); } 60% { transform: skewX(-5deg) scaleX(1.2); filter: blur(1px); } to { transform: skewX(0) scaleX(1); filter: blur(0); } }`},
+{id:'CR35',name:'Dimension Shift',description:'Element shifts between dimensions with 3D perspective warp',cssClass:'animotion-dimension-shift',keyframeName:'animotion-dimensionShift',category:'creative',subcategory:'effect',tags:['dimension','shift','3d','creative'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-dimension-shift { animation: animotion-dimensionShift 1s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-dimensionShift { 0% { transform: perspective(600px) rotateY(0) scale(1); } 50% { transform: perspective(600px) rotateY(90deg) scale(0.5); opacity: 0.5; } to { transform: perspective(600px) rotateY(0) scale(1); opacity: 1; } }`},
+{id:'CR36',name:'Glass Shatter',description:'Element shatters into pieces like broken glass',cssClass:'animotion-glass-shatter',keyframeName:'animotion-glassShatter',category:'creative',subcategory:'effect',tags:['glass','shatter','break','creative'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-glass-shatter { animation: animotion-glassShatter 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-glassShatter { 0% { transform: scale(1); opacity: 1; filter: brightness(1); } 30% { filter: brightness(2); } to { transform: scale(1.2); opacity: 0; filter: brightness(0.5); } }`},
+{id:'CR37',name:'Paper Tear',description:'Element tears apart like paper being ripped',cssClass:'animotion-paper-tear',keyframeName:'animotion-paperTear',category:'creative',subcategory:'material',tags:['paper','tear','rip','creative'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-paper-tear { animation: animotion-paperTear 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-paperTear { from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } to { clip-path: polygon(0 0, 45% 0, 50% 100%, 0 100%); } }`},
+{id:'CR38',name:'Chain Reaction',description:'Elements trigger one after another in chain reaction',cssClass:'animotion-chain-reaction',keyframeName:'animotion-chainReaction',category:'creative',subcategory:'effect',tags:['chain','reaction','sequence','creative'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-chain-reaction { animation: animotion-chainReaction 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-chainReaction { from { transform: scale(0); opacity: 0; } 60% { transform: scale(1.2); } to { transform: scale(1); opacity: 1; } }`},
+{id:'CR39',name:'Domino Fall',description:'Elements fall like dominoes in sequence',cssClass:'animotion-domino-fall',keyframeName:'animotion-dominoFall',category:'creative',subcategory:'effect',tags:['domino','fall','sequence','creative'],duration:'0.5s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-domino-fall { animation: animotion-dominoFall 0.5s ease-in both; transform-origin: bottom right; }`,keyframeCSS:`@keyframes animotion-dominoFall { from { transform: rotateZ(0); } to { transform: rotateZ(90deg); } }`},
+{id:'CR40',name:'Ripple Effect',description:'Element creates expanding ripple rings outward',cssClass:'animotion-ripple-effect',keyframeName:'animotion-rippleEffect',category:'creative',subcategory:'effect',tags:['ripple','expand','rings','creative'],duration:'1s',timingFunction:'ease-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-ripple-effect { animation: animotion-rippleEffect 1s ease-out infinite; }`,keyframeCSS:`@keyframes animotion-rippleEffect { from { box-shadow: 0 0 0 0 rgba(59,130,246,0.4), 0 0 0 0 rgba(59,130,246,0.2); } to { box-shadow: 0 0 0 15px rgba(59,130,246,0), 0 0 0 30px rgba(59,130,246,0); } }`},
+// ==================== FINTECH (30) ====================
+{id:'FN01',name:'Ticker Scroll',description:'Stock ticker text scrolls horizontally continuously',cssClass:'animotion-ticker-scroll',keyframeName:'animotion-tickerScroll',category:'fintech',subcategory:'ticker',tags:['ticker','scroll','stock','fintech'],duration:'10s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'text',css:`.animotion-ticker-scroll { animation: animotion-tickerScroll 10s linear infinite; white-space: nowrap; }`,keyframeCSS:`@keyframes animotion-tickerScroll { from { transform: translateX(100%); } to { transform: translateX(-100%); } }`},
+{id:'FN02',name:'Price Up',description:'Price value animates upward with green positive indicator',cssClass:'animotion-price-up',keyframeName:'animotion-priceUp',category:'fintech',subcategory:'value',tags:['price','up','positive','fintech','green'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-price-up { color: #10b981; animation: animotion-priceUp 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-priceUp { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'FN03',name:'Price Down',description:'Price value animates downward with red negative indicator',cssClass:'animotion-price-down',keyframeName:'animotion-priceDown',category:'fintech',subcategory:'value',tags:['price','down','negative','fintech','red'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-price-down { color: #ef4444; animation: animotion-priceDown 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-priceDown { from { transform: translateY(-10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'FN04',name:'Candlestick Grow',description:'Candlestick chart bar grows from baseline upward',cssClass:'animotion-candlestick-grow',keyframeName:'animotion-candlestickGrow',category:'fintech',subcategory:'chart',tags:['candlestick','grow','chart','fintech'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-candlestick-grow { animation: animotion-candlestickGrow 0.6s ease-out both; transform-origin: bottom; }`,keyframeCSS:`@keyframes animotion-candlestickGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }`},
+{id:'FN05',name:'Chart Line Draw',description:'Chart line draws from left to right progressively',cssClass:'animotion-chart-line-draw-fintech',keyframeName:'animotion-chartLineDrawFintech',category:'fintech',subcategory:'chart',tags:['chart','line','draw','fintech'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-chart-line-draw-fintech { animation: animotion-chartLineDrawFintech 1.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-chartLineDrawFintech { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }`},
+{id:'FN06',name:'Pie Fill',description:'Pie chart slice fills with conic gradient animation',cssClass:'animotion-pie-fill-fintech',keyframeName:'animotion-pieFillFintech',category:'fintech',subcategory:'chart',tags:['pie','chart','fill','fintech'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-pie-fill-fintech { border-radius: 50%; animation: animotion-pieFillFintech 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-pieFillFintech { from { background: conic-gradient(#3b82f6 0deg, transparent 0deg); } to { background: conic-gradient(#3b82f6 270deg, transparent 270deg); } }`},
+{id:'FN07',name:'Bar Grow',description:'Chart bar grows from bottom to target height',cssClass:'animotion-bar-grow',keyframeName:'animotion-barGrow',category:'fintech',subcategory:'chart',tags:['bar','grow','chart','fintech'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-bar-grow { animation: animotion-barGrow 0.8s ease-out both; transform-origin: bottom; }`,keyframeCSS:`@keyframes animotion-barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }`},
+{id:'FN08',name:'Value Counter',description:'Numeric value counts up with smooth interpolation',cssClass:'animotion-value-counter',keyframeName:'animotion-valueCounter',category:'fintech',subcategory:'value',tags:['counter','count','number','fintech'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-value-counter { animation: animotion-valueCounter 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-valueCounter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'FN09',name:'Currency Flip',description:'Currency symbol flips to show updated value',cssClass:'animotion-currency-flip',keyframeName:'animotion-currencyFlip',category:'fintech',subcategory:'value',tags:['currency','flip','update','fintech'],duration:'0.4s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-currency-flip { animation: animotion-currencyFlip 0.4s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-currencyFlip { from { transform: perspective(400px) rotateX(0); } 50% { transform: perspective(400px) rotateX(90deg); } to { transform: perspective(400px) rotateX(0); } }`},
+{id:'FN10',name:'Transaction Slide',description:'Transaction row slides in from the right',cssClass:'animotion-transaction-slide',keyframeName:'animotion-transactionSlide',category:'fintech',subcategory:'list',tags:['transaction','slide','row','fintech'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-transaction-slide { animation: animotion-transactionSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-transactionSlide { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'FN11',name:'Balance Update',description:'Balance value updates with counter roll animation',cssClass:'animotion-balance-update',keyframeName:'animotion-balanceUpdate',category:'fintech',subcategory:'value',tags:['balance','update','counter','fintech'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-balance-update { animation: animotion-balanceUpdate 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-balanceUpdate { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'FN12',name:'Profit Glow',description:'Profit indicator glows green with pulsing shadow',cssClass:'animotion-profit-glow',keyframeName:'animotion-profitGlow',category:'fintech',subcategory:'indicator',tags:['profit','glow','green','fintech'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-profit-glow { animation: animotion-profitGlow 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-profitGlow { 0%, to { box-shadow: 0 0 5px rgba(16,185,129,0.3); } 50% { box-shadow: 0 0 20px rgba(16,185,129,0.6); } }`},
+{id:'FN13',name:'Loss Flash',description:'Loss indicator flashes red briefly for alert',cssClass:'animotion-loss-flash',keyframeName:'animotion-lossFlash',category:'fintech',subcategory:'indicator',tags:['loss','flash','red','fintech','alert'],duration:'0.5s',timingFunction:'ease-in-out',iterationCount:'2',fillMode:'both',demoType:'box',css:`.animotion-loss-flash { animation: animotion-lossFlash 0.5s ease-in-out 2 both; }`,keyframeCSS:`@keyframes animotion-lossFlash { 0%, to { background-color: transparent; } 50% { background-color: rgba(239,68,68,0.15); } }`},
+{id:'FN14',name:'Market Pulse',description:'Market indicator pulses to show live activity',cssClass:'animotion-market-pulse',keyframeName:'animotion-marketPulse',category:'fintech',subcategory:'indicator',tags:['market','pulse','live','fintech'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-market-pulse { animation: animotion-marketPulse 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-marketPulse { 0%, to { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.7; } }`},
+{id:'FN15',name:'Stock Ticker',description:'Stock price ticker with colored directional indicator',cssClass:'animotion-stock-ticker',keyframeName:'animotion-stockTicker',category:'fintech',subcategory:'ticker',tags:['stock','ticker','price','fintech'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-stock-ticker { animation: animotion-stockTicker 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-stockTicker { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }`},
+{id:'FN16',name:'Portfolio Card',description:'Portfolio card slides in with value reveal',cssClass:'animotion-portfolio-card',keyframeName:'animotion-portfolioCard',category:'fintech',subcategory:'card',tags:['portfolio','card','reveal','fintech'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-portfolio-card { animation: animotion-portfolioCard 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-portfolioCard { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'FN17',name:'Invoice Slide',description:'Invoice document slides in from the side',cssClass:'animotion-invoice-slide',keyframeName:'animotion-invoiceSlide',category:'fintech',subcategory:'document',tags:['invoice','slide','document','fintech'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-invoice-slide { animation: animotion-invoiceSlide 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-invoiceSlide { from { transform: translateX(100%); } to { transform: translateX(0); } }`},
+{id:'FN18',name:'Payment Process',description:'Payment processing animation with progress stages',cssClass:'animotion-payment-process',keyframeName:'animotion-paymentProcess',category:'fintech',subcategory:'process',tags:['payment','process','loading','fintech'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-payment-process { animation: animotion-paymentProcess 2s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-paymentProcess { 0% { width: 0%; background: #3b82f6; } 50% { width: 60%; background: #f59e0b; } to { width: 100%; background: #10b981; } }`},
+{id:'FN19',name:'Wallet Open',description:'Wallet icon opens to reveal contents',cssClass:'animotion-wallet-open',keyframeName:'animotion-walletOpen',category:'fintech',subcategory:'icon',tags:['wallet','open','reveal','fintech'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-wallet-open { animation: animotion-walletOpen 0.5s ease-out both; transform-origin: bottom; }`,keyframeCSS:`@keyframes animotion-walletOpen { from { transform: perspective(600px) rotateX(0); } to { transform: perspective(600px) rotateX(-30deg); } }`},
+{id:'FN20',name:'Coin Drop',description:'Coin drops with bounce on landing',cssClass:'animotion-coin-drop',keyframeName:'animotion-coinDrop',category:'fintech',subcategory:'icon',tags:['coin','drop','bounce','fintech'],duration:'0.6s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-coin-drop { animation: animotion-coinDrop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-coinDrop { from { transform: translateY(-40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'FN21',name:'Coin Flip',description:'Coin flips in the air showing both sides',cssClass:'animotion-coin-flip',keyframeName:'animotion-coinFlip',category:'fintech',subcategory:'icon',tags:['coin','flip','3d','fintech'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-coin-flip { animation: animotion-coinFlip 1s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-coinFlip { 0% { transform: translateY(0) rotateX(0); } 50% { transform: translateY(-30px) rotateX(360deg); } to { transform: translateY(0) rotateX(720deg); } }`},
+{id:'FN22',name:'Coin Stack',description:'Coins stack on top of each other with offset',cssClass:'animotion-coin-stack',keyframeName:'animotion-coinStack',category:'fintech',subcategory:'icon',tags:['coin','stack','pile','fintech'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-coin-stack { animation: animotion-coinStack 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-coinStack { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'FN23',name:'Diamond Shine',description:'Diamond sparkles with rotating shine effect',cssClass:'animotion-diamond-shine',keyframeName:'animotion-diamondShine',category:'fintech',subcategory:'icon',tags:['diamond','shine','sparkle','fintech'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-diamond-shine { animation: animotion-diamondShine 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-diamondShine { 0%, to { filter: brightness(1); } 50% { filter: brightness(1.5); } }`},
+{id:'FN24',name:'Gold Gleam',description:'Gold surface gleams with sweeping highlight',cssClass:'animotion-gold-gleam',keyframeName:'animotion-goldGleam',category:'fintech',subcategory:'effect',tags:['gold','gleam','highlight','fintech'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-gold-gleam { background: linear-gradient(110deg, #b8860b 30%, #ffd700 50%, #b8860b 70%); background-size: 200% 100%; animation: animotion-goldGleam 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-goldGleam { from { background-position: 200% 0; } to { background-position: -200% 0; } }`},
+{id:'FN25',name:'Secure Lock',description:'Lock icon clicks shut with secure animation',cssClass:'animotion-secure-lock',keyframeName:'animotion-secureLock',category:'fintech',subcategory:'icon',tags:['lock','secure','click','fintech'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-secure-lock { animation: animotion-secureLock 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-secureLock { from { transform: translateY(-3px); } 60% { transform: translateY(1px); } to { transform: translateY(0); } }`},
+{id:'FN26',name:'Verify Check',description:'Verification checkmark appears with success animation',cssClass:'animotion-verify-check',keyframeName:'animotion-verifyCheck',category:'fintech',subcategory:'icon',tags:['verify','check','success','fintech'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-verify-check { animation: animotion-verifyCheck 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-verifyCheck { from { transform: scale(0) rotate(-45deg); opacity: 0; } 60% { transform: scale(1.2) rotate(0); } to { transform: scale(1) rotate(0); opacity: 1; } }`},
+{id:'FN27',name:'Transfer Arrow',description:'Arrow slides from left to right indicating money transfer',cssClass:'animotion-transfer-arrow',keyframeName:'animotion-transferArrow',category:'fintech',subcategory:'icon',tags:['transfer','arrow','send','fintech'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-transfer-arrow { animation: animotion-transferArrow 0.6s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-transferArrow { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'FN28',name:'Deposit Drop',description:'Deposit indicator drops into place with bounce',cssClass:'animotion-deposit-drop',keyframeName:'animotion-depositDrop',category:'fintech',subcategory:'action',tags:['deposit','drop','bounce','fintech'],duration:'0.5s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-deposit-drop { animation: animotion-depositDrop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-depositDrop { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'FN29',name:'Withdraw Slide',description:'Withdrawal slides out to indicate money leaving',cssClass:'animotion-withdraw-slide',keyframeName:'animotion-withdrawSlide',category:'fintech',subcategory:'action',tags:['withdraw','slide','exit','fintech'],duration:'0.4s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-withdraw-slide { animation: animotion-withdrawSlide 0.4s ease-in both; }`,keyframeCSS:`@keyframes animotion-withdrawSlide { from { transform: translateX(0); opacity: 1; } to { transform: translateX(50px); opacity: 0; } }`},
+{id:'FN30',name:'Dividend Rain',description:'Dividend coins rain down like rewards',cssClass:'animotion-dividend-rain',keyframeName:'animotion-dividendRain',category:'fintech',subcategory:'effect',tags:['dividend','rain','reward','fintech'],duration:'1s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-dividend-rain { animation: animotion-dividendRain 1s ease-in both; }`,keyframeCSS:`@keyframes animotion-dividendRain { from { transform: translateY(-40px) rotate(0); opacity: 0; } 50% { opacity: 1; } to { transform: translateY(40px) rotate(180deg); opacity: 0.5; } }`},
+// ==================== GAMING (40) ====================
+{id:'GM01',name:'Gravity Fall',description:'Element falls with realistic gravity acceleration',cssClass:'animotion-gravity-fall',keyframeName:'animotion-gravityFall',category:'gaming',subcategory:'physics',tags:['gravity','fall','physics','gaming'],duration:'0.6s',timingFunction:'cubic-bezier(0.55, 0, 1, 0.45)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-gravity-fall { animation: animotion-gravityFall 0.6s cubic-bezier(0.55, 0, 1, 0.45) both; }`,keyframeCSS:`@keyframes animotion-gravityFall { from { transform: translateY(-100px); } to { transform: translateY(0); } }`},
+{id:'GM02',name:'Elastic Bounce Physics',description:'Element bounces with realistic elastic physics',cssClass:'animotion-elastic-bounce-physics',keyframeName:'animotion-elasticBouncePhysics',category:'gaming',subcategory:'physics',tags:['elastic','bounce','physics','gaming'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-elastic-bounce-physics { animation: animotion-elasticBouncePhysics 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-elasticBouncePhysics { 0% { transform: translateY(-60px); } 40% { transform: translateY(0) scaleY(0.8) scaleX(1.2); } 55% { transform: translateY(-20px) scaleY(1.1) scaleX(0.9); } 70% { transform: translateY(0) scaleY(0.9) scaleX(1.05); } 85% { transform: translateY(-5px); } to { transform: translateY(0); } }`},
+{id:'GM03',name:'Spring Oscillate',description:'Element oscillates on a spring with dampening',cssClass:'animotion-spring-oscillate',keyframeName:'animotion-springOscillate',category:'gaming',subcategory:'physics',tags:['spring','oscillate','dampen','gaming'],duration:'1.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-spring-oscillate { animation: animotion-springOscillate 1.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-springOscillate { 0% { transform: translateX(-30px); } 20% { transform: translateX(20px); } 40% { transform: translateX(-12px); } 60% { transform: translateX(8px); } 80% { transform: translateX(-3px); } to { transform: translateX(0); } }`},
+{id:'GM04',name:'Pendulum Swing',description:'Element swings like a pendulum with gravity',cssClass:'animotion-pendulum-swing',keyframeName:'animotion-pendulumSwing',category:'gaming',subcategory:'physics',tags:['pendulum','swing','gravity','gaming'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-pendulum-swing { animation: animotion-pendulumSwing 2s ease-in-out infinite; transform-origin: top center; }`,keyframeCSS:`@keyframes animotion-pendulumSwing { 0%, to { transform: rotate(0); } 25% { transform: rotate(20deg); } 75% { transform: rotate(-20deg); } }`},
+{id:'GM05',name:'Orbital Motion',description:'Element follows an orbital circular path',cssClass:'animotion-orbital-motion',keyframeName:'animotion-orbitalMotion',category:'gaming',subcategory:'physics',tags:['orbital','circle','path','gaming'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-orbital-motion { animation: animotion-orbitalMotion 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-orbitalMotion { to { transform: rotate(360deg) translateX(30px) rotate(-360deg); } }`},
+{id:'GM06',name:'Projectile Path',description:'Element follows a parabolic projectile trajectory',cssClass:'animotion-projectile-path',keyframeName:'animotion-projectilePath',category:'gaming',subcategory:'physics',tags:['projectile','parabola','trajectory','gaming'],duration:'1s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-projectile-path { animation: animotion-projectilePath 1s ease-in both; }`,keyframeCSS:`@keyframes animotion-projectilePath { 0% { transform: translate(0, 0); } 50% { transform: translate(50px, -40px); } to { transform: translate(100px, 0); } }`},
+{id:'GM07',name:'Wave Propagation',description:'Wave propagates outward from an impact point',cssClass:'animotion-wave-propagation',keyframeName:'animotion-wavePropagation',category:'gaming',subcategory:'physics',tags:['wave','propagation','impact','gaming'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-wave-propagation { animation: animotion-wavePropagation 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-wavePropagation { from { box-shadow: 0 0 0 0 rgba(59,130,246,0.6); } to { box-shadow: 0 0 0 30px rgba(59,130,246,0); } }`},
+{id:'GM08',name:'Particle Explode',description:'Particles explode outward from center point',cssClass:'animotion-particle-explode',keyframeName:'animotion-particleExplode',category:'gaming',subcategory:'effect',tags:['particle','explode','burst','gaming'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-particle-explode { animation: animotion-particleExplode 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-particleExplode { from { transform: scale(1); opacity: 1; } to { transform: scale(2); opacity: 0; } }`},
+{id:'GM09',name:'Magnet Attract',description:'Element is attracted toward a magnetic point',cssClass:'animotion-magnet-attract',keyframeName:'animotion-magnetAttract',category:'gaming',subcategory:'physics',tags:['magnet','attract','pull','gaming'],duration:'0.5s',timingFunction:'cubic-bezier(0.55, 0, 1, 0.45)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-magnet-attract { animation: animotion-magnetAttract 0.5s cubic-bezier(0.55, 0, 1, 0.45) both; }`,keyframeCSS:`@keyframes animotion-magnetAttract { from { transform: translateX(50px); } to { transform: translateX(0); } }`},
+{id:'GM10',name:'Magnet Repel',description:'Element is repelled away from a magnetic point',cssClass:'animotion-magnet-repel',keyframeName:'animotion-magnetRepel',category:'gaming',subcategory:'physics',tags:['magnet','repel','push','gaming'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-magnet-repel { animation: animotion-magnetRepel 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-magnetRepel { from { transform: translateX(0); } to { transform: translateX(50px); } }`},
+{id:'GM11',name:'Friction Slide',description:'Element slides and decelerates with friction',cssClass:'animotion-friction-slide',keyframeName:'animotion-frictionSlide',category:'gaming',subcategory:'physics',tags:['friction','slide','decelerate','gaming'],duration:'1s',timingFunction:'cubic-bezier(0, 0, 0.2, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-friction-slide { animation: animotion-frictionSlide 1s cubic-bezier(0, 0, 0.2, 1) both; }`,keyframeCSS:`@keyframes animotion-frictionSlide { from { transform: translateX(-100px); } to { transform: translateX(0); } }`},
+{id:'GM12',name:'Momentum Carry',description:'Element carries momentum with gradual slowdown',cssClass:'animotion-momentum-carry',keyframeName:'animotion-momentumCarry',category:'gaming',subcategory:'physics',tags:['momentum','carry','inertia','gaming'],duration:'1.5s',timingFunction:'cubic-bezier(0.25, 0.46, 0.45, 0.94)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-momentum-carry { animation: animotion-momentumCarry 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }`,keyframeCSS:`@keyframes animotion-momentumCarry { from { transform: translateX(-80px); } to { transform: translateX(0); } }`},
+{id:'GM13',name:'Collision Bounce',description:'Element bounces off after collision impact',cssClass:'animotion-collision-bounce',keyframeName:'animotion-collisionBounce',category:'gaming',subcategory:'physics',tags:['collision','bounce','impact','gaming'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-collision-bounce { animation: animotion-collisionBounce 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-collisionBounce { 0% { transform: translateX(0); } 30% { transform: translateX(-5px) scaleX(0.95); } to { transform: translateX(15px); } }`},
+{id:'GM14',name:'Fluid Flow',description:'Element flows with fluid-like smooth movement',cssClass:'animotion-fluid-flow',keyframeName:'animotion-fluidFlow',category:'gaming',subcategory:'physics',tags:['fluid','flow','smooth','gaming'],duration:'3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-fluid-flow { animation: animotion-fluidFlow 3s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-fluidFlow { 0%, to { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(0, 0); } 50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: translate(5px, -5px); } }`},
+{id:'GM15',name:'Vortex Pull',description:'Element gets pulled into a spinning vortex',cssClass:'animotion-vortex-pull',keyframeName:'animotion-vortexPull',category:'gaming',subcategory:'effect',tags:['vortex','pull','spin','gaming'],duration:'1s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-vortex-pull { animation: animotion-vortexPull 1s ease-in both; }`,keyframeCSS:`@keyframes animotion-vortexPull { from { transform: rotate(0) scale(1); opacity: 1; } to { transform: rotate(720deg) scale(0); opacity: 0; } }`},
+{id:'GM16',name:'Tornado Spin',description:'Element spins in a tornado-like upward spiral',cssClass:'animotion-tornado-spin',keyframeName:'animotion-tornadoSpin',category:'gaming',subcategory:'effect',tags:['tornado','spin','spiral','gaming'],duration:'2s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'box',css:`.animotion-tornado-spin { animation: animotion-tornadoSpin 2s linear infinite; }`,keyframeCSS:`@keyframes animotion-tornadoSpin { 0% { transform: rotate(0) translateY(0) scale(1); } 50% { transform: rotate(360deg) translateY(-20px) scale(0.7); } to { transform: rotate(720deg) translateY(0) scale(1); } }`},
+{id:'GM17',name:'Earthquake Shake',description:'Element shakes violently like an earthquake',cssClass:'animotion-earthquake-shake',keyframeName:'animotion-earthquakeShake',category:'gaming',subcategory:'effect',tags:['earthquake','shake','violent','gaming'],duration:'0.5s',timingFunction:'linear',iterationCount:'3',fillMode:'both',demoType:'box',css:`.animotion-earthquake-shake { animation: animotion-earthquakeShake 0.5s linear 3 both; }`,keyframeCSS:`@keyframes animotion-earthquakeShake { 0%, to { transform: translate(0, 0) rotate(0); } 10% { transform: translate(-5px, -3px) rotate(-1deg); } 20% { transform: translate(3px, 5px) rotate(1deg); } 30% { transform: translate(-3px, 2px) rotate(0); } 40% { transform: translate(5px, -2px) rotate(1deg); } 50% { transform: translate(-2px, 3px) rotate(-1deg); } 60% { transform: translate(4px, -4px) rotate(0); } 70% { transform: translate(-4px, 1px) rotate(-1deg); } 80% { transform: translate(2px, -3px) rotate(1deg); } 90% { transform: translate(-1px, 2px) rotate(0); } }`},
+{id:'GM18',name:'Avalanche Slide',description:'Element slides downward in an avalanche cascade',cssClass:'animotion-avalanche-slide',keyframeName:'animotion-avalancheSlide',category:'gaming',subcategory:'effect',tags:['avalanche','slide','cascade','gaming'],duration:'0.8s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-avalanche-slide { animation: animotion-avalancheSlide 0.8s ease-in both; }`,keyframeCSS:`@keyframes animotion-avalancheSlide { from { transform: translate(-30px, -50px) rotate(-10deg); } to { transform: translate(0, 0) rotate(0); } }`},
+{id:'GM19',name:'Bouncing Ball Physics',description:'Ball bounces with realistic height decay',cssClass:'animotion-bouncing-ball-physics',keyframeName:'animotion-bouncingBallPhysics',category:'gaming',subcategory:'physics',tags:['bounce','ball','decay','gaming'],duration:'1.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-bouncing-ball-physics { animation: animotion-bouncingBallPhysics 1.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-bouncingBallPhysics { 0% { transform: translateY(-80px); } 20% { transform: translateY(0) scaleY(0.85) scaleX(1.15); } 30% { transform: translateY(-40px); } 50% { transform: translateY(0) scaleY(0.9) scaleX(1.1); } 60% { transform: translateY(-15px); } 75% { transform: translateY(0) scaleY(0.95) scaleX(1.05); } 85% { transform: translateY(-5px); } to { transform: translateY(0); } }`},
+{id:'GM20',name:'Damped Oscillation',description:'Element oscillates with gradually decreasing amplitude',cssClass:'animotion-damped-oscillation',keyframeName:'animotion-dampedOscillation',category:'gaming',subcategory:'physics',tags:['damped','oscillation','decay','gaming'],duration:'2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-damped-oscillation { animation: animotion-dampedOscillation 2s ease-out both; }`,keyframeCSS:`@keyframes animotion-dampedOscillation { 0% { transform: rotate(25deg); } 15% { transform: rotate(-20deg); } 30% { transform: rotate(15deg); } 45% { transform: rotate(-10deg); } 60% { transform: rotate(6deg); } 75% { transform: rotate(-3deg); } 90% { transform: rotate(1deg); } to { transform: rotate(0); } }`},
+{id:'GM21',name:'Health Bar Fill',description:'Health bar fills with green color from left',cssClass:'animotion-health-bar-fill',keyframeName:'animotion-healthBarFill',category:'gaming',subcategory:'ui',tags:['health','bar','fill','gaming','hp'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-health-bar-fill { background: #10b981; animation: animotion-healthBarFill 1s ease-out both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-healthBarFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }`},
+{id:'GM22',name:'Health Bar Drain',description:'Health bar drains from right to left when taking damage',cssClass:'animotion-health-bar-drain',keyframeName:'animotion-healthBarDrain',category:'gaming',subcategory:'ui',tags:['health','bar','drain','gaming','damage'],duration:'0.5s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-health-bar-drain { background: #ef4444; animation: animotion-healthBarDrain 0.5s ease-in both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-healthBarDrain { from { transform: scaleX(1); } to { transform: scaleX(0.3); } }`},
+{id:'GM23',name:'XP Gain',description:'Experience points float up and fade when gained',cssClass:'animotion-xp-gain',keyframeName:'animotion-xpGain',category:'gaming',subcategory:'ui',tags:['xp','gain','float','gaming','experience'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-xp-gain { color: #f59e0b; animation: animotion-xpGain 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-xpGain { from { transform: translateY(0) scale(0.8); opacity: 1; } to { transform: translateY(-30px) scale(1.2); opacity: 0; } }`},
+{id:'GM24',name:'Level Up',description:'Dramatic level-up celebration with flash and scale',cssClass:'animotion-level-up',keyframeName:'animotion-levelUp',category:'gaming',subcategory:'ui',tags:['level','up','celebration','gaming'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-level-up { animation: animotion-levelUp 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-levelUp { 0% { transform: scale(0.5); opacity: 0; filter: brightness(3); } 30% { transform: scale(1.3); filter: brightness(2); } 60% { transform: scale(0.95); filter: brightness(1); } to { transform: scale(1); opacity: 1; filter: brightness(1); } }`},
+{id:'GM25',name:'Achievement Unlock',description:'Achievement badge unlocks with rotation and glow',cssClass:'animotion-achievement-unlock',keyframeName:'animotion-achievementUnlock',category:'gaming',subcategory:'ui',tags:['achievement','unlock','badge','gaming'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-achievement-unlock { animation: animotion-achievementUnlock 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-achievementUnlock { 0% { transform: scale(0) rotate(-180deg); opacity: 0; } 50% { transform: scale(1.2) rotate(0); box-shadow: 0 0 30px rgba(245,158,11,0.6); } to { transform: scale(1); opacity: 1; box-shadow: 0 0 10px rgba(245,158,11,0.3); } }`},
+{id:'GM26',name:'Combo Counter',description:'Combo number pops with increasing emphasis',cssClass:'animotion-combo-counter',keyframeName:'animotion-comboCounter',category:'gaming',subcategory:'ui',tags:['combo','counter','pop','gaming'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-combo-counter { animation: animotion-comboCounter 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-comboCounter { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'GM27',name:'Damage Flash',description:'Screen flashes red when taking damage',cssClass:'animotion-damage-flash',keyframeName:'animotion-damageFlash',category:'gaming',subcategory:'effect',tags:['damage','flash','red','gaming','hit'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-damage-flash { animation: animotion-damageFlash 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-damageFlash { 0% { background-color: rgba(239,68,68,0.5); } to { background-color: transparent; } }`},
+{id:'GM28',name:'Shield Activate',description:'Shield barrier activates with expanding ring',cssClass:'animotion-shield-activate',keyframeName:'animotion-shieldActivate',category:'gaming',subcategory:'effect',tags:['shield','barrier','activate','gaming'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-shield-activate { animation: animotion-shieldActivate 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-shieldActivate { from { transform: scale(0); opacity: 0; box-shadow: 0 0 0 0 rgba(59,130,246,0.6); } to { transform: scale(1); opacity: 1; box-shadow: 0 0 20px 5px rgba(59,130,246,0.3); } }`},
+{id:'GM29',name:'Power Up',description:'Power-up effect with glow and scale burst',cssClass:'animotion-power-up',keyframeName:'animotion-powerUp',category:'gaming',subcategory:'effect',tags:['power','up','glow','gaming','boost'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-power-up { animation: animotion-powerUp 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-powerUp { 0% { transform: scale(0.8); filter: brightness(1); } 40% { transform: scale(1.3); filter: brightness(2); } to { transform: scale(1); filter: brightness(1); } }`},
+{id:'GM30',name:'Respawn',description:'Character respawns with fade and scale from center',cssClass:'animotion-respawn',keyframeName:'animotion-respawn',category:'gaming',subcategory:'effect',tags:['respawn','fade','appear','gaming'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-respawn { animation: animotion-respawn 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-respawn { from { transform: scale(0); opacity: 0; filter: brightness(3); } 50% { filter: brightness(1.5); } to { transform: scale(1); opacity: 1; filter: brightness(1); } }`},
+{id:'GM31',name:'Score Pop Up',description:'Score number pops up and floats away',cssClass:'animotion-score-pop-up',keyframeName:'animotion-scorePopUp',category:'gaming',subcategory:'ui',tags:['score','pop','float','gaming'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-score-pop-up { animation: animotion-scorePopUp 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-scorePopUp { from { transform: translateY(0) scale(0.5); opacity: 1; } to { transform: translateY(-40px) scale(1.2); opacity: 0; } }`},
+{id:'GM32',name:'Critical Hit',description:'Critical hit effect with screen shake and flash',cssClass:'animotion-critical-hit',keyframeName:'animotion-criticalHit',category:'gaming',subcategory:'effect',tags:['critical','hit','shake','gaming'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-critical-hit { animation: animotion-criticalHit 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-criticalHit { 0% { transform: scale(1.3); filter: brightness(3); } 25% { transform: translate(-3px, 2px) scale(1); } 50% { transform: translate(3px, -2px); filter: brightness(1); } to { transform: translate(0, 0); } }`},
+{id:'GM33',name:'Heal Pulse',description:'Healing pulse with green glow emanating outward',cssClass:'animotion-heal-pulse',keyframeName:'animotion-healPulse',category:'gaming',subcategory:'effect',tags:['heal','pulse','green','gaming'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-heal-pulse { animation: animotion-healPulse 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-healPulse { from { box-shadow: 0 0 0 0 rgba(16,185,129,0.6); filter: brightness(1.5); } to { box-shadow: 0 0 30px 10px rgba(16,185,129,0); filter: brightness(1); } }`},
+{id:'GM34',name:'Mana Recharge',description:'Mana bar recharges with blue glow effect',cssClass:'animotion-mana-recharge',keyframeName:'animotion-manaRecharge',category:'gaming',subcategory:'ui',tags:['mana','recharge','blue','gaming'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-mana-recharge { background: #3b82f6; animation: animotion-manaRecharge 1.5s ease-in-out both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-manaRecharge { from { transform: scaleX(0.2); box-shadow: 0 0 5px rgba(59,130,246,0.3); } to { transform: scaleX(1); box-shadow: 0 0 15px rgba(59,130,246,0.6); } }`},
+{id:'GM35',name:'Stamina Drain',description:'Stamina bar drains with yellow-to-red color transition',cssClass:'animotion-stamina-drain',keyframeName:'animotion-staminaDrain',category:'gaming',subcategory:'ui',tags:['stamina','drain','energy','gaming'],duration:'1s',timingFunction:'ease-in',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-stamina-drain { animation: animotion-staminaDrain 1s ease-in both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-staminaDrain { from { transform: scaleX(1); background: #f59e0b; } to { transform: scaleX(0.1); background: #ef4444; } }`},
+{id:'GM36',name:'Poison Drip',description:'Poison effect with green dripping pulses',cssClass:'animotion-poison-drip',keyframeName:'animotion-poisonDrip',category:'gaming',subcategory:'status',tags:['poison','drip','green','gaming','dot'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-poison-drip { animation: animotion-poisonDrip 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-poisonDrip { 0%, to { box-shadow: 0 0 5px rgba(16,185,129,0.3); filter: hue-rotate(0deg); } 50% { box-shadow: 0 0 15px rgba(16,185,129,0.6); filter: hue-rotate(20deg); } }`},
+{id:'GM37',name:'Freeze Effect',description:'Element appears frozen with blue tint and crystal edges',cssClass:'animotion-freeze-effect',keyframeName:'animotion-freezeEffect',category:'gaming',subcategory:'status',tags:['freeze','ice','blue','gaming'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-freeze-effect { animation: animotion-freezeEffect 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-freezeEffect { from { filter: saturate(100%) brightness(1); } to { filter: saturate(50%) brightness(1.3) hue-rotate(180deg); box-shadow: 0 0 15px rgba(96,165,250,0.5); } }`},
+{id:'GM38',name:'Burn Effect',description:'Element burns with orange flickering glow',cssClass:'animotion-burn-effect',keyframeName:'animotion-burnEffect',category:'gaming',subcategory:'status',tags:['burn','fire','orange','gaming'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-burn-effect { animation: animotion-burnEffect 0.3s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-burnEffect { 0%, to { box-shadow: 0 0 10px rgba(239,68,68,0.5); filter: brightness(1); } 50% { box-shadow: 0 0 20px rgba(245,158,11,0.8); filter: brightness(1.2); } }`},
+{id:'GM39',name:'Electric Shock',description:'Element twitches with electric shock effect',cssClass:'animotion-electric-shock',keyframeName:'animotion-electricShock',category:'gaming',subcategory:'status',tags:['electric','shock','lightning','gaming'],duration:'0.2s',timingFunction:'steps(2)',iterationCount:'5',fillMode:'both',demoType:'box',css:`.animotion-electric-shock { animation: animotion-electricShock 0.2s steps(2) 5 both; }`,keyframeCSS:`@keyframes animotion-electricShock { 0%, to { transform: translate(0, 0); filter: brightness(1); } 25% { transform: translate(2px, -1px); filter: brightness(2); } 50% { transform: translate(-1px, 2px); filter: brightness(1); } 75% { transform: translate(-2px, -1px); filter: brightness(1.5); } }`},
+{id:'GM40',name:'Teleport',description:'Element disappears and reappears with teleport effect',cssClass:'animotion-teleport',keyframeName:'animotion-teleport',category:'gaming',subcategory:'effect',tags:['teleport','warp','disappear','gaming'],duration:'0.8s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-teleport { animation: animotion-teleport 0.8s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-teleport { 0% { transform: scale(1); opacity: 1; filter: brightness(1); } 30% { transform: scale(1.5) translateY(-10px); opacity: 0.5; filter: brightness(3); } 50% { transform: scale(0); opacity: 0; } 70% { transform: scale(0); opacity: 0; } 85% { transform: scale(1.2); opacity: 0.5; filter: brightness(2); } to { transform: scale(1); opacity: 1; filter: brightness(1); } }`},
+// ==================== ECOMMERCE (25) ====================
+{id:'EC01',name:'Add To Cart Bounce',description:'Item bounces into the cart with elastic effect',cssClass:'animotion-add-to-cart-bounce',keyframeName:'animotion-addToCartBounce',category:'ecommerce',subcategory:'cart',tags:['cart','add','bounce','ecommerce'],duration:'0.5s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-add-to-cart-bounce { animation: animotion-addToCartBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-addToCartBounce { from { transform: scale(0) translateY(-20px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }`},
+{id:'EC02',name:'Cart Shake',description:'Cart icon shakes to indicate new item added',cssClass:'animotion-cart-shake',keyframeName:'animotion-cartShake',category:'ecommerce',subcategory:'cart',tags:['cart','shake','notification','ecommerce'],duration:'0.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-cart-shake { animation: animotion-cartShake 0.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-cartShake { 0%, to { transform: rotate(0); } 20% { transform: rotate(-10deg); } 40% { transform: rotate(10deg); } 60% { transform: rotate(-5deg); } 80% { transform: rotate(5deg); } }`},
+{id:'EC03',name:'Wishlist Heart',description:'Heart fills and pulses when added to wishlist',cssClass:'animotion-wishlist-heart',keyframeName:'animotion-wishlistHeart',category:'ecommerce',subcategory:'action',tags:['wishlist','heart','fill','ecommerce'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-wishlist-heart { animation: animotion-wishlistHeart 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-wishlistHeart { 0% { transform: scale(0); } 50% { transform: scale(1.3); } to { transform: scale(1); } }`},
+{id:'EC04',name:'Price Slash',description:'Original price gets slashed with a strikethrough animation',cssClass:'animotion-price-slash',keyframeName:'animotion-priceSlash',category:'ecommerce',subcategory:'price',tags:['price','slash','discount','ecommerce'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-price-slash { text-decoration: line-through; animation: animotion-priceSlash 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-priceSlash { from { text-decoration-color: transparent; } to { text-decoration-color: #ef4444; color: #6b7280; } }`},
+{id:'EC05',name:'Sale Badge Pop',description:'Sale badge pops into view with bounce',cssClass:'animotion-sale-badge-pop',keyframeName:'animotion-saleBadgePop',category:'ecommerce',subcategory:'badge',tags:['sale','badge','pop','ecommerce'],duration:'0.4s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-sale-badge-pop { animation: animotion-saleBadgePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-saleBadgePop { from { transform: scale(0) rotate(-15deg); } to { transform: scale(1) rotate(0); } }`},
+{id:'EC06',name:'Product Zoom',description:'Product image zooms in on hover for detail view',cssClass:'animotion-product-zoom',keyframeName:'animotion-productZoom',category:'ecommerce',subcategory:'image',tags:['product','zoom','detail','ecommerce'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-product-zoom { animation: animotion-productZoom 0.4s ease-out both; overflow: hidden; }`,keyframeCSS:`@keyframes animotion-productZoom { from { transform: scale(1); } to { transform: scale(1.15); } }`},
+{id:'EC07',name:'Quick View Slide',description:'Quick view panel slides up from product card',cssClass:'animotion-quick-view-slide',keyframeName:'animotion-quickViewSlide',category:'ecommerce',subcategory:'panel',tags:['quick-view','slide','panel','ecommerce'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-quick-view-slide { animation: animotion-quickViewSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-quickViewSlide { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'EC08',name:'Size Select',description:'Size option scales and highlights when selected',cssClass:'animotion-size-select',keyframeName:'animotion-sizeSelect',category:'ecommerce',subcategory:'option',tags:['size','select','highlight','ecommerce'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'button',css:`.animotion-size-select { animation: animotion-sizeSelect 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-sizeSelect { from { transform: scale(1); border-color: #d1d5db; } to { transform: scale(1.05); border-color: #3b82f6; } }`},
+{id:'EC09',name:'Color Swatch Pop',description:'Color swatch pops when selected with ring indicator',cssClass:'animotion-color-swatch-pop',keyframeName:'animotion-colorSwatchPop',category:'ecommerce',subcategory:'option',tags:['color','swatch','pop','ecommerce'],duration:'0.2s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-color-swatch-pop { animation: animotion-colorSwatchPop 0.2s ease-out both; }`,keyframeCSS:`@keyframes animotion-colorSwatchPop { from { box-shadow: 0 0 0 0 rgba(59,130,246,0); } to { box-shadow: 0 0 0 3px rgba(59,130,246,0.5); } }`},
+{id:'EC10',name:'Quantity Bounce',description:'Quantity number bounces when changed',cssClass:'animotion-quantity-bounce',keyframeName:'animotion-quantityBounce',category:'ecommerce',subcategory:'input',tags:['quantity','bounce','change','ecommerce'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-quantity-bounce { animation: animotion-quantityBounce 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-quantityBounce { from { transform: scale(0.5); } 60% { transform: scale(1.2); } to { transform: scale(1); } }`},
+{id:'EC11',name:'Checkout Step',description:'Checkout process advances to next step with slide',cssClass:'animotion-checkout-step',keyframeName:'animotion-checkoutStep',category:'ecommerce',subcategory:'process',tags:['checkout','step','progress','ecommerce'],duration:'0.4s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-checkout-step { animation: animotion-checkoutStep 0.4s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-checkoutStep { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'EC12',name:'Shipping Truck',description:'Shipping truck drives across indicating delivery',cssClass:'animotion-shipping-truck',keyframeName:'animotion-shippingTruck',category:'ecommerce',subcategory:'delivery',tags:['shipping','truck','delivery','ecommerce'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-shipping-truck { animation: animotion-shippingTruck 2s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-shippingTruck { from { transform: translateX(-100%); } to { transform: translateX(100%); } }`},
+{id:'EC13',name:'Delivery Drop',description:'Package drops with bounce for delivery confirmation',cssClass:'animotion-delivery-drop',keyframeName:'animotion-deliveryDrop',category:'ecommerce',subcategory:'delivery',tags:['delivery','drop','package','ecommerce'],duration:'0.6s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-delivery-drop { animation: animotion-deliveryDrop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-deliveryDrop { from { transform: translateY(-40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'EC14',name:'Rating Star',description:'Star fills with golden color for product rating',cssClass:'animotion-rating-star',keyframeName:'animotion-ratingStar',category:'ecommerce',subcategory:'review',tags:['rating','star','gold','ecommerce'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-rating-star { animation: animotion-ratingStar 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-ratingStar { from { transform: scale(0.5) rotate(-72deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }`},
+{id:'EC15',name:'Review Slide',description:'Customer review slides in from the side',cssClass:'animotion-review-slide',keyframeName:'animotion-reviewSlide',category:'ecommerce',subcategory:'review',tags:['review','slide','testimonial','ecommerce'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-review-slide { animation: animotion-reviewSlide 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-reviewSlide { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'EC16',name:'Coupon Peel',description:'Coupon code peels to reveal discount',cssClass:'animotion-coupon-peel',keyframeName:'animotion-couponPeel',category:'ecommerce',subcategory:'promo',tags:['coupon','peel','reveal','ecommerce'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-coupon-peel { animation: animotion-couponPeel 0.6s ease-out both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-couponPeel { from { transform: perspective(600px) rotateY(90deg); } to { transform: perspective(600px) rotateY(0); } }`},
+{id:'EC17',name:'Discount Flash',description:'Discount price flashes to draw attention',cssClass:'animotion-discount-flash',keyframeName:'animotion-discountFlash',category:'ecommerce',subcategory:'price',tags:['discount','flash','attention','ecommerce'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'2',fillMode:'both',demoType:'text',css:`.animotion-discount-flash { color: #ef4444; animation: animotion-discountFlash 0.6s ease-in-out 2 both; }`,keyframeCSS:`@keyframes animotion-discountFlash { 0%, to { opacity: 1; } 50% { opacity: 0.3; } }`},
+{id:'EC18',name:'Stock Low',description:'Low stock warning pulses with urgent red indicator',cssClass:'animotion-stock-low',keyframeName:'animotion-stockLow',category:'ecommerce',subcategory:'status',tags:['stock','low','urgent','ecommerce','warning'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'text',css:`.animotion-stock-low { color: #ef4444; animation: animotion-stockLow 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-stockLow { 0%, to { opacity: 1; } 50% { opacity: 0.5; } }`},
+{id:'EC19',name:'New Badge',description:'New product badge pops and shines',cssClass:'animotion-new-badge',keyframeName:'animotion-newBadge',category:'ecommerce',subcategory:'badge',tags:['new','badge','shine','ecommerce'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-new-badge { animation: animotion-newBadge 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-newBadge { from { transform: scale(0) rotate(45deg); } 60% { transform: scale(1.1) rotate(0); } to { transform: scale(1); } }`},
+{id:'EC20',name:'Trending Fire',description:'Trending indicator pulses with fire-like orange glow',cssClass:'animotion-trending-fire',keyframeName:'animotion-trendingFire',category:'ecommerce',subcategory:'badge',tags:['trending','fire','hot','ecommerce'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-trending-fire { animation: animotion-trendingFire 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-trendingFire { 0%, to { box-shadow: 0 0 5px rgba(245,158,11,0.3); } 50% { box-shadow: 0 0 15px rgba(245,158,11,0.6), 0 0 30px rgba(239,68,68,0.3); } }`},
+{id:'EC21',name:'Compare Slide',description:'Product comparison panel slides in from the bottom',cssClass:'animotion-compare-slide',keyframeName:'animotion-compareSlide',category:'ecommerce',subcategory:'panel',tags:['compare','slide','panel','ecommerce'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-compare-slide { animation: animotion-compareSlide 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-compareSlide { from { transform: translateY(100%); } to { transform: translateY(0); } }`},
+{id:'EC22',name:'Filter Drop',description:'Filter options drop down with staggered animation',cssClass:'animotion-filter-drop',keyframeName:'animotion-filterDrop',category:'ecommerce',subcategory:'filter',tags:['filter','drop','stagger','ecommerce'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-filter-drop { animation: animotion-filterDrop 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-filterDrop { from { transform: translateY(-10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'EC23',name:'Sort Flip',description:'Sort icon flips to indicate direction change',cssClass:'animotion-sort-flip',keyframeName:'animotion-sortFlip',category:'ecommerce',subcategory:'filter',tags:['sort','flip','direction','ecommerce'],duration:'0.3s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-sort-flip { animation: animotion-sortFlip 0.3s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-sortFlip { from { transform: scaleY(1); } to { transform: scaleY(-1); } }`},
+{id:'EC24',name:'Grid To List',description:'Products transition from grid to list layout',cssClass:'animotion-grid-to-list',keyframeName:'animotion-gridToList',category:'ecommerce',subcategory:'layout',tags:['grid','list','layout','ecommerce'],duration:'0.4s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-grid-to-list { animation: animotion-gridToList 0.4s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-gridToList { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }`},
+{id:'EC25',name:'Product Card Flip',description:'Product card flips to show additional details on back',cssClass:'animotion-product-card-flip',keyframeName:'animotion-productCardFlip',category:'ecommerce',subcategory:'card',tags:['product','card','flip','ecommerce'],duration:'0.6s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-product-card-flip { animation: animotion-productCardFlip 0.6s ease-in-out both; perspective: 1000px; }`,keyframeCSS:`@keyframes animotion-productCardFlip { from { transform: perspective(1000px) rotateY(0); } to { transform: perspective(1000px) rotateY(180deg); } }`},
+// ==================== SOCIAL (25) ====================
+{id:'SO01',name:'Like Heart',description:'Heart pops with scale and color fill for like action',cssClass:'animotion-like-heart',keyframeName:'animotion-likeHeart',category:'social',subcategory:'reaction',tags:['like','heart','pop','social'],duration:'0.4s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-like-heart { animation: animotion-likeHeart 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-likeHeart { from { transform: scale(0); color: #ef4444; } 50% { transform: scale(1.3); } to { transform: scale(1); } }`},
+{id:'SO02',name:'Double Tap Heart',description:'Large heart appears then fades for double-tap like',cssClass:'animotion-double-tap-heart',keyframeName:'animotion-doubleTapHeart',category:'social',subcategory:'reaction',tags:['double-tap','heart','instagram','social'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-double-tap-heart { animation: animotion-doubleTapHeart 0.8s ease-out both; }`,keyframeCSS:`@keyframes animotion-doubleTapHeart { 0% { transform: scale(0); opacity: 0; } 30% { transform: scale(1.2); opacity: 1; } 60% { transform: scale(1); opacity: 1; } to { transform: scale(1.1); opacity: 0; } }`},
+{id:'SO03',name:'Comment Bubble',description:'Comment bubble slides in from bottom with bounce',cssClass:'animotion-comment-bubble',keyframeName:'animotion-commentBubble',category:'social',subcategory:'interaction',tags:['comment','bubble','slide','social'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-comment-bubble { animation: animotion-commentBubble 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-commentBubble { from { transform: translateY(10px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }`},
+{id:'SO04',name:'Share Bounce',description:'Share icon bounces with ripple for share action',cssClass:'animotion-share-bounce',keyframeName:'animotion-shareBounce',category:'social',subcategory:'action',tags:['share','bounce','ripple','social'],duration:'0.4s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-share-bounce { animation: animotion-shareBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-shareBounce { 0% { transform: scale(1); } 50% { transform: scale(1.3); } to { transform: scale(1); } }`},
+{id:'SO05',name:'Follow Pop',description:'Follow button pops with state change animation',cssClass:'animotion-follow-pop',keyframeName:'animotion-followPop',category:'social',subcategory:'action',tags:['follow','pop','button','social'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'button',css:`.animotion-follow-pop { animation: animotion-followPop 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-followPop { 0% { transform: scale(1); } 50% { transform: scale(0.9); } to { transform: scale(1); } }`},
+{id:'SO06',name:'Story Ring',description:'Story ring gradient rotates around profile picture',cssClass:'animotion-story-ring',keyframeName:'animotion-storyRing',category:'social',subcategory:'status',tags:['story','ring','gradient','social'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-story-ring { border: 3px solid transparent; border-radius: 50%; background-image: linear-gradient(white, white), linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); background-origin: border-box; background-clip: padding-box, border-box; animation: animotion-storyRing 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-storyRing { to { filter: hue-rotate(360deg); } }`},
+{id:'SO07',name:'Story Progress',description:'Story progress bar fills from left to right',cssClass:'animotion-story-progress',keyframeName:'animotion-storyProgress',category:'social',subcategory:'progress',tags:['story','progress','bar','social'],duration:'5s',timingFunction:'linear',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-story-progress { background: #fff; animation: animotion-storyProgress 5s linear both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-storyProgress { from { transform: scaleX(0); } to { transform: scaleX(1); } }`},
+{id:'SO08',name:'Reel Play',description:'Reel play button pulses then fades for video start',cssClass:'animotion-reel-play',keyframeName:'animotion-reelPlay',category:'social',subcategory:'video',tags:['reel','play','video','social'],duration:'0.6s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-reel-play { animation: animotion-reelPlay 0.6s ease-out both; }`,keyframeCSS:`@keyframes animotion-reelPlay { 0% { transform: scale(0.8); opacity: 1; } 50% { transform: scale(1.2); } to { transform: scale(1); opacity: 0; } }`},
+{id:'SO09',name:'Notification Bell',description:'Bell shakes side to side for new notification',cssClass:'animotion-notification-bell',keyframeName:'animotion-notificationBell',category:'social',subcategory:'notification',tags:['notification','bell','shake','social'],duration:'0.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-notification-bell { animation: animotion-notificationBell 0.5s ease-in-out both; transform-origin: top center; }`,keyframeCSS:`@keyframes animotion-notificationBell { 0%, to { transform: rotate(0); } 15% { transform: rotate(15deg); } 30% { transform: rotate(-15deg); } 45% { transform: rotate(10deg); } 60% { transform: rotate(-10deg); } 75% { transform: rotate(5deg); } }`},
+{id:'SO10',name:'Message Pop',description:'New message notification pops in with bounce',cssClass:'animotion-message-pop',keyframeName:'animotion-messagePop',category:'social',subcategory:'notification',tags:['message','pop','bounce','social'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-message-pop { animation: animotion-messagePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-messagePop { from { transform: scale(0); } to { transform: scale(1); } }`},
+{id:'SO11',name:'Status Dot',description:'Online status dot pulses with green glow',cssClass:'animotion-status-dot',keyframeName:'animotion-statusDot',category:'social',subcategory:'status',tags:['status','online','dot','social'],duration:'2s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-status-dot { width: 10px; height: 10px; border-radius: 50%; background: #10b981; animation: animotion-statusDot 2s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-statusDot { 0%, to { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); } 50% { box-shadow: 0 0 0 6px rgba(16,185,129,0); } }`},
+{id:'SO12',name:'Verified Badge',description:'Verified badge appears with scale and shine',cssClass:'animotion-verified-badge',keyframeName:'animotion-verifiedBadge',category:'social',subcategory:'badge',tags:['verified','badge','check','social'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-verified-badge { animation: animotion-verifiedBadge 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-verifiedBadge { from { transform: scale(0) rotate(-45deg); opacity: 0; } 60% { transform: scale(1.2) rotate(0); } to { transform: scale(1); opacity: 1; } }`},
+{id:'SO13',name:'Hashtag Pop',description:'Hashtag tag pops into view when applied',cssClass:'animotion-hashtag-pop',keyframeName:'animotion-hashtagPop',category:'social',subcategory:'tag',tags:['hashtag','pop','tag','social'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-hashtag-pop { animation: animotion-hashtagPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-hashtagPop { from { transform: scale(0); } to { transform: scale(1); } }`},
+{id:'SO14',name:'Mention Highlight',description:'Mentioned username highlights with background sweep',cssClass:'animotion-mention-highlight',keyframeName:'animotion-mentionHighlight',category:'social',subcategory:'text',tags:['mention','highlight','sweep','social'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-mention-highlight { animation: animotion-mentionHighlight 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-mentionHighlight { from { background-color: rgba(59,130,246,0); } to { background-color: rgba(59,130,246,0.1); } }`},
+{id:'SO15',name:'Trending Arrow',description:'Trending arrow points up with animated emphasis',cssClass:'animotion-trending-arrow',keyframeName:'animotion-trendingArrow',category:'social',subcategory:'indicator',tags:['trending','arrow','up','social'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-trending-arrow { animation: animotion-trendingArrow 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-trendingArrow { 0%, to { transform: translateY(0); } 50% { transform: translateY(-5px); } }`},
+{id:'SO16',name:'Live Indicator',description:'Live streaming dot pulses red for broadcast',cssClass:'animotion-live-indicator',keyframeName:'animotion-liveIndicator',category:'social',subcategory:'status',tags:['live','streaming','pulse','social','red'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'circle',css:`.animotion-live-indicator { background: #ef4444; animation: animotion-liveIndicator 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-liveIndicator { 0%, to { opacity: 1; box-shadow: 0 0 0 0 rgba(239,68,68,0.4); } 50% { opacity: 0.8; box-shadow: 0 0 0 8px rgba(239,68,68,0); } }`},
+{id:'SO17',name:'Poll Bar Fill',description:'Poll results bar fills to show vote percentage',cssClass:'animotion-poll-bar-fill',keyframeName:'animotion-pollBarFill',category:'social',subcategory:'poll',tags:['poll','bar','fill','social','vote'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-poll-bar-fill { animation: animotion-pollBarFill 0.8s ease-out both; transform-origin: left; }`,keyframeCSS:`@keyframes animotion-pollBarFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }`},
+{id:'SO18',name:'Reaction Float',description:'Emoji reaction floats upward and fades',cssClass:'animotion-reaction-float',keyframeName:'animotion-reactionFloat',category:'social',subcategory:'reaction',tags:['reaction','float','emoji','social'],duration:'1.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-reaction-float { animation: animotion-reactionFloat 1.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-reactionFloat { from { transform: translateY(0) scale(1); opacity: 1; } to { transform: translateY(-60px) scale(1.5); opacity: 0; } }`},
+{id:'SO19',name:'Voice Note',description:'Voice note waveform pulses during recording',cssClass:'animotion-voice-note',keyframeName:'animotion-voiceNote',category:'social',subcategory:'audio',tags:['voice','note','waveform','social'],duration:'0.8s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'bars',css:`.animotion-voice-note span { display: inline-block; width: 3px; height: 15px; background: #3b82f6; margin: 0 1px; animation: animotion-voiceNote 0.8s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-voiceNote { 0%, to { height: 5px; } 50% { height: 20px; } }`},
+{id:'SO20',name:'Read Receipt',description:'Read receipt checkmarks appear sequentially',cssClass:'animotion-read-receipt',keyframeName:'animotion-readReceipt',category:'social',subcategory:'status',tags:['read','receipt','check','social'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-read-receipt { animation: animotion-readReceipt 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-readReceipt { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); color: #3b82f6; } }`},
+{id:'SO21',name:'Group Avatar',description:'Group avatar thumbnails stack with overlap animation',cssClass:'animotion-group-avatar',keyframeName:'animotion-groupAvatar',category:'social',subcategory:'avatar',tags:['group','avatar','stack','social'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-group-avatar { animation: animotion-groupAvatar 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-groupAvatar { from { transform: translateX(-10px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'SO22',name:'Profile Pop',description:'Profile card pops open with scale and shadow',cssClass:'animotion-profile-pop',keyframeName:'animotion-profilePop',category:'social',subcategory:'card',tags:['profile','pop','card','social'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-profile-pop { animation: animotion-profilePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-profilePop { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.15); } }`},
+{id:'SO23',name:'Feed Refresh',description:'Feed content refreshes with pull-down indicator',cssClass:'animotion-feed-refresh',keyframeName:'animotion-feedRefresh',category:'social',subcategory:'action',tags:['feed','refresh','pull','social'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-feed-refresh { animation: animotion-feedRefresh 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-feedRefresh { to { transform: rotate(360deg); } }`},
+{id:'SO24',name:'Infinite Scroll',description:'Loading indicator for infinite scroll at bottom',cssClass:'animotion-infinite-scroll',keyframeName:'animotion-infiniteScroll',category:'social',subcategory:'loading',tags:['infinite','scroll','loading','social'],duration:'1s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'dots',css:`.animotion-infinite-scroll span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; animation: animotion-infiniteScroll 1s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-infiniteScroll { 0%, to { opacity: 0.3; } 50% { opacity: 1; } }`},
+{id:'SO25',name:'Content Load',description:'Content placeholder loads with shimmer effect',cssClass:'animotion-content-load',keyframeName:'animotion-contentLoad',category:'social',subcategory:'loading',tags:['content','load','shimmer','social'],duration:'1.5s',timingFunction:'linear',iterationCount:'infinite',fillMode:'both',demoType:'card',css:`.animotion-content-load { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: animotion-contentLoad 1.5s linear infinite; }`,keyframeCSS:`@keyframes animotion-contentLoad { from { background-position: 200% 0; } to { background-position: -200% 0; } }`},
+// ==================== DASHBOARD (25) ====================
+{id:'DB01',name:'Chart Line Draw',description:'Line chart draws from left to right with stroke animation',cssClass:'animotion-chart-line-draw',keyframeName:'animotion-chartLineDraw',category:'dashboard',subcategory:'chart',tags:['chart','line','draw','dashboard'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-chart-line-draw { animation: animotion-chartLineDraw 1.5s ease-in-out both; }`,keyframeCSS:`@keyframes animotion-chartLineDraw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }`},
+{id:'DB02',name:'Chart Bar Grow',description:'Bar chart bars grow from baseline upward',cssClass:'animotion-chart-bar-grow',keyframeName:'animotion-chartBarGrow',category:'dashboard',subcategory:'chart',tags:['chart','bar','grow','dashboard'],duration:'0.8s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-chart-bar-grow { animation: animotion-chartBarGrow 0.8s ease-out both; transform-origin: bottom; }`,keyframeCSS:`@keyframes animotion-chartBarGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }`},
+{id:'DB03',name:'Chart Pie Fill',description:'Pie chart fills with conic gradient rotation',cssClass:'animotion-chart-pie-fill',keyframeName:'animotion-chartPieFill',category:'dashboard',subcategory:'chart',tags:['chart','pie','fill','dashboard'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-chart-pie-fill { border-radius: 50%; animation: animotion-chartPieFill 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-chartPieFill { from { background: conic-gradient(#3b82f6 0deg, #e5e7eb 0deg); } to { background: conic-gradient(#3b82f6 270deg, #e5e7eb 270deg); } }`},
+{id:'DB04',name:'Chart Donut Fill',description:'Donut chart ring fills with animated arc',cssClass:'animotion-chart-donut-fill',keyframeName:'animotion-chartDonutFill',category:'dashboard',subcategory:'chart',tags:['chart','donut','ring','dashboard'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-chart-donut-fill { border-radius: 50%; animation: animotion-chartDonutFill 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-chartDonutFill { from { background: conic-gradient(#3b82f6 0deg, transparent 0deg); } to { background: conic-gradient(#3b82f6 240deg, transparent 240deg); } }`},
+{id:'DB05',name:'Gauge Needle',description:'Gauge needle sweeps to target value',cssClass:'animotion-gauge-needle',keyframeName:'animotion-gaugeNeedle',category:'dashboard',subcategory:'gauge',tags:['gauge','needle','sweep','dashboard'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-gauge-needle { animation: animotion-gaugeNeedle 1s ease-out both; transform-origin: bottom center; }`,keyframeCSS:`@keyframes animotion-gaugeNeedle { from { transform: rotate(-90deg); } to { transform: rotate(45deg); } }`},
+{id:'DB06',name:'Sparkline',description:'Mini sparkline chart draws from left to right',cssClass:'animotion-sparkline',keyframeName:'animotion-sparkline',category:'dashboard',subcategory:'chart',tags:['sparkline','mini','chart','dashboard'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-sparkline { animation: animotion-sparkline 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-sparkline { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }`},
+{id:'DB07',name:'Heatmap Pulse',description:'Heatmap cell pulses with intensity color change',cssClass:'animotion-heatmap-pulse',keyframeName:'animotion-heatmapPulse',category:'dashboard',subcategory:'chart',tags:['heatmap','pulse','intensity','dashboard'],duration:'1.5s',timingFunction:'ease-in-out',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-heatmap-pulse { animation: animotion-heatmapPulse 1.5s ease-in-out infinite; }`,keyframeCSS:`@keyframes animotion-heatmapPulse { 0%, to { opacity: 0.5; } 50% { opacity: 1; } }`},
+{id:'DB08',name:'Treemap Expand',description:'Treemap block expands to show detail on click',cssClass:'animotion-treemap-expand',keyframeName:'animotion-treemapExpand',category:'dashboard',subcategory:'chart',tags:['treemap','expand','detail','dashboard'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-treemap-expand { animation: animotion-treemapExpand 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-treemapExpand { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'DB09',name:'Scatter Plot',description:'Scatter plot dots appear with staggered pop-in',cssClass:'animotion-scatter-plot',keyframeName:'animotion-scatterPlot',category:'dashboard',subcategory:'chart',tags:['scatter','plot','dots','dashboard'],duration:'0.4s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'dots',css:`.animotion-scatter-plot { animation: animotion-scatterPlot 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-scatterPlot { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'DB10',name:'Radar Sweep',description:'Radar chart sweeps with rotating line indicator',cssClass:'animotion-radar-sweep',keyframeName:'animotion-radarSweep',category:'dashboard',subcategory:'chart',tags:['radar','sweep','rotate','dashboard'],duration:'3s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-radar-sweep { animation: animotion-radarSweep 3s linear infinite; }`,keyframeCSS:`@keyframes animotion-radarSweep { to { transform: rotate(360deg); } }`},
+{id:'DB11',name:'Funnel Fill',description:'Funnel chart sections fill from top to bottom',cssClass:'animotion-funnel-fill',keyframeName:'animotion-funnelFill',category:'dashboard',subcategory:'chart',tags:['funnel','fill','stages','dashboard'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-funnel-fill { animation: animotion-funnelFill 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-funnelFill { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }`},
+{id:'DB12',name:'Waterfall Step',description:'Waterfall chart blocks step in sequentially',cssClass:'animotion-waterfall-step',keyframeName:'animotion-waterfallStep',category:'dashboard',subcategory:'chart',tags:['waterfall','step','sequential','dashboard'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'bars',css:`.animotion-waterfall-step { animation: animotion-waterfallStep 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-waterfallStep { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'DB13',name:'Bubble Chart',description:'Bubble chart circles scale in with stagger',cssClass:'animotion-bubble-chart',keyframeName:'animotion-bubbleChart',category:'dashboard',subcategory:'chart',tags:['bubble','chart','scale','dashboard'],duration:'0.5s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-bubble-chart { animation: animotion-bubbleChart 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-bubbleChart { from { transform: scale(0); } to { transform: scale(1); } }`},
+{id:'DB14',name:'Network Node',description:'Network graph node appears with connection pulse',cssClass:'animotion-network-node',keyframeName:'animotion-networkNode',category:'dashboard',subcategory:'graph',tags:['network','node','connection','dashboard'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'circle',css:`.animotion-network-node { animation: animotion-networkNode 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-networkNode { from { transform: scale(0); box-shadow: 0 0 0 0 rgba(59,130,246,0.4); } to { transform: scale(1); box-shadow: 0 0 0 4px rgba(59,130,246,0); } }`},
+{id:'DB15',name:'Timeline Reveal',description:'Timeline items reveal with staggered slide-in',cssClass:'animotion-timeline-reveal',keyframeName:'animotion-timelineReveal',category:'dashboard',subcategory:'layout',tags:['timeline','reveal','stagger','dashboard'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-timeline-reveal { animation: animotion-timelineReveal 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-timelineReveal { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'DB16',name:'KPI Counter',description:'KPI number counts up from zero to target value',cssClass:'animotion-kpi-counter',keyframeName:'animotion-kpiCounter',category:'dashboard',subcategory:'metric',tags:['kpi','counter','number','dashboard'],duration:'1s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'text',css:`.animotion-kpi-counter { animation: animotion-kpiCounter 1s ease-out both; }`,keyframeCSS:`@keyframes animotion-kpiCounter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`},
+{id:'DB17',name:'Metric Card',description:'Metric card slides in with value highlight',cssClass:'animotion-metric-card',keyframeName:'animotion-metricCard',category:'dashboard',subcategory:'card',tags:['metric','card','slide','dashboard'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-metric-card { animation: animotion-metricCard 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-metricCard { from { transform: translateY(15px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }`},
+{id:'DB18',name:'Alert Blink',description:'Alert indicator blinks to draw attention',cssClass:'animotion-alert-blink',keyframeName:'animotion-alertBlink',category:'dashboard',subcategory:'alert',tags:['alert','blink','warning','dashboard'],duration:'1s',timingFunction:'steps(1)',iterationCount:'infinite',fillMode:'both',demoType:'box',css:`.animotion-alert-blink { animation: animotion-alertBlink 1s steps(1) infinite; }`,keyframeCSS:`@keyframes animotion-alertBlink { 0%, to { opacity: 1; } 50% { opacity: 0; } }`},
+{id:'DB19',name:'Status Change',description:'Status badge transitions color for state change',cssClass:'animotion-status-change',keyframeName:'animotion-statusChange',category:'dashboard',subcategory:'status',tags:['status','change','color','dashboard'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-status-change { animation: animotion-statusChange 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-statusChange { from { background-color: #f59e0b; transform: scale(0.8); } to { background-color: #10b981; transform: scale(1); } }`},
+{id:'DB20',name:'Data Refresh',description:'Data refresh indicator spins while loading new data',cssClass:'animotion-data-refresh',keyframeName:'animotion-dataRefresh',category:'dashboard',subcategory:'loading',tags:['data','refresh','spin','dashboard'],duration:'1s',timingFunction:'linear',iterationCount:'infinite',fillMode:'none',demoType:'circle',css:`.animotion-data-refresh { animation: animotion-dataRefresh 1s linear infinite; }`,keyframeCSS:`@keyframes animotion-dataRefresh { to { transform: rotate(360deg); } }`},
+{id:'DB21',name:'Table Row Slide',description:'Table rows slide in from the right sequentially',cssClass:'animotion-table-row-slide',keyframeName:'animotion-tableRowSlide',category:'dashboard',subcategory:'table',tags:['table','row','slide','dashboard'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-table-row-slide { animation: animotion-tableRowSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-tableRowSlide { from { transform: translateX(20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`},
+{id:'DB22',name:'Grid Cell Pop',description:'Dashboard grid cell pops into place with scale',cssClass:'animotion-grid-cell-pop',keyframeName:'animotion-gridCellPop',category:'dashboard',subcategory:'layout',tags:['grid','cell','pop','dashboard'],duration:'0.3s',timingFunction:'cubic-bezier(0.34, 1.56, 0.64, 1)',iterationCount:'1',fillMode:'both',demoType:'box',css:`.animotion-grid-cell-pop { animation: animotion-gridCellPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }`,keyframeCSS:`@keyframes animotion-gridCellPop { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }`},
+{id:'DB23',name:'Widget Expand',description:'Dashboard widget expands to show full content',cssClass:'animotion-widget-expand',keyframeName:'animotion-widgetExpand',category:'dashboard',subcategory:'widget',tags:['widget','expand','reveal','dashboard'],duration:'0.4s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-widget-expand { animation: animotion-widgetExpand 0.4s ease-out both; }`,keyframeCSS:`@keyframes animotion-widgetExpand { from { max-height: 100px; opacity: 0.5; } to { max-height: 500px; opacity: 1; } }`},
+{id:'DB24',name:'Panel Slide',description:'Dashboard panel slides in from the edge',cssClass:'animotion-panel-slide',keyframeName:'animotion-panelSlide',category:'dashboard',subcategory:'layout',tags:['panel','slide','sidebar','dashboard'],duration:'0.3s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-panel-slide { animation: animotion-panelSlide 0.3s ease-out both; }`,keyframeCSS:`@keyframes animotion-panelSlide { from { transform: translateX(-100%); } to { transform: translateX(0); } }`},
+{id:'DB25',name:'Dashboard Load',description:'Full dashboard layout loads with staggered widget reveals',cssClass:'animotion-dashboard-load',keyframeName:'animotion-dashboardLoad',category:'dashboard',subcategory:'layout',tags:['dashboard','load','stagger','layout'],duration:'0.5s',timingFunction:'ease-out',iterationCount:'1',fillMode:'both',demoType:'card',css:`.animotion-dashboard-load { animation: animotion-dashboardLoad 0.5s ease-out both; }`,keyframeCSS:`@keyframes animotion-dashboardLoad { from { transform: translateY(20px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }`}
+
+] // end animations array
+
+}; // end window.ANIMOTION_DATA

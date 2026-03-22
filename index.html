@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animotion — 1000+ CSS3 Animations & Icons | Open Source Library</title>
+  <meta name="description" content="The largest open-source CSS3 animation library. 1000+ production-ready animations across 20 categories. Copy CSS, upload PNGs to animate, use via API or MCP. Zero dependencies.">
+  <meta name="keywords" content="CSS3 animations, CSS animation library, web animations, open source, icons, animation framework">
+  <meta property="og:title" content="Animotion — 1000+ CSS3 Animations & Icons">
+  <meta property="og:description" content="The largest open-source CSS3 animation library. Zero dependencies, production-ready.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/keyframes.css">
+  <link rel="stylesheet" href="css/keyframes-part2.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="header">
+    <button class="sidebar-toggle" id="sidebar-toggle">☰</button>
+
+    <div class="header-brand">
+      <div class="header-logo">A</div>
+      <span class="header-title">Animotion</span>
+      <span class="header-badge">v1.0</span>
+    </div>
+
+    <div class="header-search">
+      <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="search-input" placeholder="Search animations, categories, techniques..." autocomplete="off">
+      <span class="shortcut-hint">⌘K</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="header-btn" id="theme-toggle" title="Toggle theme">🌙</button>
+      <a href="https://github.com/nickshouvik/css3-animations" target="_blank" class="header-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ── APP LAYOUT ── -->
+  <div class="app-layout">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Stats -->
+      <div class="sidebar-stats">
+        <div class="stat-card">
+          <div class="stat-value" id="stat-total">0</div>
+          <div class="stat-label">Animations</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-categories">0</div>
+          <div class="stat-label">Categories</div>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Categories</div>
+        <nav id="cat-nav">
+          <!-- Rendered by JS -->
+        </nav>
+      </div>
+
+      <!-- Info -->
+      <div class="sidebar-section" style="margin-top: auto;">
+        <div style="padding: 12px; background: var(--surface); border-radius: var(--radius-sm); border: 1px solid var(--border); font-size: 12px; color: var(--text3);">
+          <strong style="color: var(--text2);">Open Source</strong><br>
+          MIT Licensed. Built by <a href="https://bachao.ai" target="_blank" style="color: var(--accent); text-decoration: none;">Bachao.AI</a> for the dev community.
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main-content">
+
+      <!-- Main Tabs -->
+      <div class="main-tabs">
+        <button class="main-tab active" data-maintab="animations">Animations</button>
+        <button class="main-tab" data-maintab="icons">Icons</button>
+        <button class="main-tab" data-maintab="png-animator">PNG Animator</button>
+      </div>
+
+      <!-- ═══ ANIMATIONS TAB ═══ -->
+      <div class="tab-content active" data-content="animations">
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <span class="toolbar-title" id="toolbar-category-name">All Animations</span>
+            <span class="toolbar-count" id="toolbar-count">0 animations</span>
+          </div>
+          <div class="toolbar-right">
+            <div class="view-toggle">
+              <button class="view-btn active" data-view="grid" title="Grid view">▦</button>
+              <button class="view-btn" data-view="compact" title="Compact view">▤</button>
+              <button class="view-btn" data-view="list" title="List view">☰</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="anim-grid" id="anim-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- ═══ ICONS TAB ═══ -->
+      <div class="tab-content" data-content="icons">
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <span class="toolbar-title">Icons Library</span>
+            <span class="toolbar-count">Coming soon — 200+ icons</span>
+          </div>
+        </div>
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+          <h3>Icons Library</h3>
+          <p>200+ production-ready SVG icons are being crafted. Stay tuned!</p>
+        </div>
+      </div>
+
+      <!-- ═══ PNG ANIMATOR TAB ═══ -->
+      <div class="tab-content" data-content="png-animator">
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <span class="toolbar-title">PNG Animator</span>
+            <span class="toolbar-count">Upload an image, pick an animation, export CSS</span>
+          </div>
+        </div>
+
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
+          <!-- Upload Zone -->
+          <div class="png-upload-zone" id="png-upload-zone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p>Drag & drop an image here, or click to browse</p>
+            <small>Supports PNG, JPG, SVG, GIF</small>
+            <input type="file" id="png-file-input" accept="image/*" style="display: none">
+          </div>
+
+          <!-- Controls (hidden until image uploaded) -->
+          <div class="png-controls" id="png-controls" style="display: none;">
+            <select id="png-anim-select" style="flex: 1; min-width: 200px;">
+              <option value="">Select an animation...</option>
+            </select>
+            <input type="text" id="png-duration" placeholder="Duration (e.g. 1s)" style="width: 140px;">
+            <select id="png-easing">
+              <option value="ease">ease</option>
+              <option value="ease-in">ease-in</option>
+              <option value="ease-out">ease-out</option>
+              <option value="ease-in-out">ease-in-out</option>
+              <option value="linear">linear</option>
+              <option value="cubic-bezier(0.175, 0.885, 0.32, 1.275)">spring</option>
+              <option value="cubic-bezier(0.68, -0.55, 0.265, 1.55)">bounce</option>
+            </select>
+            <button class="header-btn" id="png-export-btn" style="background: var(--accent); color: #fff; border-color: var(--accent);">
+              Export CSS
+            </button>
+          </div>
+
+          <!-- Preview -->
+          <div class="png-preview" id="png-preview-container" style="display: none;">
+            <img id="png-preview-img" src="" alt="Preview" style="display: none;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>
+          <strong>Animotion</strong> — 1000+ CSS3 Animations & Icons.
+          Open Source, MIT Licensed.
+          Built with care by <a href="https://bachao.ai" target="_blank">Bachao.AI</a>
+        </p>
+        <p style="margin-top: 4px;">
+          <a href="https://github.com/nickshouvik/css3-animations" target="_blank">GitHub</a> ·
+          <a href="docs/api.md" target="_blank">API Docs</a> ·
+          <a href="api.json" target="_blank">api.json</a>
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ── CODE MODAL ── -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">Animation Name</h2>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+
+      <div class="modal-preview" id="modal-preview">
+        <div id="modal-preview-area"></div>
+        <button class="modal-replay" id="modal-replay">↻ Replay</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-meta" id="modal-meta"></div>
+
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-tab="css">CSS</button>
+          <button class="modal-tab" data-tab="html">HTML</button>
+          <button class="modal-tab" data-tab="js">JavaScript</button>
+        </div>
+
+        <!-- CSS Panel -->
+        <div class="modal-code-panel active" data-panel="css">
+          <div class="code-block" style="margin-top: 12px;">
+            <div class="code-block-header">
+              <span class="code-block-label">CSS</span>
+              <button class="copy-btn" data-target="modal-css-code">Copy</button>
+            </div>
+            <pre><code id="modal-css-code"></code></pre>
+          </div>
+        </div>
+
+        <!-- HTML Panel -->
+        <div class="modal-code-panel" data-panel="html" style="display: none;">
+          <div class="code-block" style="margin-top: 12px;">
+            <div class="code-block-header">
+              <span class="code-block-label">HTML</span>
+              <button class="copy-btn" data-target="modal-html-code">Copy</button>
+            </div>
+            <pre><code id="modal-html-code"></code></pre>
+          </div>
+        </div>
+
+        <!-- JS Panel -->
+        <div class="modal-code-panel" data-panel="js" style="display: none;">
+          <div class="code-block" style="margin-top: 12px;">
+            <div class="code-block-header">
+              <span class="code-block-label">JavaScript</span>
+              <button class="copy-btn" data-target="modal-js-code">Copy</button>
+            </div>
+            <pre><code id="modal-js-code"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SCROLL TO TOP ── -->
+  <button class="scroll-top" id="scroll-top" title="Scroll to top">↑</button>
+
+  <!-- ── TOAST CONTAINER ── -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/icons-app.js"></script>
+  <script src="js/png-animator.js"></script>
+</body>
+</html>

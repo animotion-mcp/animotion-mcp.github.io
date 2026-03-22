@@ -1,0 +1,19 @@
+{
+  "name": "@animotion/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Animotion CSS3 Animation Library — enables AI agents to search, retrieve, and compose animations",
+  "main": "server.js",
+  "type": "module",
+  "license": "MIT",
+  "author": "Bachao.AI",
+  "keywords": ["mcp", "css3", "animations", "ai", "claude", "icons"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bin": {
+    "animotion-mcp": "./server.js"
+  }
+}
