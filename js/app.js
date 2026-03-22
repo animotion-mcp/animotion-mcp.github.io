@@ -24,10 +24,29 @@
   // ── Initialize ──
   function init() {
     applyTheme(state.theme);
+    injectAnimationStyles();
     renderSidebar();
     filterAndRender();
     bindEvents();
     renderStats();
+  }
+
+  // ── Inject all animation CSS classes + keyframes into the page ──
+  // The keyframes.css file uses kebab-case names but data.js uses camelCase.
+  // We inject both the @keyframes and .class rules from data.js to ensure
+  // every animation works correctly with matching names.
+  function injectAnimationStyles() {
+    if (!window.ANIMOTION_DATA) return;
+    const existing = document.getElementById('animotion-injected-styles');
+    if (existing) return; // already injected
+
+    const style = document.createElement('style');
+    style.id = 'animotion-injected-styles';
+    const parts = window.ANIMOTION_DATA.animations.map(a =>
+      a.keyframeCSS + '\n' + a.css
+    );
+    style.textContent = parts.join('\n\n');
+    document.head.appendChild(style);
   }
 
   // ── Theme ──
