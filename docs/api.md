@@ -7,9 +7,9 @@
 ### CDN (Recommended)
 ```html
 <!-- Full library (all animations) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nickshouvik/css3-animations@main/css/keyframes.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nickshouvik/css3-animations@main/css/keyframes-part2.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nickshouvik/css3-animations@main/css/utilities.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes-part2.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/utilities.css">
 ```
 
 ### Usage
