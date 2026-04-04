@@ -25,23 +25,33 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-  // ── Style Manager (lazy injection) ──
+  // ── Style Manager (lazy injection via separate style elements) ──
   const StyleManager = {
     injected: new Set(),
-    styleEl: null,
+    baseEl: null,
 
     ensure(animations) {
-      if (!this.styleEl) {
-        this.styleEl = document.createElement('style');
-        this.styleEl.id = 'animotion-dynamic-styles';
-        // Always add the infinite loop override for card previews
-        this.styleEl.textContent = `
+      if (!this.baseEl) {
+        this.baseEl = document.createElement('style');
+        this.baseEl.id = 'animotion-base-styles';
+        this.baseEl.textContent = `
+          /* Animations paused by default, play on card hover */
           .anim-card-preview [data-animate] {
+            animation-play-state: paused !important;
+            will-change: transform, opacity;
+          }
+          .anim-card:hover .anim-card-preview [data-animate],
+          .anim-card.playing .anim-card-preview [data-animate] {
+            animation-play-state: running !important;
+          }
+          /* Auto-play mode when toggled */
+          .anim-grid.autoplay .anim-card-preview [data-animate] {
+            animation-play-state: running !important;
             animation-iteration-count: infinite !important;
             animation-direction: alternate !important;
           }
         `;
-        document.head.appendChild(this.styleEl);
+        document.head.appendChild(this.baseEl);
       }
       const newCSS = [];
       for (const a of animations) {
@@ -51,7 +61,9 @@
         }
       }
       if (newCSS.length) {
-        this.styleEl.textContent += '\n' + newCSS.join('\n');
+        const el = document.createElement('style');
+        el.textContent = newCSS.join('\n');
+        document.head.appendChild(el);
       }
     }
   };
@@ -127,7 +139,7 @@
     container.innerHTML = featured.map(anim => `
       <div class="hero-showcase-item">
         <div class="hero-showcase-demo">
-          <div class="demo-box ${prefersReduced ? '' : anim.cssClass}" ${prefersReduced ? '' : `data-animate="${anim.cssClass}"`} style="animation-iteration-count:infinite;animation-direction:alternate;"></div>
+          <div class="demo-box ${prefersReduced ? '' : anim.cssClass}" ${prefersReduced ? '' : `data-animate="${anim.cssClass}"`} style="animation-iteration-count:infinite;animation-timing-function:ease-in-out;will-change:transform,opacity;"></div>
         </div>
         <span class="hero-showcase-label">${anim.name}</span>
       </div>
@@ -263,11 +275,9 @@
 
     grid.innerHTML = html;
 
-    // Start animations
+    // Animations are already applied via CSS class — they start paused
+    // and play on hover. No need for reflow hacks.
     requestAnimationFrame(() => {
-      $$('.anim-card-preview [data-animate]', grid).forEach(el => {
-        triggerAnimation(el, el.dataset.animate);
-      });
     });
 
     // Setup IntersectionObserver for infinite scroll
@@ -300,6 +310,10 @@
       <div class="anim-card" data-id="${escapeAttr(anim.id)}">
         <div class="anim-card-preview" style="--card-cat-color: ${catColor}">
           ${demoHTML}
+          <span class="anim-card-play-hint">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Hover to play
+          </span>
           <button class="anim-card-replay" title="Replay" aria-label="Replay ${escapeAttr(anim.name)}">
             ${UI_ICONS.replay}
           </button>
@@ -957,6 +971,17 @@
         if (sidebar) sidebar.classList.remove('open');
         sidebarOverlay.classList.remove('active');
         if (sidebarToggle) sidebarToggle.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    // Autoplay toggle
+    const autoplayBtn = $('#autoplay-toggle');
+    if (autoplayBtn) {
+      autoplayBtn.addEventListener('click', () => {
+        const grid = $('#anim-grid');
+        const isActive = autoplayBtn.classList.toggle('active');
+        autoplayBtn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        if (grid) grid.classList.toggle('autoplay', isActive);
       });
     }
 

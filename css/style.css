@@ -773,6 +773,34 @@ body::before {
   gap: 8px;
 }
 
+/* Autoplay toggle */
+.autoplay-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text3);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.autoplay-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.autoplay-toggle.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
 /* View toggle */
 .view-toggle {
   display: flex;
@@ -945,6 +973,13 @@ body::before {
   background: var(--card-preview-bg);
   position: relative;
   overflow: hidden;
+  contain: content;
+}
+
+/* GPU acceleration hint for animated children */
+.anim-card-preview [data-animate] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 /* Category-colored preview gradient overlay */
@@ -955,6 +990,37 @@ body::before {
   opacity: 0.06;
   background: radial-gradient(circle at 50% 80%, var(--card-cat-color, var(--accent)) 0%, transparent 70%);
   pointer-events: none;
+}
+
+/* Hover-to-play indicator */
+.anim-card-play-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(0,0,0,0.45);
+  color: rgba(255,255,255,0.8);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.anim-card:hover .anim-card-play-hint {
+  opacity: 0;
+}
+
+/* When autoplay is on, hide play hint */
+.anim-grid.autoplay .anim-card-play-hint {
+  display: none;
 }
 
 /* Demo elements — bigger and bolder */
