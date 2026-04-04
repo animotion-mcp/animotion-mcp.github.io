@@ -1,6 +1,7 @@
 /* ============================================================
    ANIMOTION — App Controller
-   Handles: filtering, search, rendering, modals, PNG animator
+   Handles: filtering, search, rendering, modals, pagination,
+   routing, hero showcase, syntax highlighting, accessibility
    ============================================================ */
 
 (function () {
@@ -11,51 +12,87 @@
     activeCategory: 'all',
     activeSubcategory: null,
     searchQuery: '',
-    viewMode: 'grid', // grid, compact, list
-    activeTab: 'animations', // animations, icons, png-animator
+    viewMode: 'grid',
+    activeTab: 'animations',
     theme: localStorage.getItem('animotion-theme') || 'light',
     filtered: [],
+    pageSize: 48,
+    currentPage: 1,
+    previewText: '',
   };
 
   // ── DOM Cache ──
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
+  // ── Style Manager (lazy injection) ──
+  const StyleManager = {
+    injected: new Set(),
+    styleEl: null,
+
+    ensure(animations) {
+      if (!this.styleEl) {
+        this.styleEl = document.createElement('style');
+        this.styleEl.id = 'animotion-dynamic-styles';
+        // Always add the infinite loop override for card previews
+        this.styleEl.textContent = `
+          .anim-card-preview [data-animate] {
+            animation-iteration-count: infinite !important;
+            animation-direction: alternate !important;
+          }
+        `;
+        document.head.appendChild(this.styleEl);
+      }
+      const newCSS = [];
+      for (const a of animations) {
+        if (!this.injected.has(a.id)) {
+          this.injected.add(a.id);
+          newCSS.push(a.keyframeCSS + '\n' + a.css);
+        }
+      }
+      if (newCSS.length) {
+        this.styleEl.textContent += '\n' + newCSS.join('\n');
+      }
+    }
+  };
+
+  // ── SVG Icons ──
+  const UI_ICONS = {
+    sun: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
+    moon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+    replay: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>',
+    copy: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
+  };
+
+  // ── Category Groups ──
+  const CATEGORY_GROUPS = [
+    { name: 'Core', ids: ['entrance', 'exit', 'attention'] },
+    { name: 'Elements', ids: ['text', 'button', 'card', 'form', 'navigation'] },
+    { name: 'Effects', ids: ['background', 'filter', 'transform3d', 'creative'] },
+    { name: 'Loaders', ids: ['loader'] },
+    { name: 'Interactions', ids: ['micro', 'scroll'] },
+    { name: 'Industry', ids: ['fintech', 'gaming', 'ecommerce', 'social', 'dashboard'] },
+  ];
+
+  // ── Featured animations for hero ──
+  const FEATURED_IDS = ['E01', 'A01', 'L01', 'T01', 'CR01', 'BT01'];
+
   // ── Initialize ──
   function init() {
-    applyTheme(state.theme);
-    injectAnimationStyles();
-    renderSidebar();
-    filterAndRender();
-    bindEvents();
-    renderStats();
-  }
-
-  // ── Inject all animation CSS classes + keyframes into the page ──
-  // The keyframes.css file uses kebab-case names but data.js uses camelCase.
-  // We inject both the @keyframes and .class rules from data.js to ensure
-  // every animation works correctly with matching names.
-  function injectAnimationStyles() {
-    if (!window.ANIMOTION_DATA) return;
-    const existing = document.getElementById('animotion-injected-styles');
-    if (existing) return; // already injected
-
-    const style = document.createElement('style');
-    style.id = 'animotion-injected-styles';
-    const parts = window.ANIMOTION_DATA.animations.map(a =>
-      a.keyframeCSS + '\n' + a.css
-    );
-    // Force all animations to loop infinitely in the card previews
-    // so users always see the animation playing. The modal and
-    // exported code use the original iteration count.
-    parts.push(`
-      .anim-card-preview [data-animate] {
-        animation-iteration-count: infinite !important;
-        animation-direction: alternate !important;
+    if (!window.ANIMOTION_DATA) {
+      const grid = $('#anim-grid');
+      if (grid) {
+        grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><h3>Failed to load animation data</h3><p>Please refresh the page or check your connection.</p></div>';
       }
-    `);
-    style.textContent = parts.join('\n\n');
-    document.head.appendChild(style);
+      return;
+    }
+
+    applyTheme(state.theme);
+    renderSidebar();
+    renderHeroShowcase();
+    renderStats();
+    handleRoute();
+    bindEvents();
   }
 
   // ── Theme ──
@@ -69,17 +106,42 @@
     localStorage.setItem('animotion-theme', theme);
     const btn = $('#theme-toggle');
     if (btn) {
-      btn.textContent = theme === 'dark' ? '☀' : '☾';
-      btn.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.innerHTML = theme === 'dark' ? UI_ICONS.sun : UI_ICONS.moon;
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     }
   }
 
-  // ── Sidebar Categories ──
+  // ── Hero Showcase ──
+  function renderHeroShowcase() {
+    const container = $('#hero-showcase');
+    if (!container || !window.ANIMOTION_DATA) return;
+
+    const { animations } = window.ANIMOTION_DATA;
+    const featured = FEATURED_IDS.map(id => animations.find(a => a.id === id)).filter(Boolean);
+
+    // Only show if reduced motion is not preferred
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    StyleManager.ensure(featured);
+
+    container.innerHTML = featured.map(anim => `
+      <div class="hero-showcase-item">
+        <div class="hero-showcase-demo">
+          <div class="demo-box ${prefersReduced ? '' : anim.cssClass}" ${prefersReduced ? '' : `data-animate="${anim.cssClass}"`} style="animation-iteration-count:infinite;animation-direction:alternate;"></div>
+        </div>
+        <span class="hero-showcase-label">${anim.name}</span>
+      </div>
+    `).join('');
+  }
+
+  // ── Sidebar Categories (collapsible groups) ──
   function renderSidebar() {
     const nav = $('#cat-nav');
     if (!nav || !window.ANIMOTION_DATA) return;
 
     const { categories, animations } = window.ANIMOTION_DATA;
+    const catMap = {};
+    categories.forEach(c => { catMap[c.id] = c; });
 
     let html = `
       <button class="cat-item active" data-cat="all">
@@ -89,15 +151,26 @@
       </button>
     `;
 
-    categories.forEach(cat => {
-      const count = animations.filter(a => a.category === cat.id).length;
-      html += `
-        <button class="cat-item" data-cat="${cat.id}">
-          <span class="cat-dot" style="background: var(--cat-${cat.id})"></span>
-          ${cat.name}
-          <span class="cat-count">${count}</span>
-        </button>
-      `;
+    CATEGORY_GROUPS.forEach(group => {
+      const groupCats = group.ids.map(id => catMap[id]).filter(Boolean);
+      if (groupCats.length === 0) return;
+
+      html += `<details class="cat-group" open>`;
+      html += `<summary>${group.name}</summary>`;
+      html += `<div class="cat-group-items">`;
+
+      groupCats.forEach(cat => {
+        const count = animations.filter(a => a.category === cat.id).length;
+        html += `
+          <button class="cat-item" data-cat="${cat.id}">
+            <span class="cat-dot" style="background: var(--cat-${cat.id})"></span>
+            ${cat.name}
+            <span class="cat-count">${count}</span>
+          </button>
+        `;
+      });
+
+      html += `</div></details>`;
     });
 
     nav.innerHTML = html;
@@ -107,10 +180,20 @@
   function renderStats() {
     if (!window.ANIMOTION_DATA) return;
     const { categories, animations } = window.ANIMOTION_DATA;
+    const total = animations.length;
+    const catCount = categories.length;
+
     const totalEl = $('#stat-total');
     const catEl = $('#stat-categories');
-    if (totalEl) totalEl.textContent = animations.length;
-    if (catEl) catEl.textContent = categories.length;
+    const heroCount = $('#hero-count');
+    const heroCatCount = $('#hero-cat-count');
+    const footerCount = $('#footer-count');
+
+    if (totalEl) totalEl.textContent = total;
+    if (catEl) catEl.textContent = catCount;
+    if (heroCount) heroCount.textContent = total;
+    if (heroCatCount) heroCatCount.textContent = catCount;
+    if (footerCount) footerCount.textContent = total + '+';
   }
 
   // ── Filter & Render ──
@@ -120,12 +203,10 @@
 
     let filtered = animations;
 
-    // Category filter
     if (state.activeCategory !== 'all') {
       filtered = filtered.filter(a => a.category === state.activeCategory);
     }
 
-    // Search filter
     if (state.searchQuery) {
       const q = state.searchQuery.toLowerCase();
       filtered = filtered.filter(a =>
@@ -138,11 +219,12 @@
     }
 
     state.filtered = filtered;
+    state.currentPage = 1;
     renderGrid(filtered);
     updateToolbar(filtered.length);
   }
 
-  // ── Render Grid ──
+  // ── Render Grid (paginated) ──
   function renderGrid(animations) {
     const grid = $('#anim-grid');
     if (!grid) return;
@@ -160,13 +242,53 @@
       return;
     }
 
-    grid.innerHTML = animations.map(anim => createCardHTML(anim)).join('');
+    const end = state.currentPage * state.pageSize;
+    const visible = animations.slice(0, end);
+    const hasMore = animations.length > end;
+
+    // Lazy-inject styles for visible animations
+    StyleManager.ensure(visible);
+
+    let html = visible.map(anim => createCardHTML(anim)).join('');
+
+    if (hasMore) {
+      html += `
+        <div class="load-more-container" id="load-more-sentinel">
+          <button class="load-more-btn" id="load-more-btn">
+            Load More (${animations.length - end} remaining)
+          </button>
+        </div>
+      `;
+    }
+
+    grid.innerHTML = html;
+
     // Start animations
     requestAnimationFrame(() => {
       $$('.anim-card-preview [data-animate]', grid).forEach(el => {
         triggerAnimation(el, el.dataset.animate);
       });
     });
+
+    // Setup IntersectionObserver for infinite scroll
+    if (hasMore) {
+      const sentinel = $('#load-more-sentinel');
+      if (sentinel) {
+        const observer = new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) {
+            observer.disconnect();
+            loadNextPage();
+          }
+        }, { rootMargin: '300px' });
+        observer.observe(sentinel);
+      }
+    }
+  }
+
+  // ── Load next page ──
+  function loadNextPage() {
+    state.currentPage++;
+    renderGrid(state.filtered);
   }
 
   // ── Create Card HTML ──
@@ -175,19 +297,24 @@
     const demoHTML = getDemoHTML(anim);
 
     return `
-      <div class="anim-card" data-id="${anim.id}" onclick="window.AnimotionApp.openModal('${anim.id}')">
-        <div class="anim-card-preview">
+      <div class="anim-card" data-id="${escapeAttr(anim.id)}">
+        <div class="anim-card-preview" style="--card-cat-color: ${catColor}">
           ${demoHTML}
-          <button class="anim-card-replay" onclick="event.stopPropagation(); window.AnimotionApp.replay('${anim.id}')" title="Replay">↻</button>
+          <button class="anim-card-replay" title="Replay" aria-label="Replay ${escapeAttr(anim.name)}">
+            ${UI_ICONS.replay}
+          </button>
+          <button class="anim-card-copy" data-class=".${escapeAttr(anim.cssClass)}" title="Copy class name">
+            ${UI_ICONS.copy} .${escapeHTML(anim.cssClass)}
+          </button>
         </div>
         <div class="anim-card-info">
           <div class="anim-card-name">
-            ${anim.name}
-            <span class="anim-card-category" style="background: ${catColor}20; color: ${catColor}">${anim.category}</span>
+            ${escapeHTML(anim.name)}
+            <span class="anim-card-category" style="background: ${catColor}20; color: ${catColor}">${escapeHTML(anim.category)}</span>
           </div>
-          <div class="anim-card-desc">${anim.description}</div>
+          <div class="anim-card-desc">${escapeHTML(anim.description)}</div>
           <div class="anim-card-tags">
-            <span class="anim-card-tag">.${anim.cssClass}</span>
+            <span class="anim-card-tag">.${escapeHTML(anim.cssClass)}</span>
           </div>
         </div>
       </div>
@@ -195,9 +322,15 @@
   }
 
   // ── Demo Element HTML ──
-  function getDemoHTML(anim) {
+  function getDemoHTML(anim, forceText) {
     const cls = anim.cssClass;
-    const animAttr = `data-animate="${cls}"`;
+    const animAttr = `data-animate="${escapeAttr(cls)}"`;
+    const customText = forceText || state.previewText;
+
+    // If user typed custom text, show it as animated text for ALL demo types
+    if (customText) {
+      return `<div class="demo-text ${cls}" ${animAttr}>${escapeHTML(customText)}</div>`;
+    }
 
     switch (anim.demoType) {
       case 'text':
@@ -228,7 +361,7 @@
   // ── Trigger Animation ──
   function triggerAnimation(el, className) {
     el.classList.remove(className);
-    void el.offsetWidth; // force reflow
+    void el.offsetWidth;
     el.classList.add(className);
   }
 
@@ -245,24 +378,55 @@
   }
 
   // ── Update Toolbar ──
-  function updateToolbar(count) {
-    const el = $('#toolbar-count');
-    if (el) el.textContent = `${count} animation${count !== 1 ? 's' : ''}`;
+  function updateToolbar(totalCount) {
+    const countEl = $('#toolbar-count');
+    const nameEl = $('#toolbar-category-name');
+
+    const visibleCount = Math.min(state.currentPage * state.pageSize, totalCount);
+
+    if (countEl) {
+      if (totalCount > state.pageSize) {
+        countEl.textContent = `Showing ${visibleCount} of ${totalCount}`;
+      } else {
+        countEl.textContent = `${totalCount} animation${totalCount !== 1 ? 's' : ''}`;
+      }
+    }
+
+    if (nameEl) {
+      if (state.activeCategory === 'all') {
+        nameEl.textContent = 'All Animations';
+      } else {
+        const cat = window.ANIMOTION_DATA.categories.find(c => c.id === state.activeCategory);
+        nameEl.textContent = cat ? cat.name : 'All Animations';
+      }
+    }
   }
 
   // ── Open Modal ──
+  let focusTrapCleanup = null;
+  let previousFocus = null;
+
   function openModal(id) {
     if (!window.ANIMOTION_DATA) return;
     const anim = window.ANIMOTION_DATA.animations.find(a => a.id === id);
     if (!anim) return;
 
+    // Lazy-inject styles for this animation
+    StyleManager.ensure([anim]);
+
     const overlay = $('#modal-overlay');
     if (!overlay) return;
 
-    const catColor = `var(--cat-${anim.category})`;
+    previousFocus = document.activeElement;
 
     // Fill modal content
     $('#modal-title').textContent = anim.name;
+
+    // Copy class button
+    const copyClassBtn = $('#modal-copy-class');
+    if (copyClassBtn) {
+      copyClassBtn.dataset.class = '.' + anim.cssClass;
+    }
 
     // Preview
     const previewArea = $('#modal-preview-area');
@@ -275,29 +439,35 @@
 
     // Meta
     $('#modal-meta').innerHTML = `
-      <span class="meta-chip"><strong>Category:</strong> ${anim.category}</span>
-      <span class="meta-chip"><strong>Duration:</strong> ${anim.duration}</span>
-      <span class="meta-chip"><strong>Easing:</strong> ${anim.timingFunction}</span>
-      <span class="meta-chip"><strong>Class:</strong> .${anim.cssClass}</span>
+      <span class="meta-chip"><strong>Category:</strong> ${escapeHTML(anim.category)}</span>
+      <span class="meta-chip"><strong>Duration:</strong> ${escapeHTML(anim.duration)}</span>
+      <span class="meta-chip"><strong>Easing:</strong> ${escapeHTML(anim.timingFunction)}</span>
+      <span class="meta-chip"><strong>Class:</strong> .${escapeHTML(anim.cssClass)}</span>
     `;
 
-    // CSS code
+    // CSS code with syntax highlighting
     const cssCode = `/* Keyframe */\n${anim.keyframeCSS}\n\n/* Usage */\n${anim.css}`;
-    $('#modal-css-code').textContent = cssCode;
+    $('#modal-css-code').innerHTML = highlightCSS(cssCode);
 
     // HTML code
     const htmlCode = `<!-- Add the animation class to any element -->\n<div class="${anim.cssClass}">Your content here</div>\n\n<!-- With utility classes -->\n<div class="${anim.cssClass} animotion-duration-1000 animotion-delay-200">\n  Your content here\n</div>`;
-    $('#modal-html-code').textContent = htmlCode;
+    $('#modal-html-code').innerHTML = highlightHTML(htmlCode);
 
-    // JS code (for programmatic use)
+    // JS code
     const jsCode = `// Trigger animation programmatically\nconst el = document.querySelector('.my-element');\nel.classList.add('${anim.cssClass}');\n\n// Replay animation\nfunction replayAnimation(element) {\n  element.classList.remove('${anim.cssClass}');\n  void element.offsetWidth; // force reflow\n  element.classList.add('${anim.cssClass}');\n}\n\n// Listen for animation end\nel.addEventListener('animationend', () => {\n  console.log('Animation complete!');\n});`;
-    $('#modal-js-code').textContent = jsCode;
+    $('#modal-js-code').innerHTML = highlightJS(jsCode);
 
     // Show CSS tab by default
     setModalTab('css');
 
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Update URL hash
+    history.pushState(null, '', '#/animation/' + anim.id);
+
+    // Focus trap
+    focusTrapCleanup = trapFocus(overlay.querySelector('.modal'));
   }
 
   // ── Close Modal ──
@@ -305,6 +475,49 @@
     const overlay = $('#modal-overlay');
     if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
+
+    if (focusTrapCleanup) {
+      focusTrapCleanup();
+      focusTrapCleanup = null;
+    }
+
+    if (previousFocus) {
+      previousFocus.focus();
+      previousFocus = null;
+    }
+
+    // Restore URL hash to category
+    if (state.activeCategory !== 'all') {
+      history.pushState(null, '', '#/category/' + state.activeCategory);
+    } else {
+      history.pushState(null, '', window.location.pathname);
+    }
+  }
+
+  // ── Focus Trap ──
+  function trapFocus(modal) {
+    const focusable = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusable.length === 0) return () => {};
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    function handleTab(e) {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    modal.addEventListener('keydown', handleTab);
+    first.focus();
+    return () => modal.removeEventListener('keydown', handleTab);
   }
 
   // ── Modal Tab Switch ──
@@ -322,7 +535,7 @@
     navigator.clipboard.writeText(text).then(() => {
       btnEl.classList.add('copied');
       const originalText = btnEl.innerHTML;
-      btnEl.innerHTML = '✓ Copied!';
+      btnEl.innerHTML = '&#10003; Copied!';
       setTimeout(() => {
         btnEl.classList.remove('copied');
         btnEl.innerHTML = originalText;
@@ -342,7 +555,93 @@
     setTimeout(() => toast.remove(), 3000);
   }
 
-  // ── PNG Animator ──
+  // ── Syntax Highlighting ──
+  function escapeHTML(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function escapeAttr(str) {
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function highlightCSS(code) {
+    let escaped = escapeHTML(code);
+    // Comments
+    escaped = escaped.replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="hl-comment">$1</span>');
+    // @keyframes, from, to
+    escaped = escaped.replace(/(@keyframes|@media)\b/g, '<span class="hl-keyword">$1</span>');
+    escaped = escaped.replace(/\b(from|to)\b(?=\s*\{)/g, '<span class="hl-keyword">$1</span>');
+    // Selectors (lines starting with . or @)
+    escaped = escaped.replace(/(^|\n)(\.[\w-]+)/g, '$1<span class="hl-selector">$2</span>');
+    // Properties
+    escaped = escaped.replace(/([\w-]+)(\s*:)/g, '<span class="hl-property">$1</span>$2');
+    // Values after colon
+    escaped = escaped.replace(/(:\s*)([^;{}\n]+)/g, '$1<span class="hl-value">$2</span>');
+    return escaped;
+  }
+
+  function highlightHTML(code) {
+    let escaped = escapeHTML(code);
+    // Comments
+    escaped = escaped.replace(/(&lt;!--[\s\S]*?--&gt;)/g, '<span class="hl-comment">$1</span>');
+    // Tags
+    escaped = escaped.replace(/(&lt;\/?)([\w-]+)/g, '$1<span class="hl-keyword">$2</span>');
+    // Attributes
+    escaped = escaped.replace(/([\w-]+)(=)/g, '<span class="hl-property">$1</span>$2');
+    // Strings
+    escaped = escaped.replace(/(&quot;[^&]*?&quot;)/g, '<span class="hl-string">$1</span>');
+    return escaped;
+  }
+
+  function highlightJS(code) {
+    let escaped = escapeHTML(code);
+    // Comments
+    escaped = escaped.replace(/(\/\/[^\n]*)/g, '<span class="hl-comment">$1</span>');
+    // Keywords
+    escaped = escaped.replace(/\b(const|let|var|function|return|if|else|new|void)\b/g, '<span class="hl-keyword">$1</span>');
+    // Strings
+    escaped = escaped.replace(/('(?:[^'\\]|\\.)*')/g, '<span class="hl-string">$1</span>');
+    // Methods
+    escaped = escaped.replace(/\.(querySelector|classList|add|remove|addEventListener|log|offsetWidth)\b/g, '.<span class="hl-property">$1</span>');
+    return escaped;
+  }
+
+  // ── URL Hash Routing ──
+  function handleRoute() {
+    const hash = location.hash;
+
+    // Allow native browser anchor scrolling for simple anchors like #app, #get-started
+    if (hash === '#app' || hash === '#get-started' || hash === '#hero') {
+      return; // Let the browser handle native anchor scrolling
+    }
+
+    const path = hash.slice(1) || '/';
+    const parts = path.split('/').filter(Boolean);
+
+    if (parts[0] === 'category' && parts[1]) {
+      state.activeCategory = parts[1];
+      $$('.cat-item').forEach(b => b.classList.toggle('active', b.dataset.cat === parts[1]));
+      filterAndRender();
+      scrollToApp();
+    } else if (parts[0] === 'animation' && parts[1]) {
+      filterAndRender();
+      setTimeout(() => openModal(parts[1]), 100);
+    } else {
+      state.activeCategory = 'all';
+      $$('.cat-item').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
+      filterAndRender();
+    }
+  }
+
+  function scrollToApp() {
+    const app = $('#app');
+    if (app) {
+      const top = app.getBoundingClientRect().top + window.scrollY - 64;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+
+  // ── PNG Animator (init) ──
   function initPNGAnimator() {
     const zone = $('#png-upload-zone');
     const input = $('#png-file-input');
@@ -351,22 +650,20 @@
 
     if (!zone || !input) return;
 
-    // Populate dropdown
     if (window.ANIMOTION_DATA && animSelect) {
       const { categories, animations } = window.ANIMOTION_DATA;
       let optHTML = '<option value="">Select an animation...</option>';
       categories.forEach(cat => {
         const catAnims = animations.filter(a => a.category === cat.id);
-        optHTML += `<optgroup label="${cat.name}">`;
+        optHTML += `<optgroup label="${escapeAttr(cat.name)}">`;
         catAnims.forEach(a => {
-          optHTML += `<option value="${a.cssClass}">${a.name}</option>`;
+          optHTML += `<option value="${escapeAttr(a.cssClass)}">${escapeHTML(a.name)}</option>`;
         });
         optHTML += '</optgroup>';
       });
       animSelect.innerHTML = optHTML;
     }
 
-    // Drag & drop
     zone.addEventListener('dragover', e => {
       e.preventDefault();
       zone.classList.add('dragover');
@@ -388,14 +685,15 @@
       if (e.target.files[0]) handleImageFile(e.target.files[0]);
     });
 
-    // Animation select change
     if (animSelect) {
       animSelect.addEventListener('change', () => {
         if (!preview) return;
-        // Remove all animotion classes
         const classes = [...preview.classList].filter(c => c.startsWith('animotion-'));
         classes.forEach(c => preview.classList.remove(c));
         if (animSelect.value) {
+          // Ensure styles are injected for this animation
+          const anim = window.ANIMOTION_DATA.animations.find(a => a.cssClass === animSelect.value);
+          if (anim) StyleManager.ensure([anim]);
           void preview.offsetWidth;
           preview.classList.add(animSelect.value);
         }
@@ -413,14 +711,12 @@
         preview.style.display = 'block';
       }
       if (container) container.style.display = 'flex';
-      // Show controls
       const controls = $('#png-controls');
       if (controls) controls.style.display = 'flex';
     };
     reader.readAsDataURL(file);
   }
 
-  // ── Export PNG Animation CSS ──
   function exportPNGCSS() {
     const animSelect = $('#png-anim-select');
     const durationInput = $('#png-duration');
@@ -444,7 +740,7 @@
     });
   }
 
-  // ── Bind Events ──
+  // ── Bind Events (all event delegation, no inline onclick) ──
   function bindEvents() {
     // Category clicks
     document.addEventListener('click', e => {
@@ -453,7 +749,53 @@
         $$('.cat-item').forEach(b => b.classList.remove('active'));
         catBtn.classList.add('active');
         state.activeCategory = catBtn.dataset.cat;
+        history.pushState(null, '', catBtn.dataset.cat === 'all' ? window.location.pathname : '#/category/' + catBtn.dataset.cat);
         filterAndRender();
+        scrollToApp();
+
+        // Close mobile sidebar
+        const sidebar = $('#sidebar');
+        const overlay = $('#sidebar-overlay');
+        if (sidebar) sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('active');
+        const toggle = $('#sidebar-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Card interactions (event delegation)
+    document.addEventListener('click', e => {
+      // Quick copy class
+      const copyBtn = e.target.closest('.anim-card-copy');
+      if (copyBtn) {
+        e.stopPropagation();
+        const className = copyBtn.dataset.class;
+        navigator.clipboard.writeText(className).then(() => {
+          showToast('Class name copied: ' + className);
+        });
+        return;
+      }
+
+      // Replay
+      const replayBtn = e.target.closest('.anim-card-replay');
+      if (replayBtn) {
+        e.stopPropagation();
+        const card = replayBtn.closest('.anim-card');
+        if (card) replay(card.dataset.id);
+        return;
+      }
+
+      // Open modal on card click
+      const card = e.target.closest('.anim-card');
+      if (card) {
+        openModal(card.dataset.id);
+        return;
+      }
+
+      // Load more button
+      if (e.target.closest('#load-more-btn')) {
+        loadNextPage();
+        return;
       }
     });
 
@@ -466,11 +808,12 @@
         debounce = setTimeout(() => {
           state.searchQuery = e.target.value;
           filterAndRender();
+          if (state.searchQuery) scrollToApp();
         }, 200);
       });
     }
 
-    // Keyboard shortcut for search
+    // Keyboard shortcuts
     document.addEventListener('keydown', e => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
@@ -495,8 +838,12 @@
     // View mode toggle
     $$('.view-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        $$('.view-btn').forEach(b => b.classList.remove('active'));
+        $$('.view-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-checked', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-checked', 'true');
         state.viewMode = btn.dataset.view;
         const grid = $('#anim-grid');
         if (grid) {
@@ -522,15 +869,40 @@
       tab.addEventListener('click', () => setModalTab(tab.dataset.tab));
     });
 
-    // Copy buttons
+    // Copy buttons (including get-started section)
     document.addEventListener('click', e => {
-      const copyBtn = e.target.closest('.copy-btn');
-      if (copyBtn) {
-        const target = copyBtn.dataset.target;
+      const btn = e.target.closest('.copy-btn');
+      if (btn) {
+        // If it has data-copy-text, use that (for get-started section)
+        if (btn.dataset.copyText) {
+          navigator.clipboard.writeText(btn.dataset.copyText).then(() => {
+            btn.classList.add('copied');
+            const orig = btn.innerHTML;
+            btn.innerHTML = '&#10003; Copied!';
+            setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = orig; }, 2000);
+            showToast('Copied to clipboard!');
+          });
+          return;
+        }
+        // Otherwise, copy from target code element
+        const target = btn.dataset.target;
         const codeEl = $(`#${target}`);
-        if (codeEl) copyCode(copyBtn, codeEl.textContent);
+        if (codeEl) copyCode(btn, codeEl.textContent);
       }
     });
+
+    // Modal copy class button
+    const modalCopyClass = $('#modal-copy-class');
+    if (modalCopyClass) {
+      modalCopyClass.addEventListener('click', () => {
+        const cls = modalCopyClass.dataset.class;
+        if (cls) {
+          navigator.clipboard.writeText(cls).then(() => {
+            showToast('Class name copied: ' + cls);
+          });
+        }
+      });
+    }
 
     // Modal replay
     const modalReplay = $('#modal-replay');
@@ -543,11 +915,14 @@
       });
     }
 
-    // Main tabs (Animations / Icons / PNG Animator)
+    // Main tabs
     $$('.main-tab').forEach(tab => {
       tab.addEventListener('click', () => {
         const tabName = tab.dataset.maintab;
-        $$('.main-tab').forEach(t => t.classList.toggle('active', t.dataset.maintab === tabName));
+        $$('.main-tab').forEach(t => {
+          t.classList.toggle('active', t.dataset.maintab === tabName);
+          t.setAttribute('aria-selected', t.dataset.maintab === tabName ? 'true' : 'false');
+        });
         $$('.tab-content').forEach(tc => tc.classList.toggle('active', tc.dataset.content === tabName));
         state.activeTab = tabName;
       });
@@ -564,12 +939,45 @@
       });
     }
 
-    // Sidebar toggle (mobile)
+    // Sidebar toggle (mobile) with overlay
     const sidebarToggle = $('#sidebar-toggle');
     const sidebar = $('#sidebar');
+    const sidebarOverlay = $('#sidebar-overlay');
+
     if (sidebarToggle && sidebar) {
       sidebarToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
+        const isOpen = sidebar.classList.toggle('open');
+        sidebarToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (sidebarOverlay) sidebarOverlay.classList.toggle('active', isOpen);
+      });
+    }
+
+    if (sidebarOverlay) {
+      sidebarOverlay.addEventListener('click', () => {
+        if (sidebar) sidebar.classList.remove('open');
+        sidebarOverlay.classList.remove('active');
+        if (sidebarToggle) sidebarToggle.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    // Preview text input
+    const previewTextInput = $('#preview-text-input');
+    const previewTextReset = $('#preview-text-reset');
+    if (previewTextInput) {
+      let previewDebounce;
+      previewTextInput.addEventListener('input', () => {
+        clearTimeout(previewDebounce);
+        previewDebounce = setTimeout(() => {
+          state.previewText = previewTextInput.value.trim();
+          renderGrid(state.filtered);
+        }, 300);
+      });
+    }
+    if (previewTextReset) {
+      previewTextReset.addEventListener('click', () => {
+        state.previewText = '';
+        if (previewTextInput) previewTextInput.value = '';
+        renderGrid(state.filtered);
       });
     }
 
@@ -579,6 +987,28 @@
     // Export PNG CSS
     const exportBtn = $('#png-export-btn');
     if (exportBtn) exportBtn.addEventListener('click', exportPNGCSS);
+
+    // Hash routing
+    window.addEventListener('hashchange', () => {
+      const hash = location.hash;
+      // Let browser handle native anchors
+      if (hash === '#app' || hash === '#get-started' || hash === '#hero') return;
+      if (!hash || hash === '#' || hash === '#/') {
+        state.activeCategory = 'all';
+        $$('.cat-item').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
+        filterAndRender();
+      } else if (hash.startsWith('#/category/')) {
+        const cat = hash.replace('#/category/', '');
+        if (cat !== state.activeCategory) {
+          state.activeCategory = cat;
+          $$('.cat-item').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+          filterAndRender();
+        }
+      } else if (hash.startsWith('#/animation/')) {
+        const id = hash.replace('#/animation/', '');
+        openModal(id);
+      }
+    });
   }
 
   // ── Public API ──
