@@ -3,12 +3,11 @@
 ### The largest open-source CSS3 animation library. 745+ animations, 9,500+ icons via MCP, zero dependencies.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://animotion.bachao.ai)
+[![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://animationiconsmcp.github.io)
 [![Icons](https://img.shields.io/badge/MCP_Icons-9,500+-06b6d4)](mcp/)
 [![MCP](https://img.shields.io/badge/MCP-v2.0-10b981)](mcp/)
-[![Deploy](https://img.shields.io/badge/Vercel-Deployed-000?logo=vercel)](https://animotion.bachao.ai)
 
-**[Live Demo](https://animotion.bachao.ai)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
+**[Live Demo](https://animationiconsmcp.github.io)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
 
 ---
 
@@ -44,9 +43,9 @@ Built for everyone — from manual coders to vibe coders, from junior developers
 Add these lines to your HTML `<head>`:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes-part2.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/utilities.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes-part2.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/utilities.css">
 ```
 
 Then use any animation class:
@@ -58,14 +57,14 @@ Then use any animation class:
 ### Option 2: Download
 
 ```bash
-git clone https://github.com/shouvikfullstack/css3-animations.git
+git clone https://github.com/animationiconsmcp/animationiconsmcp.github.io.git
 ```
 
 Include the CSS files from the `css/` folder in your project.
 
 ### Option 3: Copy from Website
 
-Visit [animotion.bachao.ai](https://animotion.bachao.ai), find your animation, hover to preview, click the card, and copy the CSS.
+Visit [animationiconsmcp.github.io](https://animationiconsmcp.github.io), find your animation, hover to preview, click the card, and copy the CSS.
 
 ---
 
@@ -338,12 +337,12 @@ Or handle it globally:
 
 ## API Reference
 
-Animotion provides a machine-readable JSON API at [`api.json`](https://animotion.bachao.ai/api.json) for programmatic access.
+Animotion provides a machine-readable JSON API at [`api.json`](https://animationiconsmcp.github.io/api.json) for programmatic access.
 
 ### Endpoint
 
 ```
-GET https://animotion.bachao.ai/api.json
+GET https://animationiconsmcp.github.io/api.json
 ```
 
 ### Response Schema
@@ -390,7 +389,7 @@ GET https://animotion.bachao.ai/api.json
 #### Fetch all animations in a category
 
 ```javascript
-const response = await fetch('https://animotion.bachao.ai/api.json');
+const response = await fetch('https://animationiconsmcp.github.io/api.json');
 const data = await response.json();
 
 // Get all loader animations
@@ -700,7 +699,7 @@ Upload any image (PNG, JPG, SVG, GIF) and apply any of the 745 animations to it.
 
 ### How to use
 
-1. Visit [the website](https://animotion.bachao.ai) and click **PNG Animator** tab
+1. Visit [the website](https://animationiconsmcp.github.io) and click **PNG Animator** tab
 2. Drag & drop your image or click to browse
 3. Select an animation from the dropdown (organized by category)
 4. Adjust duration, easing, and delay
@@ -936,8 +935,7 @@ Built by [Bachao.AI](https://bachao.ai) for the developer community.
 
 ## Links
 
-- **Website:** https://animotion.bachao.ai
-- **GitHub:** https://github.com/shouvikfullstack/css3-animations
-- **API JSON:** https://animotion.bachao.ai/api.json
-- **API Docs:** https://animotion.bachao.ai/docs/api.md
-- **GitHub Pages (mirror):** https://shouvikfullstack.github.io/css3-animations/
+- **Website:** https://animationiconsmcp.github.io
+- **GitHub:** https://github.com/animationiconsmcp/animationiconsmcp.github.io
+- **API JSON:** https://animationiconsmcp.github.io/api.json
+- **API Docs:** https://animationiconsmcp.github.io/docs/api.md
