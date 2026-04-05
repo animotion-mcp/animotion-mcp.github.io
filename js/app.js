@@ -19,6 +19,7 @@
     pageSize: 48,
     currentPage: 1,
     previewText: '',
+    animSpeed: 1,
   };
 
   // ── DOM Cache ──
@@ -206,6 +207,8 @@
     if (heroCount) heroCount.textContent = total;
     if (heroCatCount) heroCatCount.textContent = catCount;
     if (footerCount) footerCount.textContent = total + '+';
+    const heroIconCount = $('#hero-icon-count');
+    if (heroIconCount) heroIconCount.textContent = '9,000+';
   }
 
   // ── Filter & Render ──
@@ -278,6 +281,9 @@
     // Animations are already applied via CSS class — they start paused
     // and play on hover. No need for reflow hacks.
     requestAnimationFrame(() => {
+      if (state.animSpeed !== 1) {
+        applySpeed(state.animSpeed);
+      }
     });
 
     // Setup IntersectionObserver for infinite scroll
@@ -625,7 +631,7 @@
     const hash = location.hash;
 
     // Allow native browser anchor scrolling for simple anchors like #app, #get-started
-    if (hash === '#app' || hash === '#get-started' || hash === '#hero') {
+    if (hash === '#app' || hash === '#get-started' || hash === '#hero' || hash === '#mcp-section') {
       return; // Let the browser handle native anchor scrolling
     }
 
@@ -751,6 +757,23 @@
 
     navigator.clipboard.writeText(code).then(() => {
       showToast('CSS code copied! Paste it into your stylesheet.');
+    });
+  }
+
+  // ── Apply Animation Speed ──
+  function applySpeed(multiplier) {
+    const grid = $('#anim-grid');
+    if (!grid) return;
+    const elements = grid.querySelectorAll('[data-animate]');
+    elements.forEach(el => {
+      const computed = getComputedStyle(el);
+      const current = parseFloat(computed.animationDuration) || 1;
+      // Store original duration on first call
+      if (!el.dataset.origDuration) {
+        el.dataset.origDuration = current;
+      }
+      const orig = parseFloat(el.dataset.origDuration);
+      el.style.animationDuration = (orig / multiplier) + 's';
     });
   }
 
@@ -985,6 +1008,18 @@
       });
     }
 
+    // Speed slider
+    const speedSlider = $('#speed-slider');
+    const speedValue = $('#speed-value');
+    if (speedSlider) {
+      speedSlider.addEventListener('input', () => {
+        const speed = parseFloat(speedSlider.value);
+        state.animSpeed = speed;
+        if (speedValue) speedValue.textContent = speed + 'x';
+        applySpeed(speed);
+      });
+    }
+
     // Preview text input
     const previewTextInput = $('#preview-text-input');
     const previewTextReset = $('#preview-text-reset');
@@ -1017,7 +1052,7 @@
     window.addEventListener('hashchange', () => {
       const hash = location.hash;
       // Let browser handle native anchors
-      if (hash === '#app' || hash === '#get-started' || hash === '#hero') return;
+      if (hash === '#app' || hash === '#get-started' || hash === '#hero' || hash === '#mcp-section') return;
       if (!hash || hash === '#' || hash === '#/') {
         state.activeCategory = 'all';
         $$('.cat-item').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
