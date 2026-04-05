@@ -19,7 +19,7 @@
     pageSize: 48,
     currentPage: 1,
     previewText: '',
-    animSpeed: 1,
+    animSpeed: 0.5,
   };
 
   // ── DOM Cache ──
@@ -36,20 +36,21 @@
         this.baseEl = document.createElement('style');
         this.baseEl.id = 'animotion-base-styles';
         this.baseEl.textContent = `
-          /* Animations paused by default, play on card hover */
+          /* Animations auto-play, infinite loop, smooth */
           .anim-card-preview [data-animate] {
-            animation-play-state: paused !important;
-            will-change: transform, opacity;
-          }
-          .anim-card:hover .anim-card-preview [data-animate],
-          .anim-card.playing .anim-card-preview [data-animate] {
-            animation-play-state: running !important;
-          }
-          /* Auto-play mode when toggled */
-          .anim-grid.autoplay .anim-card-preview [data-animate] {
             animation-play-state: running !important;
             animation-iteration-count: infinite !important;
             animation-direction: alternate !important;
+            animation-timing-function: ease-in-out !important;
+            will-change: transform, opacity;
+          }
+          /* Paused mode (when autoplay toggled OFF) */
+          .anim-grid.paused .anim-card-preview [data-animate] {
+            animation-play-state: paused !important;
+          }
+          .anim-grid.paused .anim-card:hover .anim-card-preview [data-animate],
+          .anim-grid.paused .anim-card.playing .anim-card-preview [data-animate] {
+            animation-play-state: running !important;
           }
         `;
         document.head.appendChild(this.baseEl);
@@ -106,6 +107,12 @@
     renderStats();
     handleRoute();
     bindEvents();
+
+    // Set initial speed slider to 0.5x (smoother default)
+    const slider = $('#speed-slider');
+    const speedVal = $('#speed-value');
+    if (slider) slider.value = '0.5';
+    if (speedVal) speedVal.textContent = '0.5x';
   }
 
   // ── Theme ──
@@ -278,8 +285,7 @@
 
     grid.innerHTML = html;
 
-    // Animations are already applied via CSS class — they start paused
-    // and play on hover. No need for reflow hacks.
+    // Animations auto-play with infinite loop. Apply speed multiplier.
     requestAnimationFrame(() => {
       if (state.animSpeed !== 1) {
         applySpeed(state.animSpeed);
@@ -630,8 +636,8 @@
   function handleRoute() {
     const hash = location.hash;
 
-    // Allow native browser anchor scrolling for simple anchors like #app, #get-started
-    if (hash === '#app' || hash === '#get-started' || hash === '#hero' || hash === '#mcp-section') {
+    // Allow native browser anchor scrolling for simple anchors like #app, #manual-setup
+    if (hash === '#app' || hash === '#manual-setup' || hash === '#hero' || hash === '#mcp-section') {
       return; // Let the browser handle native anchor scrolling
     }
 
@@ -1023,14 +1029,14 @@
       });
     }
 
-    // Autoplay toggle
+    // Pause/Play toggle (animations auto-play by default)
     const autoplayBtn = $('#autoplay-toggle');
     if (autoplayBtn) {
       autoplayBtn.addEventListener('click', () => {
         const grid = $('#anim-grid');
-        const isActive = autoplayBtn.classList.toggle('active');
-        autoplayBtn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-        if (grid) grid.classList.toggle('autoplay', isActive);
+        const isPaused = autoplayBtn.classList.toggle('active');
+        autoplayBtn.setAttribute('aria-pressed', isPaused ? 'true' : 'false');
+        if (grid) grid.classList.toggle('paused', isPaused);
       });
     }
 
@@ -1078,7 +1084,7 @@
     window.addEventListener('hashchange', () => {
       const hash = location.hash;
       // Let browser handle native anchors
-      if (hash === '#app' || hash === '#get-started' || hash === '#hero' || hash === '#mcp-section') return;
+      if (hash === '#app' || hash === '#manual-setup' || hash === '#hero' || hash === '#mcp-section') return;
       if (!hash || hash === '#' || hash === '#/') {
         state.activeCategory = 'all';
         $$('.cat-item').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));

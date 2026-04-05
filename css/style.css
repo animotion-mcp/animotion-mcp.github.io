@@ -682,6 +682,36 @@ body::before {
   color: var(--text2);
 }
 
+/* ── MANUAL SETUP (collapsed bottom section) ── */
+.manual-setup {
+  padding: 40px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.manual-setup-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.manual-setup-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text2);
+}
+
+.manual-setup-subtitle {
+  font-size: 14px;
+  color: var(--text3);
+  margin-bottom: 24px;
+}
+
 /* ── LAYOUT ── */
 .app-layout {
   display: flex;
@@ -1205,7 +1235,13 @@ body::before {
 }
 
 /* Hover-to-play indicator */
+/* Play hint — hidden by default since animations auto-play */
 .anim-card-play-hint {
+  display: none;
+}
+
+/* Show play hint only when paused */
+.anim-grid.paused .anim-card-play-hint {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -1221,18 +1257,12 @@ body::before {
   font-weight: 600;
   letter-spacing: 0.3px;
   opacity: 0.7;
-  transition: opacity 0.2s;
   z-index: 4;
   pointer-events: none;
 }
 
-.anim-card:hover .anim-card-play-hint {
+.anim-grid.paused .anim-card:hover .anim-card-play-hint {
   opacity: 0;
-}
-
-/* When autoplay is on, hide play hint */
-.anim-grid.autoplay .anim-card-play-hint {
-  display: none;
 }
 
 /* Touch vs hover play hints */
