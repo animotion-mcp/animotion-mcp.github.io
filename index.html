@@ -11,6 +11,12 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://animationiconsmcp.github.io/">
   <link rel="canonical" href="https://animationiconsmcp.github.io/">
+  <meta property="og:image" content="https://animationiconsmcp.github.io/icons/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Animotion — CSS Animations, 9000+ Icons &amp; MCP Server for AI Agents">
+  <meta name="twitter:description" content="745+ CSS3 animations, 9,000+ SVG icons, and an MCP server for AI agents. Open source, zero dependencies.">
+  <meta name="twitter:image" content="https://animationiconsmcp.github.io/icons/og-image.png">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
 
   <!-- Fonts (non-blocking) -->
@@ -18,10 +24,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
 
-  <link rel="stylesheet" href="css/style.css?v=11">
-  <link rel="stylesheet" href="css/keyframes.css?v=11">
-  <link rel="stylesheet" href="css/keyframes-part2.css?v=11">
-  <link rel="stylesheet" href="css/utilities.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/keyframes.css?v=12">
+  <link rel="stylesheet" href="css/keyframes-part2.css?v=12">
+  <link rel="stylesheet" href="css/utilities.css?v=12">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -120,12 +126,13 @@
         <div class="install-card">
           <div class="install-card-header">
             <span class="install-label">CDN</span>
-            <button class="copy-btn" data-copy-text='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes.css"&gt;' aria-label="Copy CDN link">Copy</button>
+            <button class="copy-btn" data-copy-text='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes-part2.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/utilities.css"&gt;' aria-label="Copy CDN links">Copy</button>
           </div>
-          <pre class="install-code"><code>&lt;link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/
-  animationiconsmcp/animationiconsmcp.github.io
-  @main/css/keyframes.css"&gt;</code></pre>
+          <pre class="install-code"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes.css"&gt;
+&lt;link rel="stylesheet" href="...@main/css/keyframes-part2.css"&gt;
+&lt;link rel="stylesheet" href="...@main/css/utilities.css"&gt;</code></pre>
         </div>
 
         <!-- Usage -->
@@ -156,7 +163,7 @@
   <!-- MCP FOR AI AGENTS -->
   <section class="mcp-section" id="mcp-section">
     <div class="mcp-inner">
-      <div class="mcp-badge">USP</div>
+      <div class="mcp-badge">AI-Native</div>
       <h2 class="mcp-title">MCP Server for AI Agents</h2>
       <p class="mcp-subtitle">The first CSS animation library with a built-in Model Context Protocol server. Your AI coding assistant can search animations, grab SVG icons, and generate CSS — without hallucinating.</p>
 
@@ -190,14 +197,14 @@
           <div class="install-card">
             <div class="install-card-header">
               <span class="install-label">Claude / Cursor / Windsurf</span>
-              <button class="copy-btn" data-copy-text='{"mcpServers":{"animotion":{"command":"node","args":["mcp/server.js"],"cwd":"./animationiconsmcp.github.io"}}}' aria-label="Copy MCP config">Copy</button>
+              <button class="copy-btn" data-copy-text='{"mcpServers":{"animotion":{"command":"node","args":["mcp/server.js"],"cwd":"/path/to/animationiconsmcp.github.io"}}}' aria-label="Copy MCP config">Copy</button>
             </div>
             <pre class="install-code"><code>{
   "mcpServers": {
     "animotion": {
       "command": "node",
       "args": ["mcp/server.js"],
-      "cwd": "./animationiconsmcp.github.io"
+      "cwd": "/path/to/animationiconsmcp.github.io"
     }
   }
 }</code></pre>
@@ -377,22 +384,23 @@ npm install
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <p>
-          <strong>Animotion</strong> &mdash; <span id="footer-count">745+</span> CSS3 Animations & Icons.
-          Open Source, MIT Licensed.
-          Built with care by <a href="https://bachao.ai" target="_blank">Bachao.AI</a>
-        </p>
-        <p class="footer-links">
-          <a href="#mcp-section">MCP Server</a> &middot;
-          <a href="https://github.com/animationiconsmcp/animationiconsmcp.github.io" target="_blank">GitHub</a> &middot;
-          <a href="docs/api.md" target="_blank">API Docs</a> &middot;
-          <a href="api.json" target="_blank">api.json</a>
-        </p>
-      </footer>
     </main>
   </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      <strong>Animotion</strong> &mdash; <span id="footer-count">745+</span> CSS3 Animations & Icons.
+      Open Source, MIT Licensed.
+      Built with care by <a href="https://bachao.ai" target="_blank">Bachao.AI</a>
+    </p>
+    <p class="footer-links">
+      <a href="#mcp-section">MCP Server</a> &middot;
+      <a href="https://github.com/animationiconsmcp/animationiconsmcp.github.io" target="_blank">GitHub</a> &middot;
+      <a href="https://github.com/animationiconsmcp/animationiconsmcp.github.io/blob/main/docs/api.md" target="_blank">API Docs</a> &middot;
+      <a href="api.json" target="_blank">api.json</a>
+    </p>
+  </footer>
 
   <!-- CODE MODAL -->
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -472,11 +480,11 @@ npm install
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
   <!-- SCRIPTS -->
-  <script src="js/data.js?v=11"></script>
-  <script src="js/icons.js?v=11"></script>
-  <script src="js/icon-providers.js?v=11"></script>
-  <script src="js/app.js?v=11"></script>
-  <script src="js/icons-app.js?v=11"></script>
-  <script src="js/png-animator.js?v=11"></script>
+  <script src="js/data.js?v=12"></script>
+  <script src="js/icons.js?v=12"></script>
+  <script src="js/icon-providers.js?v=12"></script>
+  <script src="js/app.js?v=12"></script>
+  <script src="js/icons-app.js?v=12"></script>
+  <script src="js/png-animator.js?v=12"></script>
 </body>
 </html>

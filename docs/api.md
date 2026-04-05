@@ -1,15 +1,15 @@
 # Animotion API & Integration Guide
 
-> 1000+ CSS3 Animations & Icons — for humans and AI agents alike.
+> 745+ CSS3 Animations & Icons — for humans and AI agents alike.
 
 ## Quick Start
 
 ### CDN (Recommended)
 ```html
 <!-- Full library (all animations) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes-part2.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/utilities.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes-part2.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/utilities.css">
 ```
 
 ### Usage

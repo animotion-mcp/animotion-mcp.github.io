@@ -313,12 +313,12 @@
     const demoHTML = getDemoHTML(anim);
 
     return `
-      <div class="anim-card" data-id="${escapeAttr(anim.id)}">
+      <div class="anim-card" tabindex="0" role="button" data-id="${escapeAttr(anim.id)}">
         <div class="anim-card-preview" style="--card-cat-color: ${catColor}">
           ${demoHTML}
           <span class="anim-card-play-hint">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Hover to play
+            <span class="play-hint-desktop">Hover to play</span><span class="play-hint-touch">Tap to preview</span>
           </span>
           <button class="anim-card-replay" title="Replay" aria-label="Replay ${escapeAttr(anim.name)}">
             ${UI_ICONS.replay}
@@ -835,6 +835,32 @@
         return;
       }
     });
+
+    // Keyboard support for cards
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const card = e.target.closest('.anim-card');
+        if (card) {
+          e.preventDefault();
+          openModal(card.dataset.id);
+        }
+      }
+    });
+
+    // Touch: tap card to toggle play
+    if ('ontouchstart' in window) {
+      document.addEventListener('touchend', e => {
+        const card = e.target.closest('.anim-card');
+        if (card && !e.target.closest('.anim-card-copy') && !e.target.closest('.anim-card-replay')) {
+          const el = card.querySelector('[data-animate]');
+          if (el && !card.classList.contains('playing')) {
+            e.preventDefault();
+            card.classList.add('playing');
+            setTimeout(() => card.classList.remove('playing'), 2000);
+          }
+        }
+      });
+    }
 
     // Search
     const searchInput = $('#search-input');

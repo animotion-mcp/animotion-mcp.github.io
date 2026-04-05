@@ -1171,6 +1171,12 @@ body::before {
   box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25);
 }
 
+.anim-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  outline: none;
+}
+
 .anim-card-preview {
   height: 180px;
   display: flex;
@@ -1227,6 +1233,14 @@ body::before {
 /* When autoplay is on, hide play hint */
 .anim-grid.autoplay .anim-card-play-hint {
   display: none;
+}
+
+/* Touch vs hover play hints */
+.play-hint-touch { display: none; }
+
+@media (hover: none) {
+  .play-hint-desktop { display: none; }
+  .play-hint-touch { display: inline; }
 }
 
 /* Demo elements — bigger and bolder */
@@ -2147,6 +2161,8 @@ body::before {
   .hero-title-accent {
     font-size: 18px;
   }
+  .play-hint-desktop { display: none; }
+  .play-hint-touch { display: inline; }
 }
 
 @media (max-width: 480px) {
@@ -2192,13 +2208,13 @@ body::before {
 }
 
 /* ── FOOTER ── */
+/* Standalone footer */
 .footer {
-  padding: 24px;
   text-align: center;
+  padding: 32px 24px;
   border-top: 1px solid var(--border);
-  margin-top: 40px;
-  color: var(--text3);
   font-size: 13px;
+  color: var(--text3);
 }
 
 .footer a {
@@ -2206,10 +2222,12 @@ body::before {
   text-decoration: none;
 }
 
-.footer a:hover { text-decoration: underline; }
+.footer a:hover {
+  text-decoration: underline;
+}
 
 .footer-links {
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 /* ── PREFERS REDUCED MOTION ── */
