@@ -60,6 +60,27 @@
 - pulsemcp.com — checked submission process
 - mcpservers.org — form submission (CAPTCHA pending)
 
+## Session 2 Actions (continued ~17:30 – 18:45 IST)
+
+| # | Timestamp | Tool/Command | Target | What | Why | Result |
+|---|-----------|-------------|--------|------|-----|--------|
+| 31 | 17:30 IST | Agent (search) | web | Search for all MCP registries beyond known 4 | Maximize distribution | Found 20+ directories |
+| 32 | 17:35 IST | gh issue create (agent) | cline/mcp-marketplace | Submit to Cline MCP Marketplace | Registry listing | Issue #1248 created |
+| 33 | 17:35 IST | gh api (agent) | appcypher/awesome-mcp-servers | Fork + branch + edit README | Secondary awesome list | Branch ready, PRs disabled by repo owner |
+| 34 | 17:35 IST | gh api (agent) | wong2/awesome-mcp-servers | Fork + branch + edit README | Secondary awesome list | Branch ready, PRs disabled by repo owner |
+| 35 | 17:40 IST | Browser | glama.ai | Sign up ceo@bachao.ai, submit animotion-mcp server | Glama registry | Submitted for review |
+| 36 | 17:45 IST | Browser | smithery.ai | Check publish form | Smithery registry | Not compatible (requires hosted HTTP endpoint) |
+| 37 | 17:50 IST | Browser | pulsemcp.com/submit | Check submission | PulseMCP directory | Ingests from Official MCP Registry only |
+| 38 | 17:55 IST | Browser | mcpservers.org/submit | Fill form | MCPServers.org | Paid listing — skipped |
+| 39 | 18:00 IST | Write | mcp/Dockerfile | Add Dockerfile for Glama checks | Glama server verification | Committed (faa647d) |
+| 40 | 18:05 IST | Browser | glama.ai/mcp/servers/animotion-mcp/... | Check Glama page, verify badge URL | Confirm listing | Listed, badge SVG live (scores pending) |
+| 41 | 18:10 IST | gh api PUT | ceo-shouvik/awesome-mcp-servers | Fix PR #4197: entry name → owner/repo format + add Glama badge | Maintainer requested fixes | Commit 172236c pushed, PR updated |
+| 42 | 18:15 IST | gh api POST comment | punkpeye/awesome-mcp-servers#4197 | Comment notifying fixes done | Maintainer review | Comment posted |
+| 43 | 18:20 IST | Write | mcp.json (repo root) | Add mcp.json for Cursor Directory Open Plugins standard | Cursor Directory auto-detect | Committed (4cdbf21) |
+| 44 | 18:25 IST | Browser | cursor.directory/plugins/new | Login via GitHub OAuth, scan repo, fill form, publish | Cursor Directory listing | Published at cursor.directory/plugins/animotion-mcp |
+| 45 | 18:30 IST | Browser | reddit.com | Attempt Reddit post | Launch post | Blocked by Chrome extension safety restriction |
+| 46 | 18:35 IST | xclip | clipboard | Copy Reddit post content to clipboard for manual posting | User to post manually | Copied |
+
 ## Key Outcomes
 1. **GitHub org migrated**: animationiconsmcp → animotion-mcp (Dhisattva AI Pvt Ltd)
 2. **Site live**: https://animotion-mcp.github.io/ (HTTP 200)
@@ -69,9 +90,13 @@
 6. **Google Search Console**: verified, sitemap submitted, indexing requested
 7. **Dev.to article**: published
 8. **Twitter/X**: posted from @CEOShouvik
-9. **awesome-mcp-servers PR #4197**: needs Glama badge + entry name fix
-10. **Glama**: submitted for review
+9. **awesome-mcp-servers PR #4197**: updated with Glama badge + owner/repo name, waiting merge
+10. **Glama**: listed, badge live, scores pending evaluation
 11. **mcp.so issue #1512**: submitted
 12. **Cline Marketplace issue #1248**: submitted
-13. **appcypher + wong2 awesome lists**: branches ready, PRs need manual creation
-14. **MCPServers.org**: form filled, needs CAPTCHA
+13. **Cursor Directory**: published at cursor.directory/plugins/animotion-mcp
+14. **appcypher + wong2 awesome lists**: PRs disabled by repo owners — dead end
+15. **MCPServers.org**: paid listing — skipped
+16. **Smithery**: not compatible (needs hosted HTTP)
+17. **PulseMCP**: ingests from Official MCP Registry only
+18. **Reddit**: blocked by Chrome extension, content in clipboard for manual post
