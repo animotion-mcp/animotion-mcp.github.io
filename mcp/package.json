@@ -12,6 +12,9 @@
     "directory": "mcp"
   },
   "homepage": "https://animationiconsmcp.github.io",
+  "engines": {
+    "node": ">=18"
+  },
   "keywords": [
     "mcp",
     "model-context-protocol",

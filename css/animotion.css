@@ -1,0 +1,748 @@
+/* Animotion — CSS Animation Classes (auto-generated) */
+/* https://animationiconsmcp.github.io */
+
+.animotion-fade-in { animation: animotion-fadeIn 0.6s ease-out both; }
+.animotion-fade-in-down { animation: animotion-fadeInDown 0.6s ease-out both; }
+.animotion-fade-in-up { animation: animotion-fadeInUp 0.6s ease-out both; }
+.animotion-fade-in-left { animation: animotion-fadeInLeft 0.6s ease-out both; }
+.animotion-fade-in-right { animation: animotion-fadeInRight 0.6s ease-out both; }
+.animotion-fade-in-down-big { animation: animotion-fadeInDownBig 0.8s ease-out both; }
+.animotion-fade-in-up-big { animation: animotion-fadeInUpBig 0.8s ease-out both; }
+.animotion-fade-in-left-big { animation: animotion-fadeInLeftBig 0.8s ease-out both; }
+.animotion-fade-in-right-big { animation: animotion-fadeInRightBig 0.8s ease-out both; }
+.animotion-fade-in-top-left { animation: animotion-fadeInTopLeft 0.6s ease-out both; }
+.animotion-fade-in-top-right { animation: animotion-fadeInTopRight 0.6s ease-out both; }
+.animotion-fade-in-bottom-left { animation: animotion-fadeInBottomLeft 0.6s ease-out both; }
+.animotion-fade-in-bottom-right { animation: animotion-fadeInBottomRight 0.6s ease-out both; }
+.animotion-slide-in-down { animation: animotion-slideInDown 0.5s ease-out both; }
+.animotion-slide-in-up { animation: animotion-slideInUp 0.5s ease-out both; }
+.animotion-slide-in-left { animation: animotion-slideInLeft 0.5s ease-out both; }
+.animotion-slide-in-right { animation: animotion-slideInRight 0.5s ease-out both; }
+.animotion-zoom-in { animation: animotion-zoomIn 0.5s ease-out both; }
+.animotion-zoom-in-down { animation: animotion-zoomInDown 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+.animotion-zoom-in-up { animation: animotion-zoomInUp 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+.animotion-zoom-in-left { animation: animotion-zoomInLeft 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+.animotion-zoom-in-right { animation: animotion-zoomInRight 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+.animotion-flip-in-x { animation: animotion-flipInX 0.6s ease-in both; backface-visibility: visible; }
+.animotion-flip-in-y { animation: animotion-flipInY 0.6s ease-in both; backface-visibility: visible; }
+.animotion-rotate-in { animation: animotion-rotateIn 0.6s ease-out both; }
+.animotion-rotate-in-down-left { animation: animotion-rotateInDownLeft 0.6s ease-out both; }
+.animotion-rotate-in-down-right { animation: animotion-rotateInDownRight 0.6s ease-out both; }
+.animotion-rotate-in-up-left { animation: animotion-rotateInUpLeft 0.6s ease-out both; }
+.animotion-rotate-in-up-right { animation: animotion-rotateInUpRight 0.6s ease-out both; }
+.animotion-bounce-in { animation: animotion-bounceIn 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+.animotion-bounce-in-down { animation: animotion-bounceInDown 0.8s ease-out both; }
+.animotion-bounce-in-up { animation: animotion-bounceInUp 0.8s ease-out both; }
+.animotion-bounce-in-left { animation: animotion-bounceInLeft 0.8s ease-out both; }
+.animotion-bounce-in-right { animation: animotion-bounceInRight 0.8s ease-out both; }
+.animotion-light-speed-in-left { animation: animotion-lightSpeedInLeft 0.5s ease-out both; }
+.animotion-light-speed-in-right { animation: animotion-lightSpeedInRight 0.5s ease-out both; }
+.animotion-roll-in { animation: animotion-rollIn 0.8s ease-out both; }
+.animotion-jack-in-the-box { animation: animotion-jackInTheBox 0.8s ease both; }
+.animotion-hinge { animation: animotion-hinge 2s ease-in-out both; transform-origin: top left; }
+.animotion-blur-reveal { animation: animotion-blurReveal 0.6s ease-out both; }
+.animotion-clip-wipe-left { animation: animotion-clipWipeLeft 0.6s ease-in-out both; }
+.animotion-clip-wipe-top { animation: animotion-clipWipeTop 0.6s ease-in-out both; }
+.animotion-clip-wipe-right { animation: animotion-clipWipeRight 0.6s ease-in-out both; }
+.animotion-clip-wipe-bottom { animation: animotion-clipWipeBottom 0.6s ease-in-out both; }
+.animotion-circle-reveal { animation: animotion-circleReveal 0.7s ease-out both; }
+.animotion-iris-wipe { animation: animotion-irisWipe 0.7s ease-in-out both; }
+.animotion-text-wipe { animation: animotion-textWipe 0.6s ease-in-out both; overflow: hidden; }
+.animotion-drop-in { animation: animotion-dropIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-swing-in { animation: animotion-swingIn 0.8s ease-out both; transform-origin: top center; }
+.animotion-expand-in { animation: animotion-expandIn 0.5s ease-out both; }
+.animotion-unfold-in { animation: animotion-unfoldIn 0.6s ease-out both; }
+.animotion-pop-in { animation: animotion-popIn 0.4s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }
+.animotion-scale-reveal { animation: animotion-scaleReveal 0.5s ease-out both; }
+.animotion-morph-in { animation: animotion-morphIn 0.7s ease-out both; }
+.animotion-spiral-in { animation: animotion-spiralIn 0.8s ease-out both; }
+.animotion-swoop-in { animation: animotion-swoopIn 0.6s ease-out both; }
+.animotion-curtain-up { animation: animotion-curtainUp 0.7s ease-in-out both; overflow: hidden; }
+.animotion-curtain-down { animation: animotion-curtainDown 0.7s ease-in-out both; overflow: hidden; }
+.animotion-door-open { animation: animotion-doorOpen 0.8s ease-out both; transform-origin: left center; perspective: 800px; }
+.animotion-peel-in { animation: animotion-peelIn 0.8s ease-out both; transform-origin: bottom left; }
+.animotion-type-reveal-in { animation: animotion-typeRevealIn 1.5s steps(20, end) both; overflow: hidden; white-space: nowrap; }
+.animotion-elastic-in { animation: animotion-elasticIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }
+.animotion-spring-in { animation: animotion-springIn 0.9s ease-out both; }
+.animotion-telegraph-in { animation: animotion-telegraphIn 0.6s steps(5, end) both; }
+.animotion-vortex-in { animation: animotion-vortexIn 1s ease-out both; }
+.animotion-fade-out { animation: animotion-fadeOut 0.6s ease-in both; }
+.animotion-fade-out-down { animation: animotion-fadeOutDown 0.6s ease-in both; }
+.animotion-fade-out-up { animation: animotion-fadeOutUp 0.6s ease-in both; }
+.animotion-fade-out-left { animation: animotion-fadeOutLeft 0.6s ease-in both; }
+.animotion-fade-out-right { animation: animotion-fadeOutRight 0.6s ease-in both; }
+.animotion-fade-out-down-big { animation: animotion-fadeOutDownBig 0.8s ease-in both; }
+.animotion-fade-out-up-big { animation: animotion-fadeOutUpBig 0.8s ease-in both; }
+.animotion-fade-out-left-big { animation: animotion-fadeOutLeftBig 0.8s ease-in both; }
+.animotion-fade-out-right-big { animation: animotion-fadeOutRightBig 0.8s ease-in both; }
+.animotion-slide-out-down { animation: animotion-slideOutDown 0.5s ease-in both; }
+.animotion-slide-out-up { animation: animotion-slideOutUp 0.5s ease-in both; }
+.animotion-slide-out-left { animation: animotion-slideOutLeft 0.5s ease-in both; }
+.animotion-slide-out-right { animation: animotion-slideOutRight 0.5s ease-in both; }
+.animotion-zoom-out { animation: animotion-zoomOut 0.5s ease-in both; }
+.animotion-zoom-out-down { animation: animotion-zoomOutDown 0.6s ease-in both; }
+.animotion-zoom-out-up { animation: animotion-zoomOutUp 0.6s ease-in both; }
+.animotion-zoom-out-left { animation: animotion-zoomOutLeft 0.6s ease-in both; }
+.animotion-zoom-out-right { animation: animotion-zoomOutRight 0.6s ease-in both; }
+.animotion-flip-out-x { animation: animotion-flipOutX 0.5s ease-in both; backface-visibility: visible; }
+.animotion-flip-out-y { animation: animotion-flipOutY 0.5s ease-in both; backface-visibility: visible; }
+.animotion-rotate-out { animation: animotion-rotateOut 0.6s ease-in both; }
+.animotion-rotate-out-down-left { animation: animotion-rotateOutDownLeft 0.6s ease-in both; }
+.animotion-rotate-out-down-right { animation: animotion-rotateOutDownRight 0.6s ease-in both; }
+.animotion-rotate-out-up-left { animation: animotion-rotateOutUpLeft 0.6s ease-in both; }
+.animotion-rotate-out-up-right { animation: animotion-rotateOutUpRight 0.6s ease-in both; }
+.animotion-bounce-out { animation: animotion-bounceOut 0.75s ease-in both; }
+.animotion-bounce-out-down { animation: animotion-bounceOutDown 0.8s ease-in both; }
+.animotion-bounce-out-up { animation: animotion-bounceOutUp 0.8s ease-in both; }
+.animotion-bounce-out-left { animation: animotion-bounceOutLeft 0.8s ease-in both; }
+.animotion-bounce-out-right { animation: animotion-bounceOutRight 0.8s ease-in both; }
+.animotion-light-speed-out-left { animation: animotion-lightSpeedOutLeft 0.5s ease-in both; }
+.animotion-light-speed-out-right { animation: animotion-lightSpeedOutRight 0.5s ease-in both; }
+.animotion-roll-out { animation: animotion-rollOut 0.8s ease-in both; }
+.animotion-blur-out { animation: animotion-blurOut 0.6s ease-in both; }
+.animotion-circle-collapse { animation: animotion-circleCollapse 0.7s ease-in both; }
+.animotion-shrink-out { animation: animotion-shrinkOut 0.5s ease-in both; }
+.animotion-pop-out { animation: animotion-popOut 0.4s ease-in both; }
+.animotion-fold-out { animation: animotion-foldOut 0.5s ease-in both; transform-origin: top; }
+.animotion-spiral-out { animation: animotion-spiralOut 0.8s ease-in both; }
+.animotion-swoop-out { animation: animotion-swoopOut 0.6s ease-in both; }
+.animotion-door-close { animation: animotion-doorClose 0.8s ease-in both; transform-origin: left center; }
+.animotion-peel-out { animation: animotion-peelOut 0.8s ease-in both; transform-origin: top right; }
+.animotion-elastic-out { animation: animotion-elasticOut 0.8s ease-in both; }
+.animotion-vortex-out { animation: animotion-vortexOut 1s ease-in both; }
+.animotion-clip-wipe-out-left { animation: animotion-clipWipeOutLeft 0.6s ease-in-out both; }
+.animotion-clip-wipe-out-top { animation: animotion-clipWipeOutTop 0.6s ease-in-out both; }
+.animotion-curtain-close { animation: animotion-curtainClose 0.7s ease-in-out both; }
+.animotion-dissolve-out { animation: animotion-dissolveOut 0.8s ease-in both; }
+.animotion-collapse-out { animation: animotion-collapseOut 0.5s ease-in both; }
+.animotion-dimension-out { animation: animotion-dimensionOut 0.7s ease-in both; }
+.animotion-bounce { animation: animotion-bounce 1s ease infinite; }
+.animotion-flash { animation: animotion-flash 1s ease-in-out infinite; }
+.animotion-pulse { animation: animotion-pulse 1s ease-in-out infinite; }
+.animotion-rubber-band { animation: animotion-rubberBand 1s ease-in-out both; }
+.animotion-shake-x { animation: animotion-shakeX 0.8s ease-in-out both; }
+.animotion-shake-y { animation: animotion-shakeY 0.8s ease-in-out both; }
+.animotion-head-shake { animation: animotion-headShake 1s ease-in-out both; }
+.animotion-swing { animation: animotion-swing 1s ease-in-out both; transform-origin: top center; }
+.animotion-tada { animation: animotion-tada 1s ease-in-out both; }
+.animotion-wobble { animation: animotion-wobble 1s ease-in-out both; }
+.animotion-jello { animation: animotion-jello 1s ease-in-out both; }
+.animotion-heartbeat { animation: animotion-heartbeat 1.3s ease-in-out infinite; }
+.animotion-spin { animation: animotion-spin 1s linear infinite; }
+.animotion-wiggle { animation: animotion-wiggle 0.5s ease-in-out infinite; }
+.animotion-float { animation: animotion-float 3s ease-in-out infinite; }
+.animotion-breathe { animation: animotion-breathe 4s ease-in-out infinite; }
+.animotion-nod { animation: animotion-nod 0.6s ease-in-out 2 both; transform-origin: bottom center; }
+.animotion-tilt { animation: animotion-tilt 0.6s ease-in-out both; }
+.animotion-blink { animation: animotion-blink 1s steps(2, start) infinite; }
+.animotion-snap { animation: animotion-snap 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }
+.animotion-vibrate { animation: animotion-vibrate 0.3s linear infinite; }
+.animotion-twitch { animation: animotion-twitch 0.4s ease-in-out 3 both; }
+.animotion-sway { animation: animotion-sway 2s ease-in-out infinite; }
+.animotion-rock { animation: animotion-rock 1.5s ease-in-out infinite; transform-origin: center bottom; }
+.animotion-pendulum { animation: animotion-pendulum 2s ease-in-out infinite; transform-origin: top center; }
+.animotion-tremble { animation: animotion-tremble 0.2s linear infinite; }
+.animotion-quiver { animation: animotion-quiver 0.3s ease-in-out infinite; }
+.animotion-pulsate-ring { animation: animotion-pulsateRing 1.5s ease-out infinite; }
+.animotion-ripple-attention { animation: animotion-rippleAttention 1s ease-out infinite; }
+.animotion-glow-pulse { animation: animotion-glowPulse 2s ease-in-out infinite; }
+.animotion-border-pulse { animation: animotion-borderPulse 1.5s ease-in-out infinite; border: 2px solid #3b82f6; }
+.animotion-shadow-pulse { animation: animotion-shadowPulse 2s ease-in-out infinite; }
+.animotion-color-shift { animation: animotion-colorShift 3s linear infinite; }
+.animotion-skew-bounce { animation: animotion-skewBounce 0.8s ease-in-out both; }
+.animotion-stretch-x { animation: animotion-stretchX 0.8s ease-in-out both; }
+.animotion-stretch-y { animation: animotion-stretchY 0.8s ease-in-out both; }
+.animotion-squish { animation: animotion-squish 0.6s ease-in-out both; }
+.animotion-pop-attention { animation: animotion-popAttention 0.3s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }
+.animotion-flicker-attention { animation: animotion-flickerAttention 1.5s linear infinite; }
+.animotion-buzz-attention { animation: animotion-buzzAttention 0.15s linear infinite; }
+.animotion-typewriter { animation: animotion-typewriter 2s steps(30, end) both; overflow: hidden; white-space: nowrap; border-right: 2px solid; }
+.animotion-shimmer-text { background: linear-gradient(90deg, #333 0%, #fff 50%, #333 100%); background-size: 200% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: animotion-shimmerText 2s linear infinite; }
+.animotion-gradient-text { background: linear-gradient(270deg, #3b82f6, #8b5cf6, #ef4444, #f59e0b, #3b82f6); background-size: 400% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: animotion-gradientText 3s linear infinite; }
+.animotion-glitch-text { position: relative; animation: animotion-glitchText 0.5s steps(2, end) infinite; }
+.animotion-rgb-split { animation: animotion-rgbSplit 2s ease-in-out infinite; }
+.animotion-neon-flicker { color: #fff; animation: animotion-neonFlicker 1.5s ease-in-out infinite; }
+.animotion-text-wipe-reveal { animation: animotion-textWipeReveal 0.8s ease-in-out both; }
+.animotion-text-split { animation: animotion-textSplit 0.6s ease-out both; }
+.animotion-letter-wave { display: inline-block; animation: animotion-letterWave 1.5s ease-in-out infinite; }
+.animotion-char-wave { display: inline-block; animation: animotion-charWave 2s ease-in-out infinite; }
+.animotion-blur-reveal-text { animation: animotion-blurRevealText 0.8s ease-out both; }
+.animotion-zoom-text { animation: animotion-zoomText 0.6s ease-out both; }
+.animotion-flip-text-3d { animation: animotion-flipText3D 0.8s ease-out both; perspective: 600px; }
+.animotion-outlined-pulsing { -webkit-text-stroke: 1px currentColor; animation: animotion-outlinedPulsing 2s ease-in-out infinite; }
+.animotion-rainbow-text { animation: animotion-rainbowText 3s linear infinite; }
+.animotion-text-trail { animation: animotion-textTrail 2s ease-in-out infinite; }
+.animotion-text-pop { animation: animotion-textPop 0.4s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }
+.animotion-marquee-scroll { animation: animotion-marqueeScroll 10s linear infinite; white-space: nowrap; }
+.animotion-text-cascade { display: inline-block; animation: animotion-textCascade 0.6s ease-out both; }
+.animotion-text-scramble { animation: animotion-textScramble 1s steps(10, end) both; }
+.animotion-shadow-expand { animation: animotion-shadowExpand 0.6s ease-out both; }
+.animotion-word-flip-carousel { display: inline-block; animation: animotion-wordFlipCarousel 0.6s ease-in-out both; }
+.animotion-typing-cursor { border-right: 2px solid currentColor; animation: animotion-typingCursor 1s steps(1) infinite; }
+.animotion-gradient-border-text { border: 2px solid transparent; background-clip: padding-box; animation: animotion-gradientBorderText 3s linear infinite; }
+.animotion-stagger-cascade { animation: animotion-staggerCascade 0.5s ease-out both; }
+.animotion-text-slide-up-reveal { overflow: hidden; animation: animotion-textSlideUpReveal 0.6s ease-out both; }
+.animotion-ink-drop-text { animation: animotion-inkDropText 0.8s ease-out both; }
+.animotion-text-glitch-clone { animation: animotion-textGlitchClone 0.8s steps(2, end) infinite; }
+.animotion-counter-roll { display: inline-block; overflow: hidden; animation: animotion-counterRoll 1s ease-out both; }
+.animotion-text-breathe { animation: animotion-textBreathe 4s ease-in-out infinite; }
+.animotion-text-float { animation: animotion-textFloat 3s ease-in-out infinite; }
+.animotion-text-bounce { display: inline-block; animation: animotion-textBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; }
+.animotion-text-elastic { display: inline-block; animation: animotion-textElastic 1s ease-in-out both; }
+.animotion-text-spring { animation: animotion-textSpring 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-text-morph { animation: animotion-textMorph 3s ease-in-out infinite; }
+.animotion-text-reveal-mask { animation: animotion-textRevealMask 0.8s ease-in-out both; }
+.animotion-text-fade-words { animation: animotion-textFadeWords 0.5s ease-out both; }
+.animotion-text-highlight { animation: animotion-textHighlight 0.8s ease-in-out both; background-size: 200% 100%; background-image: linear-gradient(to right, transparent 50%, #fde68a 50%); }
+.animotion-text-stroke { -webkit-text-stroke: 2px currentColor; -webkit-text-fill-color: transparent; animation: animotion-textStroke 1.5s ease-in-out both; }
+.animotion-text-shadow-dance { animation: animotion-textShadowDance 2s ease-in-out infinite; }
+.animotion-text-perspective { animation: animotion-textPerspective 3s ease-in-out infinite; perspective: 600px; }
+.animotion-text-wobble { display: inline-block; animation: animotion-textWobble 1s ease-in-out both; }
+.animotion-text-zigzag { display: inline-block; animation: animotion-textZigzag 2s linear infinite; }
+.animotion-text-spiral { display: inline-block; animation: animotion-textSpiral 1s ease-out both; }
+.animotion-text-rain { display: inline-block; animation: animotion-textRain 0.5s cubic-bezier(0.55, 0, 1, 0.45) both; }
+.animotion-text-explode { animation: animotion-textExplode 0.6s ease-out both; }
+.animotion-text-assemble { animation: animotion-textAssemble 0.8s ease-out both; }
+.animotion-text-matrix { color: #00ff00; font-family: monospace; animation: animotion-textMatrix 0.6s steps(5, end) both; }
+.animotion-text-hologram { animation: animotion-textHologram 2s linear infinite; }
+.animotion-typewriter-delete { animation: animotion-typewriterDelete 2s steps(30, end) both; overflow: hidden; white-space: nowrap; border-right: 2px solid; }
+.animotion-gradient-shift { background: linear-gradient(270deg, #3b82f6, #8b5cf6, #ef4444, #f59e0b); background-size: 400% 400%; animation: animotion-gradientShift 4s ease-in-out infinite; }
+.animotion-aurora { background: linear-gradient(135deg, #0c3547, #134e5e, #1a6b4e, #71b280, #134e5e); background-size: 400% 400%; animation: animotion-aurora 6s ease-in-out infinite; }
+.animotion-mesh-gradient { background: radial-gradient(at 40% 20%, #3b82f6 0%, transparent 50%), radial-gradient(at 80% 0%, #8b5cf6 0%, transparent 50%), radial-gradient(at 0% 50%, #ef4444 0%, transparent 50%), radial-gradient(at 80% 80%, #10b981 0%, transparent 50%), radial-gradient(at 0% 100%, #f59e0b 0%, transparent 50%); background-size: 200% 200%; animation: animotion-meshGradient 8s ease-in-out infinite; }
+.animotion-animated-grid { background-image: linear-gradient(rgba(59,130,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px); background-size: 30px 30px; animation: animotion-animatedGrid 3s ease-in-out infinite; }
+.animotion-dot-grid-pulse { background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px); background-size: 20px 20px; animation: animotion-dotGridPulse 2s ease-in-out infinite; }
+.animotion-starfield { background: #0a0a2e; background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent), radial-gradient(2px 2px at 40px 70px, #fff, transparent), radial-gradient(1px 1px at 90px 40px, #fff, transparent), radial-gradient(1px 1px at 130px 80px, #fff, transparent), radial-gradient(2px 2px at 160px 30px, #fff, transparent); background-size: 200px 100px; animation: animotion-starfield 3s linear infinite; }
+.animotion-bokeh-circles { background: radial-gradient(circle at 20% 50%, rgba(59,130,246,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 30%, rgba(139,92,246,0.3) 0%, transparent 40%), radial-gradient(circle at 50% 80%, rgba(245,158,11,0.3) 0%, transparent 45%); animation: animotion-bokehCircles 5s ease-in-out infinite; }
+.animotion-plasma { background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #06d6a0, #ff006e); background-size: 300% 300%; animation: animotion-plasma 6s ease-in-out infinite; }
+.animotion-matrix-rain { background: #000 repeating-linear-gradient(0deg, rgba(0,255,0,0.15) 0px, rgba(0,255,0,0.15) 1px, transparent 1px, transparent 20px); background-size: 20px 20px; animation: animotion-matrixRain 2s linear infinite; }
+.animotion-conic-spin { background: conic-gradient(from 0deg, #3b82f6, #8b5cf6, #ef4444, #f59e0b, #3b82f6); animation: animotion-conicSpin 3s linear infinite; }
+.animotion-wave-blob { background: #3b82f6; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation: animotion-waveBlob 8s ease-in-out infinite; }
+.animotion-ripple-expand { background: radial-gradient(circle, transparent 30%, rgba(59,130,246,0.3) 31%, transparent 32%); background-size: 100% 100%; animation: animotion-rippleExpand 2s ease-out infinite; }
+.animotion-circuit-board { background: #0a0a2e; background-image: linear-gradient(rgba(59,130,246,0.2) 2px, transparent 2px), linear-gradient(90deg, rgba(59,130,246,0.2) 2px, transparent 2px), linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px); background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px; animation: animotion-circuitBoard 3s linear infinite; }
+.animotion-confetti-rain { background-image: radial-gradient(circle, #ff6b6b 2px, transparent 2px), radial-gradient(circle, #ffd93d 2px, transparent 2px), radial-gradient(circle, #6bcb77 2px, transparent 2px), radial-gradient(circle, #4d96ff 2px, transparent 2px); background-size: 60px 80px, 70px 90px, 80px 70px, 50px 100px; animation: animotion-confettiRain 3s linear infinite; }
+.animotion-bubble-float { background-image: radial-gradient(circle at 30% 80%, rgba(59,130,246,0.3) 10px, transparent 10px), radial-gradient(circle at 70% 60%, rgba(139,92,246,0.2) 15px, transparent 15px), radial-gradient(circle at 50% 90%, rgba(16,185,129,0.25) 8px, transparent 8px); animation: animotion-bubbleFloat 4s ease-in-out infinite; }
+.animotion-spotlight-move { background: radial-gradient(circle at 0% 50%, rgba(255,255,255,0.3) 0%, transparent 60%); animation: animotion-spotlightMove 3s ease-in-out infinite; }
+.animotion-moving-gradient { background: linear-gradient(45deg, #3b82f6 25%, #8b5cf6 50%, #3b82f6 75%); background-size: 200% 200%; animation: animotion-movingGradient 3s linear infinite; }
+.animotion-noise-overlay { background-image: repeating-radial-gradient(circle at 17% 32%, rgba(0,0,0,0.05) 0px, transparent 1px, transparent 2px); background-size: 3px 3px; animation: animotion-noiseOverlay 0.2s steps(4) infinite; }
+.animotion-geometric-rotate { background: conic-gradient(from 0deg at 50% 50%, rgba(59,130,246,0.1) 0deg, transparent 60deg, rgba(139,92,246,0.1) 120deg, transparent 180deg, rgba(239,68,68,0.1) 240deg, transparent 300deg); animation: animotion-geometricRotate 10s linear infinite; }
+.animotion-parallax-layers { background-image: linear-gradient(135deg, rgba(59,130,246,0.2) 25%, transparent 25%), linear-gradient(225deg, rgba(139,92,246,0.2) 25%, transparent 25%); background-size: 60px 60px, 40px 40px; animation: animotion-parallaxLayers 6s linear infinite; }
+.animotion-hue-rotate-bg { background: linear-gradient(135deg, #3b82f6, #8b5cf6); animation: animotion-hueRotateBg 5s linear infinite; }
+.animotion-scanline-crt { background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px); background-size: 100% 4px; animation: animotion-scanlineCRT 4s linear infinite; }
+.animotion-holographic-foil { background: linear-gradient(135deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #ff6b6b); background-size: 200% 200%; animation: animotion-holographicFoil 3s ease-in-out infinite; }
+.animotion-lava-lamp { background: radial-gradient(ellipse at 30% 80%, rgba(239,68,68,0.6) 0%, transparent 50%), radial-gradient(ellipse at 70% 20%, rgba(245,158,11,0.6) 0%, transparent 50%); animation: animotion-lavaLamp 8s ease-in-out infinite; }
+.animotion-particle-field { background-image: radial-gradient(1px 1px at 10px 10px, rgba(255,255,255,0.5) 0%, transparent 100%), radial-gradient(1px 1px at 50px 30px, rgba(255,255,255,0.4) 0%, transparent 100%), radial-gradient(2px 2px at 80px 50px, rgba(255,255,255,0.3) 0%, transparent 100%); background-size: 100px 80px; animation: animotion-particleField 10s linear infinite; }
+.animotion-nebula { background: radial-gradient(ellipse at 20% 50%, rgba(139,92,246,0.4), transparent 70%), radial-gradient(ellipse at 80% 50%, rgba(59,130,246,0.4), transparent 70%), radial-gradient(ellipse at 50% 20%, rgba(239,68,68,0.3), transparent 70%); background-color: #0a0a2e; animation: animotion-nebula 10s ease-in-out infinite; }
+.animotion-fireflies { background-image: radial-gradient(2px 2px at 25% 40%, rgba(245,158,11,0.8), transparent), radial-gradient(2px 2px at 75% 60%, rgba(245,158,11,0.6), transparent), radial-gradient(1px 1px at 50% 30%, rgba(245,158,11,0.9), transparent); background-size: 200px 200px; animation: animotion-fireflies 5s ease-in-out infinite; }
+.animotion-ocean-wave { background: linear-gradient(180deg, #0077b6, #0096c7, #00b4d8, #48cae4, #90e0ef); background-size: 100% 200%; animation: animotion-oceanWave 4s ease-in-out infinite; }
+.animotion-cloud-drift { background-image: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.6) 0%, transparent 60%), radial-gradient(ellipse at 70% 40%, rgba(255,255,255,0.4) 0%, transparent 50%); background-size: 300px 150px; animation: animotion-cloudDrift 15s linear infinite; }
+.animotion-light-rays { background: conic-gradient(from 0deg, transparent 0deg, rgba(255,255,255,0.1) 10deg, transparent 20deg, transparent 30deg, rgba(255,255,255,0.1) 40deg, transparent 50deg); animation: animotion-lightRays 10s linear infinite; }
+.animotion-prism-refract { background: linear-gradient(135deg, #ff0000, #ff8800, #ffff00, #00ff00, #0088ff, #8800ff); background-size: 200% 200%; animation: animotion-prismRefract 4s ease-in-out infinite; }
+.animotion-galaxy-spiral { background: conic-gradient(from 0deg at 50% 50%, #0a0a2e, rgba(139,92,246,0.3), #0a0a2e, rgba(59,130,246,0.3), #0a0a2e); animation: animotion-galaxySpiral 15s linear infinite; }
+.animotion-electric-field { background: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(59,130,246,0.1) 10px, rgba(59,130,246,0.1) 11px); animation: animotion-electricField 2s ease-in-out infinite; }
+.animotion-data-stream { background: repeating-linear-gradient(0deg, rgba(59,130,246,0.1) 0px, rgba(59,130,246,0.1) 1px, transparent 1px, transparent 5px); background-size: 100% 5px; animation: animotion-dataStream 2s linear infinite; }
+.animotion-grid-pulse { background-image: linear-gradient(rgba(59,130,246,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.15) 1px, transparent 1px); background-size: 40px 40px; animation: animotion-gridPulse 2s ease-in-out infinite; }
+.animotion-waveform-bg { background: linear-gradient(0deg, transparent 40%, rgba(59,130,246,0.3) 50%, transparent 60%); background-size: 100% 100%; animation: animotion-waveformBg 3s ease-in-out infinite; }
+.animotion-raindrops { background-image: radial-gradient(circle at 30% 40%, rgba(59,130,246,0.3) 0%, transparent 20%), radial-gradient(circle at 70% 60%, rgba(59,130,246,0.2) 0%, transparent 15%), radial-gradient(circle at 50% 80%, rgba(59,130,246,0.25) 0%, transparent 18%); animation: animotion-raindrops 2s ease-out infinite; }
+.animotion-snowfall { background-image: radial-gradient(3px 3px at 20% 0%, rgba(255,255,255,0.8), transparent), radial-gradient(2px 2px at 50% 0%, rgba(255,255,255,0.6), transparent), radial-gradient(2px 2px at 80% 0%, rgba(255,255,255,0.7), transparent); background-size: 200px 200px, 150px 180px, 180px 220px; animation: animotion-snowfall 5s linear infinite; }
+.animotion-fog-roll { background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1)); background-size: 200% 100%; animation: animotion-fogRoll 10s linear infinite; }
+.animotion-aurora-boreal { background: linear-gradient(180deg, #000428 0%, #004e92 30%, #00bf72 50%, #a8ff78 60%, #004e92 80%, #000428 100%); background-size: 100% 400%; animation: animotion-auroraBoreal 8s ease-in-out infinite; }
+.animotion-ripple-click { position: relative; overflow: hidden; } .animotion-ripple-click::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%); animation: animotion-rippleClick 0.6s ease-out both; }
+.animotion-glow-pulse-btn { animation: animotion-glowPulseBtn 2s ease-in-out infinite; }
+.animotion-shine-sweep { position: relative; overflow: hidden; background-image: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%); background-size: 200% 100%; animation: animotion-shineSweep 1.5s ease-in-out infinite; }
+.animotion-fill-left { background-size: 200% 100%; background-image: linear-gradient(to right, #3b82f6 50%, transparent 50%); background-position: right; animation: animotion-fillLeft 0.4s ease-in-out both; }
+.animotion-fill-right { background-size: 200% 100%; background-image: linear-gradient(to left, #3b82f6 50%, transparent 50%); background-position: left; animation: animotion-fillRight 0.4s ease-in-out both; }
+.animotion-fill-top { background-size: 100% 200%; background-image: linear-gradient(to bottom, #3b82f6 50%, transparent 50%); background-position: bottom; animation: animotion-fillTop 0.4s ease-in-out both; }
+.animotion-fill-bottom { background-size: 100% 200%; background-image: linear-gradient(to top, #3b82f6 50%, transparent 50%); background-position: top; animation: animotion-fillBottom 0.4s ease-in-out both; }
+.animotion-press-3d { box-shadow: 0 4px 0 #1e40af; animation: animotion-press3D 0.15s ease-in both; }
+.animotion-border-draw { border: 2px solid transparent; background-clip: padding-box; animation: animotion-borderDraw 0.8s ease-in-out both; }
+.animotion-gradient-border-btn { border: 2px solid; animation: animotion-gradientBorderBtn 3s linear infinite; }
+.animotion-gradient-sweep { background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ef4444, #3b82f6); background-size: 300% 100%; animation: animotion-gradientSweep 2s linear infinite; }
+.animotion-magnetic-pull { animation: animotion-magneticPull 0.3s ease-out both; }
+.animotion-shake-error { animation: animotion-shakeError 0.5s ease-in-out both; }
+.animotion-success-checkmark { background-color: #10b981; animation: animotion-successCheckmark 0.6s ease-out both; }
+.animotion-loading-spinner { position: relative; color: transparent; } .animotion-loading-spinner::after { content: ''; position: absolute; width: 16px; height: 16px; top: 50%; left: 50%; margin: -8px 0 0 -8px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: animotion-loadingSpinner 1s linear infinite; }
+.animotion-progress-fill { background: linear-gradient(90deg, #10b981 0%, #10b981 50%, #3b82f6 50%, #3b82f6 100%); background-size: 200% 100%; background-position: right; animation: animotion-progressFill 2s linear both; }
+.animotion-jelly-bounce { animation: animotion-jellyBounce 0.6s ease-in-out both; }
+.animotion-elastic-scale { animation: animotion-elasticScale 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }
+.animotion-outline-grow { animation: animotion-outlineGrow 0.3s ease-out both; }
+.animotion-icon-slide-in { animation: animotion-iconSlideIn 0.3s ease-out both; }
+.animotion-color-wave { background: linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6); background-size: 200% 100%; animation: animotion-colorWave 2s ease-in-out infinite; }
+.animotion-neon-glow { animation: animotion-neonGlow 2s ease-in-out infinite; }
+.animotion-spotlight-sweep { background-image: linear-gradient(110deg, transparent 20%, rgba(255,255,255,0.3) 50%, transparent 80%); background-size: 200% 100%; animation: animotion-spotlightSweep 2s ease-in-out infinite; }
+.animotion-text-flip-btn { perspective: 600px; animation: animotion-textFlipBtn 0.4s ease-in-out both; }
+.animotion-btn-flip-3d { animation: animotion-btnFlip3D 0.6s ease-in-out both; perspective: 800px; }
+.animotion-btn-morph { animation: animotion-btnMorph 0.5s ease-in-out both; }
+.animotion-btn-stretch { animation: animotion-btnStretch 0.3s ease-out both; }
+.animotion-btn-pop { animation: animotion-btnPop 0.3s cubic-bezier(0.26, 0.53, 0.74, 1.48) both; }
+.animotion-btn-slide { animation: animotion-btnSlide 0.3s ease-out both; }
+.animotion-btn-rotate { animation: animotion-btnRotate 0.3s ease-out both; }
+.animotion-btn-pulse-ring { animation: animotion-btnPulseRing 1.5s ease-out infinite; }
+.animotion-btn-glitch { animation: animotion-btnGlitch 0.3s steps(2, end) 3 both; }
+.animotion-btn-wave { background: linear-gradient(90deg, #3b82f6, #6366f1, #3b82f6); background-size: 200% 100%; animation: animotion-btnWave 1.5s ease-in-out infinite; }
+.animotion-btn-ripple-out { animation: animotion-btnRippleOut 0.6s ease-out both; }
+.animotion-btn-fill-diagonal { background: linear-gradient(135deg, #3b82f6 50%, transparent 50%); background-size: 250% 250%; background-position: 100% 100%; animation: animotion-btnFillDiagonal 0.4s ease-in-out both; }
+.animotion-btn-sweep-circle { background: radial-gradient(circle, #3b82f6 0%, transparent 0%); animation: animotion-btnSweepCircle 0.5s ease-out both; }
+.animotion-btn-border-chase { border: 2px solid transparent; background-clip: padding-box; animation: animotion-btnBorderChase 2s linear infinite; }
+.animotion-btn-shine { position: relative; overflow: hidden; } .animotion-btn-shine::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: animotion-btnShine 1s ease-in-out both; }
+.animotion-btn-lift { animation: animotion-btnLift 0.3s ease-out both; }
+.animotion-btn-press { animation: animotion-btnPress 0.15s ease-in both; }
+.animotion-card-lift { animation: animotion-cardLift 0.3s ease-out both; }
+.animotion-card-flip-3d { animation: animotion-cardFlip3D 0.6s ease-in-out both; perspective: 1000px; }
+.animotion-card-tilt-3d { animation: animotion-cardTilt3D 3s ease-in-out infinite; perspective: 1000px; }
+.animotion-glassmorphism { animation: animotion-glassmorphism 0.5s ease-out both; backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
+.animotion-neumorphism-press { animation: animotion-neumorphismPress 0.2s ease-in-out both; }
+.animotion-glow-border-card { border: 2px solid #3b82f6; animation: animotion-glowBorderCard 2s ease-in-out infinite; }
+.animotion-gradient-border-card { border: 2px solid; animation: animotion-gradientBorderCard 3s linear infinite; }
+.animotion-zoom-image { overflow: hidden; animation: animotion-zoomImage 0.5s ease-out both; }
+.animotion-overlay-reveal { animation: animotion-overlayReveal 0.4s ease-out both; }
+.animotion-slide-info-panel { animation: animotion-slideInfoPanel 0.4s ease-out both; }
+.animotion-card-scale-in { animation: animotion-cardScaleIn 0.5s ease-out both; }
+.animotion-shadow-bloom { animation: animotion-shadowBloom 0.4s ease-out both; }
+.animotion-shimmer-loading { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: animotion-shimmerLoading 1.5s linear infinite; }
+.animotion-skeleton-screen { background: #e5e7eb; animation: animotion-skeletonScreen 1.5s ease-in-out infinite; }
+.animotion-card-rotate-y { animation: animotion-cardRotateY 0.5s ease-out both; perspective: 1000px; }
+.animotion-polaroid-drop { animation: animotion-polaroidDrop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-card-unfold { animation: animotion-cardUnfold 0.6s ease-out both; transform-origin: top; }
+.animotion-flip-reveal { animation: animotion-flipReveal 0.8s ease-in-out both; perspective: 1000px; }
+.animotion-border-collapse-draw { border: 2px solid transparent; animation: animotion-borderCollapseDraw 0.8s ease-in-out both; }
+.animotion-confetti-card { animation: animotion-confettiCard 1s ease-out both; }
+.animotion-card-stack { animation: animotion-cardStack 0.5s ease-out both; }
+.animotion-card-fan { animation: animotion-cardFan 0.6s ease-out both; transform-origin: bottom center; }
+.animotion-card-shuffle { animation: animotion-cardShuffle 0.5s ease-in-out both; }
+.animotion-card-deal { animation: animotion-cardDeal 0.4s ease-out both; }
+.animotion-card-peel { animation: animotion-cardPeel 0.7s ease-in-out both; transform-origin: bottom left; }
+.animotion-card-slide { animation: animotion-cardSlide 0.5s ease-out both; }
+.animotion-card-morph { animation: animotion-cardMorph 1s ease-in-out infinite; }
+.animotion-card-expand { animation: animotion-cardExpand 0.5s ease-out both; }
+.animotion-card-collapse { animation: animotion-cardCollapse 0.4s ease-in both; }
+.animotion-card-swipe { animation: animotion-cardSwipe 0.5s ease-in both; }
+.animotion-card-bounce { animation: animotion-cardBounce 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-card-wobble { animation: animotion-cardWobble 0.6s ease-in-out both; }
+.animotion-card-glow { animation: animotion-cardGlow 0.4s ease-out both; }
+.animotion-card-pulse { animation: animotion-cardPulse 2s ease-in-out infinite; }
+.animotion-card-reveal { animation: animotion-cardReveal 0.6s ease-out both; }
+.animotion-spinner-border { width: 40px; height: 40px; border: 3px solid rgba(59,130,246,0.2); border-top-color: #3b82f6; border-radius: 50%; animation: animotion-spinnerBorder 0.75s linear infinite; }
+.animotion-dual-ring { width: 40px; height: 40px; border: 3px solid transparent; border-top-color: #3b82f6; border-bottom-color: #8b5cf6; border-radius: 50%; animation: animotion-dualRing 1.2s linear infinite; }
+.animotion-triple-ring { width: 40px; height: 40px; border: 3px solid rgba(59,130,246,0.15); border-top-color: #3b82f6; border-right-color: #8b5cf6; border-bottom-color: #ef4444; border-radius: 50%; animation: animotion-tripleRing 1.5s linear infinite; }
+.animotion-conic-spinner { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(from 0deg, transparent, #3b82f6); mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px)); animation: animotion-conicSpinner 1s linear infinite; }
+.animotion-gradient-spinner { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(#3b82f6, #8b5cf6, transparent); mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px)); animation: animotion-gradientSpinner 1s linear infinite; }
+.animotion-dots-wave { display: flex; gap: 6px; } .animotion-dots-wave span { width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsWave 1.4s ease-in-out infinite; }
+.animotion-dots-bounce span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsBounce 1s ease-in-out infinite; }
+.animotion-dots-scale span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsScale 1.2s ease-in-out infinite; }
+.animotion-dots-fade span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsFade 1.2s ease-in-out infinite; }
+.animotion-dots-orbit { width: 40px; height: 40px; position: relative; animation: animotion-dotsOrbit 1.5s linear infinite; }
+.animotion-bars-wave span { display: inline-block; width: 4px; height: 20px; background: #3b82f6; margin: 0 2px; animation: animotion-barsWave 1.2s ease-in-out infinite; }
+.animotion-bars-scale span { display: inline-block; width: 4px; height: 30px; background: #3b82f6; margin: 0 2px; animation: animotion-barsScale 1s ease-in-out infinite; }
+.animotion-bars-strobe span { display: inline-block; width: 4px; height: 25px; background: #3b82f6; margin: 0 2px; animation: animotion-barsStrobe 0.8s steps(1) infinite; }
+.animotion-orbital { width: 40px; height: 40px; border: 2px solid rgba(59,130,246,0.2); border-radius: 50%; position: relative; } .animotion-orbital::after { content: ''; position: absolute; width: 8px; height: 8px; background: #3b82f6; border-radius: 50%; top: -4px; left: 50%; margin-left: -4px; animation: animotion-orbital 1.5s linear infinite; transform-origin: 4px 24px; }
+.animotion-ping-pulse { width: 20px; height: 20px; border-radius: 50%; background: #3b82f6; animation: animotion-pingPulse 1.5s ease-out infinite; }
+.animotion-progress-bar { width: 100%; height: 4px; background: rgba(59,130,246,0.2); border-radius: 2px; overflow: hidden; } .animotion-progress-bar::after { content: ''; display: block; height: 100%; background: #3b82f6; animation: animotion-progressBar 2s ease-in-out infinite; }
+.animotion-indeterminate-bar { width: 100%; height: 4px; background: rgba(59,130,246,0.2); overflow: hidden; } .animotion-indeterminate-bar::after { content: ''; display: block; width: 40%; height: 100%; background: #3b82f6; animation: animotion-indeterminateBar 1.5s ease-in-out infinite; }
+.animotion-striped-progress { height: 8px; background: repeating-linear-gradient(45deg, #3b82f6 0px, #3b82f6 10px, #6366f1 10px, #6366f1 20px); background-size: 28px 100%; animation: animotion-stripedProgress 1s linear infinite; }
+.animotion-circle-progress { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(#3b82f6 0deg, transparent 0deg); animation: animotion-circleProgress 2s linear infinite; }
+.animotion-semi-circle-progress { width: 40px; height: 20px; border-radius: 40px 40px 0 0; border: 3px solid #3b82f6; border-bottom: none; animation: animotion-semiCircleProgress 1.5s ease-in-out infinite; transform-origin: bottom center; }
+.animotion-skeleton-lines { background: linear-gradient(90deg, #e5e7eb 25%, #d1d5db 50%, #e5e7eb 75%); background-size: 200% 100%; animation: animotion-skeletonLines 1.5s ease-in-out infinite; height: 12px; border-radius: 4px; }
+.animotion-heartbeat-monitor { width: 4px; height: 20px; background: #ef4444; animation: animotion-heartbeatMonitor 1.5s ease-in-out infinite; }
+.animotion-dna-helix span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-dnaHelix 2s linear infinite; }
+.animotion-cube-spin-loader { width: 30px; height: 30px; background: #3b82f6; animation: animotion-cubeSpinLoader 2s linear infinite; }
+.animotion-dots-grid-pulse span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-dotsGridPulse 1.5s ease-in-out infinite; }
+.animotion-infinity-loop { width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-infinityLoop 2s linear infinite; }
+.animotion-hourglass-flip { width: 20px; height: 20px; clip-path: polygon(0 0, 100% 0, 50% 50%, 100% 100%, 0 100%, 50% 50%); background: #3b82f6; animation: animotion-hourglassFlip 1.5s ease-in-out infinite; }
+.animotion-wifi-bars span { display: inline-block; width: 4px; background: #3b82f6; margin: 0 2px; border-radius: 2px; animation: animotion-wifiBars 1.5s ease-in-out infinite; }
+.animotion-battery-fill { width: 40px; height: 20px; border: 2px solid #3b82f6; border-radius: 3px; position: relative; overflow: hidden; } .animotion-battery-fill::after { content: ''; display: block; height: 100%; background: #3b82f6; animation: animotion-batteryFill 2s linear infinite; }
+.animotion-typing-indicator span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; animation: animotion-typingIndicator 1.4s ease-in-out infinite; }
+.animotion-clock-spin { width: 40px; height: 40px; border: 2px solid #3b82f6; border-radius: 50%; position: relative; } .animotion-clock-spin::after { content: ''; position: absolute; width: 2px; height: 15px; background: #3b82f6; top: 5px; left: 50%; margin-left: -1px; transform-origin: bottom center; animation: animotion-clockSpin 2s linear infinite; }
+.animotion-gear-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(50% 0%, 63% 13%, 80% 10%, 78% 28%, 95% 35%, 85% 50%, 95% 65%, 78% 72%, 80% 90%, 63% 87%, 50% 100%, 37% 87%, 20% 90%, 22% 72%, 5% 65%, 15% 50%, 5% 35%, 22% 28%, 20% 10%, 37% 13%); animation: animotion-gearSpin 3s linear infinite; }
+.animotion-atom-spin { width: 40px; height: 40px; border: 2px solid rgba(59,130,246,0.3); border-radius: 50%; position: relative; animation: animotion-atomSpin 2s linear infinite; } .animotion-atom-spin::after { content: ''; width: 6px; height: 6px; background: #3b82f6; border-radius: 50%; position: absolute; top: -3px; left: 50%; margin-left: -3px; }
+.animotion-pulse-dot { width: 15px; height: 15px; border-radius: 50%; background: #3b82f6; animation: animotion-pulseDot 1s ease-in-out infinite; }
+.animotion-chain-links { width: 20px; height: 10px; border: 2px solid #3b82f6; border-radius: 10px; animation: animotion-chainLinks 1.5s ease-in-out infinite; }
+.animotion-wave-loader span { display: inline-block; width: 4px; height: 30px; background: #3b82f6; margin: 0 2px; animation: animotion-waveLoader 1.2s ease-in-out infinite; transform-origin: bottom; }
+.animotion-snake-loader { width: 40px; height: 40px; border: 3px solid transparent; border-top-color: #3b82f6; border-right-color: #3b82f6; border-radius: 50%; animation: animotion-snakeLoader 1.5s linear infinite; }
+.animotion-pendulum-loader { width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-pendulumLoader 1.5s ease-in-out infinite; transform-origin: top center; }
+.animotion-square-rotate { width: 25px; height: 25px; background: #3b82f6; animation: animotion-squareRotate 1.2s ease-in-out infinite; }
+.animotion-triangle-spin { width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 26px solid #3b82f6; animation: animotion-triangleSpin 1.5s linear infinite; }
+.animotion-hexagon-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); animation: animotion-hexagonSpin 2s linear infinite; }
+.animotion-diamond-spin { width: 25px; height: 25px; background: #3b82f6; transform: rotate(45deg); animation: animotion-diamondSpin 1.5s linear infinite; }
+.animotion-star-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation: animotion-starSpin 2s linear infinite; }
+.animotion-cross-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%); animation: animotion-crossSpin 1.5s linear infinite; }
+.animotion-plus-spin { width: 30px; height: 30px; position: relative; animation: animotion-plusSpin 1s linear infinite; } .animotion-plus-spin::before, .animotion-plus-spin::after { content: ''; position: absolute; background: #3b82f6; } .animotion-plus-spin::before { width: 100%; height: 4px; top: 50%; margin-top: -2px; } .animotion-plus-spin::after { width: 4px; height: 100%; left: 50%; margin-left: -2px; }
+.animotion-arrow-spin { width: 30px; height: 30px; background: #3b82f6; clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 40% 65%, 0% 65%, 0% 35%, 40% 35%); animation: animotion-arrowSpin 1s linear infinite; }
+.animotion-ripple-loader { width: 40px; height: 40px; border-radius: 50%; border: 3px solid #3b82f6; animation: animotion-rippleLoader 1.5s ease-out infinite; }
+.animotion-expanding-circle { width: 40px; height: 40px; border-radius: 50%; background: rgba(59,130,246,0.4); animation: animotion-expandingCircle 1.2s ease-in-out infinite; }
+.animotion-bouncing-ball { width: 20px; height: 20px; border-radius: 50%; background: #3b82f6; animation: animotion-bouncingBall 1s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; }
+.animotion-sliding-dots span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; animation: animotion-slidingDots 1.5s ease-in-out infinite; }
+.animotion-morphing-shape { width: 30px; height: 30px; background: #3b82f6; animation: animotion-morphingShape 2s ease-in-out infinite; }
+.animotion-flowing-dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-flowingDots 2s linear infinite; }
+.animotion-spiral-loader { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: animotion-spiralLoader 2s linear infinite; }
+.animotion-grid-loader span { display: inline-block; width: 10px; height: 10px; background: #3b82f6; margin: 1px; animation: animotion-gridLoader 1.5s ease-in-out infinite; }
+.animotion-barber-pole { height: 8px; background: repeating-linear-gradient(45deg, #3b82f6 0px, #3b82f6 10px, #fff 10px, #fff 20px); background-size: 28px 100%; animation: animotion-barberPole 1s linear infinite; }
+.animotion-pulse-bars span { display: inline-block; width: 4px; height: 25px; background: #3b82f6; margin: 0 2px; animation: animotion-pulseBars 1.2s ease-in-out infinite; }
+.animotion-waveform-loader span { display: inline-block; width: 3px; background: #3b82f6; margin: 0 1px; animation: animotion-waveformLoader 1s ease-in-out infinite; }
+.animotion-orbit-dots { width: 40px; height: 40px; position: relative; animation: animotion-orbitDots 2s linear infinite; }
+.animotion-rainbow-spinner { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(#ff0000, #ff8800, #ffff00, #00ff00, #0088ff, #8800ff, #ff0000); mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px)); animation: animotion-rainbowSpinner 1s linear infinite; }
+.animotion-matrix-loader { color: #00ff00; font-family: monospace; animation: animotion-matrixLoader 1.5s steps(5) infinite; }
+.animotion-underline-grow { position: relative; } .animotion-underline-grow::after { content: ''; position: absolute; bottom: 0; left: 50%; height: 2px; background: #3b82f6; animation: animotion-underlineGrow 0.3s ease-out both; }
+.animotion-underline-slide::after { content: ''; position: absolute; bottom: 0; left: 0; height: 2px; background: #3b82f6; animation: animotion-underlineSlide 0.3s ease-out both; }
+.animotion-hamburger-x { animation: animotion-hamburgerX 0.3s ease-in-out both; }
+.animotion-hamburger-arrow { animation: animotion-hamburgerArrow 0.3s ease-in-out both; }
+.animotion-dropdown-slide { animation: animotion-dropdownSlide 0.3s ease-out both; transform-origin: top; }
+.animotion-drawer-slide-in { animation: animotion-drawerSlideIn 0.3s ease-out both; }
+.animotion-sticky-nav-compact { animation: animotion-stickyNavCompact 0.3s ease-out both; }
+.animotion-back-to-top-appear { animation: animotion-backToTopAppear 0.3s ease-out both; }
+.animotion-scroll-progress-bar { height: 3px; background: #3b82f6; animation: animotion-scrollProgressBar 0.3s linear both; transform-origin: left; }
+.animotion-pagination-hop { animation: animotion-paginationHop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-breadcrumb-cascade { animation: animotion-breadcrumbCascade 0.3s ease-out both; }
+.animotion-tab-active-pill { animation: animotion-tabActivePill 0.3s ease-in-out both; }
+.animotion-bottom-nav-active { animation: animotion-bottomNavActive 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-dropdown-arrow-spin { animation: animotion-dropdownArrowSpin 0.2s ease-out both; }
+.animotion-nav-link-rainbow { animation: animotion-navLinkRainbow 2s linear infinite; }
+.animotion-nav-slide-down { animation: animotion-navSlideDown 0.4s ease-out both; }
+.animotion-nav-fade-in { animation: animotion-navFadeIn 0.5s ease-out both; }
+.animotion-nav-accordion { animation: animotion-navAccordion 0.3s ease-out both; overflow: hidden; }
+.animotion-nav-highlight { animation: animotion-navHighlight 0.2s ease-out both; }
+.animotion-nav-border-slide { border-bottom: 2px solid #3b82f6; animation: animotion-navBorderSlide 0.3s ease-in-out both; }
+.animotion-nav-glow { animation: animotion-navGlow 0.3s ease-out both; }
+.animotion-nav-pulse { animation: animotion-navPulse 1.5s ease-in-out infinite; }
+.animotion-nav-scale { animation: animotion-navScale 0.2s ease-out both; }
+.animotion-nav-rotate { animation: animotion-navRotate 0.3s ease-out both; }
+.animotion-nav-morph { animation: animotion-navMorph 0.4s ease-in-out both; }
+.animotion-label-float { animation: animotion-labelFloat 0.2s ease-out both; }
+.animotion-input-glow-focus { animation: animotion-inputGlowFocus 0.3s ease-out both; }
+.animotion-input-shake-error { animation: animotion-inputShakeError 0.5s ease-in-out both; border-color: #ef4444; }
+.animotion-input-success-border { animation: animotion-inputSuccessBorder 0.3s ease-out both; }
+.animotion-checkbox-draw { animation: animotion-checkboxDraw 0.3s ease-out both; }
+.animotion-checkbox-scale-pop { animation: animotion-checkboxScalePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-radio-fill { animation: animotion-radioFill 0.2s ease-out both; }
+.animotion-radio-ping { animation: animotion-radioPing 0.5s ease-out both; }
+.animotion-toggle-slide { animation: animotion-toggleSlide 0.2s ease-in-out both; }
+.animotion-toggle-morph { animation: animotion-toggleMorph 0.3s ease-in-out both; }
+.animotion-search-bar-expand { animation: animotion-searchBarExpand 0.3s ease-out both; }
+.animotion-password-reveal { animation: animotion-passwordReveal 0.2s ease-out both; }
+.animotion-range-fill { animation: animotion-rangeFill 0.3s ease-out both; }
+.animotion-form-progress-steps { animation: animotion-formProgressSteps 0.5s ease-out both; }
+.animotion-select-slide-open { animation: animotion-selectSlideOpen 0.2s ease-out both; transform-origin: top; }
+.animotion-input-border-focus { animation: animotion-inputBorderFocus 0.2s ease-out both; }
+.animotion-input-label-shrink { animation: animotion-inputLabelShrink 0.2s ease-out both; }
+.animotion-input-ripple { animation: animotion-inputRipple 0.4s ease-out both; }
+.animotion-input-highlight { animation: animotion-inputHighlight 0.2s ease-out both; }
+.animotion-input-underline::after { content: ''; display: block; height: 2px; background: #3b82f6; animation: animotion-inputUnderline 0.3s ease-out both; transform-origin: center; }
+.animotion-input-fill { background-size: 200% 100%; background-image: linear-gradient(to right, rgba(59,130,246,0.05) 50%, transparent 50%); background-position: right; animation: animotion-inputFill 0.3s ease-out both; }
+.animotion-form-step-slide { animation: animotion-formStepSlide 0.4s ease-in-out both; }
+.animotion-input-count-up { animation: animotion-inputCountUp 0.5s ease-out both; }
+.animotion-input-tag-pop { animation: animotion-inputTagPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-input-auto-fill { animation: animotion-inputAutoFill 0.3s ease-out both; }
+.animotion-select-rotate-open { animation: animotion-selectRotateOpen 0.2s ease-out both; }
+.animotion-textarea-grow { animation: animotion-textareaGrow 0.3s ease-out both; }
+.animotion-input-icon-slide { animation: animotion-inputIconSlide 0.3s ease-out both; }
+.animotion-form-validate-shake { animation: animotion-formValidateShake 0.6s ease-in-out both; }
+.animotion-form-success-glow { animation: animotion-formSuccessGlow 0.5s ease-out both; }
+.animotion-rotate-x-axis { animation: animotion-rotateXAxis 2s linear infinite; perspective: 800px; }
+.animotion-rotate-y-axis { animation: animotion-rotateYAxis 2s linear infinite; perspective: 800px; }
+.animotion-rotate-z-axis { animation: animotion-rotateZAxis 2s linear infinite; }
+.animotion-full-cube-spin { animation: animotion-fullCubeSpin 4s linear infinite; }
+.animotion-card-flip-front-back { animation: animotion-cardFlipFrontBack 1s ease-in-out both; perspective: 1000px; }
+.animotion-perspective-tilt { animation: animotion-perspectiveTilt 3s ease-in-out infinite; }
+.animotion-text-extrude-3d { animation: animotion-textExtrude3D 2s ease-in-out infinite; }
+.animotion-button-press-3d { animation: animotion-buttonPress3D 0.15s ease-in both; }
+.animotion-fold-from-top { animation: animotion-foldFromTop 0.6s ease-out both; transform-origin: top; }
+.animotion-sphere-illusion { border-radius: 50%; animation: animotion-sphereIllusion 4s linear infinite; }
+.animotion-cylinder-spin { animation: animotion-cylinderSpin 3s linear infinite; }
+.animotion-book-page-open { animation: animotion-bookPageOpen 0.8s ease-in-out both; transform-origin: left center; }
+.animotion-door-open-3d { animation: animotion-doorOpen3D 0.8s ease-out both; transform-origin: left center; }
+.animotion-dice-roll { animation: animotion-diceRoll 1.5s ease-in-out both; }
+.animotion-panorama-spin { animation: animotion-panoramaSpin 10s linear infinite; }
+.animotion-carousel-spin { animation: animotion-carouselSpin 6s linear infinite; }
+.animotion-prism-rotate { animation: animotion-prismRotate 3s linear infinite; }
+.animotion-pyramid-spin { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); animation: animotion-pyramidSpin 4s linear infinite; }
+.animotion-helix-twist { animation: animotion-helixTwist 3s linear infinite; }
+.animotion-spiral-descend { animation: animotion-spiralDescend 3s ease-in-out infinite; }
+.animotion-orbital-path { animation: animotion-orbitalPath 4s linear infinite; }
+.animotion-swing-door { animation: animotion-swingDoor 2s ease-in-out infinite; transform-origin: left center; }
+.animotion-flip-board { animation: animotion-flipBoard 0.6s ease-in-out both; transform-origin: center bottom; }
+.animotion-cube-unfold { animation: animotion-cubeUnfold 1s ease-in-out both; }
+.animotion-tunnel-zoom { animation: animotion-tunnelZoom 3s linear infinite; }
+.animotion-perspective-zoom { animation: animotion-perspectiveZoom 2s ease-in-out infinite; }
+.animotion-tilt-shift { animation: animotion-tiltShift 3s ease-in-out infinite; }
+.animotion-rotate-in-place { animation: animotion-rotateInPlace 4s linear infinite; }
+.animotion-wobble-3d { animation: animotion-wobble3D 1.5s ease-in-out infinite; }
+.animotion-bounce-3d { animation: animotion-bounce3D 1s ease-in-out infinite; }
+.animotion-swing-3d { animation: animotion-swing3D 2s ease-in-out infinite; transform-origin: top center; }
+.animotion-pendulum-3d { animation: animotion-pendulum3D 2.5s ease-in-out infinite; transform-origin: top center; }
+.animotion-seesaw-3d { animation: animotion-seesaw3D 2s ease-in-out infinite; transform-origin: center bottom; }
+.animotion-ferris-wheel { animation: animotion-ferrisWheel 6s linear infinite; }
+.animotion-windmill-3d { animation: animotion-windmill3D 3s linear infinite; transform-origin: center center; }
+.animotion-blur-in { animation: animotion-blurIn 0.6s ease-out both; }
+.animotion-unblur-hover { filter: blur(5px); animation: animotion-unblurHover 0.4s ease-out both; }
+.animotion-grayscale-to-color { animation: animotion-grayscaleToColor 0.6s ease-out both; }
+.animotion-sepia-flash { animation: animotion-sepiaFlash 1s ease-in-out both; }
+.animotion-saturate-boost { animation: animotion-saturateBoost 0.5s ease-out both; }
+.animotion-brightness-flash { animation: animotion-brightnessFlash 0.6s ease-in-out both; }
+.animotion-contrast-pulse { animation: animotion-contrastPulse 2s ease-in-out infinite; }
+.animotion-hue-rotate-cycle { animation: animotion-hueRotateCycle 3s linear infinite; }
+.animotion-invert-flash { animation: animotion-invertFlash 0.6s ease-in-out both; }
+.animotion-drop-shadow-grow { animation: animotion-dropShadowGrow 0.4s ease-out both; }
+.animotion-blur-pulse { animation: animotion-blurPulse 2s ease-in-out infinite; }
+.animotion-vintage-filter { animation: animotion-vintageFilter 0.6s ease-out both; }
+.animotion-night-vision { animation: animotion-nightVision 0.5s ease-out both; }
+.animotion-thermal-vision { animation: animotion-thermalVision 0.5s ease-out both; }
+.animotion-xray-effect { animation: animotion-xrayEffect 0.5s ease-out both; }
+.animotion-duotone-shift { animation: animotion-duotoneShift 4s ease-in-out infinite; }
+.animotion-color-pop { animation: animotion-colorPop 0.8s ease-out both; }
+.animotion-fade-to-grayscale { animation: animotion-fadeToGrayscale 0.8s ease-in both; }
+.animotion-bloom-effect { animation: animotion-bloomEffect 2s ease-in-out infinite; }
+.animotion-soft-focus { animation: animotion-softFocus 0.5s ease-out both; }
+.animotion-crystal-refract { animation: animotion-crystalRefract 3s ease-in-out infinite; }
+.animotion-prismatic-shift { animation: animotion-prismaticShift 4s linear infinite; }
+.animotion-neon-filter { animation: animotion-neonFilter 2s ease-in-out infinite; }
+.animotion-retro-filter { animation: animotion-retroFilter 0.6s ease-out both; }
+.animotion-glitch-filter { animation: animotion-glitchFilter 0.5s steps(3) infinite; }
+.animotion-like-bounce { animation: animotion-likeBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-add-to-cart { animation: animotion-addToCart 0.5s ease-in-out both; }
+.animotion-notification-pop { animation: animotion-notificationPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-switch-toggle { animation: animotion-switchToggle 0.2s ease-in-out both; }
+.animotion-checkmark-draw { animation: animotion-checkmarkDraw 0.4s ease-out both; }
+.animotion-star-rate { animation: animotion-starRate 0.3s ease-out both; }
+.animotion-progress-complete { animation: animotion-progressComplete 0.5s ease-out both; }
+.animotion-drag-start { animation: animotion-dragStart 0.2s ease-out both; }
+.animotion-drag-end { animation: animotion-dragEnd 0.3s ease-out both; }
+.animotion-pinch-zoom { animation: animotion-pinchZoom 0.3s ease-out both; }
+.animotion-swipe-hint { animation: animotion-swipeHint 1.5s ease-in-out both; }
+.animotion-pull-to-refresh { animation: animotion-pullToRefresh 0.5s ease-out both; }
+.animotion-double-tap-zoom { animation: animotion-doubleTapZoom 0.3s ease-out both; }
+.animotion-long-press-glow { animation: animotion-longPressGlow 0.8s ease-in both; }
+.animotion-tap-feedback { animation: animotion-tapFeedback 0.15s ease-out both; }
+.animotion-menu-item-hover { animation: animotion-menuItemHover 0.2s ease-out both; }
+.animotion-tooltip-fade { animation: animotion-tooltipFade 0.2s ease-out both; }
+.animotion-chip-remove { animation: animotion-chipRemove 0.2s ease-in both; }
+.animotion-badge-count { animation: animotion-badgeCount 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-fab-open { animation: animotion-fabOpen 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-fab-close { animation: animotion-fabClose 0.2s ease-in both; }
+.animotion-snackbar-slide { animation: animotion-snackbarSlide 0.3s ease-out both; }
+.animotion-snackbar-dismiss { animation: animotion-snackbarDismiss 0.2s ease-in both; }
+.animotion-modal-open { animation: animotion-modalOpen 0.3s ease-out both; }
+.animotion-modal-close { animation: animotion-modalClose 0.2s ease-in both; }
+.animotion-accordion-expand { animation: animotion-accordionExpand 0.3s ease-out both; }
+.animotion-accordion-collapse { animation: animotion-accordionCollapse 0.2s ease-in both; }
+.animotion-tab-switch { animation: animotion-tabSwitch 0.3s ease-in-out both; }
+.animotion-carousel-slide { animation: animotion-carouselSlide 0.4s ease-in-out both; }
+.animotion-stepper-advance { animation: animotion-stepperAdvance 0.4s ease-out both; }
+.animotion-rating-fill { animation: animotion-ratingFill 0.3s ease-out both; }
+.animotion-bookmark-flip { animation: animotion-bookmarkFlip 0.3s ease-in-out both; }
+.animotion-share-expand { animation: animotion-shareExpand 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-comment-slide { animation: animotion-commentSlide 0.3s ease-out both; }
+.animotion-reply-indent { animation: animotion-replyIndent 0.3s ease-out both; }
+.animotion-emoji-react { animation: animotion-emojiReact 1s ease-out both; }
+.animotion-voice-wave { animation: animotion-voiceWave 1s ease-in-out infinite both; }
+.animotion-read-indicator { animation: animotion-readIndicator 0.3s ease-out both; }
+.animotion-online-status { animation: animotion-onlineStatus 2s ease-in-out infinite both; }
+.animotion-typing-bubble { animation: animotion-typingBubble 1.4s ease-in-out infinite both; }
+.animotion-scroll-fade-in { animation: animotion-scrollFadeIn 0.6s ease-out both; }
+.animotion-scroll-fade-in-up { animation: animotion-scrollFadeInUp 0.6s ease-out both; }
+.animotion-scroll-fade-in-left { animation: animotion-scrollFadeInLeft 0.6s ease-out both; }
+.animotion-scroll-fade-in-right { animation: animotion-scrollFadeInRight 0.6s ease-out both; }
+.animotion-scroll-zoom-in { animation: animotion-scrollZoomIn 0.6s ease-out both; }
+.animotion-scroll-slide-up { animation: animotion-scrollSlideUp 0.5s ease-out both; }
+.animotion-scroll-slide-left { animation: animotion-scrollSlideLeft 0.5s ease-out both; }
+.animotion-scroll-rotate-in { animation: animotion-scrollRotateIn 0.6s ease-out both; }
+.animotion-scroll-flip-in { animation: animotion-scrollFlipIn 0.7s ease-out both; }
+.animotion-scroll-blur-in { animation: animotion-scrollBlurIn 0.6s ease-out both; }
+.animotion-scroll-count-up { animation: animotion-scrollCountUp 1s ease-out both; }
+.animotion-scroll-progress-reveal { animation: animotion-scrollProgressReveal 0.8s ease-in-out both; }
+.animotion-scroll-parallax { animation: animotion-scrollParallax 0.1s linear both; will-change: transform; }
+.animotion-scroll-stagger { animation: animotion-scrollStagger 0.5s ease-out both; }
+.animotion-scroll-scale { animation: animotion-scrollScale 0.5s ease-out both; }
+.animotion-scroll-clip-reveal { animation: animotion-scrollClipReveal 0.7s ease-out both; }
+.animotion-scroll-text-reveal { animation: animotion-scrollTextReveal 0.6s ease-out both; }
+.animotion-scroll-image-reveal { animation: animotion-scrollImageReveal 0.8s ease-in-out both; }
+.animotion-scroll-card-stack { animation: animotion-scrollCardStack 0.5s ease-out both; }
+.animotion-scroll-timeline { animation: animotion-scrollTimeline 0.6s ease-out both; }
+.animotion-scroll-horizontal { animation: animotion-scrollHorizontal 0.5s linear both; }
+.animotion-scroll-snap { animation: animotion-scrollSnap 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-scroll-reveal-mask { animation: animotion-scrollRevealMask 0.8s ease-out both; }
+.animotion-scroll-wipe-in { animation: animotion-scrollWipeIn 0.7s ease-in-out both; }
+.animotion-scroll-morph-in { animation: animotion-scrollMorphIn 0.7s ease-out both; }
+.animotion-paint-splash { animation: animotion-paintSplash 0.6s ease-out both; }
+.animotion-ink-bleed { animation: animotion-inkBleed 0.8s ease-out both; }
+.animotion-watercolor { animation: animotion-watercolor 1s ease-out both; }
+.animotion-paper-fold { animation: animotion-paperFold 0.6s ease-in-out both; transform-origin: top; }
+.animotion-origami { animation: animotion-origami 1s ease-out both; }
+.animotion-film-burn { animation: animotion-filmBurn 0.5s ease-in-out both; }
+.animotion-vhs-tracking { animation: animotion-vhsTracking 2s steps(3) infinite; }
+.animotion-pixelate { animation: animotion-pixelate 0.8s steps(8) both; }
+.animotion-ascii { animation: animotion-ascii 1s steps(10) both; font-family: monospace; }
+.animotion-halftone { animation: animotion-halftone 0.8s ease-out both; }
+.animotion-mosaic { animation: animotion-mosaic 0.8s ease-out both; }
+.animotion-kaleidoscope { animation: animotion-kaleidoscope 4s linear infinite; }
+.animotion-mirror-reflect { animation: animotion-mirrorReflect 2s ease-in-out infinite; }
+.animotion-liquid-morph { animation: animotion-liquidMorph 4s ease-in-out infinite; }
+.animotion-smoke-rise { animation: animotion-smokeRise 3s ease-out infinite; }
+.animotion-fire-flicker { animation: animotion-fireFlicker 0.3s ease-in-out infinite; }
+.animotion-lightning-flash { animation: animotion-lightningFlash 0.3s ease-out both; }
+.animotion-aurora-wave { animation: animotion-auroraWave 5s ease-in-out infinite; }
+.animotion-crystal-grow { animation: animotion-crystalGrow 1s ease-out both; }
+.animotion-ice-formation { animation: animotion-iceFormation 0.8s ease-out both; }
+.animotion-sand-flow { animation: animotion-sandFlow 2s linear infinite; }
+.animotion-wind-blow { animation: animotion-windBlow 3s ease-in-out infinite; transform-origin: bottom center; }
+.animotion-leaf-fall { animation: animotion-leafFall 3s ease-in-out both; }
+.animotion-petal-float { animation: animotion-petalFloat 4s ease-in-out infinite; }
+.animotion-bubble-rise { animation: animotion-bubbleRise 3s ease-out infinite; }
+.animotion-waves-crash { animation: animotion-wavesCrash 2s ease-in-out infinite; }
+.animotion-rain-drop { animation: animotion-rainDrop 1s ease-in both; }
+.animotion-sparkle { animation: animotion-sparkle 1.5s ease-in-out infinite; }
+.animotion-stardust { animation: animotion-stardust 2s ease-out infinite; }
+.animotion-cosmic-dust { animation: animotion-cosmicDust 5s linear infinite; }
+.animotion-galaxy-spin { animation: animotion-galaxySpin 8s linear infinite; }
+.animotion-black-hole { animation: animotion-blackHole 1s ease-in both; }
+.animotion-wormhole { animation: animotion-wormhole 1.5s ease-in-out both; }
+.animotion-time-warp { animation: animotion-timeWarp 1s ease-in-out both; }
+.animotion-dimension-shift { animation: animotion-dimensionShift 1s ease-in-out both; }
+.animotion-glass-shatter { animation: animotion-glassShatter 0.5s ease-out both; }
+.animotion-paper-tear { animation: animotion-paperTear 0.6s ease-out both; }
+.animotion-chain-reaction { animation: animotion-chainReaction 0.5s ease-out both; }
+.animotion-domino-fall { animation: animotion-dominoFall 0.5s ease-in both; transform-origin: bottom right; }
+.animotion-ripple-effect { animation: animotion-rippleEffect 1s ease-out infinite; }
+.animotion-ticker-scroll { animation: animotion-tickerScroll 10s linear infinite; white-space: nowrap; }
+.animotion-price-up { color: #10b981; animation: animotion-priceUp 0.5s ease-out both; }
+.animotion-price-down { color: #ef4444; animation: animotion-priceDown 0.5s ease-out both; }
+.animotion-candlestick-grow { animation: animotion-candlestickGrow 0.6s ease-out both; transform-origin: bottom; }
+.animotion-chart-line-draw-fintech { animation: animotion-chartLineDrawFintech 1.5s ease-in-out both; }
+.animotion-pie-fill-fintech { border-radius: 50%; animation: animotion-pieFillFintech 1s ease-out both; }
+.animotion-bar-grow { animation: animotion-barGrow 0.8s ease-out both; transform-origin: bottom; }
+.animotion-value-counter { animation: animotion-valueCounter 1s ease-out both; }
+.animotion-currency-flip { animation: animotion-currencyFlip 0.4s ease-in-out both; }
+.animotion-transaction-slide { animation: animotion-transactionSlide 0.3s ease-out both; }
+.animotion-balance-update { animation: animotion-balanceUpdate 0.5s ease-out both; }
+.animotion-profit-glow { animation: animotion-profitGlow 1.5s ease-in-out infinite; }
+.animotion-loss-flash { animation: animotion-lossFlash 0.5s ease-in-out 2 both; }
+.animotion-market-pulse { animation: animotion-marketPulse 2s ease-in-out infinite; }
+.animotion-stock-ticker { animation: animotion-stockTicker 0.4s ease-out both; }
+.animotion-portfolio-card { animation: animotion-portfolioCard 0.5s ease-out both; }
+.animotion-invoice-slide { animation: animotion-invoiceSlide 0.4s ease-out both; }
+.animotion-payment-process { animation: animotion-paymentProcess 2s ease-in-out both; }
+.animotion-wallet-open { animation: animotion-walletOpen 0.5s ease-out both; transform-origin: bottom; }
+.animotion-coin-drop { animation: animotion-coinDrop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-coin-flip { animation: animotion-coinFlip 1s ease-in-out both; }
+.animotion-coin-stack { animation: animotion-coinStack 0.3s ease-out both; }
+.animotion-diamond-shine { animation: animotion-diamondShine 2s ease-in-out infinite; }
+.animotion-gold-gleam { background: linear-gradient(110deg, #b8860b 30%, #ffd700 50%, #b8860b 70%); background-size: 200% 100%; animation: animotion-goldGleam 2s ease-in-out infinite; }
+.animotion-secure-lock { animation: animotion-secureLock 0.3s ease-out both; }
+.animotion-verify-check { animation: animotion-verifyCheck 0.5s ease-out both; }
+.animotion-transfer-arrow { animation: animotion-transferArrow 0.6s ease-in-out both; }
+.animotion-deposit-drop { animation: animotion-depositDrop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-withdraw-slide { animation: animotion-withdrawSlide 0.4s ease-in both; }
+.animotion-dividend-rain { animation: animotion-dividendRain 1s ease-in both; }
+.animotion-gravity-fall { animation: animotion-gravityFall 0.6s cubic-bezier(0.55, 0, 1, 0.45) both; }
+.animotion-elastic-bounce-physics { animation: animotion-elasticBouncePhysics 1s ease-out both; }
+.animotion-spring-oscillate { animation: animotion-springOscillate 1.5s ease-out both; }
+.animotion-pendulum-swing { animation: animotion-pendulumSwing 2s ease-in-out infinite; transform-origin: top center; }
+.animotion-orbital-motion { animation: animotion-orbitalMotion 3s linear infinite; }
+.animotion-projectile-path { animation: animotion-projectilePath 1s ease-in both; }
+.animotion-wave-propagation { animation: animotion-wavePropagation 1s ease-out both; }
+.animotion-particle-explode { animation: animotion-particleExplode 0.5s ease-out both; }
+.animotion-magnet-attract { animation: animotion-magnetAttract 0.5s cubic-bezier(0.55, 0, 1, 0.45) both; }
+.animotion-magnet-repel { animation: animotion-magnetRepel 0.5s ease-out both; }
+.animotion-friction-slide { animation: animotion-frictionSlide 1s cubic-bezier(0, 0, 0.2, 1) both; }
+.animotion-momentum-carry { animation: animotion-momentumCarry 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animotion-collision-bounce { animation: animotion-collisionBounce 0.4s ease-out both; }
+.animotion-fluid-flow { animation: animotion-fluidFlow 3s ease-in-out infinite; }
+.animotion-vortex-pull { animation: animotion-vortexPull 1s ease-in both; }
+.animotion-tornado-spin { animation: animotion-tornadoSpin 2s linear infinite; }
+.animotion-earthquake-shake { animation: animotion-earthquakeShake 0.5s linear 3 both; }
+.animotion-avalanche-slide { animation: animotion-avalancheSlide 0.8s ease-in both; }
+.animotion-bouncing-ball-physics { animation: animotion-bouncingBallPhysics 1.5s ease-out both; }
+.animotion-damped-oscillation { animation: animotion-dampedOscillation 2s ease-out both; }
+.animotion-health-bar-fill { background: #10b981; animation: animotion-healthBarFill 1s ease-out both; transform-origin: left; }
+.animotion-health-bar-drain { background: #ef4444; animation: animotion-healthBarDrain 0.5s ease-in both; transform-origin: left; }
+.animotion-xp-gain { color: #f59e0b; animation: animotion-xpGain 1s ease-out both; }
+.animotion-level-up { animation: animotion-levelUp 1s ease-out both; }
+.animotion-achievement-unlock { animation: animotion-achievementUnlock 1s ease-out both; }
+.animotion-combo-counter { animation: animotion-comboCounter 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-damage-flash { animation: animotion-damageFlash 0.3s ease-out both; }
+.animotion-shield-activate { animation: animotion-shieldActivate 0.5s ease-out both; }
+.animotion-power-up { animation: animotion-powerUp 0.6s ease-out both; }
+.animotion-respawn { animation: animotion-respawn 0.8s ease-out both; }
+.animotion-score-pop-up { animation: animotion-scorePopUp 1s ease-out both; }
+.animotion-critical-hit { animation: animotion-criticalHit 0.4s ease-out both; }
+.animotion-heal-pulse { animation: animotion-healPulse 1s ease-out both; }
+.animotion-mana-recharge { background: #3b82f6; animation: animotion-manaRecharge 1.5s ease-in-out both; transform-origin: left; }
+.animotion-stamina-drain { animation: animotion-staminaDrain 1s ease-in both; transform-origin: left; }
+.animotion-poison-drip { animation: animotion-poisonDrip 1.5s ease-in-out infinite; }
+.animotion-freeze-effect { animation: animotion-freezeEffect 0.5s ease-out both; }
+.animotion-burn-effect { animation: animotion-burnEffect 0.3s ease-in-out infinite; }
+.animotion-electric-shock { animation: animotion-electricShock 0.2s steps(2) 5 both; }
+.animotion-teleport { animation: animotion-teleport 0.8s ease-in-out both; }
+.animotion-add-to-cart-bounce { animation: animotion-addToCartBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-cart-shake { animation: animotion-cartShake 0.5s ease-in-out both; }
+.animotion-wishlist-heart { animation: animotion-wishlistHeart 0.4s ease-out both; }
+.animotion-price-slash { text-decoration: line-through; animation: animotion-priceSlash 0.4s ease-out both; }
+.animotion-sale-badge-pop { animation: animotion-saleBadgePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-product-zoom { animation: animotion-productZoom 0.4s ease-out both; overflow: hidden; }
+.animotion-quick-view-slide { animation: animotion-quickViewSlide 0.3s ease-out both; }
+.animotion-size-select { animation: animotion-sizeSelect 0.2s ease-out both; }
+.animotion-color-swatch-pop { animation: animotion-colorSwatchPop 0.2s ease-out both; }
+.animotion-quantity-bounce { animation: animotion-quantityBounce 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-checkout-step { animation: animotion-checkoutStep 0.4s ease-in-out both; }
+.animotion-shipping-truck { animation: animotion-shippingTruck 2s ease-in-out both; }
+.animotion-delivery-drop { animation: animotion-deliveryDrop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-rating-star { animation: animotion-ratingStar 0.3s ease-out both; }
+.animotion-review-slide { animation: animotion-reviewSlide 0.4s ease-out both; }
+.animotion-coupon-peel { animation: animotion-couponPeel 0.6s ease-out both; transform-origin: left; }
+.animotion-discount-flash { color: #ef4444; animation: animotion-discountFlash 0.6s ease-in-out 2 both; }
+.animotion-stock-low { color: #ef4444; animation: animotion-stockLow 1.5s ease-in-out infinite; }
+.animotion-new-badge { animation: animotion-newBadge 0.5s ease-out both; }
+.animotion-trending-fire { animation: animotion-trendingFire 1s ease-in-out infinite; }
+.animotion-compare-slide { animation: animotion-compareSlide 0.4s ease-out both; }
+.animotion-filter-drop { animation: animotion-filterDrop 0.3s ease-out both; }
+.animotion-sort-flip { animation: animotion-sortFlip 0.3s ease-in-out both; }
+.animotion-grid-to-list { animation: animotion-gridToList 0.4s ease-in-out both; }
+.animotion-product-card-flip { animation: animotion-productCardFlip 0.6s ease-in-out both; perspective: 1000px; }
+.animotion-like-heart { animation: animotion-likeHeart 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-double-tap-heart { animation: animotion-doubleTapHeart 0.8s ease-out both; }
+.animotion-comment-bubble { animation: animotion-commentBubble 0.3s ease-out both; }
+.animotion-share-bounce { animation: animotion-shareBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-follow-pop { animation: animotion-followPop 0.3s ease-out both; }
+.animotion-story-ring { border: 3px solid transparent; border-radius: 50%; background-image: linear-gradient(white, white), linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); background-origin: border-box; background-clip: padding-box, border-box; animation: animotion-storyRing 3s linear infinite; }
+.animotion-story-progress { background: #fff; animation: animotion-storyProgress 5s linear both; transform-origin: left; }
+.animotion-reel-play { animation: animotion-reelPlay 0.6s ease-out both; }
+.animotion-notification-bell { animation: animotion-notificationBell 0.5s ease-in-out both; transform-origin: top center; }
+.animotion-message-pop { animation: animotion-messagePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-status-dot { width: 10px; height: 10px; border-radius: 50%; background: #10b981; animation: animotion-statusDot 2s ease-in-out infinite; }
+.animotion-verified-badge { animation: animotion-verifiedBadge 0.5s ease-out both; }
+.animotion-hashtag-pop { animation: animotion-hashtagPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-mention-highlight { animation: animotion-mentionHighlight 0.3s ease-out both; }
+.animotion-trending-arrow { animation: animotion-trendingArrow 1s ease-in-out infinite; }
+.animotion-live-indicator { background: #ef4444; animation: animotion-liveIndicator 1.5s ease-in-out infinite; }
+.animotion-poll-bar-fill { animation: animotion-pollBarFill 0.8s ease-out both; transform-origin: left; }
+.animotion-reaction-float { animation: animotion-reactionFloat 1.5s ease-out both; }
+.animotion-voice-note span { display: inline-block; width: 3px; height: 15px; background: #3b82f6; margin: 0 1px; animation: animotion-voiceNote 0.8s ease-in-out infinite; }
+.animotion-read-receipt { animation: animotion-readReceipt 0.3s ease-out both; }
+.animotion-group-avatar { animation: animotion-groupAvatar 0.3s ease-out both; }
+.animotion-profile-pop { animation: animotion-profilePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-feed-refresh { animation: animotion-feedRefresh 1s linear infinite; }
+.animotion-infinite-scroll span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; animation: animotion-infiniteScroll 1s ease-in-out infinite; }
+.animotion-content-load { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: animotion-contentLoad 1.5s linear infinite; }
+.animotion-chart-line-draw { animation: animotion-chartLineDraw 1.5s ease-in-out both; }
+.animotion-chart-bar-grow { animation: animotion-chartBarGrow 0.8s ease-out both; transform-origin: bottom; }
+.animotion-chart-pie-fill { border-radius: 50%; animation: animotion-chartPieFill 1s ease-out both; }
+.animotion-chart-donut-fill { border-radius: 50%; animation: animotion-chartDonutFill 1s ease-out both; }
+.animotion-gauge-needle { animation: animotion-gaugeNeedle 1s ease-out both; transform-origin: bottom center; }
+.animotion-sparkline { animation: animotion-sparkline 1s ease-out both; }
+.animotion-heatmap-pulse { animation: animotion-heatmapPulse 1.5s ease-in-out infinite; }
+.animotion-treemap-expand { animation: animotion-treemapExpand 0.4s ease-out both; }
+.animotion-scatter-plot { animation: animotion-scatterPlot 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-radar-sweep { animation: animotion-radarSweep 3s linear infinite; }
+.animotion-funnel-fill { animation: animotion-funnelFill 0.5s ease-out both; }
+.animotion-waterfall-step { animation: animotion-waterfallStep 0.4s ease-out both; }
+.animotion-bubble-chart { animation: animotion-bubbleChart 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-network-node { animation: animotion-networkNode 0.4s ease-out both; }
+.animotion-timeline-reveal { animation: animotion-timelineReveal 0.5s ease-out both; }
+.animotion-kpi-counter { animation: animotion-kpiCounter 1s ease-out both; }
+.animotion-metric-card { animation: animotion-metricCard 0.4s ease-out both; }
+.animotion-alert-blink { animation: animotion-alertBlink 1s steps(1) infinite; }
+.animotion-status-change { animation: animotion-statusChange 0.5s ease-out both; }
+.animotion-data-refresh { animation: animotion-dataRefresh 1s linear infinite; }
+.animotion-table-row-slide { animation: animotion-tableRowSlide 0.3s ease-out both; }
+.animotion-grid-cell-pop { animation: animotion-gridCellPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animotion-widget-expand { animation: animotion-widgetExpand 0.4s ease-out both; }
+.animotion-panel-slide { animation: animotion-panelSlide 0.3s ease-out both; }
+.animotion-dashboard-load { animation: animotion-dashboardLoad 0.5s ease-out both; }

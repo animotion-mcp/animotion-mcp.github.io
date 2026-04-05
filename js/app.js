@@ -19,7 +19,7 @@
     pageSize: 48,
     currentPage: 1,
     previewText: '',
-    animSpeed: 0.5,
+    animSpeed: 1,
   };
 
   // ── DOM Cache ──
@@ -108,11 +108,6 @@
     handleRoute();
     bindEvents();
 
-    // Set initial speed slider to 0.5x (smoother default)
-    const slider = $('#speed-slider');
-    const speedVal = $('#speed-value');
-    if (slider) slider.value = '0.5';
-    if (speedVal) speedVal.textContent = '0.5x';
   }
 
   // ── Theme ──
