@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "animotion": {
+      "command": "npx",
+      "args": ["-y", "animotion-mcp"]
+    }
+  }
+}
