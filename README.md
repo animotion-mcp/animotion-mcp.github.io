@@ -1,11 +1,12 @@
 # Animotion
 
-### The largest open-source CSS3 animation library. 745+ animations, 9,000+ icons via MCP, zero dependencies.
+### MCP server for AI agents — 745+ CSS animations, 9,000+ SVG icons. One command: `npx animotion-mcp`
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://animationiconsmcp.github.io)
 [![Icons](https://img.shields.io/badge/MCP_Icons-9,000+-06b6d4)](mcp/)
 [![MCP](https://img.shields.io/badge/MCP-v2.0-10b981)](mcp/)
+[![npm](https://img.shields.io/npm/v/animotion-mcp)](https://www.npmjs.com/package/animotion-mcp)
 
 **[Live Demo](https://animationiconsmcp.github.io)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
 
@@ -23,7 +24,7 @@ Built for everyone — from manual coders to vibe coders, from junior developers
 - **9,000+ real SVG icons** via MCP — Lucide, Tabler, Bootstrap, Heroicons, built-in (eliminates AI-generated icons)
 - **Zero dependencies** — pure CSS, no JavaScript frameworks required
 - **GPU-optimized** — animations use `transform` and `opacity` for 60fps performance
-- **Hover-to-play previews** — smooth, no GPU overload, auto-play toggle available
+- **Auto-playing previews** — smooth, no GPU overload, auto-play toggle available
 - **Custom text preview** — type your name/brand and see it animated across all 745 animations
 - **Copy-paste ready** — every animation has a single CSS class
 - **AI-friendly** — MCP v2 server with 10 tools for Claude Code, Cursor, Windsurf, Cline
@@ -38,9 +39,26 @@ Built for everyone — from manual coders to vibe coders, from junior developers
 
 ## Quick Start
 
-### Option 1: CDN (Recommended)
+### Option 1: MCP for AI Agents (Recommended)
 
-Add these lines to your HTML `<head>`:
+Add to your Claude Code / Cursor / Windsurf MCP config:
+
+```json
+{
+  "mcpServers": {
+    "animotion": {
+      "command": "npx",
+      "args": ["-y", "animotion-mcp"]
+    }
+  }
+}
+```
+
+That's it. No clone, no install. Your AI agent now has access to 745 animations and 9,000+ SVG icons.
+
+[![npm](https://img.shields.io/npm/v/animotion-mcp)](https://www.npmjs.com/package/animotion-mcp)
+
+### Option 2: CDN (Manual CSS)
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes.css">
@@ -48,23 +66,15 @@ Add these lines to your HTML `<head>`:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/utilities.css">
 ```
 
-Then use any animation class:
-
 ```html
 <div class="animotion-fade-in">Hello World</div>
 ```
 
-### Option 2: Download
+### Option 3: Download
 
 ```bash
 git clone https://github.com/animationiconsmcp/animationiconsmcp.github.io.git
 ```
-
-Include the CSS files from the `css/` folder in your project.
-
-### Option 3: Copy from Website
-
-Visit [animationiconsmcp.github.io](https://animationiconsmcp.github.io), find your animation, hover to preview, click the card, and copy the CSS.
 
 ---
 
@@ -460,55 +470,34 @@ When AI coding tools generate UIs, they often create SVG icons that look obvious
 | Heroicons | 324 | MIT |
 | Built-in | 120 | MIT |
 
-### Setup
+### Install
 
 ```bash
-cd mcp/
-npm install
+npx animotion-mcp        # run directly, no install needed
+# or
+npm install -g animotion-mcp  # install globally
 ```
 
-### Connect to Claude Code
+### Connect to Claude Code / Cursor / Windsurf
 
-Add to your project's `.claude/settings.json` or `~/.claude/settings.json`:
+Add to your MCP config file:
 
 ```json
 {
   "mcpServers": {
     "animotion": {
-      "command": "node",
-      "args": ["/absolute/path/to/css3-animations/mcp/server.js"]
+      "command": "npx",
+      "args": ["-y", "animotion-mcp"]
     }
   }
 }
 ```
 
-### Connect to Cursor / Windsurf / Cline
-
-Add to your MCP configuration (varies by tool):
-
-```json
-{
-  "animotion": {
-    "command": "node",
-    "args": ["/absolute/path/to/css3-animations/mcp/server.js"]
-  }
-}
-```
-
-### Connect to Claude Desktop
-
-Add to `~/.claude/claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "animotion": {
-      "command": "node",
-      "args": ["/absolute/path/to/css3-animations/mcp/server.js"]
-    }
-  }
-}
-```
+**Config file locations:**
+- **Claude Code:** `.claude/settings.json` or `~/.claude/settings.json`
+- **Cursor:** `.cursor/mcp.json`
+- **Windsurf:** MCP settings panel
+- **Claude Desktop:** `~/.claude/claude_desktop_config.json`
 
 ### Available MCP Tools (10 total)
 

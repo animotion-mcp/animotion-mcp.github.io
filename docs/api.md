@@ -109,23 +109,23 @@ GET /api.json
 
 Animotion includes a Model Context Protocol (MCP) server that enables AI agents like Claude to directly search and use animations.
 
-### Setup
+### Install
 
 ```bash
-cd mcp/
-npm install
+npx animotion-mcp        # run directly
+npm install -g animotion-mcp  # or install globally
 ```
 
-### Claude Desktop Configuration
+### MCP Configuration (Claude Code / Cursor / Windsurf)
 
-Add to `~/.claude/claude_desktop_config.json`:
+Add to your MCP config:
 
 ```json
 {
   "mcpServers": {
     "animotion": {
-      "command": "node",
-      "args": ["/path/to/css3-animations/mcp/server.js"]
+      "command": "npx",
+      "args": ["-y", "animotion-mcp"]
     }
   }
 }

@@ -26,10 +26,12 @@ Thanks for your interest in contributing! Animotion is an open-source CSS3 anima
 - Keyframe names match without prefix: `slide-up-fade`
 
 ### MCP Server Changes
-1. Navigate to `mcp/` directory
-2. Run `npm install` to set up dependencies
-3. Test with: `echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | node server.js`
-4. Ensure all 10 tools are returned
+1. The MCP server is published as `animotion-mcp` on npm
+2. Navigate to `mcp/` directory for development
+3. Run `npm install` to set up dependencies
+4. Test with: `echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | node server.js`
+5. Ensure all 10 tools are returned
+6. After changes, bump version in `mcp/package.json` and publish: `cd mcp && npm publish`
 
 ## Development Setup
 
@@ -40,8 +42,11 @@ cd animationiconsmcp.github.io
 # Website — just open in browser
 open index.html
 
-# MCP Server
+# MCP Server (for development)
 cd mcp && npm install
+
+# Test MCP (users just run: npx animotion-mcp)
+echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | node server.js
 ```
 
 No build tools required. The website is pure static HTML/CSS/JS.
