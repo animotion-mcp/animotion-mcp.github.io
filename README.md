@@ -3,12 +3,12 @@
 ### MCP server for AI agents — 745+ CSS animations, 9,000+ SVG icons. One command: `npx animotion-mcp`
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://animationiconsmcp.github.io)
+[![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://animotion-mcp.github.io)
 [![Icons](https://img.shields.io/badge/MCP_Icons-9,000+-06b6d4)](mcp/)
 [![MCP](https://img.shields.io/badge/MCP-v2.0-10b981)](mcp/)
 [![npm](https://img.shields.io/npm/v/animotion-mcp)](https://www.npmjs.com/package/animotion-mcp)
 
-**[Live Demo](https://animationiconsmcp.github.io)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
+**[Live Demo](https://animotion-mcp.github.io)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
 
 ---
 
@@ -61,9 +61,9 @@ That's it. No clone, no install. Your AI agent now has access to 745 animations 
 ### Option 2: CDN (Manual CSS)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/keyframes-part2.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animationiconsmcp/animationiconsmcp.github.io@main/css/utilities.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animotion-mcp/animotion-mcp.github.io@main/css/keyframes.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animotion-mcp/animotion-mcp.github.io@main/css/keyframes-part2.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/animotion-mcp/animotion-mcp.github.io@main/css/utilities.css">
 ```
 
 ```html
@@ -73,7 +73,7 @@ That's it. No clone, no install. Your AI agent now has access to 745 animations 
 ### Option 3: Download
 
 ```bash
-git clone https://github.com/animationiconsmcp/animationiconsmcp.github.io.git
+git clone https://github.com/animotion-mcp/animotion-mcp.github.io.git
 ```
 
 ---
@@ -347,12 +347,12 @@ Or handle it globally:
 
 ## API Reference
 
-Animotion provides a machine-readable JSON API at [`api.json`](https://animationiconsmcp.github.io/api.json) for programmatic access.
+Animotion provides a machine-readable JSON API at [`api.json`](https://animotion-mcp.github.io/api.json) for programmatic access.
 
 ### Endpoint
 
 ```
-GET https://animationiconsmcp.github.io/api.json
+GET https://animotion-mcp.github.io/api.json
 ```
 
 ### Response Schema
@@ -399,7 +399,7 @@ GET https://animationiconsmcp.github.io/api.json
 #### Fetch all animations in a category
 
 ```javascript
-const response = await fetch('https://animationiconsmcp.github.io/api.json');
+const response = await fetch('https://animotion-mcp.github.io/api.json');
 const data = await response.json();
 
 // Get all loader animations
@@ -688,7 +688,7 @@ Upload any image (PNG, JPG, SVG, GIF) and apply any of the 745 animations to it.
 
 ### How to use
 
-1. Visit [the website](https://animationiconsmcp.github.io) and click **PNG Animator** tab
+1. Visit [the website](https://animotion-mcp.github.io) and click **PNG Animator** tab
 2. Drag & drop your image or click to browse
 3. Select an animation from the dropdown (organized by category)
 4. Adjust duration, easing, and delay
@@ -924,7 +924,7 @@ Built by [Bachao.AI](https://bachao.ai) for the developer community.
 
 ## Links
 
-- **Website:** https://animationiconsmcp.github.io
-- **GitHub:** https://github.com/animationiconsmcp/animationiconsmcp.github.io
-- **API JSON:** https://animationiconsmcp.github.io/api.json
-- **API Docs:** https://animationiconsmcp.github.io/docs/api.md
+- **Website:** https://animotion-mcp.github.io
+- **GitHub:** https://github.com/animotion-mcp/animotion-mcp.github.io
+- **API JSON:** https://animotion-mcp.github.io/api.json
+- **API Docs:** https://animotion-mcp.github.io/docs/api.md

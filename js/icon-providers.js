@@ -46,7 +46,7 @@ window.ANIMOTION_ICON_PROVIDERS = (function () {
     id: 'builtin',
     name: 'Animotion Built-in',
     description: '120 hand-crafted, stroke-based SVG icons included with Animotion.',
-    website: 'https://github.com/animationiconsmcp/animationiconsmcp.github.io',
+    website: 'https://github.com/animotion-mcp/animotion-mcp.github.io',
     license: 'MIT',
     type: 'builtin',          // builtin | free | paid | custom
     totalIcons: 120,

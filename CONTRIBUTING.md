@@ -5,11 +5,11 @@ Thanks for your interest in contributing! Animotion is an open-source CSS3 anima
 ## How to Contribute
 
 ### Reporting Bugs
-- Use the [Bug Report](https://github.com/animationiconsmcp/animationiconsmcp.github.io/issues/new?template=bug_report.yml) template
+- Use the [Bug Report](https://github.com/animotion-mcp/animotion-mcp.github.io/issues/new?template=bug_report.yml) template
 - Include browser, OS, and steps to reproduce
 
 ### Suggesting Features
-- Use the [Feature Request](https://github.com/animationiconsmcp/animationiconsmcp.github.io/issues/new?template=feature_request.yml) template
+- Use the [Feature Request](https://github.com/animotion-mcp/animotion-mcp.github.io/issues/new?template=feature_request.yml) template
 - Describe the use case and why it's needed
 
 ### Adding Animations
@@ -36,8 +36,8 @@ Thanks for your interest in contributing! Animotion is an open-source CSS3 anima
 ## Development Setup
 
 ```bash
-git clone https://github.com/animationiconsmcp/animationiconsmcp.github.io.git
-cd animationiconsmcp.github.io
+git clone https://github.com/animotion-mcp/animotion-mcp.github.io.git
+cd animotion-mcp.github.io
 
 # Website — just open in browser
 open index.html

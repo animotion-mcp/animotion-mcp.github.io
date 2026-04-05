@@ -8,10 +8,10 @@
   "author": "Bachao.AI",
   "repository": {
     "type": "git",
-    "url": "https://github.com/animationiconsmcp/animationiconsmcp.github.io",
+    "url": "https://github.com/animotion-mcp/animotion-mcp.github.io",
     "directory": "mcp"
   },
-  "homepage": "https://animationiconsmcp.github.io",
+  "homepage": "https://animotion-mcp.github.io",
   "engines": {
     "node": ">=18"
   },
