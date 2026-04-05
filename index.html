@@ -146,32 +146,31 @@
       </div>
 
       <div class="mcp-setup">
-        <h3 class="mcp-setup-title">Setup in 30 Seconds</h3>
+        <h3 class="mcp-setup-title">One Command Setup</h3>
         <div class="install-grid" style="max-width: 700px; margin: 0 auto;">
           <div class="install-card">
             <div class="install-card-header">
-              <span class="install-label">Claude / Cursor / Windsurf</span>
-              <button class="copy-btn" data-copy-text='{"mcpServers":{"animotion":{"command":"node","args":["mcp/server.js"],"cwd":"/path/to/animationiconsmcp.github.io"}}}' aria-label="Copy MCP config">Copy</button>
+              <span class="install-label">Add to your MCP config</span>
+              <button class="copy-btn" data-copy-text='{"mcpServers":{"animotion":{"command":"npx","args":["-y","animotion-mcp"]}}}' aria-label="Copy MCP config">Copy</button>
             </div>
             <pre class="install-code"><code>{
   "mcpServers": {
     "animotion": {
-      "command": "node",
-      "args": ["mcp/server.js"],
-      "cwd": "/path/to/animationiconsmcp.github.io"
+      "command": "npx",
+      "args": ["-y", "animotion-mcp"]
     }
   }
 }</code></pre>
           </div>
           <div class="install-card">
             <div class="install-card-header">
-              <span class="install-label">Quick Start</span>
+              <span class="install-label">That's it. No clone, no install.</span>
             </div>
-            <pre class="install-code"><code>git clone https://github.com/animationiconsmcp/
-  animationiconsmcp.github.io.git
-cd animationiconsmcp.github.io/mcp
-npm install
-# Add the MCP config to your AI tool</code></pre>
+            <pre class="install-code"><code># Or install globally
+npm install -g animotion-mcp
+
+# Or run directly
+npx animotion-mcp</code></pre>
           </div>
         </div>
       </div>

@@ -28,33 +28,51 @@ import { loadAllIcons, buildSearchIndex } from './icon-loader.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// ── Helper: find file in local dir first, then parent ──
+function findFile(...relativePaths) {
+  for (const p of relativePaths) {
+    const full = join(__dirname, p);
+    try { readFileSync(full, 'utf-8'); return full; } catch {}
+  }
+  return null;
+}
+
 // ── Load Animation Data ──
 let animationData;
 try {
-  const apiPath = join(__dirname, '..', 'api.json');
-  animationData = JSON.parse(readFileSync(apiPath, 'utf-8'));
+  const apiPath = findFile('api.json', join('..', 'api.json'));
+  if (apiPath) {
+    animationData = JSON.parse(readFileSync(apiPath, 'utf-8'));
+  } else {
+    throw new Error('api.json not found');
+  }
 } catch {
   try {
-    const dataPath = join(__dirname, '..', 'js', 'data.js');
-    const content = readFileSync(dataPath, 'utf-8');
-    const match = content.match(/window\.ANIMOTION_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
-    if (match) animationData = JSON.parse(match[1]);
+    const dataPath = findFile(join('..', 'js', 'data.js'));
+    if (dataPath) {
+      const content = readFileSync(dataPath, 'utf-8');
+      const match = content.match(/window\.ANIMOTION_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
+      if (match) animationData = JSON.parse(match[1]);
+    }
   } catch {
     animationData = { categories: [], animations: [] };
   }
 }
+if (!animationData) animationData = { categories: [], animations: [] };
 
 // ── Load Built-in Icons ──
 let builtinIcons = { categories: [], icons: [] };
 try {
-  const iconsPath = join(__dirname, '..', 'js', 'icons.js');
-  const content = readFileSync(iconsPath, 'utf-8');
-  const start = content.indexOf('{');
-  const end = content.lastIndexOf('}');
-  if (start >= 0 && end > start) {
-    let jsonStr = content.substring(start, end + 1);
-    jsonStr = jsonStr.replace(/,\s*([\]}])/g, '$1');
-    builtinIcons = JSON.parse(jsonStr);
+  const iconsPath = findFile('icons-data.js', join('..', 'js', 'icons.js'));
+  if (iconsPath) {
+    const content = readFileSync(iconsPath, 'utf-8');
+    const start = content.indexOf('{');
+    const end = content.lastIndexOf('}');
+    if (start >= 0 && end > start) {
+      let jsonStr = content.substring(start, end + 1);
+      jsonStr = jsonStr.replace(/,\s*([\]}])/g, '$1');
+      builtinIcons = JSON.parse(jsonStr);
+    }
   }
 } catch {
   // silent
@@ -456,7 +474,8 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
       return { contents: [{ uri, mimeType: 'application/json', text: JSON.stringify(animationData.categories || [], null, 2) }] };
     case 'animotion://utilities': {
       try {
-        const css = readFileSync(join(__dirname, '..', 'css', 'utilities.css'), 'utf-8');
+        const cssPath = findFile('utilities.css', join('..', 'css', 'utilities.css'));
+        const css = cssPath ? readFileSync(cssPath, 'utf-8') : 'Utilities file not found';
         return { contents: [{ uri, mimeType: 'text/css', text: css }] };
       } catch {
         return { contents: [{ uri, mimeType: 'text/plain', text: 'Utilities file not found' }] };
