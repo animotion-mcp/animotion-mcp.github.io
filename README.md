@@ -1,33 +1,38 @@
 # Animotion
 
-### The largest open-source CSS3 animation library. 745+ animations, 120 SVG icons, zero dependencies.
+### The largest open-source CSS3 animation library. 745+ animations, 9,500+ icons via MCP, zero dependencies.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://shouvikfullstack.github.io/css3-animations/)
-[![Icons](https://img.shields.io/badge/Icons-120-06b6d4)](https://shouvikfullstack.github.io/css3-animations/)
-[![MCP](https://img.shields.io/badge/MCP-Server-10b981)](mcp/)
+[![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://animotion-chi.vercel.app)
+[![Icons](https://img.shields.io/badge/MCP_Icons-9,500+-06b6d4)](mcp/)
+[![MCP](https://img.shields.io/badge/MCP-v2.0-10b981)](mcp/)
+[![Deploy](https://img.shields.io/badge/Vercel-Deployed-000?logo=vercel)](https://animotion-chi.vercel.app)
 
-**[Live Demo](https://shouvikfullstack.github.io/css3-animations/)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
+**[Live Demo](https://animotion-chi.vercel.app)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
 
 ---
 
 ## What is Animotion?
 
-Animotion is a production-ready CSS3 animation framework built for the modern web. It provides **745+ hand-crafted animations** across 20 categories, **120 SVG icons**, a **PNG Animator** tool, and an **MCP server** so AI agents can search and use animations directly.
+Animotion is a production-ready CSS3 animation framework built for the modern web. It provides **745+ hand-crafted animations** across 20 categories, **9,500+ real SVG icons** via MCP (from Lucide, Heroicons, Tabler, Bootstrap), a **PNG Animator** tool, and an **MCP server** so AI agents can search and use animations and icons directly.
 
 Built for everyone — from manual coders to vibe coders, from junior developers to AI agents.
 
 ### Key Features
 
 - **745+ CSS3 animations** across 20 categories — the largest collection available
-- **120 SVG icons** — clean, stroke-based, production-ready
+- **9,500+ real SVG icons** via MCP — Lucide, Tabler, Bootstrap, Heroicons, built-in (eliminates AI-generated icons)
 - **Zero dependencies** — pure CSS, no JavaScript frameworks required
 - **GPU-optimized** — animations use `transform` and `opacity` for 60fps performance
+- **Hover-to-play previews** — smooth, no GPU overload, auto-play toggle available
+- **Custom text preview** — type your name/brand and see it animated across all 745 animations
 - **Copy-paste ready** — every animation has a single CSS class
-- **AI-friendly** — MCP server + machine-readable `api.json` for agent integration
+- **AI-friendly** — MCP v2 server with 10 tools for Claude Code, Cursor, Windsurf, Cline
 - **PNG Animator** — upload any image, apply animation, export CSS
 - **Utility classes** — control duration, delay, easing, iteration, stagger
-- **Accessibility** — `prefers-reduced-motion` support built in
+- **Syntax-highlighted code** — modal shows CSS/HTML/JS with colored syntax
+- **URL routing** — deep-link to any animation or category via hash
+- **Accessibility** — skip link, ARIA labels, focus trap, `prefers-reduced-motion`
 - **MIT Licensed** — free forever, commercial use allowed
 
 ---
@@ -60,7 +65,7 @@ Include the CSS files from the `css/` folder in your project.
 
 ### Option 3: Copy from Website
 
-Visit [shouvikfullstack.github.io/css3-animations](https://shouvikfullstack.github.io/css3-animations/), find your animation, click the card, and copy the CSS.
+Visit [animotion-chi.vercel.app](https://animotion-chi.vercel.app), find your animation, hover to preview, click the card, and copy the CSS.
 
 ---
 
@@ -333,12 +338,12 @@ Or handle it globally:
 
 ## API Reference
 
-Animotion provides a machine-readable JSON API at [`api.json`](https://shouvikfullstack.github.io/css3-animations/api.json) for programmatic access.
+Animotion provides a machine-readable JSON API at [`api.json`](https://animotion-chi.vercel.app/api.json) for programmatic access.
 
 ### Endpoint
 
 ```
-GET https://shouvikfullstack.github.io/css3-animations/api.json
+GET https://animotion-chi.vercel.app/api.json
 ```
 
 ### Response Schema
@@ -385,7 +390,7 @@ GET https://shouvikfullstack.github.io/css3-animations/api.json
 #### Fetch all animations in a category
 
 ```javascript
-const response = await fetch('https://shouvikfullstack.github.io/css3-animations/api.json');
+const response = await fetch('https://animotion-chi.vercel.app/api.json');
 const data = await response.json();
 
 // Get all loader animations
@@ -440,7 +445,21 @@ data.categories.forEach(cat => {
 
 ## MCP Server (for AI Agents)
 
-Animotion includes a **Model Context Protocol (MCP) server** that lets AI agents like Claude, GPT, and others directly search, retrieve, and compose animations.
+Animotion includes an **MCP v2 server** with **745 animations + 9,500+ real SVG icons** from 5 providers. AI agents get real hand-crafted icons instead of generating AI-looking ones.
+
+### Why Use This MCP?
+
+When AI coding tools generate UIs, they often create SVG icons that look obviously AI-generated. With Animotion MCP, agents call `search_icons("shopping cart")` and get **real SVGs** from Lucide, Heroicons, Tabler, and Bootstrap — content matches the context but doesn't look AI-generated.
+
+### Icon Providers (9,500+ icons)
+
+| Provider | Icons | License |
+|----------|-------|---------|
+| Lucide | 1,941 | ISC |
+| Tabler | 5,039 | MIT |
+| Bootstrap | 2,078 | MIT |
+| Heroicons | 324 | MIT |
+| Built-in | 120 | MIT |
 
 ### Setup
 
@@ -449,24 +468,9 @@ cd mcp/
 npm install
 ```
 
-### Connect to Claude Desktop
-
-Add to your `~/.claude/claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "animotion": {
-      "command": "node",
-      "args": ["/absolute/path/to/css3-animations/mcp/server.js"]
-    }
-  }
-}
-```
-
 ### Connect to Claude Code
 
-Add to your project's `.claude/settings.json`:
+Add to your project's `.claude/settings.json` or `~/.claude/settings.json`:
 
 ```json
 {
@@ -479,7 +483,35 @@ Add to your project's `.claude/settings.json`:
 }
 ```
 
-### Available MCP Tools
+### Connect to Cursor / Windsurf / Cline
+
+Add to your MCP configuration (varies by tool):
+
+```json
+{
+  "animotion": {
+    "command": "node",
+    "args": ["/absolute/path/to/css3-animations/mcp/server.js"]
+  }
+}
+```
+
+### Connect to Claude Desktop
+
+Add to `~/.claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "animotion": {
+      "command": "node",
+      "args": ["/absolute/path/to/css3-animations/mcp/server.js"]
+    }
+  }
+}
+```
+
+### Available MCP Tools (10 total)
 
 #### 1. `search_animations`
 
@@ -608,15 +640,57 @@ Get ONLY the CSS code — perfect for directly inserting into stylesheets.
 // .animotion-fade-in { animation: animotion-fadeIn 0.6s ease-out both; }
 ```
 
+#### 7. `search_icons`
+
+Search 9,500+ real SVG icons across all providers. Use instead of generating icons.
+
+```json
+// Input
+{ "query": "shopping cart", "provider": "all", "limit": 5 }
+
+// Output — real SVGs from multiple providers
+{
+  "count": 5,
+  "icons": [
+    {
+      "id": "lucide:shopping-cart",
+      "name": "Shopping Cart",
+      "provider": "lucide",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" ...>...</svg>"
+    }
+  ]
+}
+```
+
+#### 8. `get_icon`
+
+Get SVG code for a specific icon. Use `provider:name` format.
+
+```json
+// Input
+{ "id": "lucide:home" }
+
+// Output — complete SVG ready to paste
+```
+
+#### 9. `list_icon_providers`
+
+List all 5 icon providers with counts and metadata.
+
+#### 10. `add_custom_icon`
+
+Register your own SVG icon for the MCP session.
+
 ### MCP Resources
 
-The server also exposes resources that AI agents can read:
+The server exposes resources that AI agents can read:
 
 | URI | Description |
 |-----|-------------|
 | `animotion://catalog` | Complete animation catalog (JSON) |
 | `animotion://categories` | Category list with metadata (JSON) |
 | `animotion://utilities` | All utility CSS classes (CSS) |
+| `animotion://icons` | Icon library stats and built-in icons (JSON) |
 
 ---
 
@@ -626,7 +700,7 @@ Upload any image (PNG, JPG, SVG, GIF) and apply any of the 745 animations to it.
 
 ### How to use
 
-1. Visit [the website](https://shouvikfullstack.github.io/css3-animations/) and click **PNG Animator** tab
+1. Visit [the website](https://animotion-chi.vercel.app) and click **PNG Animator** tab
 2. Drag & drop your image or click to browse
 3. Select an animation from the dropdown (organized by category)
 4. Adjust duration, easing, and delay
@@ -653,7 +727,7 @@ Upload any image (PNG, JPG, SVG, GIF) and apply any of the 745 animations to it.
 
 ## Icons Library
 
-120 production-ready SVG icons across 7 categories. All icons use a consistent 24x24 viewBox with stroke-based rendering.
+**9,500+ SVG icons** available via MCP server (Lucide, Tabler, Bootstrap, Heroicons) + **120 built-in icons** on the website. All icons use consistent 24x24 viewBox with stroke-based rendering.
 
 ### Categories
 
@@ -718,9 +792,13 @@ css3-animations/
 │   ├── icons-app.js              # Icons tab controller
 │   └── png-animator.js           # PNG upload & animate
 │
+├── icons/
+│   └── favicon.svg               # SVG favicon
+│
 ├── mcp/
-│   ├── server.js                 # MCP server (6 tools + 3 resources)
-│   └── package.json              # MCP server dependencies
+│   ├── server.js                 # MCP v2 server (10 tools + 4 resources)
+│   ├── icon-loader.js            # Loads 9,500+ icons from npm packages
+│   └── package.json              # MCP dependencies (includes icon libraries)
 │
 ├── docs/
 │   └── api.md                    # Detailed API documentation
@@ -858,7 +936,8 @@ Built by [Bachao.AI](https://bachao.ai) for the developer community.
 
 ## Links
 
-- **Website:** https://shouvikfullstack.github.io/css3-animations/
+- **Website:** https://animotion-chi.vercel.app
 - **GitHub:** https://github.com/shouvikfullstack/css3-animations
-- **API JSON:** https://shouvikfullstack.github.io/css3-animations/api.json
-- **API Docs:** https://shouvikfullstack.github.io/css3-animations/docs/api.md
+- **API JSON:** https://animotion-chi.vercel.app/api.json
+- **API Docs:** https://animotion-chi.vercel.app/docs/api.md
+- **GitHub Pages (mirror):** https://shouvikfullstack.github.io/css3-animations/
