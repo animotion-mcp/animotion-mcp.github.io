@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a3a" stroke-width="0.5"/>
+    </pattern>
+    <!-- Center glow -->
+    <radialGradient id="glow" cx="50%" cy="45%" r="40%" fx="50%" fy="45%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#06b6d4" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0a0a1a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Top edge highlight -->
+    <linearGradient id="topEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="30%" stop-color="#7c3aed"/>
+      <stop offset="70%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a1a"/>
+
+  <!-- Grid overlay -->
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- Center glow -->
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#topEdge)"/>
+
+  <!-- Decorative circles (subtle) -->
+  <circle cx="200" cy="315" r="180" fill="none" stroke="#7c3aed" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="1000" cy="315" r="180" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="600" cy="280" r="260" fill="none" stroke="#7c3aed" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Main title: Animotion -->
+  <text x="600" y="210" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="96" font-weight="800" fill="white" letter-spacing="-2">Animotion</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="280" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" font-weight="400" fill="#a1a1aa" letter-spacing="1">CSS Animations &amp; Icons</text>
+
+  <!-- Tagline -->
+  <text x="600" y="340" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="500" fill="#06b6d4" letter-spacing="0.5">Built for AI Agents &amp; Developers</text>
+
+  <!-- Stat badges -->
+  <!-- Badge 1: 745+ Animations -->
+  <g transform="translate(220, 440)">
+    <rect x="0" y="0" width="220" height="64" rx="12" fill="#1a1a2e" stroke="#7c3aed" stroke-width="1" opacity="0.9"/>
+    <text x="110" y="30" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="white">745+</text>
+    <text x="110" y="52" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="400" fill="#a1a1aa" letter-spacing="1">ANIMATIONS</text>
+  </g>
+
+  <!-- Badge 2: 9,000+ Icons -->
+  <g transform="translate(490, 440)">
+    <rect x="0" y="0" width="220" height="64" rx="12" fill="#1a1a2e" stroke="#06b6d4" stroke-width="1" opacity="0.9"/>
+    <text x="110" y="30" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="white">9,000+</text>
+    <text x="110" y="52" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="400" fill="#a1a1aa" letter-spacing="1">ICONS</text>
+  </g>
+
+  <!-- Badge 3: 10 MCP Tools -->
+  <g transform="translate(760, 440)">
+    <rect x="0" y="0" width="220" height="64" rx="12" fill="#1a1a2e" stroke="#7c3aed" stroke-width="1" opacity="0.9"/>
+    <text x="110" y="30" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="white">10</text>
+    <text x="110" y="52" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="400" fill="#a1a1aa" letter-spacing="1">MCP TOOLS</text>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="627" width="1200" height="3" fill="url(#topEdge)"/>
+
+  <!-- Open Source badge (small, bottom right) -->
+  <text x="600" y="565" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="400" fill="#52525b" letter-spacing="2">OPEN SOURCE  ·  ZERO DEPENDENCIES  ·  MIT LICENSE</text>
+</svg>

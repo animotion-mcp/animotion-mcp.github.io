@@ -7,6 +7,20 @@
 (function () {
   'use strict';
 
+  function sanitizeSVG(svgStr) {
+    if (!svgStr) return '';
+    // Strip script tags, event handlers, and dangerous elements
+    return svgStr
+      .replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/\son\w+\s*=\s*["'][^"']*["']/gi, '')
+      .replace(/\son\w+\s*=\s*[^\s>]*/gi, '')
+      .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
+      .replace(/<object[\s\S]*?<\/object>/gi, '')
+      .replace(/<embed[\s\S]*?>/gi, '')
+      .replace(/javascript\s*:/gi, 'blocked:')
+      .replace(/data\s*:\s*text\/html/gi, 'blocked:');
+  }
+
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
@@ -169,7 +183,7 @@
       icons.forEach(icon => {
         html += `
           <div class="icon-card" data-icon-id="${icon.id}" data-icon-provider="${icon.provider || provider.id}" title="${icon.name}">
-            ${icon.svg}
+            ${sanitizeSVG(icon.svg)}
             <div class="icon-card-name">${icon.name}</div>
           </div>
         `;
@@ -234,7 +248,7 @@
         const icon = IP().getIcon(provId, iconId);
         if (!icon) return;
 
-        navigator.clipboard.writeText(icon.svg).then(() => {
+        navigator.clipboard.writeText(sanitizeSVG(icon.svg)).then(() => {
           iconCard.style.borderColor = 'var(--success)';
           iconCard.style.background = 'rgba(16, 185, 129, 0.1)';
           const nameEl = iconCard.querySelector('.icon-card-name');

@@ -1,10 +1,10 @@
 # Animotion
 
-### The largest open-source CSS3 animation library. 745+ animations, 9,500+ icons via MCP, zero dependencies.
+### The largest open-source CSS3 animation library. 745+ animations, 9,000+ icons via MCP, zero dependencies.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Animations](https://img.shields.io/badge/Animations-745+-6366f1)](https://animationiconsmcp.github.io)
-[![Icons](https://img.shields.io/badge/MCP_Icons-9,500+-06b6d4)](mcp/)
+[![Icons](https://img.shields.io/badge/MCP_Icons-9,000+-06b6d4)](mcp/)
 [![MCP](https://img.shields.io/badge/MCP-v2.0-10b981)](mcp/)
 
 **[Live Demo](https://animationiconsmcp.github.io)** | **[API Reference](#api-reference)** | **[MCP Server](#mcp-server-for-ai-agents)** | **[PNG Animator](#png-animator)**
@@ -13,14 +13,14 @@
 
 ## What is Animotion?
 
-Animotion is a production-ready CSS3 animation framework built for the modern web. It provides **745+ hand-crafted animations** across 20 categories, **9,500+ real SVG icons** via MCP (from Lucide, Heroicons, Tabler, Bootstrap), a **PNG Animator** tool, and an **MCP server** so AI agents can search and use animations and icons directly.
+Animotion is a production-ready CSS3 animation framework built for the modern web. It provides **745+ hand-crafted animations** across 20 categories, **9,000+ real SVG icons** via MCP (from Lucide, Heroicons, Tabler, Bootstrap), a **PNG Animator** tool, and an **MCP server** so AI agents can search and use animations and icons directly.
 
 Built for everyone — from manual coders to vibe coders, from junior developers to AI agents.
 
 ### Key Features
 
 - **745+ CSS3 animations** across 20 categories — the largest collection available
-- **9,500+ real SVG icons** via MCP — Lucide, Tabler, Bootstrap, Heroicons, built-in (eliminates AI-generated icons)
+- **9,000+ real SVG icons** via MCP — Lucide, Tabler, Bootstrap, Heroicons, built-in (eliminates AI-generated icons)
 - **Zero dependencies** — pure CSS, no JavaScript frameworks required
 - **GPU-optimized** — animations use `transform` and `opacity` for 60fps performance
 - **Hover-to-play previews** — smooth, no GPU overload, auto-play toggle available
@@ -444,13 +444,13 @@ data.categories.forEach(cat => {
 
 ## MCP Server (for AI Agents)
 
-Animotion includes an **MCP v2 server** with **745 animations + 9,500+ real SVG icons** from 5 providers. AI agents get real hand-crafted icons instead of generating AI-looking ones.
+Animotion includes an **MCP v2 server** with **745 animations + 9,000+ real SVG icons** from 5 providers. AI agents get real hand-crafted icons instead of generating AI-looking ones.
 
 ### Why Use This MCP?
 
 When AI coding tools generate UIs, they often create SVG icons that look obviously AI-generated. With Animotion MCP, agents call `search_icons("shopping cart")` and get **real SVGs** from Lucide, Heroicons, Tabler, and Bootstrap — content matches the context but doesn't look AI-generated.
 
-### Icon Providers (9,500+ icons)
+### Icon Providers (9,000+ icons)
 
 | Provider | Icons | License |
 |----------|-------|---------|
@@ -641,7 +641,7 @@ Get ONLY the CSS code — perfect for directly inserting into stylesheets.
 
 #### 7. `search_icons`
 
-Search 9,500+ real SVG icons across all providers. Use instead of generating icons.
+Search 9,000+ real SVG icons across all providers. Use instead of generating icons.
 
 ```json
 // Input
@@ -726,7 +726,7 @@ Upload any image (PNG, JPG, SVG, GIF) and apply any of the 745 animations to it.
 
 ## Icons Library
 
-**9,500+ SVG icons** available via MCP server (Lucide, Tabler, Bootstrap, Heroicons) + **120 built-in icons** on the website. All icons use consistent 24x24 viewBox with stroke-based rendering.
+**9,000+ SVG icons** available via MCP server (Lucide, Tabler, Bootstrap, Heroicons) + **120 built-in icons** on the website. All icons use consistent 24x24 viewBox with stroke-based rendering.
 
 ### Categories
 
@@ -796,7 +796,7 @@ css3-animations/
 │
 ├── mcp/
 │   ├── server.js                 # MCP v2 server (10 tools + 4 resources)
-│   ├── icon-loader.js            # Loads 9,500+ icons from npm packages
+│   ├── icon-loader.js            # Loads 9,000+ icons from npm packages
 │   └── package.json              # MCP dependencies (includes icon libraries)
 │
 ├── docs/
