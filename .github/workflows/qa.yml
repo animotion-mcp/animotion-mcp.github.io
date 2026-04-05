@@ -1,0 +1,77 @@
+name: QA Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JavaScript
+        run: |
+          echo "Checking JS syntax..."
+          for f in js/app.js js/icons-app.js js/png-animator.js js/icon-providers.js; do
+            node -e "new Function(fs.readFileSync('$f','utf8'))" && echo "  $f: OK" || exit 1
+          done
+          node -e "
+            globalThis.window = {};
+            const vm = await import('vm');
+            const fs = await import('fs');
+            const code = fs.readFileSync('./js/data.js', 'utf8');
+            vm.runInThisContext(code);
+            const d = window.ANIMOTION_DATA;
+            if (!d || !d.animations || d.animations.length < 700) { console.error('data.js: FAIL'); process.exit(1); }
+            console.log('  data.js: OK (' + d.animations.length + ' animations)');
+          " --input-type=module
+
+      - name: Validate HTML structure
+        run: |
+          echo "Checking HTML..."
+          grep -q 'id="hero"' index.html && echo "  Hero section: OK" || exit 1
+          grep -q 'id="app"' index.html && echo "  App section: OK" || exit 1
+          grep -q 'id="get-started"' index.html && echo "  Get Started: OK" || exit 1
+          echo "  No onclick handlers: $(grep -c 'onclick=' index.html) (should be 0)"
+          test $(grep -c 'onclick=' index.html) -eq 0 || exit 1
+
+      - name: Validate MCP Server
+        run: |
+          cd mcp && npm install --silent
+          echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | timeout 15 node server.js 2>/dev/null | python3 -c "
+          import sys,json
+          d=json.loads(sys.stdin.read())
+          tools=d['result']['tools']
+          print(f'  MCP tools: {len(tools)} (expected 10)')
+          assert len(tools) == 10, 'Wrong tool count'
+          "
+
+      - name: Validate api.json
+        run: |
+          python3 -c "
+          import json
+          d=json.load(open('api.json'))
+          print(f'  api.json: {len(d.get(\"animations\",[]))} animations')
+          assert len(d.get('animations',[])) > 700
+          "
+
+      - name: Create issue on failure
+        if: failure() && github.event_name == 'push'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[CI] QA check failed on ${context.sha.substring(0,7)}`,
+              labels: ['bug', 'ci'],
+              body: `QA check failed on commit ${context.sha}\n\nWorkflow: ${context.workflow}\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+            });
