@@ -60,8 +60,9 @@ jobs:
           python3 -c "
           import json
           d=json.load(open('api.json'))
-          print(f'  api.json: {len(d.get(\\"animations\\",[]))} animations')
-          assert len(d.get('animations',[])) > 700
+          a=d.get('animations',[])
+          print(f'  api.json: {len(a)} animations')
+          assert len(a) > 700
           "
 
       - name: Create issue on failure
@@ -72,7 +73,7 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: \`[CI] QA check failed on \${context.sha.substring(0,7)}\`,
+              title: `[CI] QA check failed on ${context.sha.substring(0,7)}`,
               labels: ['bug', 'ci'],
-              body: \`QA check failed on commit \${context.sha}\\n\\nWorkflow: \${context.workflow}\\nRun: \${context.serverUrl}/\${context.repo.owner}/\${context.repo.repo}/actions/runs/\${context.runId}\`
+              body: `QA check failed on commit ${context.sha}\n\nWorkflow: ${context.workflow}\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
             });
