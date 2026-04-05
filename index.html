@@ -18,10 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
 
-  <link rel="stylesheet" href="css/style.css?v=9">
-  <link rel="stylesheet" href="css/keyframes.css?v=9">
-  <link rel="stylesheet" href="css/keyframes-part2.css?v=9">
-  <link rel="stylesheet" href="css/utilities.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/keyframes.css?v=10">
+  <link rel="stylesheet" href="css/keyframes-part2.css?v=10">
+  <link rel="stylesheet" href="css/utilities.css?v=10">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -118,7 +118,7 @@
         <div class="install-card">
           <div class="install-card-header">
             <span class="install-label">CDN</span>
-            <button class="copy-btn" data-copy-text='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes.css"&gt;'>Copy</button>
+            <button class="copy-btn" data-copy-text='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shouvikfullstack/css3-animations@main/css/keyframes.css"&gt;' aria-label="Copy CDN link">Copy</button>
           </div>
           <pre class="install-code"><code>&lt;link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/
@@ -130,7 +130,7 @@
         <div class="install-card">
           <div class="install-card-header">
             <span class="install-label">Usage</span>
-            <button class="copy-btn" data-copy-text='<div class="animotion-fade-in">Hello World</div>'>Copy</button>
+            <button class="copy-btn" data-copy-text='<div class="animotion-fade-in">Hello World</div>' aria-label="Copy usage example">Copy</button>
           </div>
           <pre class="install-code"><code>&lt;div class="animotion-fade-in"&gt;
   Hello World
@@ -193,9 +193,9 @@
 
       <!-- Main Tabs -->
       <div class="main-tabs" role="tablist">
-        <button class="main-tab active" data-maintab="animations" role="tab" aria-selected="true">Animations</button>
-        <button class="main-tab" data-maintab="icons" role="tab" aria-selected="false">Icons</button>
-        <button class="main-tab" data-maintab="png-animator" role="tab" aria-selected="false">PNG Animator</button>
+        <button class="main-tab active" data-maintab="animations" role="tab" aria-selected="true" aria-label="Animations tab">Animations</button>
+        <button class="main-tab" data-maintab="icons" role="tab" aria-selected="false" aria-label="Icons tab">Icons</button>
+        <button class="main-tab" data-maintab="png-animator" role="tab" aria-selected="false" aria-label="PNG Animator tab">PNG Animator</button>
       </div>
 
       <!-- ANIMATIONS TAB -->
@@ -207,7 +207,7 @@
             Preview text
           </label>
           <input type="text" id="preview-text-input" placeholder="Type your name or text..." maxlength="24" autocomplete="off" aria-label="Custom preview text for animations">
-          <button class="preview-text-reset" id="preview-text-reset" title="Reset to default">
+          <button class="preview-text-reset" id="preview-text-reset" title="Reset to default" aria-label="Reset preview text">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
           </button>
         </div>
@@ -283,7 +283,7 @@
               <option value="cubic-bezier(0.175, 0.885, 0.32, 1.275)">spring</option>
               <option value="cubic-bezier(0.68, -0.55, 0.265, 1.55)">bounce</option>
             </select>
-            <button class="btn-export" id="png-export-btn">
+            <button class="btn-export" id="png-export-btn" aria-label="Export animation CSS">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Export CSS
             </button>
@@ -318,7 +318,7 @@
       <div class="modal-header">
         <div class="modal-header-left">
           <h2 class="modal-title" id="modal-title">Animation Name</h2>
-          <button class="modal-copy-class" id="modal-copy-class" title="Copy class name">
+          <button class="modal-copy-class" id="modal-copy-class" title="Copy class name" aria-label="Copy animation class name">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             <span>Copy Class</span>
           </button>
@@ -340,9 +340,9 @@
         <div class="modal-meta" id="modal-meta"></div>
 
         <div class="modal-tabs">
-          <button class="modal-tab active" data-tab="css">CSS</button>
-          <button class="modal-tab" data-tab="html">HTML</button>
-          <button class="modal-tab" data-tab="js">JavaScript</button>
+          <button class="modal-tab active" data-tab="css" aria-label="CSS code tab">CSS</button>
+          <button class="modal-tab" data-tab="html" aria-label="HTML code tab">HTML</button>
+          <button class="modal-tab" data-tab="js" aria-label="JavaScript code tab">JavaScript</button>
         </div>
 
         <!-- CSS Panel -->
@@ -350,7 +350,7 @@
           <div class="code-block">
             <div class="code-block-header">
               <span class="code-block-label">CSS</span>
-              <button class="copy-btn" data-target="modal-css-code">Copy</button>
+              <button class="copy-btn" data-target="modal-css-code" aria-label="Copy CSS code">Copy</button>
             </div>
             <pre><code id="modal-css-code"></code></pre>
           </div>
@@ -361,7 +361,7 @@
           <div class="code-block">
             <div class="code-block-header">
               <span class="code-block-label">HTML</span>
-              <button class="copy-btn" data-target="modal-html-code">Copy</button>
+              <button class="copy-btn" data-target="modal-html-code" aria-label="Copy HTML code">Copy</button>
             </div>
             <pre><code id="modal-html-code"></code></pre>
           </div>
@@ -372,7 +372,7 @@
           <div class="code-block">
             <div class="code-block-header">
               <span class="code-block-label">JavaScript</span>
-              <button class="copy-btn" data-target="modal-js-code">Copy</button>
+              <button class="copy-btn" data-target="modal-js-code" aria-label="Copy JavaScript code">Copy</button>
             </div>
             <pre><code id="modal-js-code"></code></pre>
           </div>
@@ -390,11 +390,11 @@
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
   <!-- SCRIPTS -->
-  <script src="js/data.js?v=9"></script>
-  <script src="js/icons.js?v=9"></script>
-  <script src="js/icon-providers.js?v=9"></script>
-  <script src="js/app.js?v=9"></script>
-  <script src="js/icons-app.js?v=9"></script>
-  <script src="js/png-animator.js?v=9"></script>
+  <script src="js/data.js?v=10"></script>
+  <script src="js/icons.js?v=10"></script>
+  <script src="js/icon-providers.js?v=10"></script>
+  <script src="js/app.js?v=10"></script>
+  <script src="js/icons-app.js?v=10"></script>
+  <script src="js/png-animator.js?v=10"></script>
 </body>
 </html>

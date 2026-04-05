@@ -141,7 +141,7 @@
         <div class="hero-showcase-demo">
           <div class="demo-box ${prefersReduced ? '' : anim.cssClass}" ${prefersReduced ? '' : `data-animate="${anim.cssClass}"`} style="animation-iteration-count:infinite;animation-timing-function:ease-in-out;will-change:transform,opacity;"></div>
         </div>
-        <span class="hero-showcase-label">${anim.name}</span>
+        <span class="hero-showcase-label">${escapeHTML(anim.name)}</span>
       </div>
     `).join('');
   }
@@ -168,15 +168,15 @@
       if (groupCats.length === 0) return;
 
       html += `<details class="cat-group" open>`;
-      html += `<summary>${group.name}</summary>`;
+      html += `<summary>${escapeHTML(group.name)}</summary>`;
       html += `<div class="cat-group-items">`;
 
       groupCats.forEach(cat => {
         const count = animations.filter(a => a.category === cat.id).length;
         html += `
-          <button class="cat-item" data-cat="${cat.id}">
-            <span class="cat-dot" style="background: var(--cat-${cat.id})"></span>
-            ${cat.name}
+          <button class="cat-item" data-cat="${escapeAttr(cat.id)}">
+            <span class="cat-dot" style="background: var(--cat-${escapeAttr(cat.id)})"></span>
+            ${escapeHTML(cat.name)}
             <span class="cat-count">${count}</span>
           </button>
         `;
