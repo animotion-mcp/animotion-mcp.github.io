@@ -1,2 +1,4 @@
 .vercel
 mcp/node_modules/
+config.bat
+node_modules

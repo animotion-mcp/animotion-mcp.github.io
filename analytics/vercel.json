@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/mcp-events.js": {
+      "maxDuration": 10
+    }
+  }
+}
