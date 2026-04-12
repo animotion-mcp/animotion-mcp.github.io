@@ -111,6 +111,48 @@ console.error(`Animations available: ${(animationData.animations || []).length}`
 // In-memory custom icons
 const customIcons = [];
 
+// ── Observability ──
+const SESSION_START = Date.now();
+const callCounts = {};
+const errorCounts = {};
+
+function log(event, data = {}) {
+  console.error(JSON.stringify({ t: new Date().toISOString(), event, ...data }));
+}
+
+// Dump session summary when the process exits (e.g. IDE closes the MCP connection)
+function onExit() {
+  const totalCalls = Object.values(callCounts).reduce((a, b) => a + b, 0);
+  if (totalCalls > 0) {
+    log('session_end', {
+      durationMs: Date.now() - SESSION_START,
+      totalCalls,
+      callCounts,
+      ...(Object.keys(errorCounts).length > 0 ? { errorCounts } : {}),
+    });
+  }
+}
+process.on('exit', onExit);
+process.on('SIGINT', () => { onExit(); process.exit(0); });
+process.on('SIGTERM', () => { onExit(); process.exit(0); });
+
+/**
+ * Optional fire-and-forget analytics ping.
+ * Set ANIMOTION_ANALYTICS_URL to a POST endpoint you control.
+ * Set ANIMOTION_ANALYTICS=false to opt out entirely.
+ * Payload never contains user queries or SVG data — only tool name, outcome, and version info.
+ */
+function ping(event, data = {}) {
+  const url = process.env.ANIMOTION_ANALYTICS_URL;
+  if (!url || process.env.ANIMOTION_ANALYTICS === 'false') return;
+  fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ event, version: '1.0.3', node: process.version, ...data }),
+    signal: AbortSignal.timeout(3000),
+  }).catch(() => {}); // never throws — completely non-blocking
+}
+
 // ── MCP Server ──
 const server = new Server(
   { name: 'animotion', version: '2.0.0' },
@@ -242,7 +284,34 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
 // ── Tool Handlers ──
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
+  const t0 = Date.now();
+  callCounts[name] = (callCounts[name] || 0) + 1;
 
+  let response;
+  try {
+    response = await handleTool(name, args);
+  } catch (err) {
+    errorCounts[name] = (errorCounts[name] || 0) + 1;
+    const msg = err?.message || String(err);
+    log('tool_error', { tool: name, error: msg, durationMs: Date.now() - t0 });
+    ping('tool_error', { tool: name, error: msg });
+    return error(`Internal error: ${msg}`);
+  }
+
+  const durationMs = Date.now() - t0;
+  const isErr = response?.isError === true;
+  if (isErr) {
+    errorCounts[name] = (errorCounts[name] || 0) + 1;
+    const errText = response?.content?.[0]?.text || '';
+    log('tool_call', { tool: name, ok: false, error: errText, durationMs });
+    ping('tool_error', { tool: name, error: errText });
+  } else {
+    log('tool_call', { tool: name, ok: true, durationMs });
+  }
+  return response;
+});
+
+async function handleTool(name, args) {
   switch (name) {
     // ── Animation Tools ──
     case 'search_animations': {
@@ -453,7 +522,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     default:
       return error(`Unknown tool: ${name}`);
   }
-});
+}
 
 // ── Resources ──
 server.setRequestHandler(ListResourcesRequestSchema, async () => ({
@@ -564,6 +633,8 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   console.error(`Animotion MCP Server v2 running — ${(animationData.animations || []).length} animations, ${totalIconCount} icons`);
+  log('startup', { version: '1.0.3', node: process.version, animations: (animationData.animations || []).length, icons: totalIconCount });
+  ping('startup', { animations: (animationData.animations || []).length, icons: totalIconCount });
 }
 
 main().catch(console.error);

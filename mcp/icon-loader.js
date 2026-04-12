@@ -4,12 +4,42 @@
  */
 
 import { readdirSync, readFileSync, existsSync } from 'fs';
-import { join, basename } from 'path';
+import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { createRequire } from 'module';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+// Use proper Node.js module resolution so icon packages are found
+// whether they're nested (local dev) or hoisted (npx / global install)
+const require = createRequire(import.meta.url);
+
+/**
+ * Find a package directory by walking up the node_modules tree.
+ * Handles both nested (local dev) and hoisted (npx / global install) layouts.
+ */
+function resolvePackageDir(packageName) {
+  // Strategy 1: resolve package.json via require (works when package.json is exported)
+  try {
+    return dirname(require.resolve(`${packageName}/package.json`));
+  } catch {}
+
+  // Strategy 2: walk up the filesystem tree looking for node_modules/<packageName>
+  // This handles hoisted layouts (npx, global installs, workspaces)
+  const parts = packageName.split('/');
+  let dir = __dirname;
+  while (true) {
+    const candidate = join(dir, 'node_modules', ...parts);
+    if (existsSync(candidate)) return candidate;
+    const parent = dirname(dir);
+    if (parent === dir) break; // reached filesystem root
+    dir = parent;
+  }
+
+  // Strategy 3: last-resort fallback (will return a non-existent path; scanSVGDirectory handles that)
+  return join(__dirname, 'node_modules', ...parts);
+}
 
 /**
  * Scan a directory for SVG files and return icon objects
@@ -85,7 +115,7 @@ export function loadAllIcons() {
   const startTime = Date.now();
 
   // 1. Lucide Icons (~1900 icons)
-  const lucideDir = join(__dirname, 'node_modules', 'lucide-static', 'icons');
+  const lucideDir = join(resolvePackageDir('lucide-static'), 'icons');
   providers.lucide = {
     id: 'lucide',
     name: 'Lucide Icons',
@@ -96,8 +126,8 @@ export function loadAllIcons() {
   };
 
   // 2. Heroicons - outline (24px)
-  const heroOutlineDir = join(__dirname, 'node_modules', 'heroicons', '24', 'outline');
-  const heroSolidDir = join(__dirname, 'node_modules', 'heroicons', '24', 'solid');
+  const heroOutlineDir = join(resolvePackageDir('heroicons'), '24', 'outline');
+  const heroSolidDir = join(resolvePackageDir('heroicons'), '24', 'solid');
   const heroOutline = scanSVGDirectory(heroOutlineDir, 'heroicons', { styleTag: 'outline' });
   const heroSolid = scanSVGDirectory(heroSolidDir, 'heroicons', { styleTag: 'solid' });
   // Deduplicate — prefer outline, mark solid variants
@@ -119,8 +149,8 @@ export function loadAllIcons() {
   };
 
   // 3. Tabler Icons - outline
-  const tablerOutlineDir = join(__dirname, 'node_modules', '@tabler', 'icons', 'icons', 'outline');
-  const tablerFilledDir = join(__dirname, 'node_modules', '@tabler', 'icons', 'icons', 'filled');
+  const tablerOutlineDir = join(resolvePackageDir('@tabler/icons'), 'icons', 'outline');
+  const tablerFilledDir = join(resolvePackageDir('@tabler/icons'), 'icons', 'filled');
   const tablerOutline = scanSVGDirectory(tablerOutlineDir, 'tabler', { styleTag: 'outline' });
   const tablerFilled = scanSVGDirectory(tablerFilledDir, 'tabler', { styleTag: 'filled' });
   // Prefer outline, deduplicate
@@ -139,7 +169,7 @@ export function loadAllIcons() {
   };
 
   // 4. Bootstrap Icons
-  const bootstrapDir = join(__dirname, 'node_modules', 'bootstrap-icons', 'icons');
+  const bootstrapDir = join(resolvePackageDir('bootstrap-icons'), 'icons');
   providers.bootstrap = {
     id: 'bootstrap',
     name: 'Bootstrap Icons',
